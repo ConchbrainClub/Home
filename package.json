@@ -2,9 +2,8 @@
   "name": "conchbrainclub",
   "version": "1.0.0",
   "description": "海螺大脑俱乐部官网",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "restore": "npm install"
   },
   "repository": {
     "type": "git",
