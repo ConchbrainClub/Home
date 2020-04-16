@@ -7,3 +7,21 @@
 footer{
     margin-top: 20px;
 }
+
+#banner{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#banner h1{
+    color: blueviolet;
+}
+
+#banner img{
+    border-radius: 20px;
+}
+
+#master{
+    height: 500px;
+    background-color: blueviolet;
+}
