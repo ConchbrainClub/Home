@@ -4,20 +4,20 @@
     border-radius: 5px;
 }
 
-#banner,#master{
+.banner{
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
-#banner h1{
+#banner1 h1{
     color: blueviolet;
 }
 
-#banner img{
+#banner1 img{
     border-radius: 20px;
 }
 
-#master{
+#banner2{
     background-color: blueviolet;
 }
 
@@ -29,17 +29,17 @@ footer{
     text-align: left;
 }
 
-.bd-footer-links {
+footer ul{
     padding-left: 0;
     margin-bottom: 1rem;
 }
 
-.bd-footer-links li+li {
-    margin-left: 1rem;
-}
-
 footer li {
     display: inline-block;
+}
+
+footer ul li+li {
+    margin-left: 1rem;
 }
 
 footer li a {
