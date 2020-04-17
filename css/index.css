@@ -26,27 +26,20 @@
 }
 
 footer{
-    font-weight: 400;
-    color: #6c757d!important;
-    font-size: .875rem;
     background-color: whitesmoke;
-    text-align: left;
 }
 
-footer ul{
-    padding-left: 0;
-    margin-bottom: 1rem;
-}
-
-footer li {
-    display: inline-block;
-}
-
-footer ul li+li {
-    margin-left: 1rem;
-}
-
-footer li a {
+footer .title{
     font-weight: 600;
-    color: #495057;
+    color: #616161;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #616161;
+}
+
+#footerInfo{
+    padding-top: 30px;
+    padding-bottom: 0;
 }
