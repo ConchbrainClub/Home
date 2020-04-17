@@ -1,15 +1,35 @@
-function navigation(name){
-    document.getElementById("main").innerHTML = "";
-    var url = "./view/" + name +".html";
+function request(href,callback){
     $.ajax({
         type: 'GET',
-        url: url,
+        url: href,
         success: function(data) {
-            document.getElementById("main").innerHTML = data;
+            callback(data);
         },
         error: function() {
-            alert("error");
+            callback(undefined);
         }
+    });
+}
+
+function navigation(name){
+    document.querySelector("#main").innerHTML = "";
+    var url = "/view/" + name +".html";
+    request(url,(data) => {
+        if(data!=undefined){
+            document.querySelector("#main").innerHTML = data;
+            inject();
+        }
+    });
+}
+
+function inject(){
+    document.querySelectorAll("#main > script").forEach(element => {
+        var src = element.getAttribute("src");
+        request(src,(data) => {
+            if(data!=undefined){
+                eval(data);
+            }
+        });
     });
 }
 
