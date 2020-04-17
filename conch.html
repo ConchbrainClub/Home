@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="./favicon.ico" class="d-inline-block align-top">
+                &nbsp;Conchbrain
+            </a>
+            <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link" asp-controller="Home" asp-action="Index">主页</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./conch.html" class="nav-link" asp-controller="FeedBack" asp-action="Index">海螺</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--body-->
+    <div>
+      <h2>海螺主体</h2>
+    </div>
+
+    <!--footer-->
+    <footer class="bd-footer text-muted">
+
+        <div class="container" id="footerInfo">
+          <div class="row">
+            <div class="col-md-3">
+              <p class="title">友情链接</p>
+              <p><a target="blank" href="https://www.lllxy.net/">LLLXY</a></p>
+              <p><a target="blank" href="https://www.ccczg.site/">CCCZG</a></p>
+              <p><a target="blank" href="http://yql520.com/">longshao</a></p>
+              <p><a target="blank" href="https://www.daijua.top/">呆橘</a></p>
+            </div>
+  
+            <div class="col-md-3">
+              <p class="title">维护中项目</p>
+              <p><a target="blank" href="https://github.com/ConchBrainClub/ChaoxingScript">ChaoxingScript</a></p>
+              <p><a target="blank" href="https://github.com/ConchBrainClub/chaoxingtopic">ChaoxingTopic</a></p>
+              <p><a target="black" href="https://github.com/ConchBrainClub">其他项目(已停止维护)</a></p>
+            </div>
+  
+            <div class="col-md-3">
+              <p class="title">关于</p>
+              <p><a target="blank" href="https://github.com/ConchBrainClub">GitHub</a></p>
+              <p><a target="blank" href="javascript:void()">Privacy&Cookie</a></p>
+              <p><a target="blank" href="javascript:void()">备案</a></p>
+            </div>
+  
+            <div class="col-md-3">
+              <p class="title">联系我们</p>
+              <p><a target="blank" href="mailto:conchbrainclub@outlook.com">Mail</a></p>
+              <p><a target="blank">Feedback</a></p>
+              <p><a target="blank">QQ</a></p>
+            </div>
+  
+          </div>
+        </div>
+  
+        <div class="container-fluid p-3 p-md-5 text-center">
+          <p>Designed and Developed by ❤ <strong>ConchBrain</strong> Club</p>
+          <p>© 2020 - Conch brain Club</p>
+        </div>
+  
+      </footer>
+
+</body>
+</html>
