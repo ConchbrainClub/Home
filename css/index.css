@@ -1,3 +1,7 @@
+body{
+    padding-top: 50px;
+}
+
 .logo{
     width: 30px;
     height: 30px;
@@ -28,6 +32,7 @@
 
 #banner4{
     background-color: blueviolet;
+    color: white;
 }
 
 footer{
