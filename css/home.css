@@ -1,0 +1,26 @@
+.banner{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#banner1 h1{
+    color: blueviolet;
+}
+
+#banner1 img{
+    border-radius: 20px;
+}
+
+#banner2{
+    background-color: yellowgreen;
+}
+
+#banner3{
+    background-color: black;
+    color: white;
+}
+
+#banner4{
+    background-color: blueviolet;
+    color: white;
+}
