@@ -7,6 +7,11 @@
     max-height: 400px;
 }
 
+.banner h1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 #banner1 h1{
     color: blueviolet;
 }
