@@ -18,6 +18,7 @@ function navigation(name){
         if(data!=undefined){
             document.querySelector("#main").innerHTML = data;
             inject();
+            history.pushState({title: name},name,url);
         }
     });
 }
