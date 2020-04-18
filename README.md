@@ -7,7 +7,7 @@
 
 前端的一些依赖由cdn提供商提供
 
-如果你想切换到本地依赖需要安装 npm（windows平台下nodejs包含了npm），接下来在根目录执行
+如果想使用本地依赖（部署在服务器）需要安装 npm（windows平台下nodejs包含了npm），接下来在根目录执行
 
 ```bash
 npm install
