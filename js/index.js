@@ -2,10 +2,10 @@ function request(href,callback){
     $.ajax({
         type: 'GET',
         url: href,
-        success: function(data) {
+        success: (data) => {
             callback(data);
         },
-        error: function() {
+        error: () => {
             callback(undefined);
         }
     });
@@ -20,6 +20,9 @@ function navigation(name){
             inject();
             url = "#"+name;
             history.pushState({title: name},name,url);
+        }
+        else{
+            navigation("home");
         }
     });
 }
