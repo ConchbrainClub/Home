@@ -1,4 +1,11 @@
-#conch{
+#conch-banner{
     background-color: black;
 }
 
+#conch-banner img{
+    width: 100%;
+}
+
+#pic{
+    padding-right: 0;
+}
