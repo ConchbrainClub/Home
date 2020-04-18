@@ -36,5 +36,12 @@ function inject(){
 }
 
 function init(){
-    navigation("home");
+    var href = window.location.href;
+    if(href.includes("#")){
+        var page = href.substring(href.indexOf("#")+1);
+        navigation(page);
+    }
+    else{
+        navigation("home");
+    }
 }
