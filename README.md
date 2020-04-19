@@ -1,9 +1,7 @@
 # ConchBrainClub.github.io
-海螺大脑俱乐部官方网站
+海螺大脑俱乐部官方网站（前端）
 
-此网站目前为静态网页，部署在GithubPages，前端开发完成后会迁移到服务器
-
-> 网页属于spa应用，使用vanillajs
+> 网页属于spa应用，使用vanillajs，计划采用前后端分离设计
 
 前端的一些依赖由cdn提供商提供
 
