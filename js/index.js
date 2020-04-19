@@ -19,7 +19,7 @@ function navigation(name){
             document.querySelector("#main").innerHTML = data;
             inject();
             url = "#"+name;
-            history.pushState({title: name},name,url);
+            history.pushState({page: name},name,url);
         }
         else{
             navigation("home");
@@ -39,6 +39,10 @@ function inject(){
 }
 
 function init(){
+    window.onpopstate = (e)=>{
+        navigation(e.state.page);
+    }
+
     var href = window.location.href;
     if(href.includes("#")){
         var page = href.substring(href.indexOf("#")+1);
