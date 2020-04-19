@@ -8,7 +8,10 @@
 }
 
 #detail{
-    padding: 5rem;
+    padding-top: 5rem;;
+    padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 #detail h1{
@@ -17,4 +20,8 @@
 
 #pic{
     padding-right: 0;
+}
+
+#opt{
+    padding-top: 1rem;
 }
