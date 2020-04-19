@@ -12,6 +12,7 @@ function request(href,callback){
 }
 
 function navigation(name){
+    loadingState(true);
     document.querySelector("#main").innerHTML = "";
     var url = "/view/" + name +".html";
     request(url,(data) => {
@@ -20,11 +21,23 @@ function navigation(name){
             inject();
             url = "#"+name;
             history.pushState({page: name},name,url);
+            loadingState(false);
         }
         else{
             navigation("home");
+            loadingState(false);
         }
     });
+}
+
+function loadingState(flag){
+    var loadingPage = document.querySelector("#loading");
+    if(flag){
+        loadingPage.removeAttribute("hidden");
+    }
+    else{
+        loadingPage.setAttribute("hidden","hidden");
+    }
 }
 
 function inject(){

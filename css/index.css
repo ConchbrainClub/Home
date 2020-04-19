@@ -8,6 +8,17 @@ body{
     border-radius: 5px;
 }
 
+#loading{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#loading .box{
+    height: 10px;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
+
 footer{
     background-color: whitesmoke;
 }
