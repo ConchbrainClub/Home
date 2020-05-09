@@ -2,3 +2,9 @@
     margin-top: 50px;
     margin-bottom: 30px;
 }
+
+.card-body .box{
+    height: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
+}
