@@ -44,8 +44,8 @@ function inject(){
     document.querySelectorAll("#main > script").forEach(element => {
         var src = element.getAttribute("src");
         request(src,(data) => {
-            if(data!=undefined){
-                eval(data);
+            if(data==undefined){
+                console.log("inject error");
             }
         });
     });
