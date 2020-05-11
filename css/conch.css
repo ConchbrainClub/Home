@@ -8,3 +8,9 @@
     margin: 10px;
     background-color: whitesmoke;
 }
+
+.card .cover{
+    height: 180px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
