@@ -3,14 +3,34 @@
     margin-bottom: 30px;
 }
 
-.card-body .box{
-    height: 10px;
-    margin: 10px;
-    background-color: whitesmoke;
+.card:hover{
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 .card .cover{
     height: 180px;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.card .cover a{
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+    transition: transform 0.2s ease-out;
+}
+
+.card .cover a:hover{
+    transform: scale(1.07);
+}
+
+.card-body .box{
+    height: 10px;
+    margin: 10px;
+    background-color: whitesmoke;
 }

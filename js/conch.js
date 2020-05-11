@@ -42,7 +42,10 @@ function showData(articles){
 
                 var cover = document.createElement("div");
                 cover.className = "cover";
-                cover.style.backgroundImage = "url("+ article.cover +")"
+
+                var coverlink = document.createElement("a");
+                coverlink.href = article.link;
+                coverlink.style.backgroundImage = "url("+ article.cover +")";
 
                 var cardBody = document.createElement("div");
                 cardBody.className = "card-body";
@@ -68,6 +71,8 @@ function showData(articles){
                 cardBody.appendChild(title);
                 cardBody.appendChild(desc);
                 cardBody.appendChild(time);
+
+                cover.appendChild(coverlink);
 
                 card.appendChild(cover);
                 card.appendChild(cardBody);
