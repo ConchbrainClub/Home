@@ -25,10 +25,6 @@
     transition: transform 0.2s ease-out;
 }
 
-.card .cover a:hover{
-    transform: scale(1.07);
-}
-
 .card-body .box{
     height: 10px;
     margin: 10px;
