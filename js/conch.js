@@ -45,6 +45,7 @@ function showData(articles){
 
                 var coverlink = document.createElement("a");
                 coverlink.href = article.link;
+                coverlink.target = "blank";
                 coverlink.style.backgroundImage = "url("+ article.cover +")";
 
                 var cardBody = document.createElement("div");
