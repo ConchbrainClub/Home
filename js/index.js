@@ -51,7 +51,16 @@ function inject(){
     });
 }
 
+function initMenu(){
+    document.querySelectorAll(".nav-item").forEach(element => {
+        element.setAttribute("data-toggle","collapse");
+        element.setAttribute("data-target","#navbar");
+    });
+}
+
 function init(){
+    initMenu();
+    
     window.onpopstate = (e)=>{
         navigation(e.state.page);
     }
