@@ -1,6 +1,20 @@
-request("/articles/page1.json",(result)=>{
-    showData(result);
-});
+var articlePage = 1;
+
+function loadData(){
+    request("/articles/page"+ articlePage +".json",(result)=>{
+        if(result){
+            showData(result);
+            
+            checkNextPage((flag)=>{
+                if(!flag){
+                    var btn = document.querySelector("#layout button");
+                    btn.innerText = "没有更多了";
+                    btn.setAttribute("disabled","deiabled");
+                }
+            });
+        }
+    });
+}
 
 function getNum(articles){
     return Math.ceil(articles.length/2);
@@ -67,3 +81,22 @@ function showData(articles){
         }
     }
 }
+
+function checkNextPage(callback){
+    var nextPage = articlePage + 1;
+    request("/articles/page"+ nextPage +".json",(result)=>{
+        if(result){
+            callback(true);
+        }
+        else{
+            callback(false);
+        }
+    });
+}
+
+function loadNext(){
+    articlePage++;
+    loadData();
+}
+
+loadData();
