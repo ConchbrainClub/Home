@@ -1,14 +1,12 @@
 [
     {
         "title":"Rough.js",
-        "time":"2020/5/12 18:54",
         "cover":"/articles/resource/page2/1.png",
         "desc":"Rough.js是一个可以帮助生成手绘风格图形的js库，支持Canvas和SVG两种格式",
         "link":"https://github.com/pshihn/rough"
     },
     {
         "title":"bashtop",
-        "time":"2020/5/12 18:58",
         "cover":"/articles/resource/page2/2.png",
         "desc":"用bash编写的Linux资源监视器。",
         "link":"https://github.com/aristocratos/bashtop"

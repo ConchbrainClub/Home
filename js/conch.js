@@ -10,9 +10,11 @@ function loadConfig(){
 
 function loadData(){
     var realIndex = config.pages.length - currentPage;
+    var page = config.pages[realIndex];
 
-    request("/articles/pages/" + config.pages[realIndex].name ,(result)=>{
+    request("/articles/pages/" + page.name ,(result)=>{
         if(result){
+            showDate(page.date);
             showData(result);
 
             if(realIndex==0){
@@ -22,6 +24,13 @@ function loadData(){
             }
         }
     });
+}
+
+function showDate(date){
+    var element = document.createElement("h1");
+    element.className = "display-4 m-3";
+    element.innerText = date;
+    document.querySelector("#articles").appendChild(element);
 }
 
 function getNum(articles){
