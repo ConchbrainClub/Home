@@ -3,30 +3,35 @@
         "title":"FluentTerminal",
         "cover":"/articles/resource/page3/1.png",
         "desc":"FluentTerminal 是一个基于 UWP 和 Web 技术的终端。",
-        "link":"https://github.com/felixse/FluentTerminal"
+        "link":"https://github.com/felixse/FluentTerminal",
+        "language":"C#"
     },
     {
         "title":"Windows-terminal-context-menu",
         "cover":"/articles/resource/page3/2.png",
         "desc":"将 Windows Terminal 添加到你的右键菜单。（PowerShell脚本）",
-        "link":"https://github.com/kerol2r20/Windows-terminal-context-menu"
+        "link":"https://github.com/kerol2r20/Windows-terminal-context-menu",
+        "language":"PowerShell"
     },
     {
         "title":"Notepads",
         "cover":"/articles/resource/page3/3.png",
         "desc":"具有简约设计的现代、轻便的UWP文本编辑器。",
-        "link":"https://github.com/JasonStein/Notepads"
+        "link":"https://github.com/JasonStein/Notepads",
+        "language":"C#"
     },
     {
         "title":"terminalizer",
         "cover":"/articles/resource/page3/4.gif",
         "desc":"将你的终端录制为GIF图片在网络上分享。",
-        "link":"https://github.com/faressoft/terminalizer"
+        "link":"https://github.com/faressoft/terminalizer",
+        "language":"JavaScript"
     },
     {
         "title":"browserless",
         "cover":"/articles/resource/page3/5.gif",
         "desc":"将无头Chromium当作一项服务运行在Docker中。",
-        "link":"https://github.com/browserless/chrome"
+        "link":"https://github.com/browserless/chrome",
+        "language":"TypeScript"
     }
 ]

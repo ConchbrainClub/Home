@@ -3,30 +3,35 @@
         "title":"Windows Terminal",
         "cover":"/articles/resource/page1/1.png",
         "desc":"Windows 终端是一个新的、现代的、功能丰富的、高效的终端应用程序，适用于命令行用户。它包括 Windows 命令行社区最常请求的许多功能，包括对选项卡的支持、丰富的文本、全球化、可配置性、主题和样式等。",
-        "link":"https://github.com/microsoft/terminal"
+        "link":"https://github.com/microsoft/terminal",
+        "language":"C++"
     },
     {
         "title":"cool-retro-term",
         "cover":"/articles/resource/page1/2.gif",
         "desc":"cool-retro-term是一个终端仿真器，模仿旧阴极管屏幕的外观和感觉。此终端仿真器在 Linux 和 macOS 下工作，需要 Qt 5.2 或更高版本。",
-        "link":"https://github.com/Swordfish90/cool-retro-term"
+        "link":"https://github.com/Swordfish90/cool-retro-term",
+        "language":"QML"
     },
     {
         "title":"rich",
         "cover":"/articles/resource/page1/3.jpg",
         "desc":"Rich 是一个 Python 库，用于向终端呈现丰富的文本和漂亮的格式。丰富的 API可轻松向脚本或应用程序添加带有样式（粗体、斜体、下划线等）的彩色文本（最多 1670 万种颜色）。Rich 还可以呈现漂亮的表、进度条、标记、语法突出显示的源代码和回溯 - 开箱即用。",
-        "link":"https://github.com/willmcgugan/rich"
+        "link":"https://github.com/willmcgugan/rich",
+        "language":"Python"
     },
     {
         "title":"cascadia-code",
         "cover":"/articles/resource/page1/4.png",
         "desc":"cascadia-code 是一个有趣的，新的单空间字体，包括编程连字，旨在增强 Windows 终端的现代外观。",
-        "link":"https://github.com/microsoft/cascadia-code"
+        "link":"https://github.com/microsoft/cascadia-code",
+        "language":"Python"
     },
     {
         "title":"wttr.in",
         "cover":"/articles/resource/page1/5.png",
         "desc":"wttr.in是一种面向控制台的天气预报服务（curl wttr.in）。",
-        "link":"https://github.com/chubin/wttr.in"
+        "link":"https://github.com/chubin/wttr.in",
+        "language":"Python"
     }
 ]

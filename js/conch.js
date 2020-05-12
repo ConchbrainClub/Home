@@ -80,15 +80,15 @@ function showData(articles){
                 desc.className = "card-text";
                 desc.innerText = article.desc;
                 
-                var time = document.createElement("p");
-                time.className = "card-text";
-                time.innerText = article.time;
+                var lang = document.createElement("p");
+                lang.className = "card-text";
+                lang.innerText = "语言：" + article.language;
                 
                 title.appendChild(link);
 
                 cardBody.appendChild(title);
                 cardBody.appendChild(desc);
-                cardBody.appendChild(time);
+                cardBody.appendChild(lang);
 
                 cover.appendChild(coverlink);
 
