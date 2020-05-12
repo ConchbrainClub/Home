@@ -38,7 +38,11 @@
     </div> -->
 
     <div class="text-center m-3">
-        <button class="btn btn-light" onclick="loadNext()">加载更多</button>
+        <button class="btn btn-light" type="button" onclick="loadNext()">
+            <span>加载更多</span>
+            <span id="loadingNext" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" hidden></span>
+        </button>
     </div>
+
 
 </div>

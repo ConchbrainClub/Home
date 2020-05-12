@@ -9,6 +9,9 @@ function loadConfig(){
 }
 
 function loadData(){
+    
+    nextState(true);
+
     var realIndex = config.pages.length - currentPage;
     var page = config.pages[realIndex];
 
@@ -16,6 +19,8 @@ function loadData(){
         if(result){
             showDate(page.date);
             showData(result);
+
+            nextState(false);
 
             if(realIndex==0){
                 var btn = document.querySelector("#layout button");
@@ -108,6 +113,20 @@ function showData(articles){
 function loadNext(){
     currentPage++;
     loadData();
+}
+
+function nextState(flag){
+    var btn = document.querySelector("#layout button");
+    var loadNext = btn.querySelector("#loadingNext");
+
+    if(flag){
+        loadNext.removeAttribute("hidden");
+        btn.setAttribute("disabled","deiabled");
+    }
+    else{
+        loadNext.setAttribute("hidden","hidden");
+        btn.removeAttribute("disabled");
+    }
 }
 
 loadConfig();
