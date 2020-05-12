@@ -61,5 +61,12 @@
         "cover":"/articles/resource/page1/9.gif",
         "desc":"将你的终端录制为GIF图片在网络上分享。",
         "link":"https://github.com/faressoft/terminalizer"
+    },
+    {
+        "title":"browserless",
+        "time":"2020/5/12 18:35",
+        "cover":"/articles/resource/page1/10.gif",
+        "desc":"将无头Chromium当作一项服务运行在Docker中。",
+        "link":"https://github.com/browserless/chrome"
     }
 ]
