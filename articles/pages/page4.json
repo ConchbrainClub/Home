@@ -1,0 +1,23 @@
+[
+    {
+        "title":"WT64",
+        "cover":"/articles/resource/page4/1.gif",
+        "desc":"一个Commodore 64 皮肤的Windows 终端。",
+        "link":"https://github.com/KillerFeature/WT64",
+        "language":"PowerShell"
+    },
+    {
+        "title":"js-playground",
+        "cover":"/articles/resource/page4/2.png",
+        "desc":"一个具有可视化功能的JavaScript PlayGround。",
+        "link":"https://github.com/huytd/js-playground",
+        "language":"TypeScript"
+    },
+    {
+        "title":"WebWindow",
+        "cover":"/articles/resource/page4/3.png",
+        "desc":"一个用于.NET Core的跨平台WebView库。",
+        "link":"https://github.com/SteveSandersonMS/WebWindow",
+        "language":"TypeScript"
+    }
+]
