@@ -12,6 +12,8 @@ function request(href,callback){
 }
 
 function navigation(name){
+    window.scrollTo(0,0);
+
     loadingState(true);
     document.querySelector("#main").innerHTML = "";
     var url = "/view/" + name +".html";
