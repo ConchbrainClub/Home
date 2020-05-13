@@ -2,7 +2,7 @@ var currentPage = 1;
 var config = undefined;
 
 function loadConfig(){
-    request("/articles/config.json",(result)=>{
+    request("/articles/config.json?"+Math.random(), (result)=>{
         config = result;
         loadData(); 
     });
@@ -15,7 +15,7 @@ function loadData(){
     var realIndex = config.pages.length - currentPage;
     var page = config.pages[realIndex];
 
-    request("/articles/pages/" + page.name ,(result)=>{
+    request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
             showDate(page.date);
             showData(result);
