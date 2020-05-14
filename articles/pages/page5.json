@@ -21,7 +21,7 @@
         "language":"Visual Basic .NET"
     },
     {
-        "title":"TaskbarX",
+        "title":"BlazorOnGitHubPages",
         "cover":"/articles/resource/page5/4.png",
         "desc":"在 GitHub Pages 托管 Blazor WebAssembly 应用的简单示例。",
         "link":"https://github.com/SteveSandersonMS/BlazorOnGitHubPages",
