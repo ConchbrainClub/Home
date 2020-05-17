@@ -2,8 +2,6 @@ var currentPage = 1;
 var config = undefined;
 
 function loadConfig(){
-    nextState(true);
-
     request("/articles/config.json?"+Math.random(), (result)=>{
         config = result;
         loadData(); 
