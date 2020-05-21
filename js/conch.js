@@ -4,8 +4,21 @@ var config = undefined;
 function loadConfig(){
     request("/articles/config.json?"+Math.random(), (result)=>{
         config = result;
+        showTimeline();
         loadData(); 
     });
+}
+
+function showTimeline(){
+    var list = document.querySelector("#timeline > ul");
+    for(var i=config.pages.length-1; i>=0; i--){
+        var li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerText = config.pages[i].date;
+        //点击跳转到指定日期
+        li.setAttribute("index",config.pages.length-i);
+        list.appendChild(li);
+    }
 }
 
 function loadData(){

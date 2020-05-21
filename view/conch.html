@@ -3,46 +3,61 @@
 
 <div id="layout" class="container">
 
-    <div id="articles"></div>
-    
-    <!-- <div class="row">
-        <div class="col-md-6">
-            <div class="card mb-3">
-                <div class="cover">
-                    <a href="@article.link" style="background-image:url('@article.cover');"></a>
+    <div class="row">
+
+        <div id="timeline" class="col-md-2">
+            <ul class="list-group list-group-flush"></ul>
+        </div>
+
+        <!-- <li class="list-group-item">2020/5/21</li>
+        <li class="list-group-item">2020/5/20</li>
+        <li class="list-group-item">2020/5/19</li>
+        <li class="list-group-item">2020/5/18</li>
+        <li class="list-group-item">2020/5/17</li> -->
+
+        <div class="col-md-10">
+
+            <div id="articles"></div>
+
+            <!-- <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="cover">
+                            <a href="@article.link" style="background-image:url('@article.cover');"></a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="@article.link">@article.title</a>
+                            </h5>
+                            <p class="card-text">@article.desc</p>
+                            <p class="card-text">@article.time</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="@article.link">@article.title</a>
-                    </h5>
-                    <p class="card-text">@article.desc</p>
-                    <p class="card-text">@article.time</p>
+        
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="cover">
+                            <a href="@article.link" style="background-image:url('@article.cover');"></a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="@article.link">@article.title</a>
+                            </h5>
+                            <p class="card-text">@article.desc</p>
+                            <p class="card-text">@article.time</p>
+                        </div>
+                    </div>
                 </div>
+            </div> -->
+
+            <div class="text-center m-3">
+                <button class="btn btn-light" type="button" onclick="loadNext()" disabled>
+                    <span>加载更多</span>
+                    <span id="loadingNext" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="card mb-3">
-                <div class="cover">
-                    <a href="@article.link" style="background-image:url('@article.cover');"></a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a href="@article.link">@article.title</a>
-                    </h5>
-                    <p class="card-text">@article.desc</p>
-                    <p class="card-text">@article.time</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="text-center m-3">
-        <button class="btn btn-light" type="button" onclick="loadNext()" disabled>
-            <span>加载更多</span>
-            <span id="loadingNext" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        </button>
     </div>
-
-
 </div>
