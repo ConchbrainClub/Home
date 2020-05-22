@@ -11,14 +11,21 @@ function loadConfig(){
 
 function showTimeline(){
     var list = document.querySelector("#timeline > ul");
-    for(var i=config.pages.length-1; i>=0; i--){
+    var endIndex = config.pages.length-10 > 0 ? config.pages.length-10 : 0;
+    
+    for(var i=config.pages.length-1; i>=endIndex; i--){
         var li = document.createElement("li");
         li.className = "list-group-item";
         li.innerText = config.pages[i].date;
-        //点击跳转到指定日期
-        li.setAttribute("index",config.pages.length-i);
+        li.setAttribute("onclick","loadDatePage(" + (config.pages.length-i).toString() + ")");
         list.appendChild(li);
     }
+}
+
+function loadDatePage(index){
+    document.querySelector("#articles").innerHTML = null;
+    currentPage = index;
+    loadData();
 }
 
 function loadData(){
@@ -37,8 +44,12 @@ function loadData(){
 
             if(realIndex==0){
                 var btn = document.querySelector("#layout button");
-                btn.innerText = "没有更多了";
+                btn.querySelector("span").innerText = "没有更多了";
                 btn.setAttribute("disabled","deiabled");
+            }
+            else{
+                var btn = document.querySelector("#layout button");
+                btn.querySelector("span").innerText = "加载更多";
             }
         }
     });
