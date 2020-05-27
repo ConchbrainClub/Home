@@ -11,13 +11,13 @@ function loadConfig(){
 
 function showTimeline(){
     var list = document.querySelector("#timeline > ul");
-    var endIndex = config.pages.length-10 > 0 ? config.pages.length-10 : 0;
+    var endIndex = config.length-10 > 0 ? config.length-10 : 0;
     
-    for(var i=config.pages.length-1; i>=endIndex; i--){
+    for(var i=config.length-1; i>=endIndex; i--){
         var li = document.createElement("li");
         li.className = "list-group-item";
-        li.innerText = config.pages[i].date;
-        li.setAttribute("onclick","loadDatePage(" + (config.pages.length-i).toString() + ")");
+        li.innerText = config[i].date;
+        li.setAttribute("onclick","loadDatePage(" + (config.length-i).toString() + ")");
         list.appendChild(li);
     }
 }
@@ -32,8 +32,8 @@ function loadData(){
     
     nextState(true);
 
-    var realIndex = config.pages.length - currentPage;
-    var page = config.pages[realIndex];
+    var realIndex = config.length - currentPage;
+    var page = config[realIndex];
 
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
