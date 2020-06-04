@@ -1,0 +1,16 @@
+[
+    {
+        "title":"panolens.js",
+        "cover":"/articles/resource/page10/1.png",
+        "desc":"基于Three.js的Javascript全景查看器。",
+        "link":"https://github.com/pchen66/panolens.js",
+        "language":"JavaScript"
+    },
+    {
+        "title":"ivideo",
+        "cover":"/articles/resource/page10/2.png",
+        "desc":"一个可以观看国内主流视频平台所有视频的客户端",
+        "link":"https://github.com/phobal/ivideo",
+        "language":"JavaScript"
+    }
+]
