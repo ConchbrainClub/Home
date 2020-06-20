@@ -33,5 +33,12 @@
         "desc":"用于在页面滚动上为内容设置动画的库。",
         "link":"https://github.com/mamunhpath/josh.js",
         "language":"JavaScript"
+    },
+    {
+        "title":"notyf",
+        "cover":"/articles/resource/page12/6.png",
+        "desc":"一个简约、响应迅速的库，用于显示 toast 通知。",
+        "link":"https://github.com/caroso1222/notyf",
+        "language":"JavaScript"
     }
 ]
