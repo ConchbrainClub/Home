@@ -1,0 +1,30 @@
+[
+    {
+        "title":"Ward",
+        "cover":"/articles/resource/page12/1.png",
+        "desc":"一个简约的服务器监控工具。",
+        "link":"https://github.com/B-Software/Ward",
+        "language":"CSS"
+    },
+    {
+        "title":"gridjs",
+        "cover":"/articles/resource/page12/2.png",
+        "desc":"高级的table插件。",
+        "link":"https://github.com/grid-js/gridjs",
+        "language":"TypeScript"
+    },
+    {
+        "title":"responsively-app",
+        "cover":"/articles/resource/page12/3.png",
+        "desc":"有助于响应响应 Web 开发的修改浏览器。",
+        "link":"https://github.com/manojVivek/responsively-app",
+        "language":"JavaScript"
+    },
+    {
+        "title":"files-uwp",
+        "cover":"/articles/resource/page12/4.png",
+        "desc":"UWP版本Windows 资源管理器。",
+        "link":"https://github.com/files-community/files-uwp",
+        "language":"C#"
+    }
+]
