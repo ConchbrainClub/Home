@@ -26,5 +26,12 @@
         "desc":"UWP版本Windows 资源管理器。",
         "link":"https://github.com/files-community/files-uwp",
         "language":"C#"
+    },
+    {
+        "title":"josh.js",
+        "cover":"/articles/resource/page12/5.png",
+        "desc":"用于在页面滚动上为内容设置动画的库。",
+        "link":"https://github.com/mamunhpath/josh.js",
+        "language":"JavaScript"
     }
 ]
