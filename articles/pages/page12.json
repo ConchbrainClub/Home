@@ -40,5 +40,12 @@
         "desc":"一个简约、响应迅速的库，用于显示 toast 通知。",
         "link":"https://github.com/caroso1222/notyf",
         "language":"JavaScript"
+    },
+    {
+        "title":"excalidraw",
+        "cover":"/articles/resource/page12/7.png",
+        "desc":"用于绘制手绘像图表一样的虚拟白板。",
+        "link":"https://github.com/excalidraw/excalidraw",
+        "language":"TypeScript"
     }
 ]
