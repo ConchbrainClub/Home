@@ -2,7 +2,7 @@ var currentPage = 1;
 var config = undefined;
 
 function loadConfig(){
-    request("/articles/config.json?"+Math.random(), (result)=>{
+    request("/articles/config.json?" + Math.random(), (result)=>{
         config = result;
         showTimeline();
         loadData(); 
