@@ -30,7 +30,6 @@ function loadDatePage(index){
     document.querySelector("#articles").innerHTML = null;
     currentPage = index;
     loadData();
-    showTimeline();
 }
 
 function loadData(){
@@ -43,6 +42,7 @@ function loadData(){
         if(result){
             showDate(page.date);
             showData(result);
+            showTimeline();
 
             nextState(false);
 
