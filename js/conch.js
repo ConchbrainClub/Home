@@ -11,13 +11,12 @@ function loadConfig(){
 
 function showTimeline(){
     var list = document.querySelector("#timeline > ul");
-    var endIndex = config.length-10 > 0 ? config.length-10 : 0;
     
-    for(var i=config.length-1; i>=endIndex; i--){
+    for(var i=0; i<config.length; i++){
         var li = document.createElement("li");
         li.className = "list-group-item";
         li.innerText = config[i].date;
-        li.setAttribute("onclick","loadDatePage(" + (config.length-i).toString() + ")");
+        li.setAttribute("onclick","loadDatePage(" + i.toString() + ")");
         list.appendChild(li);
     }
 }
@@ -32,7 +31,7 @@ function loadData(){
     
     nextState(true);
 
-    var realIndex = config.length - currentPage;
+    var realIndex = currentPage-1;
     var page = config[realIndex];
 
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
@@ -42,7 +41,7 @@ function loadData(){
 
             nextState(false);
 
-            if(realIndex==0){
+            if(realIndex==config.length-1){
                 var btn = document.querySelector("#layout button");
                 btn.querySelector("span").innerText = "没有更多了";
                 btn.setAttribute("disabled","deiabled");
