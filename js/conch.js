@@ -1,4 +1,4 @@
-var currentPage = 1;
+var currentPage = 0;
 var config = undefined;
 
 function loadConfig(){
@@ -31,8 +31,7 @@ function loadData(){
     
     nextState(true);
 
-    var realIndex = currentPage-1;
-    var page = config[realIndex];
+    var page = config[currentPage];
 
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
@@ -41,7 +40,7 @@ function loadData(){
 
             nextState(false);
 
-            if(realIndex==config.length-1){
+            if(currentPage==config.length-1){
                 var btn = document.querySelector("#layout button");
                 btn.querySelector("span").innerText = "没有更多了";
                 btn.setAttribute("disabled","deiabled");
