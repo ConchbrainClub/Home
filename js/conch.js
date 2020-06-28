@@ -11,8 +11,9 @@ function loadConfig(){
 
 function showTimeline(){
     var list = document.querySelector("#timeline > ul");
+    var endIndex = config.length-10 > 0 ? config.length-10 : 0;
     
-    for(var i=0; i<config.length; i++){
+    for(var i=config.length-1; i>=endIndex; i--){
         var li = document.createElement("li");
         li.className = "list-group-item";
         li.innerText = config[i].date;
