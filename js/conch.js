@@ -11,13 +11,17 @@ function loadConfig(){
 
 function showTimeline(){
     var list = document.querySelector("#timeline > ul");
-    var endIndex = config.length-10 > 0 ? config.length-10 : 0;
+    list.innerHTML = "";
+    var endIndex = config.length-10 > 0 ? 10 : config.length;
     
-    for(var i=config.length-1; i>=endIndex; i--){
+    for(var i=0; i<endIndex; i++){
         var li = document.createElement("li");
         li.className = "list-group-item";
         li.innerText = config[i].date;
         li.setAttribute("onclick","loadDatePage(" + i.toString() + ")");
+        if(i==currentPage){
+            li.style.color = "red";
+        }
         list.appendChild(li);
     }
 }
@@ -26,6 +30,7 @@ function loadDatePage(index){
     document.querySelector("#articles").innerHTML = null;
     currentPage = index;
     loadData();
+    showTimeline();
 }
 
 function loadData(){
