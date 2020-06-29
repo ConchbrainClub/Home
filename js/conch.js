@@ -40,9 +40,9 @@ function loadData(){
 
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
+            showTimeine();
             showDate(page.date);
             showData(result);
-            showTimeline();
 
             nextState(false);
 
