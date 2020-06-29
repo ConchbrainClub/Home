@@ -4,6 +4,7 @@ var config = undefined;
 function loadConfig(){
     request("/articles/config.json?" + Math.random(), (result)=>{
         config = result;
+        showTimeline();
         loadData(); 
     });
 }
@@ -41,7 +42,7 @@ function loadData(){
         if(result){
             showDate(page.date);
             showData(result);
-            showTimeine();
+            showTimeline();
 
             nextState(false);
 
