@@ -1,0 +1,16 @@
+[
+  {
+    "title": "rocketredis",
+    "cover": "/articles/resource/page14/1.png",
+    "desc": "一个漂亮的Redis客户端。",
+    "link": "https://github.com/diego3g/rocketredis",
+    "language": "TypeScript"
+  },
+  {
+    "title": "eruda",
+    "cover": "/articles/resource/page14/2.png",
+    "desc": "移动浏览器控制台。",
+    "link": "https://github.com/liriliri/eruda",
+    "language": "JavaScript"
+  }
+]
