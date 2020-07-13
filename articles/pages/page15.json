@@ -23,7 +23,7 @@
     {
       "title": "MobileBlazorBindings",
       "cover": "/articles/resource/page15/4.png",
-      "desc": "使用 Blazor 构建本机移动应用程序。",
+      "desc": "使用Blazor构建本机移动应用程序。",
       "link": "https://github.com/xamarin/MobileBlazorBindings",
       "language": "C#"
     },
