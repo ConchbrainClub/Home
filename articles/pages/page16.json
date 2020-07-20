@@ -19,5 +19,12 @@
       "desc": "在后端作为 JSON 文件构建的数据库软件。",
       "link": "https://github.com/Devs-Garden/jsonbase",
       "language": "JavaScript"
+    },
+    {
+        "title": "github-readme-stats",
+        "cover": "/articles/resource/page16/4.png",
+        "desc": "在你的 README 中 获取动态生成的 GitHub 统计信息。",
+        "link": "https://github.com/anuraghazra/github-readme-stats",
+        "language": "JavaScript"
     }
   ]
