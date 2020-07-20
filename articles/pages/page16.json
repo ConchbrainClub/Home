@@ -8,7 +8,7 @@
     },
     {
       "title": "x-spreadsheet",
-      "cover": "/articles/resource/page16/1.png",
+      "cover": "/articles/resource/page16/2.png",
       "desc": "基于 JavaScript 快速构建 web excel。",
       "link": "https://github.com/myliang/x-spreadsheet",
       "language": "JavaScript"
