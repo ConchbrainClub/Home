@@ -11,19 +11,6 @@ function request(href,callback){
     });
 }
 
-function pushToBaidu(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-}
-
 function navigation(name){
 
     loadingState(true);
@@ -37,8 +24,6 @@ function navigation(name){
             history.pushState({page: name},name,url);
             loadingState(false);
             window.scrollTo(0,0);
-
-            pushToBaidu();
         }
         else{
             navigation("home");
