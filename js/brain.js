@@ -45,7 +45,12 @@ function kill(){
             method:"GET"
         }).then((res)=>{
             res.text().then((text)=>{
-                console.log(text)
+                if(text.includes(containerId)){
+                    containerId = undefined;
+                }
+                else{
+                    console.log("kill container defeat");
+                }
             });
         });
     }
