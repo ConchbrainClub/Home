@@ -8,7 +8,7 @@
         <div class="row">
             
             <div class="col-md-4">
-                <div class="card text-white system" onclick="createContainer()">
+                <div class="card text-white system" onclick="createContainer()" data-toggle="modal" data-target="#shell">
                     <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/ubuntu.png" class="card-img">
                 </div>
             </div>
@@ -19,6 +19,23 @@
                 </div>
             </div>
 
+        </div>
+
+        <div class="modal fade" id="shell" tabindex="-1" role="dialog" aria-labelledby="exampleModalXlLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <h5 class="modal-title h4" id="exampleModalXlLabel">Cloud-Shell</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <iframe></iframe>
+                </div>
+              </div>
+            </div>
         </div>
 
     </div>

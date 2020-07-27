@@ -7,3 +7,8 @@
     cursor: pointer;
     margin-bottom: 10px;
 }
+
+#shell iframe{
+    height: 80vh;
+    width: 100%;
+}
