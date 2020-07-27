@@ -13,13 +13,9 @@ function create(){
                 });
             }
             else{
-                alert("出错了,5秒后将重试");
-                setTimeout(create,5000);
+                alert("出错了,请刷新后重试");
             }
         });
-    }
-    else{
-        alert("请刷新网页后重试");
     }
 }
 
