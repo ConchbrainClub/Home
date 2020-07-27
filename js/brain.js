@@ -47,7 +47,7 @@ function kill(){
             res.text().then((text)=>{
                 if(text.includes(containerId)){
                     containerId = undefined;
-                    document.querySelector("#shell").querySelector("iframe").src = null;
+                    document.querySelector("#shell").querySelector("iframe").src = "";
                 }
                 else{
                     console.log("kill container defeat");
