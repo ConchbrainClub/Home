@@ -1,9 +1,9 @@
 var containerId = undefined;
 var baseUrl = "https://www.ccczg.site/web-terminal"
 
-function create(){
+function create(system){
     if(!containerId){
-        window.fetch(baseUrl + "/create",{
+        window.fetch(baseUrl + "/create?" + system,{
             method:"GET"
         }).then((res)=>{
             if(res.status==200){
@@ -66,14 +66,13 @@ function delay(){
                 console.log(text)
             });
         });
+        setTimeout(delay,1000*60);
     }
-
-    setTimeout(delay,1000*60);
 }
 
-function createContainer(){
+function createContainer(system){
     //创建容器
-    create();
+    create(system);
     //延迟容器生命周期
     delay();
     //离开网页关闭容器
