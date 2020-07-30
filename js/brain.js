@@ -17,6 +17,10 @@ function create(system){
             }
         });
     }
+    else{
+        kill();
+        setTimeout(create,1000,system);
+    }
 }
 
 function tryConnect(){
