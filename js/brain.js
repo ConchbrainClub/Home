@@ -1,14 +1,24 @@
-var containerId = undefined;
+var container = {
+    id: undefined,
+    system: undefined,
+    time: undefined
+}
+
 var baseUrl = "https://www.ccczg.site/web-terminal"
 
 function create(system){
-    if(!containerId){
+    if(!container.id){
         window.fetch(baseUrl + "/create?" + system,{
             method:"GET"
         }).then((res)=>{
             if(res.status==200){
                 res.text().then((text)=>{
-                    containerId = text;
+                    container.id = text;
+                    container.system = system;
+                    container.time = -1;
+
+                    //延迟容器生命周期
+                    delay();
                     tryConnect();
                 });
             }
@@ -24,14 +34,14 @@ function create(system){
 }
 
 function tryConnect(){
-    if(containerId){
+    if(container.id){
         var num = Math.round((Math.random()*100000)).toString();
         var str = prompt("请输入"+num);
         if(!str || str==""){
             kill();
         }
         else if(str == num){
-            var url = baseUrl + "/" + containerId;
+            var url = baseUrl + "/" + container.id;
             document.querySelector("#shell").querySelector("iframe").src = url;
         }
         else{
@@ -44,13 +54,13 @@ function tryConnect(){
 }
 
 function kill(){
-    if(containerId){
-        fetch(baseUrl + "/kill?" + containerId,{
+    if(container.id){
+        fetch(baseUrl + "/kill?" + container.id,{
             method:"GET"
         }).then((res)=>{
             res.text().then((text)=>{
-                if(text.includes(containerId)){
-                    containerId = undefined;
+                if(text.includes(container.id)){
+                    container.id = undefined;
                     document.querySelector("#shell").querySelector("iframe").src = "";
                 }
                 else{
@@ -62,12 +72,13 @@ function kill(){
 }
 
 function delay(){
-    if(containerId){
-        fetch(baseUrl + "/delay?" + containerId,{
+    if(container.id){
+        fetch(baseUrl + "/delay?" + container.id,{
             method:"GET"
         }).then((res)=>{
             res.text().then((text)=>{
-                console.log(text)
+                console.log(text);
+                container.time++;
             });
         });
         setTimeout(delay,1000*60);
@@ -77,8 +88,6 @@ function delay(){
 function createContainer(system){
     //创建容器
     create(system);
-    //延迟容器生命周期
-    delay();
     //离开网页关闭容器
     window.addEventListener('beforeunload',kill);
 }
@@ -104,3 +113,18 @@ function exitFullScreen(){
     document.querySelector("#showModal").click();
     document.querySelector(".exitFullScreen").setAttribute("hidden","hidden");
 }
+
+function showRunning(){
+    if(container.id){
+        document.querySelector("#running").removeAttribute("hidden");
+        document.querySelector("#containerSystem").innerText = container.system;
+        document.querySelector("#containerId").innerText = container.id;
+        document.querySelector("#containerTime").innerText = container.time + " min ago";
+    }
+    else{
+        document.querySelector("#running").setAttribute("hidden","hidden");
+    }
+    setTimeout(showRunning,2000);
+}
+
+showRunning();

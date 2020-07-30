@@ -5,14 +5,29 @@
 
     <div class="container">
 
-      <!-- <div>
+      <div class="jumbotron">
+        <h1 class="display-4">CloudShell</h1>
+        <p class="lead">在线的 Linux 环境,开箱即用,支持多种发行版本,内置 curl ssh vim git tmux 等基本工具.</p>
+      </div>
+
+       <div id="running" hidden>
         <h1 class="display-4">Runnung</h1>
         <hr/>
   
         <div class="row">
-          
+          <div class="card text-center">
+            <div class="card-header">运行中</div>
+            <div class="card-body">
+              <h5 class="card-title" id="containerSystem">system</h5>
+              <p class="card-text" id="containerId">ID</p>
+              <a id="showModal" href="javascript:void(0)" class="btn btn-primary" data-toggle="modal" data-target="#shell">继续使用</a>
+              <a href="javascript:void(0)" class="btn btn-primary" onclick="kill()">关闭环境</a>
+            </div>
+            <div class="card-footer text-muted"id="containerTime">time</div>
+          </div>
         </div>
-      </div> -->
+        
+      </div>
 
       <div>
         <h1 class="display-4">System</h1>
@@ -20,8 +35,6 @@
   
         <div class="row">
 
-          <button id="showModal" data-toggle="modal" data-target="#shell" hidden></button>
-  
           <div class="col-md-4">
               <div class="card text-white system" onclick="createContainer('ubuntu')" data-toggle="modal" data-target="#shell">
                   <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/ubuntu.png" class="card-img">
