@@ -5,74 +5,88 @@
 
     <div class="container">
 
+      <!-- <div>
+        <h1 class="display-4">Runnung</h1>
+        <hr/>
+  
         <div class="row">
-            
+          
+        </div>
+      </div> -->
+
+      <div>
+        <h1 class="display-4">System</h1>
+        <hr/>
+  
+        <div class="row">
+  
           <div class="col-md-4">
               <div class="card text-white system" onclick="createContainer('ubuntu')" data-toggle="modal" data-target="#shell">
                   <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/ubuntu.png" class="card-img">
               </div>
           </div>
-
+  
           <div class="col-md-4">
               <div class="card text-white system" onclick="createContainer('centos')" data-toggle="modal" data-target="#shell">
                   <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/centos.png" class="card-img">
               </div>
           </div>
-
+  
           <div class="col-md-4">
             <div class="card text-white system" onclick="createContainer('debian')" data-toggle="modal" data-target="#shell">
                 <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/debian.png" class="card-img">
             </div>
           </div>
-
+  
           <div class="col-md-4">
             <div class="card text-white system" onclick="createContainer('kali')" data-toggle="modal" data-target="#shell">
                 <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/kali.png" class="card-img">
             </div>
           </div>
-
+  
           <div class="col-md-4">
             <div class="card text-white system" onclick="createContainer('archlinux')" data-toggle="modal" data-target="#shell">
                 <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/archlinux.png" class="card-img">
             </div>
           </div>
-
+  
           <div class="col-md-4">
             <div class="card text-white system" onclick="createContainer('alpine')" data-toggle="modal" data-target="#shell">
                 <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/alpine.png" class="card-img">
             </div>
           </div>
-
+  
           <div class="col-md-4">
             <div class="card text-white system" onclick="createContainer('fedora')" data-toggle="modal" data-target="#shell">
                 <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/fedora.png" class="card-img">
             </div>
           </div>
-
+  
           <div class="col-md-4">
             <div class="card text-white system" onclick="createContainer('opensuse')" data-toggle="modal" data-target="#shell">
                 <img src="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/CloudShell/opensuse.png" class="card-img">
             </div>
           </div>
-
+  
         </div>
+      </div>
 
-        <div class="modal fade" id="shell" tabindex="-1" role="dialog" aria-labelledby="exampleModalXlLabel" style="display: none;" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-          
-                <div class="modal-header">
-                  <h5 class="modal-title h4" id="exampleModalXlLabel">Cloud-Shell</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" onclick="kill()">×</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <iframe></iframe>
-                </div>
+      <div class="modal fade" id="shell" tabindex="-1" role="dialog" aria-labelledby="exampleModalXlLabel" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+        
+              <div class="modal-header">
+                <h5 class="modal-title h4" id="exampleModalXlLabel">CloudShell</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" onclick="kill()">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <iframe></iframe>
               </div>
             </div>
-        </div>
+          </div>
+      </div>
 
     </div>
 

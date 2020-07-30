@@ -75,15 +75,4 @@ function init(){
     else{
         navigation("home");
     }
-
-    ee();
-}
-
-//============彩蛋==============
-function ee(){
-    if(Math.random()<0.2){
-        var btn = document.querySelector("#navbar > ul > li:nth-child(4) > a");
-        btn.classList.remove("disabled");
-        btn.style.color = "red";
-    }
 }
