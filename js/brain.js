@@ -102,6 +102,7 @@ function fullScreen(){
         fullScreenFrame.removeAttribute("hidden");
     },500);
     document.querySelector(".exitFullScreen").removeAttribute("hidden");
+    document.querySelector("nav").setAttribute("hidden","hidden");
 }
 
 function exitFullScreen(){
@@ -112,6 +113,7 @@ function exitFullScreen(){
     fullScreenFrame.setAttribute("hidden","hidden");
     document.querySelector("#showModal").click();
     document.querySelector(".exitFullScreen").setAttribute("hidden","hidden");
+    document.querySelector("nav").removeAttribute("hidden");
 }
 
 function showRunning(){
