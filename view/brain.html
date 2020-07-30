@@ -19,6 +19,8 @@
         <hr/>
   
         <div class="row">
+
+          <button id="showModal" data-toggle="modal" data-target="#shell" hidden></button>
   
           <div class="col-md-4">
               <div class="card text-white system" onclick="createContainer('ubuntu')" data-toggle="modal" data-target="#shell">
@@ -71,23 +73,40 @@
         </div>
       </div>
 
-      <div class="modal fade" id="shell" tabindex="-1" role="dialog" aria-labelledby="exampleModalXlLabel" style="display: none;" aria-hidden="true">
+      <div class="modal fade" id="shell" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalXlLabel" style="display: none;" aria-hidden="true">
           <div class="modal-dialog modal-xl">
             <div class="modal-content">
         
               <div class="modal-header">
                 <h5 class="modal-title h4" id="exampleModalXlLabel">CloudShell</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" onclick="kill()">×</span>
-                </button>
+
+                <ul class="nav justify-content-end">
+                  <li class="nav-item" data-dismiss="modal" aria-label="Close">
+                    <a id="btn_mini" class="nav-link" href="javascript:void(0)">最小</a>
+                  </li>
+                  <li class="nav-item" data-dismiss="modal" aria-label="Close">
+                    <a id="btn_fullScreen" class="nav-link" href="javascript:void(0)" onclick="fullScreen()">全屏</a>
+                  </li>
+                  <li class="nav-item" data-dismiss="modal" aria-label="Close">
+                    <a id="btn_close" class="nav-link" href="javascript:void(0)" onclick="kill()">关闭</a>
+                  </li>
+                </ul>
               </div>
+
               <div class="modal-body">
                 <iframe></iframe>
               </div>
+
             </div>
           </div>
       </div>
 
     </div>
 
+</div>
+
+<iframe id="fullScreenFrame" hidden></iframe>
+
+<div class="exitFullScreen" onclick="exitFullScreen()" hidden>
+  <button class="btn btn-danger">退出全屏</button>
 </div>

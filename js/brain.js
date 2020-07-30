@@ -78,3 +78,25 @@ function createContainer(system){
     //离开网页关闭容器
     window.addEventListener('beforeunload',kill);
 }
+
+function fullScreen(){
+    document.querySelector("#btn_mini").click();
+    setTimeout(()=>{
+        var iframe = document.querySelector("#shell").querySelector("iframe");
+        var fullScreenFrame = document.querySelector("#fullScreenFrame");
+        fullScreenFrame.src = iframe.src;
+        iframe.src = "";
+        fullScreenFrame.removeAttribute("hidden");
+    },500);
+    document.querySelector(".exitFullScreen").removeAttribute("hidden");
+}
+
+function exitFullScreen(){
+    var iframe = document.querySelector("#shell").querySelector("iframe");
+    var fullScreenFrame = document.querySelector("#fullScreenFrame");
+    iframe.src = fullScreenFrame.src;
+    fullScreenFrame.src = "";
+    fullScreenFrame.setAttribute("hidden","hidden");
+    document.querySelector("#showModal").click();
+    document.querySelector(".exitFullScreen").setAttribute("hidden","hidden");
+}
