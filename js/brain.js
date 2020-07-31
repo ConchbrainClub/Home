@@ -28,8 +28,7 @@ function create(system){
         });
     }
     else{
-        kill();
-        setTimeout(create,1000,system);
+        alert("请先关闭当前运行中环境");
     }
 }
 
