@@ -28,7 +28,7 @@ function create(system){
         });
     }
     else{
-        alert("请先关闭当前运行中环境");
+        alert("请先关闭当前运行中的环境");
     }
 }
 
