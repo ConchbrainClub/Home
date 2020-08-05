@@ -122,13 +122,17 @@ function reconnect(){
 
 function showRunning(){
     if(container.id){
-        document.querySelector("#running").removeAttribute("hidden");
-        document.querySelector("#containerSystem").innerText = container.system;
-        document.querySelector("#containerId").innerText = container.id;
-        document.querySelector("#containerTime").innerText = container.time + " min ago";
+        try {
+            document.querySelector("#running").removeAttribute("hidden");
+            document.querySelector("#containerSystem").innerText = container.system;
+            document.querySelector("#containerId").innerText = container.id;
+            document.querySelector("#containerTime").innerText = container.time + " min ago";
+        } catch (error) {}
     }
     else{
-        document.querySelector("#running").setAttribute("hidden","hidden");
+        try {
+            document.querySelector("#running").setAttribute("hidden","hidden");
+        } catch (error) {}
     }
     setTimeout(showRunning,2000);
 }
