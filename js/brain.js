@@ -4,7 +4,7 @@ var container = {
     time: undefined
 }
 
-var baseUrl = "https://www.ccczg.site/web-terminal"
+var baseUrl = "https://www.ccczg.site/cloudshell"
 
 function create(system){
     if(!container.id){
