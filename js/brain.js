@@ -132,3 +132,5 @@ function showRunning(){
     }
     setTimeout(showRunning,2000);
 }
+
+showRunning();
