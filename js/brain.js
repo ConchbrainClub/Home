@@ -116,7 +116,7 @@ function exitFullScreen(){
 }
 
 function reconnect(){
-    var url = "/" + container.id;
+    var url = baseUrl + "/" + container.id;
     document.querySelector("#shell").querySelector("iframe").src = url;
 }
 
