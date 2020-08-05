@@ -103,6 +103,9 @@
                 <h5 class="modal-title h4" id="exampleModalXlLabel">CloudShell</h5>
 
                 <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                    <a id="btn_mini" class="nav-link" href="javascript:void(0)" onclick="reconnect()">重连</a>
+                  </li>
                   <li class="nav-item" data-dismiss="modal" aria-label="Close">
                     <a id="btn_mini" class="nav-link" href="javascript:void(0)">最小</a>
                   </li>
@@ -132,3 +135,5 @@
 <div class="exitFullScreen" onclick="exitFullScreen()" hidden>
   <button class="btn btn-danger">退出全屏</button>
 </div>
+
+<script>showRunning();</script>

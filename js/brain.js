@@ -115,6 +115,11 @@ function exitFullScreen(){
     document.querySelector("nav").removeAttribute("hidden");
 }
 
+function reconnect(){
+    var url = "/" + container.id;
+    document.querySelector("#shell").querySelector("iframe").src = url;
+}
+
 function showRunning(){
     if(container.id){
         document.querySelector("#running").removeAttribute("hidden");
@@ -127,5 +132,3 @@ function showRunning(){
     }
     setTimeout(showRunning,2000);
 }
-
-showRunning();
