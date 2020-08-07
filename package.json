@@ -19,8 +19,5 @@
     "url": "https://github.com/Conch-brain-Club/Conch-brain-Club.github.io/issues"
   },
   "homepage": "https://github.com/Conch-brain-Club/Conch-brain-Club.github.io#readme",
-  "dependencies": {
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1"
-  }
+  "dependencies": {}
 }
