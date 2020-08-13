@@ -29,14 +29,14 @@
     },
     {
       "title": "goproxy.cn",
-      "cover": "/articles/resource/page17/2.png",
+      "cover": "/articles/resource/page17/5.png",
       "desc": "中国最可靠的 Go 模块代理。",
       "link": "https://github.com/goproxy/goproxy.cn",
       "language": "HTML"
     },
     {
       "title": "icons",
-      "cover": "/articles/resource/page17/4.png",
+      "cover": "/articles/resource/page17/6.png",
       "desc": "Bootstrap 官方开源SVG图标库引导。",
       "link": "https://github.com/twbs/icons",
       "language": "JavaScript"
