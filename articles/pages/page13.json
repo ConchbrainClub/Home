@@ -1,10 +1,10 @@
 [ 
     {
-    "title":"wordcloud2. js",
-    "cover":"/articles/resource/page13/1.png",
-    "desc":"使用js创建html的词云图。",
-    "link":"https://github.com/timdream/wordcloud2.js",
-    "language":"JavaScript"
+        "title":"wordcloud2. js",
+        "cover":"/articles/resource/page13/1.png",
+        "desc":"使用js创建html的词云图。",
+        "link":"https://github.com/timdream/wordcloud2.js",
+        "language":"JavaScript"
     },
     {
         "title":"nginx ui",
