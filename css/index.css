@@ -1,11 +1,19 @@
 body{
     padding-top: 50px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .logo{
     width: 30px;
     height: 30px;
     border-radius: 5px;
+}
+
+#content {
+    flex: 1;
+    padding: 0;
 }
 
 #loading{
