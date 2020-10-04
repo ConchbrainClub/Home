@@ -1,10 +1,10 @@
-var container = {
+let container = {
     id: undefined,
     system: undefined,
     time: undefined
 }
 
-var baseUrl = "https://www.ccczg.site/cloudshell"
+let baseUrl = "https://www.ccczg.site/cloudshell"
 
 function create(system){
     if(!container.id){
@@ -34,13 +34,13 @@ function create(system){
 
 function tryConnect(){
     if(container.id){
-        var num = Math.round((Math.random()*100000)).toString();
-        var str = prompt("请输入"+num);
+        let num = Math.round((Math.random()*100000)).toString();
+        let str = prompt("请输入"+num);
         if(!str || str==""){
             kill();
         }
         else if(str == num){
-            var url = baseUrl + "/" + container.id;
+            let url = baseUrl + "/" + container.id;
             document.querySelector("#shell").querySelector("iframe").src = url;
         }
         else{
@@ -94,8 +94,8 @@ function createContainer(system){
 function fullScreen(){
     document.querySelector("#btn_mini").click();
     setTimeout(()=>{
-        var iframe = document.querySelector("#shell").querySelector("iframe");
-        var fullScreenFrame = document.querySelector("#fullScreenFrame");
+        let iframe = document.querySelector("#shell").querySelector("iframe");
+        let fullScreenFrame = document.querySelector("#fullScreenFrame");
         fullScreenFrame.src = iframe.src;
         iframe.src = "";
         fullScreenFrame.removeAttribute("hidden");
@@ -105,8 +105,8 @@ function fullScreen(){
 }
 
 function exitFullScreen(){
-    var iframe = document.querySelector("#shell").querySelector("iframe");
-    var fullScreenFrame = document.querySelector("#fullScreenFrame");
+    let iframe = document.querySelector("#shell").querySelector("iframe");
+    let fullScreenFrame = document.querySelector("#fullScreenFrame");
     iframe.src = fullScreenFrame.src;
     fullScreenFrame.src = "";
     fullScreenFrame.setAttribute("hidden","hidden");
@@ -116,7 +116,7 @@ function exitFullScreen(){
 }
 
 function reconnect(){
-    var url = baseUrl + "/" + container.id;
+    let url = baseUrl + "/" + container.id;
     document.querySelector("#shell").querySelector("iframe").src = url;
 }
 

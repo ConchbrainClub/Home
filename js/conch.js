@@ -1,5 +1,5 @@
-var currentPage = 0;
-var config = undefined;
+let currentPage = 0;
+let config = undefined;
 
 function loadConfig(){
     request("/articles/config.json?" + Math.random(), (result)=>{
@@ -10,12 +10,12 @@ function loadConfig(){
 }
 
 function showTimeline(){
-    var list = document.querySelector("#timeline > ul");
+    let list = document.querySelector("#timeline > ul");
     list.innerHTML = "";
-    var endIndex = config.length-10 > 0 ? 10 : config.length;
+    let endIndex = config.length-10 > 0 ? 10 : config.length;
     
-    for(var i=0; i<endIndex; i++){
-        var li = document.createElement("li");
+    for(let i=0; i<endIndex; i++){
+        let li = document.createElement("li");
         li.className = "list-group-item";
         li.innerText = config[i].date;
         li.setAttribute("onclick","loadDatePage(" + i.toString() + ")");
@@ -36,7 +36,7 @@ function loadData(){
     
     nextState(true);
 
-    var page = config[currentPage];
+    let page = config[currentPage];
 
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
@@ -47,12 +47,12 @@ function loadData(){
             nextState(false);
 
             if(currentPage==config.length-1){
-                var btn = document.querySelector("#layout button");
+                let btn = document.querySelector("#layout button");
                 btn.querySelector("span").innerText = "没有更多了";
                 btn.setAttribute("disabled","deiabled");
             }
             else{
-                var btn = document.querySelector("#layout button");
+                let btn = document.querySelector("#layout button");
                 btn.querySelector("span").innerText = "加载更多";
             }
         }
@@ -60,7 +60,7 @@ function loadData(){
 }
 
 function showDate(date){
-    var element = document.createElement("h1");
+    let element = document.createElement("h1");
     element.className = "display-4 m-3";
     element.innerText = date;
     document.querySelector("#articles").appendChild(element);
@@ -71,49 +71,49 @@ function getNum(articles){
 }
 
 function showData(articles){
-    var rowNum = getNum(articles);
+    let rowNum = getNum(articles);
 
-    for(var i=0;i<rowNum;i++){
-        var row = document.createElement("div");
+    for(let i=0;i<rowNum;i++){
+        let row = document.createElement("div");
         row.className = "row";
 
-        for(var j=0;j<2;j++){
+        for(let j=0;j<2;j++){
 
-            var index = i*2+j;
-            var article = articles[index];
+            let index = i*2+j;
+            let article = articles[index];
 
             if(index<articles.length){
 
-                var col = document.createElement("div");
+                let col = document.createElement("div");
                 col.className = "col-md-6";
 
-                var card = document.createElement("div");
+                let card = document.createElement("div");
                 card.className = "card mb-3";
 
-                var cover = document.createElement("div");
+                let cover = document.createElement("div");
                 cover.className = "cover";
 
-                var coverlink = document.createElement("a");
+                let coverlink = document.createElement("a");
                 coverlink.href = article.link;
                 coverlink.target = "blank";
                 coverlink.style.backgroundImage = "url("+ article.cover +")";
 
-                var cardBody = document.createElement("div");
+                let cardBody = document.createElement("div");
                 cardBody.className = "card-body";
 
-                var title = document.createElement("h5");
+                let title = document.createElement("h5");
                 title.className = "card-title";
 
-                var link = document.createElement("a");
+                let link = document.createElement("a");
                 link.href = article.link;
                 link.target = "blank";
                 link.innerText = article.title;
                 
-                var desc = document.createElement("p");
+                let desc = document.createElement("p");
                 desc.className = "card-text";
                 desc.innerText = article.desc;
                 
-                var lang = document.createElement("p");
+                let lang = document.createElement("p");
                 lang.className = "card-text";
                 lang.innerText = "语言：" + article.language;
                 
@@ -144,8 +144,8 @@ function loadNext(){
 }
 
 function nextState(flag){
-    var btn = document.querySelector("#layout button");
-    var loadNext = btn.querySelector("#loadingNext");
+    let btn = document.querySelector("#layout button");
+    let loadNext = btn.querySelector("#loadingNext");
 
     if(flag){
         loadNext.removeAttribute("hidden");

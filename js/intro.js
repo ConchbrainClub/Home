@@ -1,5 +1,5 @@
 function createVideo(){
-    var video = document.createElement("iframe");
+    let video = document.createElement("iframe");
     video.classList.add("modal-content");
     video.setAttribute("width","800");
     video.setAttribute("height","600");

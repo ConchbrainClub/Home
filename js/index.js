@@ -15,7 +15,7 @@ function navigation(name){
 
     loadingState(true);
     document.querySelector("#main").innerHTML = "";
-    var url = "/view/" + name +".html";
+    let url = "/view/" + name +".html";
     request(url,(data) => {
         if(data!=undefined){
             document.querySelector("#main").innerHTML = data;
@@ -33,7 +33,7 @@ function navigation(name){
 }
 
 function loadingState(flag){
-    var loadingPage = document.querySelector("#loading");
+    let loadingPage = document.querySelector("#loading");
     if(flag){
         loadingPage.removeAttribute("hidden");
     }
@@ -44,7 +44,7 @@ function loadingState(flag){
 
 function inject(){
     document.querySelectorAll("#main > script").forEach(element => {
-        var src = element.getAttribute("src");
+        let src = element.getAttribute("src");
         request(src,(data) => {
             if(data==undefined){
                 console.log("inject error");
@@ -67,9 +67,9 @@ function init(){
         navigation(e.state.page);
     }
 
-    var href = window.location.href;
+    let href = window.location.href;
     if(href.includes("#")){
-        var page = href.substring(href.indexOf("#")+1);
+        let page = href.substring(href.indexOf("#")+1);
         navigation(page);
     }
     else{
