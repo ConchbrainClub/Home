@@ -129,10 +129,10 @@ function showData(articles){
                 card.appendChild(cardBody);
 
                 col.appendChild(card);
+
+                row.appendChild(col);
             }
-
-            row.appendChild(col);
-
+            
             document.querySelector("#articles").appendChild(row);
         }
     }
