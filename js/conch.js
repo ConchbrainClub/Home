@@ -1,5 +1,5 @@
-let currentPage = 0;
-let config = undefined;
+var currentPage = 0;
+var config = undefined;
 
 function loadConfig(){
     request("/articles/config.json?" + Math.random(), (result)=>{
