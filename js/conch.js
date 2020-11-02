@@ -10,19 +10,22 @@ function loadConfig(){
 }
 
 function showTimeline(){
-    var list = document.querySelector("#timeline > ul");
+    let list = document.querySelector("#timeline > ul");
     list.innerHTML = "";
-    var endIndex = config.length-10 > 0 ? 10 : config.length;
+    let endIndex = config.length-10 > 0 ? 10 : config.length;
     
-    for(var i=0; i<endIndex; i++){
-        var li = document.createElement("li");
-        li.className = "list-group-item";
-        li.innerText = config[i].date;
-        li.setAttribute("onclick","loadDatePage(" + i.toString() + ")");
-        if(i==currentPage){
-            li.style.color = "red";
+    for(let i=0; i<endIndex; i++){
+
+        let style = "";
+        if(i == currentPage){
+            style = "style='color:red;'";
         }
-        list.appendChild(li);
+
+        let html = `
+            <li class="list-group-item" ${style} onclick="loadDatePage(${i})">${config[i].date}</li>
+        `;
+
+        list.innerHTML += html;
     }
 }
 
@@ -36,7 +39,7 @@ function loadData(){
     
     nextState(true);
 
-    var page = config[currentPage];
+    let page = config[currentPage];
 
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
@@ -47,12 +50,12 @@ function loadData(){
             nextState(false);
 
             if(currentPage==config.length-1){
-                var btn = document.querySelector("#layout button");
+                let btn = document.querySelector("#layout button");
                 btn.querySelector("span").innerText = "没有更多了";
                 btn.setAttribute("disabled","deiabled");
             }
             else{
-                var btn = document.querySelector("#layout button");
+                let btn = document.querySelector("#layout button");
                 btn.querySelector("span").innerText = "加载更多";
             }
         }
@@ -60,10 +63,13 @@ function loadData(){
 }
 
 function showDate(date){
-    var element = document.createElement("h1");
-    element.className = "display-4 m-3";
-    element.innerText = date;
-    document.querySelector("#articles").appendChild(element);
+    let html = `
+        <div class="col-md-12">
+            <h1 class="display-4 m-3">${date}</h1>
+        </div>
+    `;
+
+    document.querySelector("#articles").innerHTML += html;
 }
 
 function getNum(articles){
@@ -71,71 +77,27 @@ function getNum(articles){
 }
 
 function showData(articles){
-    var rowNum = getNum(articles);
 
-    for(var i=0;i<rowNum;i++){
-        var row = document.createElement("div");
-        row.className = "row";
+    articles.forEach(article => {
+        let html = `
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="cover">
+                        <a href="${article.link}" style="background-image:url('${article.cover}');"></a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="${article.link}">${article.title}</a>
+                        </h5>
+                        <p class="card-text">${article.desc}</p>
+                        <p class="card-text">语言：${article.language}</p>
+                    </div>
+                </div>
+            </div>
+        `;
 
-        for(var j=0;j<2;j++){
-
-            var index = i*2+j;
-            var article = articles[index];
-
-            if(index<articles.length){
-
-                var col = document.createElement("div");
-                col.className = "col-md-6";
-
-                var card = document.createElement("div");
-                card.className = "card mb-3";
-
-                var cover = document.createElement("div");
-                cover.className = "cover";
-
-                var coverlink = document.createElement("a");
-                coverlink.href = article.link;
-                coverlink.target = "blank";
-                coverlink.style.backgroundImage = "url("+ article.cover +")";
-
-                var cardBody = document.createElement("div");
-                cardBody.className = "card-body";
-
-                var title = document.createElement("h5");
-                title.className = "card-title";
-
-                var link = document.createElement("a");
-                link.href = article.link;
-                link.target = "blank";
-                link.innerText = article.title;
-                
-                var desc = document.createElement("p");
-                desc.className = "card-text";
-                desc.innerText = article.desc;
-                
-                var lang = document.createElement("p");
-                lang.className = "card-text";
-                lang.innerText = "语言：" + article.language;
-                
-                title.appendChild(link);
-
-                cardBody.appendChild(title);
-                cardBody.appendChild(desc);
-                cardBody.appendChild(lang);
-
-                cover.appendChild(coverlink);
-
-                card.appendChild(cover);
-                card.appendChild(cardBody);
-
-                col.appendChild(card);
-            }
-
-            row.appendChild(col);
-
-            document.querySelector("#articles").appendChild(row);
-        }
-    }
+        document.querySelector("#articles").innerHTML += html;
+    });
 }
 
 function loadNext(){
@@ -144,8 +106,8 @@ function loadNext(){
 }
 
 function nextState(flag){
-    var btn = document.querySelector("#layout button");
-    var loadNext = btn.querySelector("#loadingNext");
+    let btn = document.querySelector("#layout button");
+    let loadNext = btn.querySelector("#loadingNext");
 
     if(flag){
         loadNext.removeAttribute("hidden");

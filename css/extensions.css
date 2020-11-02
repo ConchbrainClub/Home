@@ -1,0 +1,9 @@
+.banner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: black;
+}
+
+.banner h2 {
+    color: white;
+}

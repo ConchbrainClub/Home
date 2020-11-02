@@ -1,0 +1,30 @@
+[
+    {
+        "title": "glow",
+        "cover": "/articles/resource/page23/1.gif",
+        "desc": "在 CLI 中渲染 Markdown。",
+        "link": "https://github.com/charmbracelet/glow",
+        "language": "Go"
+    },
+    {
+        "title": "ish",
+        "cover": "/articles/resource/page23/2.png",
+        "desc": "iOS 的 Linux Shell。",
+        "link": "https://github.com/ish-app/ish",
+        "language": "C"
+    },
+    {
+        "title": "starship",
+        "cover": "/articles/resource/page23/3.gif",
+        "desc": "支持任何 Shell 的自定义提示。",
+        "link": "https://github.com/starship/starship",
+        "language": "Rust"
+    },
+    {
+        "title": "SpaceVim",
+        "cover": "/articles/resource/page23/4.png",
+        "desc": "终极 vim 配置。",
+        "link": "https://github.com/SpaceVim/SpaceVim",
+        "language": "Vim script"
+    }
+]
