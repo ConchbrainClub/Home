@@ -17,4 +17,5 @@ jobs:
     
     - name: deploy to server
       run: |
-        sudo apt search sshpass
+        sudo apt install sshpass
+        sshpass -p ${{ password }} ssh root@${{ ip }}
