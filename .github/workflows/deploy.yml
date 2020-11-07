@@ -27,6 +27,7 @@ jobs:
       with:
       host: ${{ secrets.HOST }}
       user: ${{ secrets.USER }}
+      port: ${{ secrets.PORT }}
       pass: ${{ secrets.PASSWORD }}
       scp: |
         ./* => /root/html
