@@ -18,5 +18,4 @@ jobs:
     - name: deploy to server
       run: |
         sudo apt install sshpass
-        sshpass -p ${{ PASSWORD }} ${{ SSH }}
-        neofetch
+        
