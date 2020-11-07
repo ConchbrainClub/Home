@@ -17,6 +17,18 @@ jobs:
     
     - name: deploy to server
       run: |
-        sudo apt install sshpass
-        sshpass -p ${{ secrets.PASSWORD }} ${{ secrets.SSH }}
+        ls
+        dirs
+
+    - name: scp ssh pipelines
+      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+      env:
+        LASTSSH: "Doing something after copying"
+      with:
+      host: ${{ secrets.HOST }}
+      user: ${{ secrets.USER }}
+      pass: ${{ secrets.PASSWORD }}
+      scp: |
+        ./* => /root/html
+      last_ssh: |
         neofetch
