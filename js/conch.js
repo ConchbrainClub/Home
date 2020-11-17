@@ -83,11 +83,11 @@ function showData(articles){
             <div class="col-md-6">
                 <div class="card mb-3">
                     <div class="cover">
-                        <a href="${article.link}" style="background-image:url('${article.cover}');"></a>
+                        <a href="${article.link}" style="background-image:url('${article.cover}');" target="_blank"></a>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a href="${article.link}">${article.title}</a>
+                            <a href="${article.link}" target="_blank">${article.title}</a>
                         </h5>
                         <p class="card-text">${article.desc}</p>
                         <p class="card-text">语言：${article.language}</p>
