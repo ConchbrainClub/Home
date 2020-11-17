@@ -1,0 +1,37 @@
+[
+    {
+        "title": "winapps",
+        "cover": "/articles/resource/page24/1.gif",
+        "desc": "在 Linux 中运行 Windows 应用程序。",
+        "link": "https://github.com/Fmstrat/winapps",
+        "language": "Shell"
+    },
+    {
+        "title": "MudBlazor",
+        "cover": "/articles/resource/page24/2.png",
+        "desc": "基于 Material design 的 Blazor 组件库。",
+        "link": "https://github.com/Garderoben/MudBlazor",
+        "language": "C#"
+    },
+    {
+        "title": "vscode-browser-preview",
+        "cover": "/articles/resource/page24/3.gif",
+        "desc": "VSCode 中可以调试的真实浏览器预览。",
+        "link": "https://github.com/auchenberg/vscode-browser-preview",
+        "language": "TypeScript"
+    },
+    {
+        "title": "onebot",
+        "cover": "/articles/resource/page24/4.png",
+        "desc": "Nodejs 原生 QQ 机器人框架 WebApi。",
+        "link": "https://github.com/takayama-lily/onebot",
+        "language": "JavaScript"
+    },
+    {
+        "title": "Avalonia",
+        "cover": "/articles/resource/page24/5.png",
+        "desc": "基于 XAML 的 .NET 跨平台 UI 框架。",
+        "link": "https://github.com/AvaloniaUI/Avalonia",
+        "language": "C#"
+    }
+]
