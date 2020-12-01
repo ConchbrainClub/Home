@@ -26,7 +26,7 @@ function navigation(name){
             window.scrollTo(0,0);
         }
         else{
-            navigation("home");
+            navigation("notfound");
             loadingState(false);
         }
     });
