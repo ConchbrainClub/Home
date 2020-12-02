@@ -1,0 +1,28 @@
+<div style="text-align:center; padding: 50px 20px;">
+    <h1>Welcome to ConchBrain KV Storage</h1>
+
+    <hr />
+    <h2>Get Data</h2>
+    <p>api: http://storage.conchbrain.club/get</p>
+    <p>method: GET</p>
+    <p>para: key</p>
+    <h3>case</h3>
+    <p>curl http://storage.conchbrain.club/get?key</p>
+    <p>response: value</p>
+
+    <hr />
+    <h2>Put Data</h2>
+    <p>api: https://storage.conchbrain.club/put</p>
+    <p>method: POST</p>
+    <p>para: Request Body</p>
+
+    <h3>case 1</h3>
+    <p>Require Content-Type: application/x-www-form-urlencoded</p>
+    <p>body: key=name&value=conchbrain</p>
+    <p>response: Put successful</p>
+
+    <h3>case 2</h3>
+    <p>Require Content-Type: application/json</p>
+    <p>body: { "key": "name", "value": "conchbrain" }</p>
+    <p>response: Put successful</p>
+<div>
