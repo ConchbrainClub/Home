@@ -13,6 +13,7 @@ function request(href,callback){
 
 function navigation(name){
 
+    window.scrollTo(0,0);
     loadingState(true);
     document.querySelector("#main").innerHTML = "";
     let url = "/view/" + name +".html";
@@ -23,7 +24,6 @@ function navigation(name){
             url = "#"+name;
             history.pushState({page: name},name,url);
             loadingState(false);
-            window.scrollTo(0,0);
         }
         else{
             navigation("notfound");
