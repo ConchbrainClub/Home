@@ -50,3 +50,36 @@ footer a {
 ::-webkit-scrollbar-track{
     background-color: black;
 }
+
+.gototop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.gototop.active {
+    visibility: visible;
+    color: white;
+}
+
+.gototop a {
+    width: 50px;
+    height: 50px;
+    display: table;
+    background: gray;
+    opacity: 50%;
+    padding-top: 9px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.gototop a i {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+}

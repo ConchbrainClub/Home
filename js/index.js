@@ -60,9 +60,24 @@ function initMenu(){
     });
 }
 
+function MoveTop()
+{
+	$("html,body").animate({ scrollTop: 0 }, 500);
+}
+
 function init(){
     initMenu();
-    
+
+    window.onscroll = () => {
+        // check is top
+        if (window.scrollY > 200) {
+            document.querySelector(".js-top").classList.add("active");
+        }
+        else {
+            document.querySelector(".js-top").classList.remove("active");
+        }
+    }
+
     window.onpopstate = (e)=>{
         navigation(e.state.page);
     }
