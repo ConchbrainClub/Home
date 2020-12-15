@@ -19,7 +19,8 @@ function create(system){
 
                     //延迟容器生命周期
                     delay();
-                    tryConnect();
+                    document.querySelector("#loadingStatus").setAttribute("hidden","");
+                    setTimeout(tryConnect,500);
                 });
             }
             else{
@@ -59,8 +60,8 @@ function kill(){
         }).then((res)=>{
             res.text().then((text)=>{
                 if(text.includes(container.id)){
-                    container.id = undefined;
                     document.querySelector("#shell").querySelector("iframe").src = "";
+                    container.id = undefined;
                 }
                 else{
                     console.log("kill container defeat");
