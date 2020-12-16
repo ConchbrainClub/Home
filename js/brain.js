@@ -19,7 +19,7 @@ function create(system){
 
                     //延迟容器生命周期
                     delay();
-                    document.querySelector("#loadingStatus").setAttribute("hidden","");
+                    document.querySelector("#loadingStatus").setAttribute("hidden","hidden");
                     setTimeout(tryConnect,500);
                 });
             }
