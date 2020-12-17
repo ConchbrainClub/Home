@@ -21,10 +21,10 @@
         "language": "TypeScript"
     },
     {
-        "title": "onebot",
+        "title": "oicq",
         "cover": "/articles/resource/page24/4.png",
-        "desc": "Nodejs 原生 QQ 机器人框架 WebApi。",
-        "link": "https://github.com/takayama-lily/onebot",
+        "desc": "Node.js 实现的安卓协议QQ机器人。",
+        "link": "https://github.com/takayama-lily/oicq",
         "language": "JavaScript"
     },
     {
