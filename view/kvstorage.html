@@ -8,7 +8,13 @@
     <p>Api: https://storage.conchbrain.workers.dev/demobucket/set</p>
     <p>Method: POST</p>
     <p>Content-Type: application/json</p>
-    <p>Para: Request body with key and value ( key must be a string )</p>
+    <p>
+    Para:
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    Custom bucket name (eg. demobucket)
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    Request body with key and value ( key must be a string )
+    </p>
 
     <h5>Example</h5>
     <p>
@@ -24,7 +30,12 @@
     <h2>Get Data</h2>
     <p>Api: https://storage.conchbrain.workers.dev/demobucket/get</p>
     <p>Method: GET</p>
-    <p>Para: key</p>
+    <p>Para:
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    Custom bucket name (eg. demobucket)
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    key
+    </p>
     <h5>Example</h5>
     <p>curl https://storage.conchbrain.workers.dev/demobucket/get?hello</p>
     <p><strong>Response:</strong> "Welcome"</p>
@@ -33,6 +44,9 @@
     <h2>Get All Data</h2>
     <p>Api: https://storage.conchbrain.workers.dev/demobucket</p>
     <p>Method: GET</p>
+    <p>Para:
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+        Custom bucket name (eg. demobucket)
     <h5>Example</h5>
     <p>curl https://storage.conchbrain.workers.dev/demobucket</p>
     <p><strong>Response:</strong> JsonStr</p>
@@ -41,7 +55,12 @@
     <h2>Delete Data</h2>
     <p>Api: https://storage.conchbrain.workers.dev/demobucket/delete</p>
     <p>Method: GET</p>
-    <p>Para: key</p>
+    <p>Para:
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    Custom bucket name (eg. demobucket)
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    key
+    </p>
     <h5>Example</h5>
     <p>curl https://storage.conchbrain.workers.dev/demobucket/delete?hello</p>
     <p><strong>Response:</strong> "Delete successful"</p>
