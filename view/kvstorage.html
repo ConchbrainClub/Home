@@ -1,0 +1,48 @@
+<div class="container mt-5 mb-5">
+    <div class="text-center">
+        <h1>Welcome to ConchBrain KV Storage</h1>
+        <p>A KV Storage base on serverless</p>
+    </div>
+    <hr />
+    <h2>Set Data</h2>
+    <p>Api: https://storage.conchbrain.workers.dev/bucket/set</p>
+    <p>Method: POST</p>
+    <p>Content-Type: application/json</p>
+    <p>Para: Request body with key and value ( key must be a string )</p>
+
+    <h5>Example</h5>
+    <p>
+    curl -X POST 'https://storage.conchbrain.workers.dev/bucket/set' \
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    -H 'Content-Type: application/json;' \
+    <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+    -d '{ "key": "hello", "value": "Welcome" }'
+    </p>
+    <p><strong>Response:</strong> "Put successful"</p>
+
+    <hr />
+    <h2>Get Data</h2>
+    <p>Api: https://storage.conchbrain.workers.dev/bucket/get</p>
+    <p>Method: GET</p>
+    <p>Para: key</p>
+    <h5>Example</h5>
+    <p>curl https://storage.conchbrain.workers.dev/bucket/get?hello</p>
+    <p><strong>Response:</strong> "Welcome"</p>
+
+    <hr />
+    <h2>Get All Data</h2>
+    <p>Api: https://storage.conchbrain.workers.dev/bucket</p>
+    <p>Method: GET</p>
+    <h5>Example</h5>
+    <p>curl https://storage.conchbrain.workers.dev/bucket</p>
+    <p><strong>Response:</strong> JsonStr</p>
+  
+   <hr />
+    <h2>Delete Data</h2>
+    <p>Api: https://storage.conchbrain.workers.dev/bucket/delete</p>
+    <p>Method: GET</p>
+    <p>Para: key</p>
+    <h5>Example</h5>
+    <p>curl https://storage.conchbrain.workers.dev/bucket/delete?hello</p>
+    <p><strong>Response:</strong> "Delete successful"</p>
+<div>
