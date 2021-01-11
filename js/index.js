@@ -1,5 +1,3 @@
-let scripts = [];
-
 function request(href,callback){
     $.ajax({
         type: 'GET',
@@ -47,17 +45,7 @@ function loadingState(flag){
 function inject(){
     document.querySelectorAll("#main > script").forEach(element => {
         let src = element.getAttribute("src");
-
-        if(scripts.indexOf(src) < 0) {
-            request(src,(data) => {
-                if(data == undefined) {
-                    console.log("inject error");
-                }
-                else{
-                    scripts.push(src);
-                }
-            });
-        }
+        request(src,(data) => {});
     });
 }
 

@@ -1,10 +1,10 @@
-let container = {
+var container = {
     id: undefined,
     system: undefined,
     time: undefined
 }
 
-let baseUrl = "https://www.ccczg.site/cloudshell"
+var baseUrl = "https://www.ccczg.site/cloudshell"
 
 function create(system){
     if(!container.id){
