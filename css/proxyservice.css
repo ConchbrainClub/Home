@@ -1,0 +1,12 @@
+#bg{
+    height: 70vh; 
+    background-attachment:fixed;
+}
+
+#bg input{
+    height: 45px;
+    background-color: white;
+    border-radius: 50px;
+    width: 100%;
+    opacity: 75%;
+}
