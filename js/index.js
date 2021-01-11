@@ -1,3 +1,5 @@
+let scripts = [];
+
 function request(href,callback){
     $.ajax({
         type: 'GET',
