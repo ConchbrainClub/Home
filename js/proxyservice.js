@@ -5,11 +5,9 @@ function search(){
     let href = document.querySelector("#link").value;
     if(href){
         if(isHref(href)){
-            alert("isHref");
             window.open(proxyHref + href);
         }
         else{
-            alert("notHref");
             window.open(searchHref + href);
         }
     }
