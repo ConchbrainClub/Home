@@ -1,9 +1,17 @@
 var proxyHref = "https://proxy.conchbrain.workers.dev/-----";
+var searchHref = "https://proxy.conchbrain.workers.dev/-----https://cn.bing.com/search?FORM=BESBTB&ensearch=1&q=";
 
 function search(){
     let href = document.querySelector("#link").value;
     if(href){
-        window.open(proxyHref + href);
+        if(isHref(href)){
+            alert("isHref");
+            window.open(proxyHref + href);
+        }
+        else{
+            alert("notHref");
+            window.open(searchHref + href);
+        }
     }
 }
 
@@ -16,6 +24,11 @@ function initBackground(){
         document.querySelector("#bg").style.backgroundImage = `url("${bgHref}")`;
         document.querySelector("#bg h1").style.color = "white";
     });
+}
+
+function isHref(href){
+    var reg = /^((http|https):\/\/)?(([A-Za-z0-9]+-[A-Za-z0-9]+|[A-Za-z0-9]+)\.)+([A-Za-z]+)[/\?\:]?.*$/;
+    return reg.test(href);
 }
 
 document.querySelector("input").onkeydown = () => {
