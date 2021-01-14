@@ -1,5 +1,5 @@
 var proxyHref = "https://proxy.conchbrain.workers.dev/-----";
-var searchHref = "https://proxy.conchbrain.workers.dev/-----https://cn.bing.com/search?ensearch=1&q=";
+var searchHref = "https://proxy.conchbrain.workers.dev/-----https://duckduckgo.com/?q=";
 
 function search(){
     let href = document.querySelector("#link").value;
