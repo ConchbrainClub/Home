@@ -1,6 +1,7 @@
 #bg{
     height: 80vh; 
     background-attachment:fixed;
+    background-color: whitesmoke;
 }
 
 #input-group{
