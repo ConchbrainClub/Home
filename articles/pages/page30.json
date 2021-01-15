@@ -30,7 +30,7 @@
     {
         "title": "Sora",
         "cover": "/articles/resource/page30/5.png",
-        "desc": ".Net 5 异步 QQ 机器人框架。",
+        "desc": ".NET 的异步 QQ 机器人框架。",
         "link": "https://github.com/Yukari316/Sora",
         "language": "C#"
     }
