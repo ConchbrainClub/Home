@@ -62,6 +62,7 @@ function kill(){
                 if(text.includes(container.id)){
                     document.querySelector("#shell").querySelector("iframe").src = "";
                     container.id = undefined;
+                    document.querySelector("#loadingStatus").removeAttribute("hidden");
                 }
                 else{
                     console.log("kill container defeat");
