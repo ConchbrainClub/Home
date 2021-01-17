@@ -1,11 +1,25 @@
 function createVideo(){
-    let video = document.createElement("iframe");
-    video.classList.add("modal-content");
-    video.setAttribute("width","800");
-    video.setAttribute("height","600");
-    video.setAttribute("allowfullscreen","true");
-    video.setAttribute("src","https://jx.618g.com/m3u8-dp.php?url=https://ifeng.com-v-ifeng.com/20180712/19376_e9b30d57/index.m3u8");
-    document.querySelector(".modal-dialog").appendChild(video);
+    let html = `
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h5 class="modal-title h4" id="exampleModalXlLabel">
+                <span>ConchBrainClub</span>
+            </h5>
+
+            <ul class="nav justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" onclick="removeVideo()" aria-label="关闭">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </ul>
+        </div>
+
+        <iframe class="modal-content" width="800" height="600" allowfullscreen="true" src="https://v.qq.com/txp/iframe/player.html?vid=i054487uic5"></iframe>
+
+    </div>
+    `;
+
+    document.querySelector(".modal-dialog").innerHTML = html;
 }
 
 function removeVideo(){
