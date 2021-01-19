@@ -3,8 +3,9 @@ var container = {
     system: undefined,
     time: undefined
 }
+var forward = [];
 
-var baseUrl = "https://www.ccczg.site/cloudshell"
+var baseUrl = "https://cloudshell.conchbrain.club"
 
 function create(system){
     if(!container.id){
@@ -122,19 +123,44 @@ function reconnect(){
     document.querySelector("#shell").querySelector("iframe").src = url;
 }
 
+function forwardPort(){
+    let port = document.querySelector("#port").value;
+    if(!isNaN(port)){
+        fetch(`${baseUrl}/forward?id=${container.id}&port=${port}`).then((res) => {
+            if(res.status == 200){
+                alert("转发端口成功");
+                forward.push(port);
+            }
+            else{
+                alert("转发端口失败");
+            }
+        });
+    }
+    document.querySelector("#port").value = undefined;
+}
+
 function showRunning(){
     if(container.id){
-        try {
-            document.querySelector("#running").removeAttribute("hidden");
-            document.querySelector("#containerSystem").innerText = container.system;
-            document.querySelector("#containerId").innerText = container.id;
-            document.querySelector("#containerTime").innerText = container.time + " min ago";
-        } catch (error) {}
+        //显示当前运行状态
+        document.querySelector("#running").removeAttribute("hidden");
+        document.querySelector("#containerSystem").innerText = container.system;
+        document.querySelector("#containerId").innerText = container.id;
+        document.querySelector("#containerTime").innerText = container.time + " min ago";
+
+        //显示端口转发状态
+        let forwardHtml = "";
+        forward.forEach((port) => {
+            let url = `${baseUrl}/forward/${container.id}/${port}`;
+            forwardHtml += `
+                <p class="card-text">
+                    ${port} -> <a target="_blank" href="${url}">${url}</a>
+                </p>
+            `;
+        });
+        document.querySelector("#forwardPorts").innerHTML = forwardHtml;
     }
     else{
-        try {
-            document.querySelector("#running").setAttribute("hidden","hidden");
-        } catch (error) {}
+        document.querySelector("#running").setAttribute("hidden","hidden");
     }
     setTimeout(showRunning,2000);
 }
