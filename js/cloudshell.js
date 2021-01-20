@@ -63,6 +63,7 @@ function kill(){
                 if(text.includes(container.id)){
                     document.querySelector("#shell").querySelector("iframe").src = "";
                     container.id = undefined;
+                    forward = [];
                     document.querySelector("#loadingStatus").removeAttribute("hidden");
                 }
                 else{
