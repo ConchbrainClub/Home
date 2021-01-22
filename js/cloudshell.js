@@ -3,7 +3,7 @@ var container = {
     system: undefined,
     time: undefined
 }
-var forward = [];
+var worker,forward = [];
 
 var baseUrl = "https://cloudshell.conchbrain.club"
 
@@ -19,7 +19,11 @@ function create(system){
                     container.time = -1;
 
                     //延迟容器生命周期
-                    delay();
+                    worker = new Worker("./js/cloudshell_worker.js");
+                    worker.postMessage(container.id);
+                    worker.onmessage = () => {
+                        container.time++;
+                    };
                     document.querySelector("#loadingStatus").setAttribute("hidden","hidden");
                     setTimeout(tryConnect,500);
                 });
@@ -59,32 +63,17 @@ function kill(){
         fetch(baseUrl + "/kill?" + container.id,{
             method:"GET"
         }).then((res)=>{
-            res.text().then((text)=>{
-                if(text.includes(container.id)){
-                    document.querySelector("#shell").querySelector("iframe").src = "";
-                    container.id = undefined;
-                    forward = [];
-                    document.querySelector("#loadingStatus").removeAttribute("hidden");
-                }
-                else{
-                    console.log("kill container defeat");
-                }
-            });
+            if(res.status == 200){
+                document.querySelector("#shell").querySelector("iframe").src = "";
+                container.id = undefined;
+                forward = [];
+                worker.terminate();
+                document.querySelector("#loadingStatus").removeAttribute("hidden");
+            }
+            else{
+                console.log("kill container defeat");
+            }
         });
-    }
-}
-
-function delay(){
-    if(container.id){
-        fetch(baseUrl + "/delay?" + container.id,{
-            method:"GET"
-        }).then((res)=>{
-            res.text().then((text)=>{
-                console.log(text);
-                container.time++;
-            });
-        });
-        setTimeout(delay,1000*60);
     }
 }
 
