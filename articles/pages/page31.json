@@ -30,7 +30,7 @@
     {
         "title": "stronginject",
         "cover": "/articles/resource/page31/5.png",
-        "desc": "roslyn 源生成器实现的 .NET 编译时依赖注入。",
+        "desc": "Roslyn 源生成器实现的 .NET 编译时依赖注入。",
         "link": "https://github.com/YairHalberstadt/stronginject",
         "language": "C#"
     }
