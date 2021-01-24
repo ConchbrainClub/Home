@@ -15,16 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: deploy to server
+    - name: update
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest
-      env:
-        LASTSSH: "Doing something after copying"
       with:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USER }}
         port: ${{ secrets.PORT }}
         pass: ${{ secrets.PASSWORD }}
-        scp: |
-          ./* => /home/repository/home
         last_ssh: |
-          nginx reload
+          git pull
