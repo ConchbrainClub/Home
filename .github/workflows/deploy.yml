@@ -23,4 +23,5 @@ jobs:
         port: ${{ secrets.PORT }}
         pass: ${{ secrets.PASSWORD }}
         last_ssh: |
+          cd /home/repository/home/
           git pull
