@@ -18,14 +18,14 @@
         "cover": "/articles/resource/page31/3.png",
         "desc": "数据可视化和数据探索平台。",
         "link": "https://github.com/apache/superset",
-        "language": "Rust"
+        "language": "Python"
     },
     {
         "title": "windows-rs",
         "cover": "/articles/resource/page31/4.png",
         "desc": "Rust 的 Windows Runtime API 。",
         "link": "https://github.com/microsoft/windows-rs",
-        "language": "C#"
+        "language": "Rust"
     },
     {
         "title": "stronginject",
