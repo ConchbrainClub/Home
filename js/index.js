@@ -1,13 +1,13 @@
 let scripts = [];
 let baiduPushLink = "http://data.zz.baidu.com/urls?site=https://conchbrain.club&token=5ZG2x3hnCmpkN4Qh";
 let siteMap = `
-https://conchbrain.club/#home
-https://conchbrain.club/#intro
-https://conchbrain.club/#conch
-https://conchbrain.club/#cloudshell
-https://conchbrain.club/#kvstorage
-https://conchbrain.club/#corsproxy
-https://conchbrain.club/#proxyservice
+    https://conchbrain.club/#home
+    https://conchbrain.club/#intro
+    https://conchbrain.club/#conch
+    https://conchbrain.club/#cloudshell
+    https://conchbrain.club/#kvstorage
+    https://conchbrain.club/#corsproxy
+    https://conchbrain.club/#proxyservice
 `;
 
 function pushToBaidu(){
