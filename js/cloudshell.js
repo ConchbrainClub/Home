@@ -150,7 +150,9 @@ function showRunning(){
         document.querySelector("#forwardPorts").innerHTML = forwardHtml;
     }
     else{
-        document.querySelector("#running").setAttribute("hidden","hidden");
+        try {
+            document.querySelector("#running").setAttribute("hidden","hidden");
+        } catch (error) {}
     }
     setTimeout(showRunning,2000);
 }
