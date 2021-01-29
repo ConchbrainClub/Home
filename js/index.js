@@ -103,7 +103,7 @@ function init(){
         navigation(page);
     }
     else{
-        //navigation("home");
+        navigation("home");
     }
 
     pushToBaidu();
