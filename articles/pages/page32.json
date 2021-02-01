@@ -33,5 +33,19 @@
         "desc": "猫的 HTTP 状态码 API。",
         "link": "https://github.com/httpcats/http.cat",
         "language": "JavaScript"
+    },
+    {
+        "title": "micropython",
+        "cover": "/articles/resource/page32/6.png",
+        "desc": "微控制器和受限系统的 Python 实现。",
+        "link": "https://github.com/micropython/micropython",
+        "language": "C"
+    },
+    {
+        "title": "jerryscript",
+        "cover": "/articles/resource/page32/7.png",
+        "desc": "用于物联网的轻量级 JavaScript 引擎。",
+        "link": "https://github.com/jerryscript-project/jerryscript",
+        "language": "C"
     }
 ]
