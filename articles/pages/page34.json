@@ -1,0 +1,37 @@
+[
+    {
+        "title": "colorpedia",
+        "cover": "/articles/resource/page34/4.gif",
+        "desc": "Python 的自然语言处理库。",
+        "link": "https://github.com/joowani/colorpedia",
+        "language": "Python"
+    },
+    {
+        "title": "peachpie",
+        "cover": "/articles/resource/page34/5.png",
+        "desc": ".NET 的 PHP 编译器和运行时",
+        "link": "https://github.com/peachpiecompiler/peachpie",
+        "language": "C#"
+    },
+    {
+        "title": "spaCy",
+        "cover": "/articles/resource/page34/2.png",
+        "desc": "Python 的自然语言处理库。",
+        "link": "https://github.com/explosion/spaCy",
+        "language": "Python"
+    },
+    {
+        "title": "LibreTranslate",
+        "cover": "/articles/resource/page34/1.png",
+        "desc": "免费开源的机器翻译 API。",
+        "link": "https://github.com/uav4geo/LibreTranslate",
+        "language": "HTML"
+    },
+    {
+        "title": "macdriver",
+        "cover": "/articles/resource/page34/3.png",
+        "desc": "Python 的自然语言处理库。",
+        "link": "https://github.com/progrium/macdriver",
+        "language": "Go"
+    }
+]
