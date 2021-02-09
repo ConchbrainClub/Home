@@ -12,9 +12,15 @@ function loadConfig(){
 function showTimeline(){
     let list = document.querySelector("#timeline > ul");
     list.innerHTML = "";
-    let endIndex = config.length-10 > 0 ? 10 : config.length;
+
+    let startIndex = currentPage - 4 < 0 ? 0 : currentPage - 4;
     
-    for(let i=0; i<endIndex; i++){
+    if(startIndex + 9 >= config.length)
+        startIndex = config.length - 9;
+    
+    let endIndex = startIndex + 9 < config.length ? startIndex + 9 : config.length;
+
+    for(let i = startIndex; i < endIndex; i++){
 
         let style = "";
         if(i == currentPage){
