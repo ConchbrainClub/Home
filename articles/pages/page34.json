@@ -16,7 +16,7 @@
     {
         "title": "macdriver",
         "cover": "/articles/resource/page34/3.png",
-        "desc": "Python 的自然语言处理库。",
+        "desc": "用于 Go 的本机 Mac API。",
         "link": "https://github.com/progrium/macdriver",
         "language": "Go"
     },
