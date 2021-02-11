@@ -33,10 +33,10 @@ function showTimeline(){
 
         list.innerHTML += html;
     }
-    window.scrollTo(0,0);
 }
 
 function loadDatePage(index){
+    window.scrollTo(0,0);
     document.querySelector("#articles").innerHTML = null;
     currentPage = index;
     loadData();
