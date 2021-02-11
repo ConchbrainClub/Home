@@ -1,5 +1,7 @@
 let scripts = [];
 let baiduPushLink = "http://data.zz.baidu.com/urls?site=https://conchbrain.club&token=5ZG2x3hnCmpkN4Qh";
+let client_id = "68fd42deb929a87fc8b9";
+let redirect_uri = "https://oauth.conchbrain.workers.dev/redirect";
 let siteMap = `
     https://conchbrain.club/#home
     https://conchbrain.club/#intro
@@ -15,6 +17,11 @@ function pushToBaidu(){
         method: "POST",
         body: siteMap
     });
+}
+
+function login() {
+    let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+    location.href = href;
 }
 
 function request(href,callback){
