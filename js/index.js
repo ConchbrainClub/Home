@@ -35,13 +35,13 @@ function navigation(name){
     window.scrollTo(0,0);
     loadingState(true);
     document.querySelector("#main").innerHTML = "";
-    let url = "/view/" + name +".html";
+    let url = "/view/" + name + ".html";
     request(url,(data) => {
-        if(data!=undefined){
+        if(data != undefined){
             document.querySelector("#main").innerHTML = data;
             inject();
-            url = "#"+name;
-            history.pushState({page: name},name,url);
+            url = "#" + name;
+            history.pushState({page: name}, name, url);
             loadingState(false);
         }
         else{
@@ -98,6 +98,14 @@ function init(){
     }
 
     let href = window.location.href;
+
+    if(href.includes("#login")){
+        let access_token = location.href.substring(location.href.indexOf("?") + 1);
+        localStorage.setItem("access_token", access_token);
+        navigation("home");
+        return;
+    }
+
     if(href.includes("#")){
         let page = href.substring(href.indexOf("#")+1);
         navigation(page);
