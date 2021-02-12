@@ -24,6 +24,10 @@ function login() {
     location.href = href;
 }
 
+function showInfo(){
+    alert("login successful");
+}
+
 function request(href,callback){
     $.ajax({
         type: 'GET',
@@ -109,8 +113,7 @@ function init(){
     if(href.includes("#login")){
         let access_token = location.href.substring(location.href.indexOf("?") + 1);
         localStorage.setItem("access_token", access_token);
-        navigation("home");
-        return;
+        window.location.href = "/#home";
     }
 
     if(href.includes("#")){
@@ -121,5 +124,6 @@ function init(){
         navigation("home");
     }
 
+    showInfo();
     pushToBaidu();
 }
