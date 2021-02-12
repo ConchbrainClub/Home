@@ -24,16 +24,16 @@ function login() {
     location.href = href;
 }
 
-function showInfo(){
+function getInfo(){
     $.ajax({
         type: 'GET',
-        url: "https://cors.conchbrain.workers.dev?https://api.github.com/user",
+        url: "https://api.github.com/user",
         headers: {
             accept: 'application/json',
             Authorization: `token ${localStorage.getItem("access_token")}`
         },
         success: (data) => {
-            console.log(data);
+            localStorage.setItem("user",data);
         },
         error: () => {
             alert("Get info defeat");
@@ -137,6 +137,6 @@ function init(){
         navigation("home");
     }
 
-    showInfo();
+    getInfo();
     pushToBaidu();
 }
