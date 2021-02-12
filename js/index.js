@@ -27,13 +27,13 @@ function login() {
 function showInfo(){
     $.ajax({
         type: 'GET',
-        url: "https://api.github.com/user",
+        url: "https://cors.conchbrain.workers.dev?https://api.github.com/user",
         headers: {
             accept: 'application/json',
             Authorization: `token ${localStorage.getItem("access_token")}`
         },
         success: (data) => {
-            alert(data);
+            console.log(data);
         },
         error: () => {
             alert("Get info defeat");
