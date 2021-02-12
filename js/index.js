@@ -11,6 +11,7 @@ let siteMap = `
     https://conchbrain.club/#corsproxy
     https://conchbrain.club/#proxyservice
 `;
+let user = undefined;
 
 function pushToBaidu(){
     fetch("https://cors.conchbrain.workers.dev/?" + baiduPushLink,{
@@ -25,20 +26,30 @@ function login() {
 }
 
 function getInfo(){
-    $.ajax({
-        type: 'GET',
-        url: "https://api.github.com/user",
-        headers: {
-            accept: 'application/json',
-            Authorization: `token ${localStorage.getItem("access_token")}`
-        },
-        success: (data) => {
-            localStorage.setItem("user",JSON.stringify(data));
-        },
-        error: () => {
-            alert("Get info defeat");
-        }
-    });
+
+    user = JSON.parse(localStorage.getItem("user"));
+
+    if(!user && localStorage.getItem("access_token")){
+        $.ajax({
+            type: 'GET',
+            url: "https://api.github.com/user",
+            headers: {
+                accept: 'application/json',
+                Authorization: `token ${localStorage.getItem("access_token")}`
+            },
+            success: (data) => {
+                localStorage.setItem("user",JSON.stringify(data));
+                user = data;
+            },
+            error: () => {
+                alert("Get info defeat");
+            }
+        });
+    }
+}
+
+function showInfo(){
+    alert(user.name);
 }
 
 function request(href,callback){
@@ -138,5 +149,6 @@ function init(){
     }
 
     getInfo();
+    showInfo();
     pushToBaidu();
 }
