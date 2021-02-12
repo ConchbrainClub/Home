@@ -25,7 +25,20 @@ function login() {
 }
 
 function showInfo(){
-    alert("login successful");
+    $.ajax({
+        type: 'GET',
+        url: "https://api.github.com/user",
+        headers: {
+            accept: 'application/json',
+            Authorization: `token ${localStorage.getItem("access_token")}`
+        },
+        success: (data) => {
+            alert(data);
+        },
+        error: () => {
+            alert("Get info defeat");
+        }
+    });
 }
 
 function request(href,callback){
@@ -113,7 +126,7 @@ function init(){
     if(href.includes("#login")){
         let access_token = location.href.substring(location.href.indexOf("?") + 1);
         localStorage.setItem("access_token", access_token);
-        window.location.href = "/#home";
+        window.location.href = "/";
     }
 
     if(href.includes("#")){
