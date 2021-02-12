@@ -33,7 +33,7 @@ function getInfo(){
             Authorization: `token ${localStorage.getItem("access_token")}`
         },
         success: (data) => {
-            localStorage.setItem("user",data);
+            localStorage.setItem("user",JSON.stringify(data));
         },
         error: () => {
             alert("Get info defeat");
