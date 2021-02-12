@@ -25,11 +25,15 @@ function login() {
     location.href = href;
 }
 
-function getInfo(){
+function getUser(){
+    
+    let access_token = localStorage.getItem("access_token");
+    let user = JSON.parse(localStorage.getItem("user"));
 
-    user = JSON.parse(localStorage.getItem("user"));
+    if(!access_token)
+        return;
 
-    if(!user && localStorage.getItem("access_token")){
+    if(!user){
         $.ajax({
             type: 'GET',
             url: "https://api.github.com/user",
@@ -38,18 +42,21 @@ function getInfo(){
                 Authorization: `token ${localStorage.getItem("access_token")}`
             },
             success: (data) => {
-                localStorage.setItem("user",JSON.stringify(data));
-                user = data;
+                localStorage.setItem("user", JSON.stringify(data));
+                showInfo(data);
             },
             error: () => {
                 alert("Get info defeat");
             }
         });
+        return;
     }
+
+    showInfo(user);
 }
 
-function showInfo(){
-    alert(user.name);
+function showInfo(user){
+    document.querySelector("#userName").innerText = user.name;
 }
 
 function request(href,callback){
@@ -148,7 +155,6 @@ function init(){
         navigation("home");
     }
 
-    getInfo();
-    showInfo();
+    getUser();
     pushToBaidu();
 }
