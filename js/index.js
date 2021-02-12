@@ -21,8 +21,11 @@ function pushToBaidu(){
 }
 
 function login() {
-    let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
-    location.href = href;
+    if(!localStorage.getItem("access_token")){
+        let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+        location.href = href;
+    }
+    alert("开发中....");
 }
 
 function getUser(){
