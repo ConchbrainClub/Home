@@ -49,7 +49,8 @@ function getUser(){
             showInfo();
         },
         error: () => {
-            alert("登陆失败");
+            localStorage.removeItem("access_token");
+            alert("登陆失败，请重新登录");
         }
     });
 }
