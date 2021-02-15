@@ -54,6 +54,7 @@ function getUser(){
 
 function showInfo(){
     document.querySelector("#userName").setAttribute("data-toggle", "dropdown");
+    document.querySelector("#userName").classList.add("dropdown-toggle");
     document.querySelector("#userName").innerText = userInfo.name;
 }
 
