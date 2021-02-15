@@ -21,21 +21,18 @@ function pushToBaidu(){
 }
 
 function login() {
-    if(!localStorage.getItem("access_token")){
-        let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
-        location.href = href;
-    }
-    else{
-        alert("开发中....");
-    }
+    let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+    location.href = href;
 }
 
 function getUser(){
     
     let access_token = localStorage.getItem("access_token");
 
-    if(!access_token)
+    if(!access_token){
+        document.querySelector("#userName").onclick = login;
         return;
+    }
 
     $.ajax({
         type: 'GET',
@@ -56,6 +53,7 @@ function getUser(){
 }
 
 function showInfo(){
+    document.querySelector("#userName").setAttribute("data-toggle", "dropdown");
     document.querySelector("#userName").innerText = userInfo.name;
 }
 
