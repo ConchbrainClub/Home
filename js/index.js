@@ -25,6 +25,11 @@ function login() {
     location.href = href;
 }
 
+function logout(){
+    localStorage.removeItem("access_token");
+    location.reload();
+}
+
 function getUser(){
     
     let access_token = localStorage.getItem("access_token");
@@ -46,8 +51,8 @@ function getUser(){
             showInfo();
         },
         error: () => {
-            localStorage.removeItem("access_token");
             alert("登陆失败，请重新登录");
+            logout();
         }
     });
 }
