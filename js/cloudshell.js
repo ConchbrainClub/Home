@@ -8,6 +8,7 @@ var worker,forward = [];
 var baseUrl = "https://cloudshell.conchbrain.club"
 
 function create(system){
+    
     if(!container.id){
         window.fetch(baseUrl + "/create?" + system,{
             method:"GET"
@@ -78,6 +79,17 @@ function kill(){
 }
 
 function createContainer(system){
+    
+    // 用户是否登录
+    if(!userInfo){
+        alert("登录后才能使用");
+        return;
+    }
+
+    document.querySelectorAll(".system").forEach(ele => {
+        ele.setAttribute("data-target", "#shell");
+    });
+
     //创建容器
     create(system);
     //离开网页关闭容器
