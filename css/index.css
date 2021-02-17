@@ -20,6 +20,11 @@ body{
     padding-bottom: 1rem;
 }
 
+#loading .row {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 #loading .box {
     height: 13px;
     margin-bottom: 20px;
