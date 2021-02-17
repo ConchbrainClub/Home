@@ -186,9 +186,14 @@ function changeFavourite(favourite,starId) {
 }
 
 if(userInfo)
-    request(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`,(data) => {
-        console.log(JSON.parse(data));
-        loadConfig();
+    fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`).then((res) => {
+        if(res.status == 404)
+            loadConfig();
+        else
+            res.json().then((data) => {
+                console.log(data);
+                loadConfig();
+            });
     });
 else
     loadConfig();
