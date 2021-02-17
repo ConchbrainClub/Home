@@ -185,6 +185,16 @@ function changeFavourite(favourite,starId) {
     });
 }
 
+function showToast() {
+    if(!localStorage.getItem("toasted_conch"))
+        document.querySelector("#liveToast").className = "toast show";
+}
+
+function closeToast() {
+    document.querySelector("#liveToast").className = "toast hide";
+    localStorage.setItem("toasted_conch", "yes");
+}
+
 if(userInfo)
     fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`).then((res) => {
         if(res.status == 404)
@@ -197,3 +207,5 @@ if(userInfo)
     });
 else
     loadConfig();
+
+showToast();
