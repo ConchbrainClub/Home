@@ -39,18 +39,19 @@ function getUser(){
         return;
     }
 
-    $.ajax({
-        type: 'GET',
-        url: "https://api.github.com/user",
+    fetch("https://api.github.com/user",{
         headers: {
             accept: 'application/json',
             Authorization: `token ${localStorage.getItem("access_token")}`
-        },
-        success: (data) => {
-            userInfo = data;
-            showInfo();
-        },
-        error: () => {
+        }
+    }).then(res => {
+        if(res.status == 200){
+            res.json().then(data => {
+                userInfo = data;
+                showInfo();
+            })
+        }
+        else{
             alert("登陆失败，请重新登录");
             logout();
         }
@@ -143,6 +144,8 @@ function init(){
         navigation(e.state.page);
     }
 
+    getUser();
+
     let href = window.location.href;
 
     if(href.includes("#login")){
@@ -159,6 +162,5 @@ function init(){
         navigation("home");
     }
 
-    getUser();
     pushToBaidu();
 }
