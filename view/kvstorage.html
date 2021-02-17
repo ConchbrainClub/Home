@@ -26,7 +26,7 @@
     <pre>
     curl -X PUT 'https://storage.conchbrain.workers.dev/demo/set' \
         -H 'Content-Type: application/json;' \
-        -d '{ "key": "hello", "value": "Welcome" }'
+        -d '{ "key": "Hi", "value": "ConchBrain KVStorage" }'
     </pre>
     <p class="alert alert-success"><strong>Response:</strong> "Put successful"</p>
 
@@ -42,7 +42,7 @@
     </p>
     <h5>Example:</h5>
     <pre>
-        curl https://storage.conchbrain.workers.dev/demo/get?hello
+    curl https://storage.conchbrain.workers.dev/demo/get?Hi
     </pre>
     <p class="alert alert-success"><strong>Response:</strong> "Welcome"</p>
 
@@ -55,14 +55,14 @@
         Custom bucket name (eg. demo)
     <h5>Example:</h5>
     <pre>
-        curl https://storage.conchbrain.workers.dev/demo
+    curl https://storage.conchbrain.workers.dev/demo
     </pre>
     <p class="alert alert-success"><strong>Response:</strong> JsonStr</p>
   
     <hr />
     <h2>Delete Data</h2>
     <p>Api: https://storage.conchbrain.workers.dev/demo/delete</p>
-    <p>Method: GET</p>
+    <p>Method: DELETE</p>
     <p>Para:
     <br/>&nbsp;&nbsp;&nbsp;&nbsp;
     Custom bucket name (eg. demo)
@@ -71,7 +71,7 @@
     </p>
     <h5>Example:</h5>
     <pre>
-        curl https://storage.conchbrain.workers.dev/demo/delete?hello
+    curl -X DELETE https://storage.conchbrain.workers.dev/demo/delete?hello
     </pre>
     <p class="alert alert-success"><strong>Response:</strong> "Delete successful"</p>
 <div>
