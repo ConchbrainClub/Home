@@ -142,7 +142,7 @@ async function init(){
         navigation(e.state.page);
     }
 
-    await getUser();
+    getUser();
 
     let href = window.location.href;
 
