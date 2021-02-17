@@ -1,0 +1,16 @@
+[
+    {
+        "title": "re3",
+        "cover": "/articles/resource/page35/1.png",
+        "desc": "GTA III 和 GTAVC 的反向源代码。",
+        "link": "https://github.com/GTAmodding/re3",
+        "language": "C++"
+    },
+    {
+        "title": "lite",
+        "cover": "/articles/resource/page35/2.png",
+        "desc": "用 Lua 编写的轻量级文本编辑器",
+        "link": "https://github.com/rxi/lite",
+        "language": "Lua"
+    }
+]
