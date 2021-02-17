@@ -42,3 +42,7 @@
     margin: 10px;
     background-color: whitesmoke;
 }
+
+.star {
+    cursor: pointer;
+}

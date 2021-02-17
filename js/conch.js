@@ -120,7 +120,7 @@ function showData(articles){
                     <div class="card-body">
                         <h5 class="card-title">
                             <a href="${article.link}" target="_blank">${article.title}</a>
-                            <div id="${starId}" class="float-right">${showStar(article, starId)}</div>
+                            <div id="${starId}" class="float-right star">${showStar(article, starId)}</div>
                         </h5>
                         <p class="card-text">${article.desc}</p>
                         <p class="card-text">语言：${article.language}</p>
