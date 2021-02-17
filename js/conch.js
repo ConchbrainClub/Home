@@ -191,7 +191,7 @@ if(userInfo)
             loadConfig();
         else
             res.json().then((data) => {
-                console.log(data);
+                favourites = data;
                 loadConfig();
             });
     });
