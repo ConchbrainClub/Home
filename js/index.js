@@ -30,7 +30,7 @@ function logout(){
     location.reload();
 }
 
-function getUser(){
+async function getUser(){
 
     let access_token = localStorage.getItem("access_token");
 
@@ -39,23 +39,21 @@ function getUser(){
         return;
     }
 
-    fetch("https://api.github.com/user",{
+    let res = await fetch("https://api.github.com/user",{
         headers: {
             accept: 'application/json',
             Authorization: `token ${localStorage.getItem("access_token")}`
         }
-    }).then(res => {
-        if(res.status == 200){
-            res.json().then(data => {
-                userInfo = data;
-                showInfo();
-            })
-        }
-        else{
-            alert("登陆失败，请重新登录");
-            logout();
-        }
     });
+    
+    if(res.status == 200){
+        userInfo = await res.json();
+        showInfo();
+    }
+    else{
+        alert("登陆失败，请重新登录");
+        logout();
+    }
 }
 
 function showInfo(){
@@ -127,7 +125,7 @@ function MoveTop()
 	$("html,body").animate({ scrollTop: 0 }, 500);
 }
 
-function init(){
+async function init(){
     initMenu();
 
     window.onscroll = () => {
@@ -144,7 +142,7 @@ function init(){
         navigation(e.state.page);
     }
 
-    getUser();
+    await getUser();
 
     let href = window.location.href;
 
