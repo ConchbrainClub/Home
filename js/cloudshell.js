@@ -172,4 +172,6 @@ function showRunning(){
 showRunning();
 
 if(!userInfo)
-    toast("CloudShell", "登录后，即可使用 CloudShell 全部功能。");
+    toast("CloudShell", "登录后，即可使用 CloudShell 的全部功能。");
+else
+    toast("CloudShell", "端口转发功能已经可用，快去试试吧。");
