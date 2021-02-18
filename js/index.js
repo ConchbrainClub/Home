@@ -75,6 +75,13 @@ function request(href,callback){
     });
 }
 
+function guid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c) {
+        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
+}
+
 function navigation(name){
 
     window.scrollTo(0,0);
@@ -123,6 +130,35 @@ function initMenu(){
 function MoveTop()
 {
 	$("html,body").animate({ scrollTop: 0 }, 500);
+}
+
+function toast(title, content) {
+
+    let toastId = guid();
+    
+    let html = `
+        <div id="${toastId}" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+            <img src="/favicon.ico" height="20" width="20" class="rounded mr-2">
+            <strong class="mr-auto">${title}</strong>
+            <button type="button" class="ml-2 mb-1 close" aria-label="Close" onclick="closeToast('${toastId}')">
+                <span aria-hidden="true">×</span>
+            </button>
+            </div>
+            <div class="toast-body">
+                ${content}
+            </div>
+        </div>
+    `;
+    document.querySelector("#toastArea").innerHTML += html;
+
+    setTimeout(closeToast, 8000, toastId);
+}
+
+function closeToast(toastId) {
+    let toast = document.getElementById(toastId);
+    if(toast)
+        toast.remove();
 }
 
 async function init(){

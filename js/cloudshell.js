@@ -170,3 +170,6 @@ function showRunning(){
 }
 
 showRunning();
+
+if(!userInfo)
+    toast("CloudShell", "登录后，即可使用 CloudShell 全部功能。");

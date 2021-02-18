@@ -99,13 +99,6 @@ function showStar(article, starId) {
     `;
 }
 
-function guid() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c) {
-        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-        return v.toString(16);
-    });
-}
-
 function showData(articles){
 
     articles.forEach(article => {
@@ -185,16 +178,6 @@ function changeFavourite(favourite,starId) {
     });
 }
 
-function showToast() {
-    if(!localStorage.getItem("toasted_conch"))
-        document.querySelector("#liveToast").className = "toast show";
-}
-
-function closeToast() {
-    document.querySelector("#liveToast").className = "toast hide";
-    localStorage.setItem("toasted_conch", "yes");
-}
-
 if(userInfo)
     fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`).then((res) => {
         if(res.status == 404)
@@ -208,4 +191,5 @@ if(userInfo)
 else
     loadConfig();
 
-showToast();
+if(!userInfo)
+    toast("推荐", "登录账号后，即可收藏项目推荐。");

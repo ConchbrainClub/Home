@@ -130,3 +130,11 @@ footer a {
     vertical-align: middle;
     font-weight: bold;
 }
+
+#toastArea {
+    position: fixed;
+    padding: 30px;
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+}
