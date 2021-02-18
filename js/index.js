@@ -21,6 +21,7 @@ function pushToBaidu(){
 }
 
 function login() {
+    localStorage.setItem("lastHref", location.href);
     let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
     location.href = href;
 }
@@ -185,7 +186,7 @@ async function init(){
     if(href.includes("#login")){
         let access_token = location.href.substring(location.href.indexOf("?") + 1);
         localStorage.setItem("access_token", access_token);
-        window.location.href = "/";
+        location.href = localStorage.getItem("lastHref");
     }
 
     if(href.includes("#")){
