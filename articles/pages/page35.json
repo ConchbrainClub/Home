@@ -30,7 +30,7 @@
     {
         "title": "tuxi",
         "cover": "/articles/resource/page35/5.gif",
-        "desc": "立即获得您问题答案的 CLI 的助手 。",
+        "desc": "立即获得您问题答案的 CLI 助手 。",
         "link": "https://github.com/Bugswriter/tuxi",
         "language": "Shell"
     }
