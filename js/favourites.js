@@ -56,6 +56,8 @@ function delFavourite(favourite, id){
     if(favourites.indexOf(favourite) >= 0)
         favourites.splice(favourites.indexOf(decodeURI(favourite)),1);
     
+    toast("收藏", "删除中，请稍候......");
+    
     // 保存个人数据
     fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/set`,{
         method: "PUT",
@@ -67,10 +69,12 @@ function delFavourite(favourite, id){
             "value": favourites
         })
     }).then((res) => {
-        if(res.status == 200)
+        if(res.status == 200){
             document.getElementById(id).remove();
+            toast("收藏", "删除成功。");
+        }
         else
-            alert("删除失败");
+            toast("收藏", "删除失败，请重试。");
     });
 }
 

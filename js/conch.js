@@ -160,6 +160,8 @@ function changeFavourite(favourite,starId) {
     else
         favourites.splice(favourites.indexOf(decodeURI(favourite)),1);
 
+    toast("推荐", "保存中，请稍候......");
+
     // 保存个人数据
     fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/set`,{
         method: "PUT",
@@ -171,10 +173,12 @@ function changeFavourite(favourite,starId) {
             "value": favourites
         })
     }).then((res) => {
-        if(res.status == 200)
+        if(res.status == 200){
             document.getElementById(starId).innerHTML = showStar(JSON.parse(decodeURI(favourite)),starId);
+            toast("推荐", "保存成功。");
+        }
         else
-            alert("收藏失败");
+            toast("推荐", "保存失败，请重试。");
     });
 }
 
