@@ -1,6 +1,12 @@
 var favourites = [];
 
-async function showFavourites() { 
+async function showFavourites() {
+
+    if(!userInfo){
+        navigation("home");
+        return;
+    }
+
     let res = await fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`);
     favourites = await res.json();
 
