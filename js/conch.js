@@ -41,6 +41,7 @@ function loadDatePage(index){
     window.scrollTo(0,0);
     document.querySelector("#articles").innerHTML = null;
     currentPage = index;
+    isFirst = true;
     loadData();
 }
 
