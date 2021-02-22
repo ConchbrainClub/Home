@@ -82,7 +82,7 @@ function guid() {
     });
 }
 
-function navigation(name){
+function navigation(name,isBack = false){
 
     window.scrollTo(0,0);
     loadingState(true);
@@ -93,7 +93,8 @@ function navigation(name){
             document.querySelector("#main").innerHTML = data;
             inject();
             url = "#" + name;
-            history.pushState({page: name}, name, url);
+            if(!isBack)
+                history.pushState({page: name}, name, url);
             loadingState(false);
         }
         else{
@@ -175,7 +176,7 @@ async function init(){
     }
 
     window.onpopstate = (e)=>{
-        navigation(e.state.page);
+        navigation(e.state.page, true);
     }
 
     await getUser();
