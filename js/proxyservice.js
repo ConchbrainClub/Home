@@ -13,14 +13,28 @@ function search(){
     }
 }
 
+function setBackground(bgHref){
+    document.querySelector("#bg").style.backgroundImage = `url("${bgHref}")`;
+    document.querySelector("#bg h1").style.color = "white";
+}
+
 function initBackground(){
+    let date = new Date().getDate().toString();
+    let lastDate = localStorage.getItem("lastDate");
+
+    if(lastDate == date){
+        setBackground(localStorage.getItem("bg"));
+        return;
+    }
+
     let corsProxy = "https://cors.conchbrain.workers.dev/?";
     let api = "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN";
     request(corsProxy + api,(data) => {
         let bgHref = "https://cn.bing.com" + data.images[0].url;
-        console.log(bgHref);
-        document.querySelector("#bg").style.backgroundImage = `url("${bgHref}")`;
-        document.querySelector("#bg h1").style.color = "white";
+        setBackground(bgHref);
+
+        localStorage.setItem("lastDate",date);
+        localStorage.setItem("bg", bgHref);
     });
 }
 
