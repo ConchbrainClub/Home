@@ -33,5 +33,12 @@
         "desc": "免费的软件媒体系统。",
         "link": "https://github.com/jellyfin/jellyfin",
         "language": "C#"
+    },
+    {
+        "title": "dapr",
+        "cover": "/articles/resource/page36/6.png",
+        "desc": "构建分布式应用程序的便携式、事件驱动的运行时。",
+        "link": "https://github.com/dapr/dapr",
+        "language": "C#"
     }
 ]
