@@ -37,7 +37,7 @@ function showTimeline(){
 }
 
 function loadDatePage(index){
-    window.scrollTo(0,0);
+    MoveTop();
     document.querySelector("#articles").innerHTML = null;
     currentPage = index;
     loadData();
@@ -56,16 +56,6 @@ function loadData(){
             showTimeline();
 
             nextState(false);
-
-            if(currentPage==config.length-1){
-                let btn = document.querySelector("#layout button");
-                btn.querySelector("span").innerText = "没有更多了";
-                btn.setAttribute("disabled","deiabled");
-            }
-            else{
-                let btn = document.querySelector("#layout button");
-                btn.querySelector("span").innerText = "加载更多";
-            }
         }
     });
 }
@@ -126,26 +116,13 @@ function showData(articles){
     });
 }
 
-function loadNext(){
-    currentPage++;
-    loadData();
-}
-
 function nextState(flag){
     let loadingBox = document.querySelector("#loadingBox");
-    let btn = document.querySelector("#layout button");
-    let loadNext = btn.querySelector("#loadingNext");
 
-    if(flag){
+    if(flag)
         loadingBox.removeAttribute("hidden");
-        loadNext.removeAttribute("hidden");
-        btn.setAttribute("disabled","deiabled");
-    }
-    else{
+    else
         loadingBox.setAttribute("hidden","hidden");
-        loadNext.setAttribute("hidden","hidden");
-        btn.removeAttribute("disabled");
-    }
 }
 
 function changeFavourite(favourite,starId) {
