@@ -19,5 +19,12 @@
         "desc": "nodejs 高性能、原生、跨平台 GUI 库。",
         "link": "https://github.com/nodegui/svelte-nodegui",
         "language": "TypeScript"
+    },
+    {
+        "title": "nushell",
+        "cover": "/articles/resource/page37/4.gif",
+        "desc": "一种新类型的 shell 。",
+        "link": "https://github.com/nushell/nushell",
+        "language": "Rust"
     }
 ]
