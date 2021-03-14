@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Ryujinx",
+    "cover": "/articles/resource/page39/1.png",
+    "desc": "用C＃编写的实验性Switch仿真器",
+    "link": "https://github.com/Ryujinx/Ryujinx",
+    "language": "C#"
+  },
+  {
+    "title": "Docker-OSX",
+    "cover": "/articles/resource/page39/2.png",
+    "desc": "在Docker容器中运行Mac",
+    "link": "https://github.com/sickcodes/Docker-OSX",
+    "language": "Shell"
+  },
+  {
+    "title": "croc",
+    "cover": "/articles/resource/page39/3.gif",
+    "desc": "一种允许任何两台计算机简单安全地传输文件和文件夹的工具",
+    "link": "https://github.com/schollz/croc",
+    "language": "Go"
+  },
+  {
+    "title": "projector-docker",
+    "cover": "/articles/resource/page39/4.png",
+    "desc": "使用Projector和JetBrains IDE创建和运行Docker容器的一些脚本。",
+    "link": "https://github.com/JetBrains/projector-docker",
+    "language": "Shell"
+  }
+]
