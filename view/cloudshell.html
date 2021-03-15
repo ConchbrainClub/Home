@@ -31,8 +31,8 @@
             <div class="card-body">
               <h5 class="card-title" id="containerSystem">system</h5>
               <p class="card-text" id="containerId">ID</p>
-                      <div id="forwardPorts"></div>
-                      <a href="javascript:void(0)" class="btn btn-info" data-toggle="modal" data-target="#forward">端口映射</a>
+              <div id="forwardPorts"></div>
+              <a href="javascript:void(0)" class="btn btn-info" data-toggle="modal" data-target="#forward">端口映射</a>
               <a id="showModal" href="javascript:void(0)" class="btn btn-success" data-toggle="modal" data-target="#shell">继续使用</a>
               <a href="javascript:void(0)" class="btn btn-danger" onclick="kill()">关闭环境</a>
             </div>
@@ -134,13 +134,13 @@
                   <li class="nav-item">
                     <a id="btn_mini" class="nav-link" href="javascript:void(0)" onclick="reconnect()">重连</a>
                   </li>
-                  <li class="nav-item" data-dismiss="modal" aria-label="Close">
+                  <li class="nav-item" data-dismiss="modal">
                     <a id="btn_mini" class="nav-link" href="javascript:void(0)">最小</a>
                   </li>
-                  <li class="nav-item" data-dismiss="modal" aria-label="Close">
+                  <li class="nav-item" data-dismiss="modal">
                     <a id="btn_fullScreen" class="nav-link" href="javascript:void(0)" onclick="fullScreen()">全屏</a>
                   </li>
-                  <button type="button" class="close" data-dismiss="modal" onclick="kill()" aria-label="关闭">
+                  <button type="button" class="close" data-dismiss="modal" onclick="kill()">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </ul>
