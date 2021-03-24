@@ -26,5 +26,12 @@
         "desc": "在 WSL 中使用 Windows Hello 身份验证。",
         "link": "https://github.com/nullpo-head/WSL-Hello-sudo",
         "language": "Rust"
+    },
+    {
+        "title": "windows-terminal-shaders",
+        "cover": "/articles/resource/page40/5.png",
+        "desc": "复古的 Windows Terminal 着色器。",
+        "link": "https://github.com/Hammster/windows-terminal-shaders",
+        "language": "HLSL"
     }
 ]
