@@ -2,7 +2,7 @@
     {
         "title": "qmlnet",
         "cover": "/articles/resource/page41/1.gif",
-        "desc": "",
+        "desc": ".NET 的 Qt/QML 集成支持。",
         "link": "https://github.com/qmlnet/qmlnet",
         "language": "C#"
     },
