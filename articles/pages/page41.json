@@ -1,0 +1,16 @@
+[
+    {
+        "title": "qmlnet",
+        "cover": "/articles/resource/page41/1.gif",
+        "desc": "",
+        "link": "https://github.com/qmlnet/qmlnet",
+        "language": "C#"
+    },
+    {
+        "title": "PyWebIO",
+        "cover": "/articles/resource/page41/2.gif",
+        "desc": "使用脚本编写交互式 Web 应用。",
+        "link": "https://github.com/wang0618/PyWebIO",
+        "language": "Python"
+    }
+]
