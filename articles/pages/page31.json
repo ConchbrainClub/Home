@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Arbitrium-RAT",
+        "cover": "/articles/resource/page31/1.png",
+        "desc": "跨平台的远程访问特洛伊木马程序。",
+        "link": "https://github.com/BenChaliah/Arbitrium-RAT",
+        "language": "Python"
+    },
+    {
+        "title": "adonis-ui",
+        "cover": "/articles/resource/page31/2.gif",
+        "desc": "适用于 WPF 应用程序的轻量级 UI 工具包。",
+        "link": "https://github.com/benruehl/adonis-ui",
+        "language": "C#"
+    },
+    {
+        "title": "superset",
+        "cover": "/articles/resource/page31/3.png",
+        "desc": "数据可视化和数据探索平台。",
+        "link": "https://github.com/apache/superset",
+        "language": "Python"
+    },
+    {
+        "title": "windows-rs",
+        "cover": "/articles/resource/page31/4.png",
+        "desc": "Rust 的 Windows Runtime API 。",
+        "link": "https://github.com/microsoft/windows-rs",
+        "language": "Rust"
+    },
+    {
+        "title": "stronginject",
+        "cover": "/articles/resource/page31/5.png",
+        "desc": "Roslyn 源生成器实现的 .NET 编译时依赖注入。",
+        "link": "https://github.com/YairHalberstadt/stronginject",
+        "language": "C#"
+    }
+]

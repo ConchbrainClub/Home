@@ -1,0 +1,37 @@
+[
+    {
+        "title": "re3",
+        "cover": "/articles/resource/page35/1.png",
+        "desc": "GTA III 和 GTAVC 的反向源代码。",
+        "link": "https://github.com/GTAmodding/re3",
+        "language": "C++"
+    },
+    {
+        "title": "lite",
+        "cover": "/articles/resource/page35/2.png",
+        "desc": "用 Lua 编写的轻量级文本编辑器",
+        "link": "https://github.com/rxi/lite",
+        "language": "Lua"
+    },
+    {
+        "title": "snitch",
+        "cover": "/articles/resource/page35/3.png",
+        "desc": "查找重复的传递包引用的工具。",
+        "link": "https://github.com/spectresystems/snitch",
+        "language": "C#"
+    },
+    {
+        "title": "AvalonStudio",
+        "cover": "/articles/resource/page35/4.png",
+        "desc": "跨平台 IDE 和 Shell 。",
+        "link": "https://github.com/VitalElement/AvalonStudio",
+        "language": "C#"
+    },
+    {
+        "title": "tuxi",
+        "cover": "/articles/resource/page35/5.gif",
+        "desc": "立即获得您问题答案的 CLI 助手 。",
+        "link": "https://github.com/Bugswriter/tuxi",
+        "language": "Shell"
+    }
+]

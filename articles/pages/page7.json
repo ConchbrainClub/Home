@@ -19,12 +19,5 @@
         "desc":"​​​​将draw.io集成到vscode中，通过设计器生成html/svg/xml等。",
         "link":"https://github.com/hediet/vscode-drawio",
         "language":"TypeScript"
-    },
-    {
-        "title":"TextGlitch",
-        "cover":"/articles/resource/page7/4.gif",
-        "desc":"18种CSS文字损坏特效。",
-        "link":"https://github.com/ConchBrainClub/TextGlitch",
-        "language":"CSS"
     }
 ]

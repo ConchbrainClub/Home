@@ -1,0 +1,44 @@
+[
+    {
+        "title": "EarTrumpet",
+        "cover": "/articles/resource/page28/1.gif",
+        "desc": "现代化 Windows 的音量控制。",
+        "link": "https://github.com/File-New-Project/EarTrumpet",
+        "language": "C#"
+    },
+    {
+        "title": "kivy",
+        "cover": "/articles/resource/page28/2.png",
+        "desc": "Python 的开源，跨平台 UI 框架。",
+        "link": "https://github.com/kivy/kivy",
+        "language": "Python"
+    },
+    {
+        "title": "koishi",
+        "cover": "/articles/resource/page28/3.png",
+        "desc": "一个跨平台 QQ 机器人框架。",
+        "link": "https://github.com/koishijs/koishi",
+        "language": "TypeScript"
+    },
+    {
+        "title": "piping-server",
+        "cover": "/articles/resource/page28/4.gif",
+        "desc": "通过纯 HTTP 在每台设备之间无限传输。",
+        "link": "https://github.com/nwtgck/piping-server",
+        "language": "TypeScript"
+    },
+    {
+        "title": "taskbar-groups",
+        "cover": "/articles/resource/page28/5.png",
+        "desc": "Windows 任务栏组。",
+        "link": "https://github.com/tjackenpacken/taskbar-groups",
+        "language": "C#"
+    },
+    {
+        "title": "wave",
+        "cover": "/articles/resource/page28/6.png",
+        "desc": "Python 的实时 Web 应用和仪表板。",
+        "link": "https://github.com/h2oai/wave",
+        "language": "Python"
+    }
+]

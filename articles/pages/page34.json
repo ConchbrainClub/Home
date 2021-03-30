@@ -1,0 +1,44 @@
+[
+    {
+        "title": "spaCy",
+        "cover": "/articles/resource/page34/1.png",
+        "desc": "Python 的自然语言处理库。",
+        "link": "https://github.com/explosion/spaCy",
+        "language": "Python"
+    },
+    {
+        "title": "peachpie",
+        "cover": "/articles/resource/page34/2.png",
+        "desc": ".NET 的 PHP 编译器和运行时",
+        "link": "https://github.com/peachpiecompiler/peachpie",
+        "language": "C#"
+    },
+    {
+        "title": "macdriver",
+        "cover": "/articles/resource/page34/3.png",
+        "desc": "用于 Go 的本机 Mac API。",
+        "link": "https://github.com/progrium/macdriver",
+        "language": "Go"
+    },
+    {
+        "title": "LibreTranslate",
+        "cover": "/articles/resource/page34/4.png",
+        "desc": "免费开源的机器翻译 API。",
+        "link": "https://github.com/uav4geo/LibreTranslate",
+        "language": "HTML"
+    },
+    {
+        "title": "colorpedia",
+        "cover": "/articles/resource/page34/5.gif",
+        "desc": "用于查找颜色和调色板的命令行工具。",
+        "link": "https://github.com/joowani/colorpedia",
+        "language": "Python"
+    },
+    {
+        "title": "github1s",
+        "cover": "/articles/resource/page34/6.png",
+        "desc": "在浏览器中使用 VSCode 预览 GitHub 代码。",
+        "link": "https://github.com/conwnet/github1s",
+        "language": "TypeScript"
+    }
+]

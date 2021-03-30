@@ -1,0 +1,44 @@
+[
+    {
+        "title": "SnowFS",
+        "cover": "/articles/resource/page36/1.png",
+        "desc": "图形文件的快速的、可扩展的版本控制。",
+        "link": "https://github.com/Snowtrack/SnowFS",
+        "language": "TypeScript"
+    },
+    {
+        "title": "AvaloniaILSpy",
+        "cover": "/articles/resource/page36/2.png",
+        "desc": ".NET 反编译器 ILSpy 的跨平台版本。",
+        "link": "https://github.com/icsharpcode/AvaloniaILSpy",
+        "language": "C#"
+    },
+    {
+        "title": "nw.js",
+        "cover": "/articles/resource/page36/3.png",
+        "desc": "直接从 DOM 调用所有 Node.js 模块。",
+        "link": "https://github.com/nwjs/nw.js",
+        "language": "JavaScript"
+    },
+    {
+        "title": "just",
+        "cover": "/articles/resource/page36/4.png",
+        "desc": "一个非常小的 v8 javascript 运行时。",
+        "link": "https://github.com/just-js/just",
+        "language": "JavaScript"
+    },
+    {
+        "title": "jellyfin",
+        "cover": "/articles/resource/page36/5.png",
+        "desc": "免费的软件媒体系统。",
+        "link": "https://github.com/jellyfin/jellyfin",
+        "language": "C#"
+    },
+    {
+        "title": "dapr",
+        "cover": "/articles/resource/page36/6.png",
+        "desc": "构建分布式应用程序的便携式、事件驱动的运行时。",
+        "link": "https://github.com/dapr/dapr",
+        "language": "C#"
+    }
+]

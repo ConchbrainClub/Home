@@ -1,0 +1,30 @@
+[
+    {
+        "title": "filebrowser",
+        "cover": "/articles/resource/page25/1.gif",
+        "desc": "Web 文件浏览器。",
+        "link": "https://github.com/filebrowser/filebrowser",
+        "language": "Go"
+    },
+    {
+        "title": "takenote",
+        "cover": "/articles/resource/page25/2.png",
+        "desc": "基于 Web 的笔记应用。",
+        "link": "https://github.com/taniarascia/takenote",
+        "language": "TypeScript"
+    },
+    {
+        "title": "spectre.console",
+        "cover": "/articles/resource/page25/3.gif",
+        "desc": "使创建美观的控制台应用程序的库。",
+        "link": "https://github.com/spectresystems/spectre.console",
+        "language": "C#"
+    },
+    {
+        "title": "reveal.js",
+        "cover": "/articles/resource/page25/4.png",
+        "desc": "在 Web 上创建令人惊叹的演示文稿。",
+        "link": "https://github.com/hakimel/reveal.js",
+        "language": "JavaScript"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "title": "pace",
+        "cover": "/articles/resource/page26/1.png",
+        "desc": "自动向网站添加进度条。",
+        "link": "https://github.com/CodeByZach/pace",
+        "language": "CSS"
+    },
+    {
+        "title": "lively",
+        "cover": "/articles/resource/page26/2.gif",
+        "desc": "免费开源的动态和可交互式桌面。",
+        "link": "https://github.com/rocksdanister/lively",
+        "language": "CSS"
+    },
+    {
+        "title": "Leaflet",
+        "cover": "/articles/resource/page26/3.png",
+        "desc": "交互式地图的 JavaScript 库。",
+        "link": "https://github.com/Leaflet/Leaflet",
+        "language": "JavaScript"
+    },
+    {
+        "title": "PrimerCSS",
+        "cover": "/articles/resource/page26/4.png",
+        "desc": "GitHub 的 CSS 设计系统。",
+        "link": "https://github.com/primer/css",
+        "language": "SCSS"
+    }
+]
