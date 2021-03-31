@@ -26,5 +26,12 @@
         "desc": "嵌入式 HTML/CSS/Script 引擎。",
         "link": "https://github.com/c-smile/sciter-sdk",
         "language": "C++"
+    },
+    {
+        "title": "desktop",
+        "cover": "/articles/resource/page41/5.png",
+        "desc": "GitHub Desktop for Linux。",
+        "link": "https://github.com/shiftkey/desktop",
+        "language": "TypeScript"
     }
 ]
