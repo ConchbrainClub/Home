@@ -33,5 +33,12 @@
         "desc": "GitHub Desktop for Linux。",
         "link": "https://github.com/shiftkey/desktop",
         "language": "TypeScript"
+    },
+    {
+        "title": "dockstation",
+        "cover": "/articles/resource/page41/6.png",
+        "desc": "跨平台的 Docker Desktop 客户端。",
+        "link": "https://github.com/DockStation/dockstation",
+        "language": "TypeScript"
     }
 ]
