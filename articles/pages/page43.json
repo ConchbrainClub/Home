@@ -33,5 +33,12 @@
         "desc": "Minecraft 中的 Docker 客户端。",
         "link": "https://github.com/docker/dockercraft",
         "language": "Lua"
+    },
+    {
+        "title": "grit",
+        "cover": "/articles/resource/page43/6.gif",
+        "desc": "基于树的个人任务管理。",
+        "link": "https://github.com/climech/grit",
+        "language": "Go"
     }
 ]
