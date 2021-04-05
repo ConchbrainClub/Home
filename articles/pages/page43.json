@@ -15,7 +15,7 @@
     },
     {
         "title": "querybook",
-        "cover": "/articles/resource/page43/3.png",
+        "cover": "/articles/resource/page43/3.gif",
         "desc": "笔记本界面的大数据查询 UI。",
         "link": "https://github.com/pinterest/querybook",
         "language": "TypeScript"
@@ -29,7 +29,7 @@
     },
     {
         "title": "dockercraft",
-        "cover": "/articles/resource/page43/5.png",
+        "cover": "/articles/resource/page43/5.gif",
         "desc": "Minecraft 中的 Docker 客户端。",
         "link": "https://github.com/docker/dockercraft",
         "language": "Lua"
