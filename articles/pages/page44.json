@@ -1,44 +1,44 @@
 [
     {
         "title": "codeline",
-        "cover": "/articles/resource/page44/1.png",
-        "desc": "",
+        "cover": "/articles/resource/page44/1.gif",
+        "desc": "从源代码注释中运行上下文感知命令。",
         "link": "https://github.com/synek/codeline",
-        "language": ""
+        "language": "Python"
     },
     {
         "title": "lipgloss",
         "cover": "/articles/resource/page44/2.png",
-        "desc": "",
+        "desc": "在终端自定义布局和样式。",
         "link": "https://github.com/charmbracelet/lipgloss",
-        "language": ""
+        "language": "Go"
     },
     {
         "title": "vue-nodegui",
         "cover": "/articles/resource/page44/3.png",
-        "desc": "",
+        "desc": "使用 Vue 和 CSS 构建原生跨平台桌面应用。",
         "link": "https://github.com/nodegui/vue-nodegui",
-        "language": ""
+        "language": "TypeScript"
     },
     {
         "title": "xplr",
-        "cover": "/articles/resource/page44/4.png",
-        "desc": "",
+        "cover": "/articles/resource/page44/4.gif",
+        "desc": "命令行界面文件浏览器。",
         "link": "https://github.com/sayanarijit/xplr",
-        "language": ""
+        "language": "Rust"
     },
     {
         "title": "browserify",
         "cover": "/articles/resource/page44/5.png",
-        "desc": "",
+        "desc": "在浏览器中使用 nodejs 中 require 语法。",
         "link": "https://github.com/browserify/browserify",
-        "language": ""
+        "language": "JavaScript"
     },
     {
         "title": "tinacms",
-        "cover": "/articles/resource/page44/6.png",
-        "desc": "",
+        "cover": "/articles/resource/page44/6.gif",
+        "desc": "可视化网站编辑器。",
         "link": "https://github.com/tinacms/tinacms",
-        "language": ""
+        "language": "TypeScript"
     }
 ]
