@@ -1,0 +1,44 @@
+[
+    {
+        "title": "codeline",
+        "cover": "/articles/resource/page44/1.png",
+        "desc": "",
+        "link": "https://github.com/synek/codeline",
+        "language": ""
+    },
+    {
+        "title": "lipgloss",
+        "cover": "/articles/resource/page44/2.png",
+        "desc": "",
+        "link": "https://github.com/charmbracelet/lipgloss",
+        "language": ""
+    },
+    {
+        "title": "vue-nodegui",
+        "cover": "/articles/resource/page44/3.png",
+        "desc": "",
+        "link": "https://github.com/nodegui/vue-nodegui",
+        "language": ""
+    },
+    {
+        "title": "xplr",
+        "cover": "/articles/resource/page44/4.png",
+        "desc": "",
+        "link": "https://github.com/sayanarijit/xplr",
+        "language": ""
+    },
+    {
+        "title": "browserify",
+        "cover": "/articles/resource/page44/5.png",
+        "desc": "",
+        "link": "https://github.com/browserify/browserify",
+        "language": ""
+    },
+    {
+        "title": "tinacms",
+        "cover": "/articles/resource/page44/6.png",
+        "desc": "",
+        "link": "https://github.com/tinacms/tinacms",
+        "language": ""
+    }
+]
