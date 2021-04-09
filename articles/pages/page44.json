@@ -30,7 +30,7 @@
     {
         "title": "browserify",
         "cover": "/articles/resource/page44/5.png",
-        "desc": "在浏览器中使用 nodejs 中 require 语法。",
+        "desc": "在浏览器中使用 nodejs 的 require 语法。",
         "link": "https://github.com/browserify/browserify",
         "language": "JavaScript"
     },
