@@ -1,0 +1,16 @@
+[
+    {
+        "title": "dash-to-panel",
+        "cover": "/articles/resource/page45/1.png",
+        "desc": "Gnome 桌面的图标任务栏。",
+        "link": "https://github.com/home-sweet-gnome/dash-to-panel",
+        "language": "JavaScript"
+    },
+    {
+        "title": "DataEncryption",
+        "cover": "/articles/resource/page45/2.png",
+        "desc": "为 EntityFrameworkCore 添加字段加密的支持。",
+        "link": "https://github.com/Eastrall/EntityFrameworkCore.DataEncryption",
+        "language": "C#"
+    }
+]
