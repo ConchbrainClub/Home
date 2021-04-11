@@ -12,5 +12,12 @@
         "desc": "为 EntityFrameworkCore 添加字段加密的支持。",
         "link": "https://github.com/Eastrall/EntityFrameworkCore.DataEncryption",
         "language": "C#"
+    },
+    {
+        "title": "cpufetch",
+        "cover": "/articles/resource/page45/3.png",
+        "desc": "简单有趣的 CPU 架构读取工具。",
+        "link": "https://github.com/Dr-Noob/cpufetch",
+        "language": "C"
     }
 ]
