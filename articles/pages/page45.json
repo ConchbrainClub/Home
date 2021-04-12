@@ -1,7 +1,7 @@
 [
     {
         "title": "dash-to-panel",
-        "cover": "/articles/resource/page45/1.png",
+        "cover": "/articles/resource/page45/1.gif",
         "desc": "Gnome 桌面的图标任务栏。",
         "link": "https://github.com/home-sweet-gnome/dash-to-panel",
         "language": "JavaScript"
@@ -19,5 +19,12 @@
         "desc": "简单有趣的 CPU 架构读取工具。",
         "link": "https://github.com/Dr-Noob/cpufetch",
         "language": "C"
+    },
+    {
+        "title": "jsoneditor",
+        "cover": "/articles/resource/page45/4.png",
+        "desc": "基于 Web 的 JSON 的编辑器。",
+        "link": "https://github.com/josdejong/jsoneditor",
+        "language": "JavaScript"
     }
 ]
