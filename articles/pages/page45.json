@@ -26,5 +26,12 @@
         "desc": "基于 Web 的 JSON 的编辑器。",
         "link": "https://github.com/josdejong/jsoneditor",
         "language": "JavaScript"
+    },
+    {
+        "title": "Blogifier",
+        "cover": "/articles/resource/page45/5.png",
+        "desc": "基于 .NET 5 和 Blazor WASM 的开源发布平台。",
+        "link": "https://github.com/blogifierdotnet/Blogifier",
+        "language": "C#"
     }
 ]
