@@ -55,13 +55,11 @@ function loadData(){
     isFirstLoad = true;
     
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
-        if(result){
-            showDate(page.date);
-            showData(result);
-            showTimeline();
-
-            nextState(false);
-        }
+        if(!result)
+            return;
+        showData(page.date, result);
+        showTimeline();
+        nextState(false);
     });
 }
 
@@ -94,9 +92,11 @@ function showStar(article, starId) {
     `;
 }
 
-function showData(articles){
+function showData(date, articles){
 
     document.querySelector("#articles").innerHTML = null;
+
+    showDate(date);
 
     articles.forEach(article => {
         let starId = guid();
@@ -188,7 +188,8 @@ function search() {
                 results.push(project);
             });
 
-            showData(results);
+            showData(keyword, results);
+            document.querySelector("#keyword").value = null;
         });
     });
 }
