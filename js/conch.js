@@ -168,6 +168,22 @@ function changeFavourite(favourite,starId) {
     });
 }
 
+function search() {
+    let keyword = document.querySelector("#keyword").value;
+
+    if(!keyword)
+        return;
+    
+    config.forEach(page => {
+        request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
+            if(!result)
+                return;
+            
+            console.log(result);
+        });
+    });
+}
+
 if(userInfo)
     fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`).then((res) => {
         if(res.status == 404)
