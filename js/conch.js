@@ -185,10 +185,11 @@ function search() {
                 results.push(project);
             });
 
-            document.querySelector("#keyword").value = null;
             showData(keyword, results);
         });
     });
+
+    document.querySelector("#keyword").value = null;
 }
 
 function filter(projects, keyword) {
