@@ -49,6 +49,7 @@ function loadData(){
 
     let page = config[currentPage];
 
+    window.stop();
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
             showDate(page.date);
