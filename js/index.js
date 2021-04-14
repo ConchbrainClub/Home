@@ -63,6 +63,7 @@ function showInfo(){
 }
 
 function request(href,callback){
+    window.stop();
     $.ajax({
         type: 'GET',
         url: href,
