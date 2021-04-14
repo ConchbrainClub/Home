@@ -1,7 +1,6 @@
 var currentPage = 0;
 var config = undefined;
 var favourites = [];
-var isFirstLoad = false;
 
 function loadConfig(){
     request("/articles/config.json?" + Math.random(), (result)=>{
@@ -38,6 +37,7 @@ function showTimeline(){
 }
 
 function loadDatePage(index){
+    window.stop();
     MoveTop();
     currentPage = index;
     loadData();
@@ -49,11 +49,6 @@ function loadData(){
 
     let page = config[currentPage];
 
-    if(isFirstLoad)
-        window.stop();
-    
-    isFirstLoad = true;
-    
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(!result)
             return;
@@ -170,6 +165,8 @@ function changeFavourite(favourite,starId) {
 }
 
 function search() {
+    window.stop();
+
     let keyword = document.querySelector("#keyword").value.trim();
 
     if(!keyword){
@@ -188,8 +185,8 @@ function search() {
                 results.push(project);
             });
 
-            showData(keyword, results);
             document.querySelector("#keyword").value = null;
+            showData(keyword, results);
         });
     });
 }
