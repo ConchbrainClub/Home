@@ -39,7 +39,6 @@ function showTimeline(){
 
 function loadDatePage(index){
     MoveTop();
-    document.querySelector("#articles").innerHTML = null;
     currentPage = index;
     loadData();
 }
@@ -96,6 +95,8 @@ function showStar(article, starId) {
 }
 
 function showData(articles){
+
+    document.querySelector("#articles").innerHTML = null;
 
     articles.forEach(article => {
         let starId = guid();
@@ -169,19 +170,39 @@ function changeFavourite(favourite,starId) {
 }
 
 function search() {
-    let keyword = document.querySelector("#keyword").value;
+    let keyword = document.querySelector("#keyword").value.trim();
 
-    if(!keyword)
+    if(!keyword){
+        alert("搜索内容不能为空");
         return;
-    
+    }
+
+    let results = new Array();
+
     config.forEach(page => {
-        request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
-            if(!result)
+        request("/articles/pages/" + page.name + "?" + Math.random(),(projects)=>{
+            if(!projects)
                 return;
             
-            console.log(result);
+            filter(projects, keyword).forEach(project => {
+                results.push(project);
+            });
+
+            showData(results);
         });
     });
+}
+
+function filter(projects, keyword) {
+    let results = new Array();
+
+    projects.forEach(project => {
+        if(project.title.includes(keyword) || project.desc.includes(keyword)){
+            results.push(project);
+        }
+    });
+
+    return results;
 }
 
 if(userInfo)
