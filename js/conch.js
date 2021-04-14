@@ -1,6 +1,7 @@
 var currentPage = 0;
 var config = undefined;
 var favourites = [];
+var isFirstLoad = false;
 
 function loadConfig(){
     request("/articles/config.json?" + Math.random(), (result)=>{
@@ -49,7 +50,11 @@ function loadData(){
 
     let page = config[currentPage];
 
-    window.stop();
+    if(isFirstLoad)
+        window.stop();
+    
+    isFirstLoad = true;
+    
     request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
         if(result){
             showDate(page.date);
