@@ -33,5 +33,12 @@
         "desc": "基于 .NET 5 和 Blazor WASM 的开源发布平台。",
         "link": "https://github.com/blogifierdotnet/Blogifier",
         "language": "C#"
+    },
+    {
+        "title": "leveldb",
+        "cover": "/articles/resource/page45/6.png",
+        "desc": "Google 开源的高性能键值存储类库。",
+        "link": "https://github.com/google/leveldb",
+        "language": "C++"
     }
 ]
