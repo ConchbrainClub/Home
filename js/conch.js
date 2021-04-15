@@ -204,6 +204,11 @@ function filter(projects, keyword) {
     return results;
 }
 
+document.querySelector("input").onkeydown = () => {
+    if (window.event.keyCode == 13)
+        search();
+}
+
 if(userInfo)
     fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`).then((res) => {
         if(res.status == 404)
