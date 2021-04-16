@@ -15,13 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: update
-      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
-      with:
-        host: ${{ secrets.HOST }}
-        user: ${{ secrets.USER }}
-        port: ${{ secrets.PORT }}
-        pass: ${{ secrets.PASSWORD }}
-        last_ssh: |
-          cd /home/repository/home/
-          git pull
+    # - name: update
+    #   uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+    #   with:
+    #     host: ${{ secrets.HOST }}
+    #     user: ${{ secrets.USER }}
+    #     port: ${{ secrets.PORT }}
+    #     pass: ${{ secrets.PASSWORD }}
+    #     last_ssh: |
+    #       cd /home/repository/home/
+    #       git pull

@@ -7,6 +7,10 @@
     cursor: pointer;
 }
 
+#loadingBox {
+    margin-top: 20px;
+}
+
 #timeline{
     margin-top: 20px;
 }
