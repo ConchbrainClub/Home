@@ -3,6 +3,10 @@
     margin-bottom: 30px;
 }
 
+#langs a {
+    cursor: pointer;
+}
+
 #timeline{
     margin-top: 20px;
 }

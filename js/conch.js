@@ -3,10 +3,11 @@ var config = undefined;
 var favourites = [];
 
 function loadConfig(){
+    showLangs();
     request("/articles/config.json?" + Math.random(), (result)=>{
         config = result;
         showTimeline();
-        loadData(); 
+        loadData();
     });
 }
 
@@ -34,6 +35,36 @@ function showTimeline(){
 
         list.innerHTML += html;
     }
+}
+
+function showLangs() {
+    request("https://lang.conchbrain.workers.dev/", langs => {
+        JSON.parse(langs).forEach(lang => {
+            let html = `<li class="nav-item"><a class="nav-link" onclick="filterByLang('${lang}')">${lang}</a></li>`;
+            document.querySelector("#langs").innerHTML += html;
+        });
+    });
+}
+
+function filterByLang(lang) {
+
+    window.stop();
+    
+    let results = new Array();
+    config.forEach(page => {
+        request("/articles/pages/" + page.name + "?" + Math.random(),(projects)=>{
+            if(!projects)
+                return;
+            
+            filter(projects, (project) => {
+                return project.language == lang;
+            }).forEach(project => {
+                results.push(project);
+            });
+
+            showData(lang, results);
+        });
+    });
 }
 
 function loadDatePage(index){
@@ -181,7 +212,9 @@ function search() {
             if(!projects)
                 return;
             
-            filter(projects, keyword).forEach(project => {
+            filter(projects, (project) => {
+                return project.title.includes(keyword) || project.desc.includes(keyword);
+            }).forEach(project => {
                 results.push(project);
             });
 
@@ -192,11 +225,11 @@ function search() {
     document.querySelector("#keyword").value = null;
 }
 
-function filter(projects, keyword) {
+function filter(projects, func) {
     let results = new Array();
 
     projects.forEach(project => {
-        if(project.title.includes(keyword) || project.desc.includes(keyword)){
+        if(func(project)){
             results.push(project);
         }
     });
