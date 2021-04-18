@@ -75,12 +75,13 @@ function loadDatePage(index){
 }
 
 function loadData(){
-    
+
+    document.querySelector("#articles").innerHTML = null;
     nextState(true);
 
     let page = config[currentPage];
 
-    request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
+    request("/articles/pages/" + page.name + "?" + Math.random(),(result) => {
         if(!result)
             return;
         showData(page.date, result);
