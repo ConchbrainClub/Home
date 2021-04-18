@@ -44,9 +44,8 @@ function isHref(href){
 }
 
 document.querySelector("input").onkeydown = () => {
-    if (window.event.keyCode == 13){
+    if (window.event.keyCode == 13)
         search();
-    }
 }
 
 initBackground();

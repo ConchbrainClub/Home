@@ -1,0 +1,51 @@
+[
+    {
+        "title": "NuKeeper",
+        "cover": "/articles/resource/page42/1.png",
+        "desc": "自动更新 .NET 项目的依赖。",
+        "link": "https://github.com/NuKeeperDotNet/NuKeeper",
+        "language": "C#"
+    },
+    {
+        "title": "dracula-theme",
+        "cover": "/articles/resource/page42/2.gif",
+        "desc": "开发工具黑色主题合集。",
+        "link": "https://github.com/dracula/dracula-theme",
+        "language": "Other"
+    },
+    {
+        "title": "Downloader",
+        "cover": "/articles/resource/page42/3.gif",
+        "desc": "快速可靠的 .NET 分段下载器。",
+        "link": "https://github.com/bezzad/Downloader",
+        "language": "C#"
+    },
+    {
+        "title": "neovim-dots",
+        "cover": "/articles/resource/page42/4.png",
+        "desc": "neovim IDE 配置。",
+        "link": "https://github.com/siduck76/neovim-dots",
+        "language": "Lua"
+    },
+    {
+        "title": "coreutils",
+        "cover": "/articles/resource/page42/5.png",
+        "desc": "利用 Rust 重写的跨平台 GNU 核心。",
+        "link": "https://github.com/uutils/coreutils",
+        "language": "Rust"
+    },
+    {
+        "title": "install-gnome-themes",
+        "cover": "/articles/resource/page42/6.png",
+        "desc": "GNOME 主题合集的安装脚本。",
+        "link": "https://github.com/tliron/install-gnome-themes",
+        "language": "Shell"
+    },
+    {
+        "title": "podman",
+        "cover": "/articles/resource/page42/7.png",
+        "desc": "一个管理 OCI 容器的工具。",
+        "link": "https://github.com/containers/podman",
+        "language": "Go"
+    }
+]

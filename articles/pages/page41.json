@@ -12,5 +12,33 @@
         "desc": "使用脚本编写交互式 Web 应用。",
         "link": "https://github.com/wang0618/PyWebIO",
         "language": "Python"
+    },
+    {
+        "title": "score",
+        "cover": "/articles/resource/page41/3.png",
+        "desc": "给 NuGet 包打分，并提供建议的工具。",
+        "link": "https://github.com/JonDouglas/score",
+        "language": "C#"
+    },
+    {
+        "title": "sciter-sdk",
+        "cover": "/articles/resource/page41/4.png",
+        "desc": "嵌入式 HTML/CSS/Script 引擎。",
+        "link": "https://github.com/c-smile/sciter-sdk",
+        "language": "C++"
+    },
+    {
+        "title": "desktop",
+        "cover": "/articles/resource/page41/5.png",
+        "desc": "GitHub Desktop for Linux。",
+        "link": "https://github.com/shiftkey/desktop",
+        "language": "TypeScript"
+    },
+    {
+        "title": "dockstation",
+        "cover": "/articles/resource/page41/6.png",
+        "desc": "跨平台的 Docker Desktop 客户端。",
+        "link": "https://github.com/DockStation/dockstation",
+        "language": "TypeScript"
     }
 ]

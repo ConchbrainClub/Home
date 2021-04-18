@@ -3,10 +3,11 @@ var config = undefined;
 var favourites = [];
 
 function loadConfig(){
+    showLangs();
     request("/articles/config.json?" + Math.random(), (result)=>{
         config = result;
         showTimeline();
-        loadData(); 
+        loadData();
     });
 }
 
@@ -36,27 +37,56 @@ function showTimeline(){
     }
 }
 
+function showLangs() {
+    request("https://lang.conchbrain.workers.dev/", langs => {
+        JSON.parse(langs).forEach(lang => {
+            let html = `<li class="nav-item"><a class="nav-link" onclick="filterByLang('${lang}')">${lang}</a></li>`;
+            document.querySelector("#langs").innerHTML += html;
+        });
+    });
+}
+
+function filterByLang(lang) {
+
+    window.stop();
+    
+    let results = new Array();
+    config.forEach(page => {
+        request("/articles/pages/" + page.name + "?" + Math.random(),(projects)=>{
+            if(!projects)
+                return;
+            
+            filter(projects, (project) => {
+                return project.language == lang;
+            }).forEach(project => {
+                results.push(project);
+            });
+
+            showData(lang, results);
+        });
+    });
+}
+
 function loadDatePage(index){
+    window.stop();
     MoveTop();
-    document.querySelector("#articles").innerHTML = null;
     currentPage = index;
     loadData();
 }
 
 function loadData(){
-    
+
+    document.querySelector("#articles").innerHTML = null;
     nextState(true);
 
     let page = config[currentPage];
 
-    request("/articles/pages/" + page.name + "?" + Math.random(),(result)=>{
-        if(result){
-            showDate(page.date);
-            showData(result);
-            showTimeline();
-
-            nextState(false);
-        }
+    request("/articles/pages/" + page.name + "?" + Math.random(),(result) => {
+        if(!result)
+            return;
+        showData(page.date, result);
+        showTimeline();
+        nextState(false);
     });
 }
 
@@ -89,7 +119,11 @@ function showStar(article, starId) {
     `;
 }
 
-function showData(articles){
+function showData(date, articles){
+
+    document.querySelector("#articles").innerHTML = null;
+
+    showDate(date);
 
     articles.forEach(article => {
         let starId = guid();
@@ -160,6 +194,53 @@ function changeFavourite(favourite,starId) {
         else
             toast("推荐", "保存失败，请重试。");
     });
+}
+
+function search() {
+    window.stop();
+
+    let keyword = document.querySelector("#keyword").value.trim();
+
+    if(!keyword){
+        alert("搜索内容不能为空");
+        return;
+    }
+
+    let results = new Array();
+
+    config.forEach(page => {
+        request("/articles/pages/" + page.name + "?" + Math.random(),(projects)=>{
+            if(!projects)
+                return;
+            
+            filter(projects, (project) => {
+                return project.title.includes(keyword) || project.desc.includes(keyword);
+            }).forEach(project => {
+                results.push(project);
+            });
+
+            showData(keyword, results);
+        });
+    });
+
+    document.querySelector("#keyword").value = null;
+}
+
+function filter(projects, func) {
+    let results = new Array();
+
+    projects.forEach(project => {
+        if(func(project)){
+            results.push(project);
+        }
+    });
+
+    return results;
+}
+
+document.querySelector("input").onkeydown = () => {
+    if (window.event.keyCode == 13)
+        search();
 }
 
 if(userInfo)

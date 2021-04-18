@@ -3,6 +3,14 @@
     margin-bottom: 30px;
 }
 
+#langs a {
+    cursor: pointer;
+}
+
+#loadingBox {
+    margin-top: 20px;
+}
+
 #timeline{
     margin-top: 20px;
 }

@@ -1,11 +1,20 @@
 <link rel="stylesheet" href="/css/conch.css"/>
 <script src="/js/conch.js"></script>
 
-<div id="layout" class="container">
+<div id="layout" class="container animate__animated animate__fadeIn">
 
     <div class="row">
 
         <div class="col-md-10">
+
+            <div class="input-group mb-3">
+                <input id="keyword" type="text" class="form-control" placeholder="项目名称/简介" autocomplete="off" />
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" onclick="search()">搜索</button>
+                </div>
+            </div>
+
+            <ul id="langs" class="nav justify-content-center"></ul>
 
             <div id="loadingBox" class="row">
                 
