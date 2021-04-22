@@ -12,6 +12,24 @@ let siteMap = `
     https://conchbrain.club/#proxyservice
 `;
 let userInfo = undefined;
+let isDarkMode = false;
+
+function switchTheme() {
+    isDarkMode = !isDarkMode;
+    setTheme();
+}
+
+function setTheme() {
+    if(isDarkMode){
+        DarkReader.setFetchMethod(window.fetch); 
+        DarkReader.enable();
+        localStorage.setItem("isDarkMode",isDarkMode);
+    }
+    else{
+        DarkReader.disable();
+        localStorage.removeItem("isDarkMode");
+    }
+}
 
 function pushToBaidu(){
     fetch("https://cors.conchbrain.workers.dev/?" + baiduPushLink,{
@@ -163,8 +181,10 @@ function closeToast(toastId) {
 }
 
 async function init(){
+    //初始化菜单
     initMenu();
 
+    //初始化backtop
     window.onscroll = () => {
         // check is top
         if (window.scrollY > 200) {
@@ -175,12 +195,19 @@ async function init(){
         }
     }
 
+    //初始化导航
     window.onpopstate = (e)=>{
         navigation(e.state.page, true);
     }
 
+    //初始化主题
+    isDarkMode = localStorage.getItem("isDarkMode");
+    setTheme();
+
+    //获取当前用户
     await getUser();
 
+    //判断是否授权登陆
     let href = window.location.href;
 
     if(href.includes("#login")){
@@ -189,6 +216,7 @@ async function init(){
         window.location.href = "/";
     }
 
+    //导航到指定页面
     if(href.includes("#")){
         let page = href.substring(href.indexOf("#")+1);
         navigation(page);
@@ -197,5 +225,6 @@ async function init(){
         navigation("home");
     }
 
+    //推送到百度
     pushToBaidu();
 }
