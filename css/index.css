@@ -11,12 +11,15 @@ body{
     border-radius: 5px;
 }
 
-#theme{
+#userName,#theme{
     cursor: pointer;
+}
+
+#theme{
     margin: 7px;
 }
 
-#theme:hover{
+#theme svg:hover{
     transform: scale(1.3);
 }
 
