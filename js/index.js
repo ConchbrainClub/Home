@@ -23,10 +23,12 @@ function setTheme() {
     if(isDarkMode){
         DarkReader.setFetchMethod(window.fetch); 
         DarkReader.enable();
+        document.querySelector(".logo").src = "./favicon-light.ico";
         localStorage.setItem("isDarkMode",isDarkMode);
     }
     else{
         DarkReader.disable();
+        document.querySelector(".logo").src = "./favicon.ico";
         localStorage.removeItem("isDarkMode");
     }
 }

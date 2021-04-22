@@ -13,6 +13,7 @@ body{
 
 #theme{
     cursor: pointer;
+    margin: 7px;
 }
 
 #theme:hover{
