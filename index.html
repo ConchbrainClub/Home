@@ -11,7 +11,7 @@
     <meta property="og:description" content="海螺大脑俱乐部是一个汇聚了各种奇思妙想的开发者组织" />
     <meta property="og:url" content="https://conchbrain.club/" />
     <meta property="og:site_name" content="ConchbrainClub" />
-    <meta property="og:image" content="https://lllxy.oss-cn-shenzhen.aliyuncs.com/ConchbrainClub/Images/pic1.png" />
+    <meta property="og:image" content="https://conchbrain.oss-cn-shenzhen.aliyuncs.com/images/pic1.png" />
 
     <title>海螺大脑俱乐部</title>
     
@@ -22,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/CodeByZach/pace/pace.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.32/darkreader.js"></script>
 
     <link rel="stylesheet" href="/css/index.css"/>
     <script src="/js/index.js"></script>
@@ -69,10 +70,16 @@
                     </li>
                 </ul>
 
+                <div id="theme" onclick="switchTheme()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-mask" viewBox="0 0 16 16">
+                    <path d="M6.225 1.227A7.5 7.5 0 0 1 10.5 8a7.5 7.5 0 0 1-4.275 6.773 7 7 0 1 0 0-13.546zM4.187.966a8 8 0 1 1 7.627 14.069A8 8 0 0 1 4.186.964z"/>
+                  </svg>
+                </div>
+
                 <div class="dropdown">
-                  <a id="userName" class="nav-link" href="javascript:void(0)">
+                  <span id="userName" class="nav-link">
                     登录
-                  </a>
+                  </span>
 
                   <div class="dropdown-menu" data-toggle="collapse" data-target="#navbar" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="javascript:void(0)" onclick="navigation('favourites')">我的收藏</a>
@@ -117,7 +124,6 @@
           <div class="col-md-3">
             <p class="title">友情链接</p>
             <p><a target="blank" href="https://www.ccczg.site/">陈治国</a></p>
-            <p><a target="blank" href="http://yql520.com/">YQL520</a></p>
             <p><a target="blank" href="https://www.daijua.top/">呆橘</a></p>
             <p><a target="blank" href="http://www.mineseb.cn/">CodeCat</a></p>
           </div>
