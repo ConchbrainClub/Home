@@ -40,7 +40,7 @@ function showTimeline(){
 function showLangs() {
     request("https://lang.conchbrain.workers.dev/", langs => {
         JSON.parse(langs).forEach(lang => {
-            let html = `<li class="nav-item"><a class="nav-link" onclick="filterByLang('${lang}')">${lang}</a></li>`;
+            let html = `<li class="nav-item animate__animated animate__flip"><a class="nav-link" onclick="filterByLang('${lang}')">${lang}</a></li>`;
             document.querySelector("#langs").innerHTML += html;
         });
     });
@@ -129,7 +129,7 @@ function showData(date, articles){
         let starId = guid();
 
         let html = `
-            <div class="col-md-6">
+            <div class="col-md-6 animate__animated animate__bounceIn">
                 <div class="card mb-3">
                     <div class="cover">
                         <a href="${article.link}" style="background-image:url('${article.cover}');" target="_blank"></a>
