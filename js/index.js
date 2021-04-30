@@ -14,25 +14,6 @@ let siteMap = `
 let userInfo = undefined;
 let isDarkMode = false;
 
-function switchTheme() {
-    isDarkMode = !isDarkMode;
-    setTheme();
-}
-
-function setTheme() {
-    if(isDarkMode){
-        DarkReader.setFetchMethod(window.fetch); 
-        DarkReader.enable();
-        document.querySelector(".logo").src = "./favicon-light.ico";
-        localStorage.setItem("isDarkMode",isDarkMode);
-    }
-    else{
-        DarkReader.disable();
-        document.querySelector(".logo").src = "./favicon.ico";
-        localStorage.removeItem("isDarkMode");
-    }
-}
-
 function pushToBaidu(){
     fetch("https://cors.conchbrain.workers.dev/?" + baiduPushLink,{
         method: "POST",
@@ -201,10 +182,6 @@ async function init(){
     window.onpopstate = (e)=>{
         navigation(e.state.page, true);
     }
-
-    //初始化主题
-    isDarkMode = localStorage.getItem("isDarkMode");
-    setTheme();
 
     //获取当前用户
     await getUser();
