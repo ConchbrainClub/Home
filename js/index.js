@@ -204,7 +204,7 @@ async function init(){
 
     //初始化主题
     isDarkMode = localStorage.getItem("isDarkMode");
-    //setTheme();    
+    setTheme();
 
     //获取当前用户
     await getUser();
