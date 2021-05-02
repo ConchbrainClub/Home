@@ -186,9 +186,10 @@ async function init(){
     //获取当前用户
     await getUser();
 
-    //判断是否授权登陆
+    //获取当前地址
     let href = window.location.href;
 
+    //判断是否授权登陆
     if(href.includes("#login")){
         let access_token = location.href.substring(location.href.indexOf("?") + 1);
         localStorage.setItem("access_token", access_token);
