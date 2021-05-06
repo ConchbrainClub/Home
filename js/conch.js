@@ -46,25 +46,27 @@ function showLangs() {
     });
 }
 
-function filterByLang(lang) {
+async function filterByLang(lang) {
 
     window.stop();
+    document.querySelector("#articles").innerHTML = null;
+    nextState(true);
     
     let results = new Array();
-    config.forEach(page => {
-        request("/articles/pages/" + page.name + "?" + Math.random(),(projects)=>{
-            if(!projects)
-                return;
-            
-            filter(projects, (project) => {
-                return project.language == lang;
-            }).forEach(project => {
-                results.push(project);
-            });
 
-            showData(lang, results);
+    for (let i = 0; i < config.length; i++) {
+        let res = await fetch("/articles/pages/" + config[i].name + "?" + Math.random());
+        let projects = await res.json();
+
+        filter(projects, (project) => {
+            return project.language == lang;
+        }).forEach(project => {
+            results.push(project);
         });
-    });
+    }
+
+    nextState(false);
+    showData(lang, results);
 }
 
 function loadDatePage(index){
@@ -84,9 +86,9 @@ function loadData(){
     request("/articles/pages/" + page.name + "?" + Math.random(),(result) => {
         if(!result)
             return;
+        nextState(false);
         showData(page.date, result);
         showTimeline();
-        nextState(false);
     });
 }
 
@@ -196,8 +198,10 @@ function changeFavourite(favourite,starId) {
     });
 }
 
-function search() {
+async function search() {
     window.stop();
+    document.querySelector("#articles").innerHTML = null;
+    nextState(true);
 
     let keyword = document.querySelector("#keyword").value.trim();
 
@@ -208,21 +212,19 @@ function search() {
 
     let results = new Array();
 
-    config.forEach(page => {
-        request("/articles/pages/" + page.name + "?" + Math.random(),(projects)=>{
-            if(!projects)
-                return;
-            
-            filter(projects, (project) => {
-                return project.title.includes(keyword) || project.desc.includes(keyword);
-            }).forEach(project => {
-                results.push(project);
-            });
+    for (let i = 0; i < config.length; i++) {
+        let res = await fetch("/articles/pages/" + config[i].name + "?" + Math.random());
+        let projects = await res.json();
 
-            showData(keyword, results);
+        filter(projects, (project) => {
+            return project.title.includes(keyword) || project.desc.includes(keyword);
+        }).forEach(project => {
+            results.push(project);
         });
-    });
+    }
 
+    nextState(false);
+    showData(keyword, results);
     document.querySelector("#keyword").value = null;
 }
 
