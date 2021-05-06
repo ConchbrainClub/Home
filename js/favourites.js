@@ -23,7 +23,7 @@ async function showFavourites() {
         let favourite = JSON.parse(favourites[i]);
 
         let html = `
-            <div id="${id}" class="col-md-6">
+            <div id="${id}" class="col-md-6 animate__animated animate__bounceIn">
                 <div class="card mb-3">
                     <div class="cover">
                         <a href="${favourite.link}" style="background-image:url('${favourite.cover}');" target="_blank"></a>

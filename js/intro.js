@@ -1,4 +1,8 @@
 function createVideo(){
+    
+    // 抵消 animate.css 导致模态框被覆盖的 BUG
+    document.querySelector("#banners").className = "";
+    
     let html = `
     <div class="modal-content">
 

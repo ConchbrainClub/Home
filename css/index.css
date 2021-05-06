@@ -11,16 +11,8 @@ body{
     border-radius: 5px;
 }
 
-#userName,#theme{
+#userName {
     cursor: pointer;
-}
-
-#theme{
-    margin: 7px;
-}
-
-#theme svg:hover{
-    transform: scale(1.3);
 }
 
 #content{
@@ -38,7 +30,7 @@ body{
 }
 
 #loading .box {
-    height: 13px;
+    height: 15px;
     margin-bottom: 20px;
     background-color: whitesmoke;
     background: linear-gradient( 

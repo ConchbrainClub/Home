@@ -8,6 +8,11 @@ var worker,forward = [];
 var baseUrl = "https://cloudshell.conchbrain.club"
 
 function create(system){
+
+    // 抵消 animate.css 导致模态框被覆盖的 BUG
+    try {
+        document.querySelector("#systemList").className = "";
+    } catch (error) {}
     
     if(!container.id){
         window.fetch(baseUrl + "/create?" + system,{

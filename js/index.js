@@ -14,25 +14,6 @@ let siteMap = `
 let userInfo = undefined;
 let isDarkMode = false;
 
-function switchTheme() {
-    isDarkMode = !isDarkMode;
-    setTheme();
-}
-
-function setTheme() {
-    if(isDarkMode){
-        DarkReader.setFetchMethod(window.fetch); 
-        DarkReader.enable();
-        document.querySelector(".logo").src = "./favicon-light.ico";
-        localStorage.setItem("isDarkMode",isDarkMode);
-    }
-    else{
-        DarkReader.disable();
-        document.querySelector(".logo").src = "./favicon.ico";
-        localStorage.removeItem("isDarkMode");
-    }
-}
-
 function pushToBaidu(){
     fetch("https://cors.conchbrain.workers.dev/?" + baiduPushLink,{
         method: "POST",
@@ -79,7 +60,7 @@ async function getUser(){
 function showInfo(){
     document.querySelector("#userName").setAttribute("data-toggle", "dropdown");
     document.querySelector("#userName").classList.add("dropdown-toggle");
-    document.querySelector("#userName").innerText = userInfo.name;
+    document.querySelector("#userName").innerText = userInfo.login;
 }
 
 function request(href,callback){
@@ -202,16 +183,13 @@ async function init(){
         navigation(e.state.page, true);
     }
 
-    //初始化主题
-    isDarkMode = localStorage.getItem("isDarkMode");
-    setTheme();
-
     //获取当前用户
     await getUser();
 
-    //判断是否授权登陆
+    //获取当前地址
     let href = window.location.href;
 
+    //判断是否授权登陆
     if(href.includes("#login")){
         let access_token = location.href.substring(location.href.indexOf("?") + 1);
         localStorage.setItem("access_token", access_token);
