@@ -49,7 +49,6 @@ function showLangs() {
 async function filterByLang(lang) {
 
     window.stop();
-    document.querySelector("#articles").innerHTML = null;
     nextState(true);
     
     let results = new Array();
@@ -78,9 +77,7 @@ function loadDatePage(index){
 
 function loadData(){
 
-    document.querySelector("#articles").innerHTML = null;
     nextState(true);
-
     let page = config[currentPage];
 
     request("/articles/pages/" + page.name + "?" + Math.random(),(result) => {
@@ -92,7 +89,7 @@ function loadData(){
     });
 }
 
-function showDate(date){
+function showInfo(date){
     let html = `
         <div class="col-md-12">
             <h1 class="display-4 m-3">${date}</h1>
@@ -125,7 +122,7 @@ function showData(date, articles){
 
     document.querySelector("#articles").innerHTML = null;
 
-    showDate(date);
+    showInfo(date);
 
     articles.forEach(article => {
         let starId = guid();
@@ -153,6 +150,7 @@ function showData(date, articles){
 }
 
 function nextState(flag){
+    document.querySelector("#articles").innerHTML = null;
     let loadingBox = document.querySelector("#loadingBox");
 
     if(flag)
@@ -200,7 +198,6 @@ function changeFavourite(favourite,starId) {
 
 async function search() {
     window.stop();
-    document.querySelector("#articles").innerHTML = null;
     nextState(true);
 
     let keyword = document.querySelector("#keyword").value.trim();
