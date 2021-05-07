@@ -54,7 +54,7 @@ async function filterByLang(lang) {
     let results = new Array();
 
     for (let i = 0; i < config.length; i++) {
-        let res = await fetch("/articles/pages/" + config[i].name + "?" + Math.random());
+        let res = await fetch("/articles/pages/" + config[i].name);
         let projects = await res.json();
 
         filter(projects, (project) => {
@@ -80,7 +80,7 @@ function loadData(){
     nextState(true);
     let page = config[currentPage];
 
-    request("/articles/pages/" + page.name + "?" + Math.random(),(result) => {
+    request("/articles/pages/" + page.name,(result) => {
         if(!result)
             return;
         nextState(false);
@@ -210,7 +210,7 @@ async function search() {
     let results = new Array();
 
     for (let i = 0; i < config.length; i++) {
-        let res = await fetch("/articles/pages/" + config[i].name + "?" + Math.random());
+        let res = await fetch("/articles/pages/" + config[i].name);
         let projects = await res.json();
 
         filter(projects, (project) => {
