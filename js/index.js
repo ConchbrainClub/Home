@@ -88,7 +88,8 @@ function navigation(name,isBack = false){
     window.scrollTo(0,0);
     loadingState(true);
     document.querySelector("#main").innerHTML = "";
-    let url = "/view/" + name + ".html";
+    let url = "/view/" + name.split("/")[0] + ".html";
+
     request(url,(data) => {
         if(data != undefined){
             document.querySelector("#main").innerHTML = data;
