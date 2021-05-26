@@ -2,19 +2,11 @@ let scripts = [];
 let baiduPushLink = "http://data.zz.baidu.com/urls?site=https://conchbrain.club&token=5ZG2x3hnCmpkN4Qh";
 let client_id = "68fd42deb929a87fc8b9";
 let redirect_uri = "https://oauth.conchbrain.workers.dev/redirect";
-let siteMap = `
-    https://conchbrain.club/#home
-    https://conchbrain.club/#intro
-    https://conchbrain.club/#conch
-    https://conchbrain.club/#cloudshell
-    https://conchbrain.club/#kvstorage
-    https://conchbrain.club/#corsproxy
-    https://conchbrain.club/#proxyservice
-`;
 let userInfo = undefined;
 let isDarkMode = false;
 
-function pushToBaidu(){
+async function pushToBaidu(){
+    let siteMap = await (await fetch("/SiteMap.txt")).text();
     fetch("https://cors.conchbrain.workers.dev/?" + baiduPushLink,{
         method: "POST",
         body: siteMap
