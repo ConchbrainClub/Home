@@ -1,0 +1,58 @@
+[
+    {
+        "title":"vscode-power-mode",
+        "cover":"/articles/resource/page50/1.gif",
+        "desc":"VSCode 打字特效扩展。",
+        "link":"https://github.com/hoovercj/vscode-power-mode",
+        "language":"TypeScript"
+    },
+    {
+        "title":"photopea",
+        "cover":"/articles/resource/page50/2.png",
+        "desc":"在线的图片编辑器 (支持 psd) 。",
+        "link":"https://github.com/photopea/photopea",
+        "language":"Other"
+    },
+    {
+        "title":"remoteapptool",
+        "cover":"/articles/resource/page50/3.png",
+        "desc":"在 Windows 上创建并管理远程应用程序。",
+        "link":"https://github.com/kimmknight/remoteapptool",
+        "language":"Visual Basic .NET"
+    },
+    {
+        "title":"slidev",
+        "cover":"/articles/resource/page50/4.png",
+        "desc":"将 markdown 转换为演示文稿。",
+        "link":"https://github.com/slidevjs/slidev",
+        "language":"TypeScript"
+    },
+    {
+        "title":"zx",
+        "cover":"/articles/resource/page50/5.png",
+        "desc":" 为 Node.js 扩展 Shell 语法。",
+        "link":"https://github.com/google/zx",
+        "language":"JavaScript"
+    },
+    {
+        "title":"alacritty",
+        "cover":"/articles/resource/page50/6.png",
+        "desc":"一个跨平台 OpenGL 的终端模拟器。",
+        "link":"https://github.com/alacritty/alacritty",
+        "language":"Rust"
+    },
+    {
+        "title":"python-for-android",
+        "cover":"/articles/resource/page50/7.png",
+        "desc":"将你的 Python 应用 打包进 Android 安装包。",
+        "link":"https://github.com/kivy/python-for-android",
+        "language":"Python"
+    },
+    {
+        "title":"vConsole",
+        "cover":"/articles/resource/page50/8.png",
+        "desc":"移动版前端开发者工具。",
+        "link":"https://github.com/Tencent/vConsole",
+        "language":"JavaScript"
+    }
+]
