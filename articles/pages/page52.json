@@ -1,0 +1,51 @@
+[
+    {
+        "title":"macOCR",
+        "cover":"/articles/resource/page52/1.gif",
+        "desc":"将mac屏幕上的任何文本放入剪贴板。",
+        "link":"https://github.com/schappim/macOCR",
+        "language":"Swift"
+    },
+    {
+        "title":"plotinus",
+        "cover":"/articles/resource/page52/2.gif",
+        "desc":"每个现代 GTK+ 应用程序中的可搜索命令面板。",
+        "link":"https://github.com/p-e-w/plotinus",
+        "language":"Vala"
+    },
+    {
+        "title":"autocomplete",
+        "cover":"/articles/resource/page52/3.png",
+        "desc":"为您的终端添加了自动完成功能。",
+        "link":"https://github.com/withfig/autocomplete",
+        "language":"TypeScript"
+    },
+    {
+        "title":"shelljs",
+        "cover":"/articles/resource/page52/4.gif",
+        "desc":"用于 Node.js 的便携式 Unix shell 命令。",
+        "link":"https://github.com/shelljs/shelljs",
+        "language":"JavaScript"
+    },
+    {
+        "title":"timetrace",
+        "cover":"/articles/resource/page52/5.png",
+        "desc":"timetrace 是一个简单的 CLI，用于跟踪您的工作时间。",
+        "link":"https://github.com/dominikbraun/timetrace",
+        "language":"Go"
+    },
+    {
+        "title":"syncthing",
+        "cover":"/articles/resource/page52/6.png",
+        "desc":"Syncthing 是一个连续的文件同步程序。它在两台或多台计算机之间同步文件。",
+        "link":"https://github.com/syncthing/syncthing",
+        "language":"Go"
+    },
+    {
+        "title":"ApertureTerminal",
+        "cover":"/articles/resource/page52/7.png",
+        "desc":"Windows-Terminal Portal 2 的主题设置。",
+        "link":"https://github.com/EktoHunter/ApertureTerminal",
+        "language":"Batchfile"
+    }
+]
