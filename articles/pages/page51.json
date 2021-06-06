@@ -22,14 +22,14 @@
     },
     {
         "title":"vscode-qq",
-        "cover":"/articles/resource/page51/4.jif",
+        "cover":"/articles/resource/page51/4.gif",
         "desc":"基于安卓QQ协议的vscode-qq扩展。",
         "link":"https://github.com/takayama-lily/vscode-qq",
         "language":"TypeScript"
     },
     {
         "title":"typehole",
-        "cover":"/articles/resource/page51/5.jif",
+        "cover":"/articles/resource/page51/5.gif",
         "desc":"用于 Visual Studio Code 的 TypeScript 开发工具，可帮助您自动为运行时值创建初始静态类型。",
         "link":"https://github.com/rikukissa/typehole",
         "language":"Go"
@@ -43,21 +43,21 @@
     },
     {
         "title":"macOCR",
-        "cover":"/articles/resource/page51/7.jif",
+        "cover":"/articles/resource/page51/7.gif",
         "desc":"将mac屏幕上的任何文本放入剪贴板。",
         "link":"https://github.com/schappim/macOCR",
         "language":"Swift"
     },
     {
         "title":"plotinus",
-        "cover":"/articles/resource/page51/8.jif",
+        "cover":"/articles/resource/page51/8.gif",
         "desc":"每个现代 GTK+ 应用程序中的可搜索命令面板。",
         "link":"https://github.com/p-e-w/plotinus",
         "language":"Vala"
     },
     {
         "title":"autocomplete",
-        "cover":"/articles/resource/page51/9.jif",
+        "cover":"/articles/resource/page51/9.gif",
         "desc":"为您的终端添加了自动完成功能。",
         "link":"https://github.com/withfig/autocomplete",
         "language":"TypeScript"
