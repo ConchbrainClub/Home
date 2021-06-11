@@ -1,0 +1,58 @@
+[
+    {
+        "title":"prestige",
+        "cover":"/articles/resource/page54/1.png",
+        "desc":"一个基于文本的 Http 客户端。",
+        "link":"https://github.com/sharat87/prestige",
+        "language":"TypeScript"
+    },
+    {
+        "title":"slides",
+        "cover":"/articles/resource/page54/2.gif",
+        "desc":"基于终端的演示工具（PPT）。",
+        "link":"https://github.com/maaslalani/slides",
+        "language":"Go"
+    },
+    {
+        "title":"latex-css",
+        "cover":"/articles/resource/page54/3.png",
+        "desc":"使您的网站看起来像一个 LaTeX 文档。",
+        "link":"https://github.com/vincentdoerig/latex-css",
+        "language":"HTML"
+    },
+    {
+        "title":"naive-ui",
+        "cover":"/articles/resource/page54/4.png",
+        "desc":"一个 Vue 3 的组建库。",
+        "link":"https://github.com/TuSimple/naive-ui",
+        "language":"TypeScript"
+    },
+    {
+        "title":"webpacker",
+        "cover":"/articles/resource/page54/5.png",
+        "desc":"使用 Webpack 管理 Rails 中的模块。",
+        "link":"https://github.com/rails/webpacker",
+        "language":"Ruby"
+    },
+    {
+        "title":"nocodb",
+        "cover":"/articles/resource/page54/6.png",
+        "desc":"开源支持自托管的云数据库。",
+        "link":"https://github.com/nocodb/nocodb",
+        "language":"Vue"
+    },
+    {
+        "title":"Termy",
+        "cover":"/articles/resource/page54/7.png",
+        "desc":"支持输入提示的终端。",
+        "link":"https://github.com/termyapp/Termy",
+        "language":"TypeScript"
+    },
+    {
+        "title":"pyWhat",
+        "cover":"/articles/resource/page54/8.gif",
+        "desc":"识别你不知道的内容。",
+        "link":"https://github.com/bee-san/pyWhat",
+        "language":"Python"
+    }
+]
