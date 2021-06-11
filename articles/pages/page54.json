@@ -47,5 +47,12 @@
         "desc":"支持输入提示的终端。",
         "link":"https://github.com/termyapp/Termy",
         "language":"TypeScript"
+    },
+    {
+        "title":"pyWhat",
+        "cover":"/articles/resource/page54/8.gif",
+        "desc":"识别你不知道的内容。",
+        "link":"https://github.com/bee-san/pyWhat",
+        "language":"Python"
     }
 ]
