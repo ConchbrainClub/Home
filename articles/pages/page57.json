@@ -1,0 +1,51 @@
+[
+    {
+        "title":"tabula-java",
+        "cover":"/articles/resource/page57/1.png",
+        "desc":"从PDF文件中提取表的库。",
+        "link":"https://github.com/tabulapdf/tabula-java",
+        "language":"Java"
+    },
+    {
+        "title":"plow",
+        "cover":"/articles/resource/page57/2.gif",
+        "desc":"高性能 HTTP 基准测试工具。",
+        "link":"https://github.com/six-ddc/plow",
+        "language":"Go"
+    },
+    {
+        "title":"XamlFlair",
+        "cover":"/articles/resource/page57/3.gif",
+        "desc":"UWP、WPF 和 Uno 的动画库。",
+        "link":"https://github.com/XamlFlair/XamlFlair",
+        "language":"C#"
+    },
+    {
+        "title":"fmt",
+        "cover":"/articles/resource/page57/4.png",
+        "desc":"C++ 现代的格式库。",
+        "link":"https://github.com/fmtlib/fmt",
+        "language":"C++"
+    },
+    {
+        "title":"LiteDB",
+        "cover":"/articles/resource/page57/5.png",
+        "desc":"轻量级的 .NET 文档形数据库。",
+        "link":"https://github.com/mbdavid/LiteDB",
+        "language":"C#"
+    },
+    {
+        "title":"bflat",
+        "cover":"/articles/resource/page57/6.png",
+        "desc":"C# 基于 crossgen2 的 NativeAOT。",
+        "link":"https://github.com/MichalStrehovsky/bflat",
+        "language":"C#"
+    },
+    {
+        "title":"gitui",
+        "cover":"/articles/resource/page57/7.gif",
+        "desc":"运行在命令行中的 Git GUI。",
+        "link":"https://github.com/extrawurst/gitui",
+        "language":"Rust"
+    }
+]

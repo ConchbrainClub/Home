@@ -1,52 +1,51 @@
-[{
-    "title":"termpair",
-    "cover":"/articles/resource/page56/1.gif",
-    "desc":"通过端到端加密从浏览器查看和控制终端。",
-    "link":"https://github.com/cs01/termpair",
-    "language":"Python"
-},
-{
-    "title":"textual",
-    "cover":"/articles/resource/page56/2.png",
-    "desc":"Textual 是 Python 的 TUI（文本用户界面）框架，使用Rich作为渲染器。",
-    "link":"https://github.com/willmcgugan/textual",
-    "language":"Python"
-},
-{
-    "title":"FTXUI",
-    "cover":"/articles/resource/page56/3.gif",
-    "desc":"C++ 功能终端用户界面。",
-    "link":"https://github.com/ArthurSonzogni/FTXUI",
-    "language":"C++"
-},
-{
-    "title":"marcdown",
-    "cover":"/articles/resource/page56/4.png",
-    "desc":"轻量级Markdown查看器和编辑器。",
-    "link":"https://github.com/liyasthomas/marcdown",
-    "language":"JavaScript"
-},
-{
-    "title":"gitignore",
-    "cover":"/articles/resource/page56/5.png",
-    "desc":"一组有用的 .gitignore 模板。",
-    "link":"https://github.com/github/gitignore",
-    "language":"gitignore"
-},
-{
-    "title":"cosmopolitan",
-    "cover":"/articles/resource/page56/6.png",
-    "desc":"一次构建随处运行的 C 库。",
-    "link":"https://github.com/jart/cosmopolitan",
-    "language":"C"
-},
-{
-    "title":"websocketd",
-    "cover":"/articles/resource/page56/7.png",
-    "desc":" 一个小型命令行工具，它将包装现有的命令行界面程序，并允许通过 WebSocket 访问它。",
-    "link":"https://github.com/joewalnes/websocketd",
-    "language":"Go"
-}]
-
-
-
+[
+    {
+        "title":"termpair",
+        "cover":"/articles/resource/page56/1.gif",
+        "desc":"通过端到端加密从浏览器查看和控制终端。",
+        "link":"https://github.com/cs01/termpair",
+        "language":"Python"
+    },
+    {
+        "title":"textual",
+        "cover":"/articles/resource/page56/2.png",
+        "desc":"Textual 是 Python 的 TUI（文本用户界面）框架，使用Rich作为渲染器。",
+        "link":"https://github.com/willmcgugan/textual",
+        "language":"Python"
+    },
+    {
+        "title":"FTXUI",
+        "cover":"/articles/resource/page56/3.gif",
+        "desc":"C++ 功能终端用户界面。",
+        "link":"https://github.com/ArthurSonzogni/FTXUI",
+        "language":"C++"
+    },
+    {
+        "title":"marcdown",
+        "cover":"/articles/resource/page56/4.png",
+        "desc":"轻量级Markdown查看器和编辑器。",
+        "link":"https://github.com/liyasthomas/marcdown",
+        "language":"JavaScript"
+    },
+    {
+        "title":"gitignore",
+        "cover":"/articles/resource/page56/5.png",
+        "desc":"一组有用的 .gitignore 模板。",
+        "link":"https://github.com/github/gitignore",
+        "language":"gitignore"
+    },
+    {
+        "title":"cosmopolitan",
+        "cover":"/articles/resource/page56/6.png",
+        "desc":"一次构建随处运行的 C 库。",
+        "link":"https://github.com/jart/cosmopolitan",
+        "language":"C"
+    },
+    {
+        "title":"websocketd",
+        "cover":"/articles/resource/page56/7.png",
+        "desc":" 一个小型命令行工具，它将包装现有的命令行界面程序，并允许通过 WebSocket 访问它。",
+        "link":"https://github.com/joewalnes/websocketd",
+        "language":"Go"
+    }
+]
