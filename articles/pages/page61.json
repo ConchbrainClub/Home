@@ -1,0 +1,44 @@
+[
+    {
+        "title":"LunarVim",
+        "cover":"",
+        "desc":"NeoVim IDE配置。",
+        "link":"https://github.com/ChristianChiarulli/LunarVim",
+        "language":"Lua"
+    },
+    {
+        "title":"Saleor Commerce",
+        "cover":"",
+        "desc":"模块化、无头的 GraphQL 首要电子商务平台。",
+        "link":"https://github.com/mirumee/saleor",
+        "language":"Python"
+    },
+    {
+        "title":"TAURI",
+        "cover":"",
+        "desc":"使用web技术构建小型、快速、安全的桌面应用。",
+        "link":"https://github.com/tauri-apps/tauri",
+        "language":"Rust"
+    },
+    {
+        "title":"internet-pi",
+        "cover":"",
+        "desc":"可视化的树莓派网络配置。",
+        "link":"https://github.com/geerlingguy/internet-pi",
+        "language":"Jinja"
+    },
+    {
+        "title":"Docusaurus ",
+        "cover":"",
+        "desc":"可以轻松构建开源项目网站。",
+        "link":"https://github.com/facebook/docusaurus",
+        "language":"TypeScript"
+    },
+    {
+        "title":"50 Projects in 50 Days",
+        "cover":"",
+        "desc":"50个有趣的小型web项目。",
+        "link":"https://github.com/bradtraversy/50projects50days",
+        "language":"CSS"
+    }
+]
