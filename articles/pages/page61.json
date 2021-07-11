@@ -9,7 +9,7 @@
     {
         "title":"Saleor Commerce",
         "cover":"/articles/resource/page61/2.png",
-        "desc":"模块化、无头的 GraphQL 首要电子商务平台。",
+        "desc":"模块化、无头的 GraphQL 电子商务平台。",
         "link":"https://github.com/mirumee/saleor",
         "language":"Python"
     },
@@ -30,7 +30,7 @@
     {
         "title":"Docusaurus ",
         "cover":"/articles/resource/page61/5.png",
-        "desc":"可以轻松构建开源项目网站。",
+        "desc":"轻松的构建项目文档网站。",
         "link":"https://github.com/facebook/docusaurus",
         "language":"TypeScript"
     },
