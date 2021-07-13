@@ -1,0 +1,44 @@
+[
+  {
+      "title":"Tellme",
+      "cover":"/articles/resource/page62/1.png",
+      "desc":"一个在完成时会发出语音的插件。",
+      "link":"https://github.com/whot/tellme",
+      "language":"Python"
+  },
+  {
+      "title":"Visual Python",
+      "cover":"/articles/resource/page62/2.png",
+      "desc":"基于 GUI 的 Python 代码生成器。",
+      "link":"https://github.com/visualpython/visualpython",
+      "language":"JavaScript"
+  },
+  {
+      "title":"Fireworks",
+      "cover":"/articles/resource/page62/3.png",
+      "desc":"一个比较好看的烟花。",
+      "link":"https://github.com/crashmax-dev/fireworks-js/",
+      "language":"TypeScript"
+  },
+  {
+      "title":"bflat",
+      "cover":"/articles/resource/page62/4.png",
+      "desc":"产生小型的、自包含的、原生的开箱即用的可执行文件。",
+      "link":"https://github.com/MichalStrehovsky/bflat",
+      "language":"C#"
+  },
+  {
+      "title":"Modern-scrollbar",
+      "cover":"/articles/resource/page62/5.png",
+      "desc":"一个现代外观的铬滚动条。",
+      "link":"https://github.com/luandersonn/Modern-scrollbar/",
+      "language":"HTML"
+  },
+  {
+      "title":"Zappa",
+      "cover":"/articles/resource/page62/6.jpg",
+      "desc":"一个不需要服务器的服务器。 ",
+      "link":"https://github.com/zappa/Zappa",
+      "language":"Python"
+  }
+]
