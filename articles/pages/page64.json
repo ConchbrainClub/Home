@@ -1,44 +1,44 @@
 [
     {
-        "title":"Tellme",
-        "cover":"/articles/resource/page62/1.png",
-        "desc":"通过语音通知用户命令的运行结果。",
+        "title":"vscode-livepreview",
+        "cover":"/articles/resource/page64/1.gif",
+        "desc":"在Vscode工作区托管本地服务器，以便您预览网页。",
         "link":"https://github.com/microsoft/vscode-livepreview",
-        "language":"Python"
+        "language":"TypeScript"
     },
     {
-        "title":"mapbox-gl-js",
-        "cover":"/articles/resource/page62/1.png",
-        "desc":"通过语音通知用户命令的运行结果。",
+        "title":"ImageSharp",
+        "cover":"/articles/resource/page64/2.png",
+        "desc":"一个.NET的现代化的跨平台2D图形库。",
         "link":"https://github.com/SixLabors/ImageSharp",
-        "language":"Python"
+        "language":"C#"
     },
     {
-        "title":"Tellme",
-        "cover":"/articles/resource/page62/1.png",
-        "desc":"通过语音通知用户命令的运行结果。",
+        "title":"Bludger",
+        "cover":"/articles/resource/page64/3.png",
+        "desc":"GitHub操作自动化框架呈现给你作为一个CLI。",
         "link":"https://github.com/0xInfection/Bludger",
         "language":"Python"
     },
     {
-        "title":"Tellme",
-        "cover":"/articles/resource/page62/1.png",
-        "desc":"通过语音通知用户命令的运行结果。",
+        "title":"BBDown",
+        "cover":"/articles/resource/page64/4.gif",
+        "desc":"命令行式哔哩哔哩下载器。",
         "link":"https://github.com/nilaoda/BBDown",
-        "language":"Python"
+        "language":"C#"
     },
     {
-        "title":"Tellme",
-        "cover":"/articles/resource/page62/1.png",
-        "desc":"通过语音通知用户命令的运行结果。",
+        "title":"transfer.sh",
+        "cover":"/articles/resource/page64/5.png",
+        "desc":"从命令行轻松快速的文件共享。",
         "link":"https://github.com/dutchcoders/transfer.sh",
-        "language":"Python"
+        "language":"Go"
     },
     {
-        "title":"Tellme",
-        "cover":"/articles/resource/page62/1.png",
-        "desc":"通过语音通知用户命令的运行结果。",
+        "title":"Wasp",
+        "cover":"/articles/resource/page64/6.png",
+        "desc":"WASP 是 Windows 自动化任务的PowerShell快照。",
         "link":"https://github.com/mavaddat/wasp",
-        "language":"Python"
+        "language":"C#"
     }
 ]
