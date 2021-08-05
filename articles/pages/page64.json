@@ -2,21 +2,21 @@
     {
         "title":"vscode-livepreview",
         "cover":"/articles/resource/page64/1.gif",
-        "desc":"在Vscode工作区托管本地服务器，以便您预览网页。",
+        "desc":"在 VSCode 中实时预览网页。",
         "link":"https://github.com/microsoft/vscode-livepreview",
         "language":"TypeScript"
     },
     {
         "title":"ImageSharp",
         "cover":"/articles/resource/page64/2.png",
-        "desc":"一个.NET的现代化的跨平台2D图形库。",
+        "desc":".NET 跨平台 2D 图形库。",
         "link":"https://github.com/SixLabors/ImageSharp",
         "language":"C#"
     },
     {
         "title":"Bludger",
         "cover":"/articles/resource/page64/3.png",
-        "desc":"GitHub操作自动化框架呈现给你作为一个CLI。",
+        "desc":"GitHub Actions 自动化框架。",
         "link":"https://github.com/0xInfection/Bludger",
         "language":"Python"
     },
@@ -30,14 +30,14 @@
     {
         "title":"transfer.sh",
         "cover":"/articles/resource/page64/5.png",
-        "desc":"从命令行轻松快速的文件共享。",
+        "desc":"从命令行轻松快速的共享文件。",
         "link":"https://github.com/dutchcoders/transfer.sh",
         "language":"Go"
     },
     {
         "title":"Wasp",
         "cover":"/articles/resource/page64/6.png",
-        "desc":"WASP 是 Windows 自动化任务的PowerShell快照。",
+        "desc":"PowerShell 的 Windows 自动化框架。",
         "link":"https://github.com/mavaddat/wasp",
         "language":"C#"
     }
