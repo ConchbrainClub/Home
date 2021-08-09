@@ -2,21 +2,21 @@
     {
         "title":"MySQLTuner-perl",
         "cover":"/articles/resource/page66/1.png",
-        "desc":"Perl 编写的MySQL配置脚本。",
+        "desc":"Perl 编写的 MySQL 配置脚本。",
         "link":"https://github.com/major/MySQLTuner-perl",
         "language":"Perl"
     },
     {
         "title":"WpfHexEditorControl",
         "cover":"/articles/resource/page66/2.png",
-        "desc":"用于编辑十六进制、十进制和二进制流文件的工具包。",
+        "desc":"用于编辑十六进制、十进制和二进制流文件的 WPF 工具包。",
         "link":"https://github.com/abbaye/WpfHexEditorControl",
         "language":"C#"
     },
     {
         "title":"apollo",
         "cover":"/articles/resource/page66/3.png",
-        "desc":"一个Unix风格的个人搜索引擎和网络爬虫工具。",
+        "desc":"一个 Unix 风格的个人搜索引擎和网络爬虫工具。",
         "link":"https://github.com/amirgamil/apollo",
         "language":"Go"
     },
@@ -30,14 +30,14 @@
     {
         "title":"jest",
         "cover":"/articles/resource/page66/5.png",
-        "desc":"Java测试工具",
+        "desc":"Java 测试工具",
         "link":"https://github.com/facebook/jest",
         "language":"TypeScript"
     },
     {
         "title":"macos-virtualbox",
         "cover":"/articles/resource/page66/6.jpg",
-        "desc":"虚拟机上安装MacOS的脚本",
+        "desc":"虚拟机上安装 MacOS 的脚本",
         "link":"https://github.com/myspaghetti/macos-virtualbox",
         "language":"Shell"
     }
