@@ -30,7 +30,7 @@
     {
         "title":"jest",
         "cover":"/articles/resource/page66/5.png",
-        "desc":"Java 测试工具",
+        "desc":"JavaScript 单元测试库。",
         "link":"https://github.com/facebook/jest",
         "language":"TypeScript"
     },
