@@ -1,11 +1,13 @@
 var currentPage = 0;
-var config = undefined;
+var commitId = "";
+var pages = undefined;
 var favourites = [];
 
 function loadConfig(){
     showLangs();
-    request("/articles/config.json?" + Math.random(), (result)=>{
-        config = result;
+    request("/articles/config.json?" + Math.random(), (result) => {
+        commitId = result.commit;
+        pages = result.pages;
         showTimeline();
         loadData();
     });
@@ -17,10 +19,10 @@ function showTimeline(){
 
     let startIndex = currentPage - 4 < 0 ? 0 : currentPage - 4;
     
-    if(startIndex + 9 >= config.length)
-        startIndex = config.length - 9;
+    if(startIndex + 9 >= pages.length)
+        startIndex = pages.length - 9;
     
-    let endIndex = startIndex + 9 < config.length ? startIndex + 9 : config.length;
+    let endIndex = startIndex + 9 < pages.length ? startIndex + 9 : pages.length;
 
     for(let i = startIndex; i < endIndex; i++){
 
@@ -30,7 +32,7 @@ function showTimeline(){
         }
 
         let html = `
-            <li class="list-group-item" ${style} onclick="loadDatePage(${i})">${config[i].date}</li>
+            <li class="list-group-item" ${style} onclick="loadDatePage(${i})">${pages[i].date}</li>
         `;
 
         list.innerHTML += html;
@@ -53,8 +55,8 @@ async function filterByLang(lang) {
     
     let results = new Array();
 
-    for (let i = 0; i < config.length; i++) {
-        let res = await fetch("/articles/pages/" + config[i].name);
+    for (let i = 0; i < pages.length; i++) {
+        let res = await fetch("/articles/pages/" + pages[i].name);
         let projects = await res.json();
 
         filter(projects, (project) => {
@@ -78,7 +80,7 @@ function loadDatePage(index){
 function loadData(){
 
     nextState(true);
-    let page = config[currentPage];
+    let page = pages[currentPage];
 
     request("/articles/pages/" + page.name,(result) => {
         if(!result)
@@ -126,6 +128,10 @@ function showData(date, articles){
 
     articles.forEach(article => {
         let starId = guid();
+
+        if(!location.href.includes("localhost")){
+            article.cover = `https://cdn.jsdelivr.net/gh/conchbrainclub/home@${commitId}${article.cover}`;
+        }
 
         let html = `
             <div class="col-md-6 animate__animated animate__bounceIn">
@@ -209,8 +215,8 @@ async function search() {
 
     let results = new Array();
 
-    for (let i = 0; i < config.length; i++) {
-        let res = await fetch("/articles/pages/" + config[i].name);
+    for (let i = 0; i < pages.length; i++) {
+        let res = await fetch("/articles/pages/" + pages[i].name);
         let projects = await res.json();
 
         filter(projects, (project) => {
