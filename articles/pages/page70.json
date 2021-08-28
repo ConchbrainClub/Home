@@ -1,0 +1,44 @@
+[
+    {
+        "title":"iced",
+        "cover":"/articles/resource/page70/1.gif",
+        "desc":"Rust 跨平台 GUI 库。",
+        "link":"https://github.com/hecrj/iced",
+        "language":"Rust"
+    },
+    {
+        "title":"axum",
+        "cover":"/articles/resource/page70/2.png",
+        "desc":"Rust 模块化网络应用框架。",
+        "link":"https://github.com/tokio-rs/axum",
+        "language":"Rust"
+    },
+    {
+        "title":"alertmanager",
+        "cover":"/articles/resource/page70/3.png",
+        "desc":"自托管通知推送应用程序。",
+        "link":"https://github.com/prometheus/alertmanager",
+        "language":"Go"
+    },
+    {
+        "title":"sheetjs",
+        "cover":"/articles/resource/page70/4.png",
+        "desc":"JavaScript 电子表格数据工具包。",
+        "link":"https://github.com/SheetJS/sheetjs",
+        "language":"Makefile"
+    },
+    {
+        "title":"MyFTP",
+        "cover":"/articles/resource/page70/5.png",
+        "desc":"现代化的 Windows 11 FTP 客户端。",
+        "link":"https://github.com/luandersonn/MyFTP",
+        "language":"C#"
+    },
+    {
+        "title":"BlazorTable",
+        "cover":"/articles/resource/page70/6.gif",
+        "desc":"Blazor 表格组件。",
+        "link":"https://github.com/IvanJosipovic/BlazorTable",
+        "language":"C#"
+    }
+]
