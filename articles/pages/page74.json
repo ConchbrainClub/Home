@@ -1,0 +1,44 @@
+[
+    {
+        "title":"tus-resumable-upload-protocol",
+        "cover":"/articles/resource/page74/1.png",
+        "desc":"文件可续传的上传协议",
+        "link":"https://github.com/tus/tus-resumable-upload-protocol",
+        "language":"yaml"
+    },
+    {
+        "title":"LiveCharts2",
+        "cover":"/articles/resource/page74/2.gif",
+        "desc":"简单、灵活、交互和强大的数据可视化库",
+        "link":"https://github.com/beto-rodriguez/LiveCharts2",
+        "language":"C#"
+    },
+    {
+        "title":"mycli",
+        "cover":"/articles/resource/page74/3.gif",
+        "desc":"带有自动补全和语法高亮的MySQL终端客户端",
+        "link":"https://github.com/dbcli/mycli",
+        "language":"Python"
+    },
+    {
+        "title":"dotvvm",
+        "cover":"/articles/resource/page74/4.png",
+        "desc":"Web 应用的开源 MVVM 框架",
+        "link":"https://github.com/riganti/dotvvm",
+        "language":"C#"
+    },
+    {
+        "title":"cake",
+        "cover":"/articles/resource/page74/5.png",
+        "desc":"一个跨平台构建自动化系统。",
+        "link":"https://github.com/cake-build/cake",
+        "language":"C#"
+    },
+    {
+        "title":"errata",
+        "cover":"/articles/resource/page74/6.png",
+        "desc":"创建和显示不同类型的诊断库",
+        "link":"https://github.com/spectreconsole/errata",
+        "language":"C#"
+    }
+]
