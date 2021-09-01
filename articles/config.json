@@ -1,6 +1,14 @@
 {
-  "commit": "70cdb3fbed211284fa2a51a31214f1843f60dd53",
+  "commit": "65bf32380e1884cf8ad981b6242cbc9140ea0d8a",
   "pages": [
+    {
+      "name": "page76.json",
+      "date": "2021/8/24"
+    },
+    {
+      "name": "page75.json",
+      "date": "2021/8/23"
+    },
     {
       "name": "page74.json",
       "date": "2021/8/21"
