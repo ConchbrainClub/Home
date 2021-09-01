@@ -1,0 +1,44 @@
+[
+    {
+        "title":"astro",
+        "cover":"/articles/resource/page76/1.png",
+        "desc":"使用Shell脚本的网络浏览器",
+        "link":"https://github.com/blmayer/astro",
+        "language":"Shell"
+    },
+    {
+        "title":"growthbook",
+        "cover":"/articles/resource/page76/2.png",
+        "desc":"开源 A/B 测试平台",
+        "link":"https://github.com/growthbook/growthbook",
+        "language":"TypeScript"
+    },
+    {
+        "title":"ffmpeg.wasm",
+        "cover":"/articles/resource/page76/3.gif",
+        "desc":"支持视频和音频录制，转换和流式传输浏览器的视频处理工具",
+        "link":"https://github.com/ffmpegwasm/ffmpeg.wasm",
+        "language":"JavaScript"
+    },
+    {
+        "title":"Blazor.Console",
+        "cover":"/articles/resource/page76/4.png",
+        "desc":"模拟 CLI ASP.NET Core Blazor执行应用程序的自定义命令的组件",
+        "link":"https://github.com/ardacetinkaya/Blazor.Console",
+        "language":"C#"
+    },
+    {
+        "title":"playwright-vscode",
+        "cover":"/articles/resource/page76/5.png",
+        "desc":"VScode测试 API将Playwright Test集成扩展",
+        "link":"https://github.com/microsoft/playwright-vscode",
+        "language":"TypeScript"
+    },
+    {
+        "title":"wasmer",
+        "cover":"/articles/resource/page76/6.png",
+        "desc":"基于 WebAssembly 的超轻量级容器",
+        "link":"https://github.com/wasmerio/wasmer",
+        "language":"Rust"
+    }
+]
