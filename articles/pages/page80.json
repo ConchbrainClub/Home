@@ -1,0 +1,44 @@
+[
+    {
+        "title":"tracing",
+        "cover":"/articles/resource/page80/1.png",
+        "desc":"Rust 应用级别跟踪。",
+        "link":"https://github.com/tokio-rs/tracing",
+        "language":"Rust"
+    },
+    {
+        "title":"NodeOS",
+        "cover":"/articles/resource/page80/2.png",
+        "desc":"Node.js 轻量级操作系统‎",
+        "link":"https://github.com/NodeOS/NodeOS",
+        "language":"Shell"
+    },
+    {
+        "title":"x11docker",
+        "cover":"/articles/resource/page80/3.png",
+        "desc":"在 Docker 中运行 GUI 应用程序。",
+        "link":"https://github.com/mviereck/x11docker",
+        "language":"Shell"
+    },
+    {
+        "title":"termdbms",
+        "cover":"/articles/resource/page80/4.gif",
+        "desc":"查看和编辑数据库的 TUI 应用程序。",
+        "link":"https://github.com/mathaou/termdbms",
+        "language":"Go"
+    },
+    {
+        "title":"Sidus",
+        "cover":"/articles/resource/page80/5.png",
+        "desc":"基于 Web 的函数绘图器。",
+        "link":"https://github.com/beetrandahiya/Sidus",
+        "language":"JavaScript"
+    },
+    {
+        "title":"roogle",
+        "cover":"/articles/resource/page80/6.png",
+        "desc":"Rust API 搜索引擎。",
+        "link":"https://github.com/hkmatsumoto/roogle",
+        "language":"Rust"
+    }
+]
