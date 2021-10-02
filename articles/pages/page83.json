@@ -1,0 +1,44 @@
+[
+    {
+        "title":"pdf.js",
+        "cover":"/articles/resource/page83/1.png",
+        "desc":"JavaScript PDF 渲染。",
+        "link":"https://github.com/mozilla/pdf.js",
+        "language":"JavaScript"
+    },
+    {
+        "title":"vis-network",
+        "cover":"/articles/resource/page83/2.png",
+        "desc":"创建自定义的网络视图。",
+        "link":"https://github.com/visjs/vis-network",
+        "language":"JavaScript"
+    },
+    {
+        "title":"gobang",
+        "cover":"/articles/resource/page83/3.gif",
+        "desc":"跨平台 TUI 数据库管理工具。",
+        "link":"https://github.com/TaKO8Ki/gobang",
+        "language":"Rust"
+    },
+    {
+        "title":"terraria",
+        "cover":"/articles/resource/page83/4.png",
+        "desc":"泰拉瑞亚服务器 Docker 镜像。",
+        "link":"https://github.com/ryansheehan/terraria",
+        "language":"Dockerfile"
+    },
+    {
+        "title":"TShock",
+        "cover":"/articles/resource/page83/5.png",
+        "desc":"自托管的泰拉瑞亚服务器。",
+        "link":"https://github.com/Pryaxis/TShock",
+        "language":"C#"
+    },
+    {
+        "title":"Core2D",
+        "cover":"/articles/resource/page83/6.png",
+        "desc":"多平台数据驱动的 2D 图形编辑器。",
+        "link":"https://github.com/wieslawsoltes/Core2D",
+        "language":"C#"
+    }
+]
