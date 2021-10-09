@@ -30,7 +30,7 @@
     {
         "title":"NodeNetwork",
         "cover":"/articles/resource/page75/5.gif",
-        "desc":"基于WPF UI的 C# 库",
+        "desc":"基于 WPF 的节点编辑器。",
         "link":"https://github.com/Wouterdek/NodeNetwork",
         "language":"C#"
     },
