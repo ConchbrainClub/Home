@@ -156,6 +156,14 @@ function closeToast(toastId) {
         toast.remove();
 }
 
+function autoDark() {
+    let hours = new Date().getHours();
+    if (hours >= 18 && hours <= 6) {
+        DarkReader.setFetchMethod(window.fetch);
+        DarkReader.enable();
+    }
+}
+
 async function init(){
     //初始化菜单
     initMenu();
@@ -197,7 +205,8 @@ async function init(){
     else{
         navigation("home");
     }
-
+    
+    autoDark();
     //推送到百度
     pushToBaidu();
 }
