@@ -1,0 +1,44 @@
+[
+    {
+        "title":"VS-PPT",
+        "cover":"/articles/resource/page85/1.png",
+        "desc":"提高开发人员生产力的 VS 扩展。",
+        "link":"https://github.com/Microsoft/VS-PPT",
+        "language":"C#"
+    },
+    {
+        "title":"core",
+        "cover":"/articles/resource/page85/2.png",
+        "desc":"基于 F# 的 Web 编程平台。",
+        "link":"https://github.com/dotnet-websharper/core",
+        "language":"F#"
+    },
+    {
+        "title":"spotify-tui",
+        "cover":"/articles/resource/page85/3.gif",
+        "desc":"Spotify TUI 客户端。",
+        "link":"https://github.com/Rigellute/spotify-tui",
+        "language":"Rust"
+    },
+    {
+        "title":"javalin",
+        "cover":"/articles/resource/page85/4.png",
+        "desc":"简单而现代的 Java Web 框架。",
+        "link":"https://github.com/tipsy/javalin",
+        "language":"Kotlin"
+    },
+    {
+        "title":"AiurVersionControl",
+        "cover":"/articles/resource/page85/5.png",
+        "desc":"强大的集合同步框架。",
+        "link":"https://github.com/AiursoftWeb/AiurVersionControl",
+        "language":"C#"
+    },
+    {
+        "title":"Edi.WordFilter",
+        "cover":"/articles/resource/page85/6.png",
+        "desc":"文字过滤器。",
+        "link":"https://github.com/EdiWang/Edi.WordFilter",
+        "language":"C#"
+    }
+]
