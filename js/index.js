@@ -158,7 +158,7 @@ function closeToast(toastId) {
 
 function autoDark() {
     let hours = new Date().getHours();
-    if (hours >= 18 && hours <= 6) {
+    if (hours >= 18 || hours <= 6) {
         DarkReader.setFetchMethod(window.fetch);
         DarkReader.enable();
     }
