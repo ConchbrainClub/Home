@@ -129,7 +129,7 @@ function showData(date, articles){
     articles.forEach(article => {
         let starId = guid();
 
-        if(!location.href.includes("localhost")){
+        if(!location.href.includes("127.0.0.1")){
             article.cover = `https://cdn.jsdelivr.net/gh/conchbrainclub/home@${commitId}${article.cover}`;
         }
 
