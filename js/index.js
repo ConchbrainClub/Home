@@ -206,7 +206,7 @@ async function init(){
         navigation("home");
     }
     
-    autoDark();
+    //autoDark();
     //推送到百度
     pushToBaidu();
 }
