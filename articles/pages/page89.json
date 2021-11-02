@@ -1,0 +1,44 @@
+[
+    {
+        "title":"waydroid",
+        "cover":"/articles/resource/page89/1.png",
+        "desc":"在容器中启动完整的 Android 系统。",
+        "link":"https://github.com/waydroid/waydroid",
+        "language":"Python"
+    },
+    {
+        "title":"Text-Grab",
+        "cover":"/articles/resource/page89/2.gif",
+        "desc":"简单实用的 Windows OCR。",
+        "link":"https://github.com/TheJoeFin/Text-Grab",
+        "language":"C#"
+    },
+    {
+        "title":"Hangfire",
+        "cover":"/articles/resource/page89/3.png",
+        "desc":"在 .NET 应用程序中创建后台任务。",
+        "link":"https://github.com/HangfireIO/Hangfire",
+        "language":"C#"
+    },
+    {
+        "title":"cheat",
+        "cover":"/articles/resource/page89/4.png",
+        "desc":"在命令行中创建和查看交互式提示。",
+        "link":"https://github.com/cheat/cheat",
+        "language":"Go"
+    },
+    {
+        "title":"jreleaser",
+        "cover":"/articles/resource/page89/5.png",
+        "desc":"简单快速的发布 Java 项目。",
+        "link":"https://github.com/jreleaser/jreleaser",
+        "language":"Java"
+    },
+    {
+        "title":"tv",
+        "cover":"/articles/resource/page89/1.png",
+        "desc":"命令行 csv 格式化打印。",
+        "link":"https://github.com/alexhallam/tv",
+        "language":"Rust"
+    }
+]
