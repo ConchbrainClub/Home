@@ -1,7 +1,7 @@
 ---
 name: Feedback
 about: New Feedback
-title: ''
+title: Feedback
 labels: ''
 assignees: lixinyang123, ccczg
 
