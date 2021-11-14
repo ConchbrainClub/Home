@@ -1,0 +1,44 @@
+[
+    {
+        "title":"vapor",
+        "cover":"/articles/resource/page91/1.png",
+        "desc":"服务端 Swift Web 框架。",
+        "link":"https://github.com/vapor/vapor",
+        "language":"Swift"
+    },
+    {
+        "title":"NETworkManager",
+        "cover":"/articles/resource/page91/2.gif",
+        "desc":"管理网络和排除网络问题的强大工具。",
+        "link":"https://github.com/BornToBeRoot/NETworkManager",
+        "language":"C#"
+    },
+    {
+        "title":"uptime-kuma",
+        "cover":"/articles/resource/page91/3.png",
+        "desc":"自托管的网站监控工具。",
+        "link":"https://github.com/louislam/uptime-kuma",
+        "language":"JavaScript"
+    },
+    {
+        "title":"iroiro",
+        "cover":"/articles/resource/page91/4.png",
+        "desc":"命令行颜色查找工具。",
+        "link":"https://github.com/antfu/iroiro",
+        "language":"TypeScript"
+    },
+    {
+        "title":"xplorer",
+        "cover":"/articles/resource/page91/5.png",
+        "desc":"一个可定制的现代化文件管理器。",
+        "link":"https://github.com/kimlimjustin/xplorer",
+        "language":"TypeScript"
+    },
+    {
+        "title":"PageFabric",
+        "cover":"/articles/resource/page91/6.png",
+        "desc":"Fluent Design 的静态网页生成器。",
+        "link":"https://github.com/sebbouez/PageFabric",
+        "language":"C#"
+    }
+]
