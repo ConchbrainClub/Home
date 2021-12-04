@@ -53,7 +53,7 @@ function tryConnect(){
             $("#shell").modal("toggle");
         }
         else if(str == num){
-            let url = baseUrl + "/" + container.id;
+            let url = `${baseUrl}/${container.id}/`;;
             document.querySelector("#shell").querySelector("iframe").src = url;
         }
         else{
