@@ -1,0 +1,44 @@
+[
+    {
+        "title":"UUPMediaCreator",
+        "cover":"/articles/resource/page92/1.png",
+        "desc":"Windows Media 文件创建工具。",
+        "link":"https://github.com/gus33000/UUPMediaCreator",
+        "language":"C#"
+    },
+    {
+        "title":"rancher-desktop",
+        "cover":"/articles/resource/page92/2.png",
+        "desc":"Kubernetes 和容器管理桌面客户端。",
+        "link":"https://github.com/rancher-sandbox/rancher-desktop",
+        "language":"TypeScript"
+    },
+    {
+        "title":"httpie",
+        "cover":"/articles/resource/page92/3.gif",
+        "desc":"现代化 HTTP 命令行客户端。",
+        "link":"https://github.com/httpie/httpie",
+        "language":"Python"
+    },
+    {
+        "title":"hurl",
+        "cover":"/articles/resource/page92/4.png",
+        "desc":"运行和测试 HTTP 请求。",
+        "link":"https://github.com/Orange-OpenSource/hurl",
+        "language":"Rust"
+    },
+    {
+        "title":"Wox",
+        "cover":"/articles/resource/page92/5.gif",
+        "desc":"简单易用的 Windows 启动器。",
+        "link":"https://github.com/Wox-launcher/Wox",
+        "language":"C#"
+    },
+    {
+        "title":"checkboxland",
+        "cover":"/articles/resource/page92/6.png",
+        "desc":"使用 HTML CheckBox 渲染任何东西。",
+        "link":"https://github.com/bryanbraun/checkboxland",
+        "language":"JavaScript"
+    }
+]
