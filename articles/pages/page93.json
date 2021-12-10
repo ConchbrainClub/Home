@@ -1,0 +1,44 @@
+[
+    {
+        "title":"appwrite",
+        "cover":"/articles/resource/page93/1.png",
+        "desc":"安全的端到端后端服务器。",
+        "link":"https://github.com/appwrite/appwrite",
+        "language":"JavaScript"
+    },
+    {
+        "title":"HybridBlazor",
+        "cover":"/articles/resource/page93/2.gif",
+        "desc":"同时部署两种 Blazor 托管模型。",
+        "link":"https://github.com/jdtcn/HybridBlazor",
+        "language":"C#"
+    },
+    {
+        "title":"Monocle",
+        "cover":"/articles/resource/page93/3.png",
+        "desc":"PowerShell Web 自动化模块。",
+        "link":"https://github.com/Badgerati/Monocle",
+        "language":"PowerShell"
+    },
+    {
+        "title":"pyodide",
+        "cover":"/articles/resource/page93/4.png",
+        "desc":"将 Python 编译为 WebAssembly。",
+        "link":"https://github.com/pyodide/pyodide",
+        "language":"Python"
+    },
+    {
+        "title":"balena-rpiplay",
+        "cover":"/articles/resource/page93/5.png",
+        "desc":"将 Raspberry Pi 转换为 Airplay 服务器。",
+        "link":"https://github.com/rahul-thakoor/balena-rpiplay",
+        "language":"Shell"
+    },
+    {
+        "title":"winfetch",
+        "cover":"/articles/resource/page93/6.png",
+        "desc":"Windows 命令行系统信息工具。",
+        "link":"https://github.com/kiedtl/winfetch",
+        "language":"PowerShell"
+    }
+]
