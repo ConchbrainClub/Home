@@ -22,7 +22,7 @@
     },
     {
         "title":"jira-cli",
-        "cover":"/articles/resource/page102/4.gif",
+        "cover":"/articles/resource/page102/4.png",
         "desc":"Jira 命令行工具。",
         "link":"https://github.com/ankitpokhrel/jira-cli",
         "language":"Go"
