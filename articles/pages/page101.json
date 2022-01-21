@@ -1,0 +1,44 @@
+[
+    {
+        "title":"milkdown",
+        "cover":"/articles/resource/page101/1.png",
+        "desc":"插件驱动的 Markdown 编辑器。",
+        "link":"https://github.com/Saul-Mirone/milkdown",
+        "language":"TypeScript"
+    },
+    {
+        "title":"daedalOS",
+        "cover":"/articles/resource/page101/2.gif",
+        "desc":"浏览器中的桌面环境。",
+        "link":"https://github.com/DustinBrett/daedalOS",
+        "language":"JavaScript"
+    },
+    {
+        "title":"wails",
+        "cover":"/articles/resource/page101/3.png",
+        "desc":"使用 Go 和 Web 技术构建桌面应用程序。",
+        "link":"https://github.com/wailsapp/wails",
+        "language":"Go"
+    },
+    {
+        "title":"wpfui",
+        "cover":"/articles/resource/page101/4.png",
+        "desc":"流畅式设计的 WPF UI 库。",
+        "link":"https://github.com/lepoco/wpfui",
+        "language":"C#"
+    },
+    {
+        "title":"PowerRemoteDesktop",
+        "cover":"/articles/resource/page101/5.png",
+        "desc":"PowerShell 实现的远程桌面应用程序。",
+        "link":"https://github.com/DarkCoderSc/PowerRemoteDesktop",
+        "language":"PowerShell"
+    },
+    {
+        "title":"ktop",
+        "cover":"/articles/resource/page101/6.png",
+        "desc":"适用于 Kubernetes 集群的 TUI 工具。",
+        "link":"https://github.com/vladimirvivien/ktop",
+        "language":"Go"
+    }
+]
