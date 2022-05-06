@@ -1,0 +1,44 @@
+[
+    {
+        "title":"jdeploy",
+        "cover":"/articles/resource/page111/1.png",
+        "desc":"开发人员友好的桌面部署工具。",
+        "link":"https://github.com/shannah/jdeploy",
+        "language":"Java"
+    },
+    {
+        "title":"memfs",
+        "cover":"/articles/resource/page111/2.png",
+        "desc":"Node.js 的内存中文件系统。",
+        "link":"https://github.com/streamich/memfs",
+        "language":"TypeScript"
+    },
+    {
+        "title":"openpilot",
+        "cover":"/articles/resource/page111/3.png",
+        "desc":"开源的驾驶员辅助系统。",
+        "link":"https://github.com/commaai/openpilot",
+        "language":"Python"
+    },
+    {
+        "title":"automerge",
+        "cover":"/articles/resource/page111/4.png",
+        "desc":"在 JavaScript 中自动合并更改（多用户协作）。",
+        "link":"https://github.com/automerge/automerge",
+        "language":"JavaScript"
+    },
+    {
+        "title":"air",
+        "cover":"/articles/resource/page111/5.png",
+        "desc":"Go 应用的实时热重载。",
+        "link":"https://github.com/cosmtrek/air",
+        "language":"Go"
+    },
+    {
+        "title":"fastapi",
+        "cover":"/articles/resource/page111/6.png",
+        "desc":"现代、快速、高性能的 Python Web 框架。",
+        "link":"https://github.com/tiangolo/fastapi",
+        "language":"Python"
+    }
+]
