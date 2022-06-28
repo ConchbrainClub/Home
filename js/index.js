@@ -95,6 +95,9 @@ function navigation(name,isBack = false){
             navigation("notfound");
             loadingState(false);
         }
+
+        DarkReader.setFetchMethod(fetch)
+        DarkReader.enable()    
     });
 }
 
@@ -198,9 +201,6 @@ async function init(){
         navigation("home");
     }
 
-    DarkReader.setFetchMethod(fetch)
-    DarkReader.enable()
-    
     //推送到百度
     pushToBaidu();
 }
