@@ -94,10 +94,7 @@ function navigation(name,isBack = false){
         else{
             navigation("notfound");
             loadingState(false);
-        }
-
-        DarkReader.setFetchMethod(fetch)
-        DarkReader.enable()    
+        }   
     });
 }
 
