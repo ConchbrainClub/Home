@@ -197,6 +197,9 @@ async function init(){
     else{
         navigation("home");
     }
+
+    DarkReader.setFetchMethod(fetch)
+    DarkReader.enable()
     
     //推送到百度
     pushToBaidu();
