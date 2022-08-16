@@ -1,12 +1,10 @@
 var currentPage = 0;
-var commitId = "";
 var pages = undefined;
 var favourites = [];
 
 function loadConfig(){
     showLangs();
     request("/articles/config.json?" + Math.random(), (result) => {
-        commitId = result.commit;
         pages = result.pages;
         showTimeline();
         loadData();
@@ -128,10 +126,6 @@ function showData(date, articles){
 
     articles.forEach(article => {
         let starId = guid();
-
-        if(!location.href.includes("127.0.0.1")){
-            article.cover = `https://cdn.jsdelivr.net/gh/conchbrainclub/home@${commitId}${article.cover}`;
-        }
 
         let html = `
             <div class="col-md-6 animate__animated animate__bounceIn">
