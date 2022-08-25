@@ -1,0 +1,44 @@
+[
+    {
+        "title":"fx",
+        "cover":"/articles/resource/page119/1.gif",
+        "desc":"终端 JSON 查看器。",
+        "link":"https://github.com/antonmedv/fx",
+        "language":"Go"
+    },
+    {
+        "title":"tabby",
+        "cover":"/articles/resource/page119/2.png",
+        "desc":"更加现代化的终端。",
+        "link":"https://github.com/Eugeny/tabby",
+        "language":"TypeScript"
+    },
+    {
+        "title":"Cytopia",
+        "cover":"/articles/resource/page119/3.png",
+        "desc":"城市建筑模拟游戏。",
+        "link":"https://github.com/CytopiaTeam/Cytopia",
+        "language":"C++"
+    },
+    {
+        "title":"giggle",
+        "cover":"/articles/resource/page119/4.png",
+        "desc":"自托管无广告的谷歌搜索体验。",
+        "link":"https://github.com/dan-lovelace/giggle",
+        "language":"TypeScript"
+    },
+    {
+        "title":"pnpm",
+        "cover":"/articles/resource/page119/5.png",
+        "desc":" 快速的，节省磁盘空间的包管理工具。",
+        "link":"https://github.com/pnpm/pnpm",
+        "language":"TypeScript"
+    },
+    {
+        "title":"spacedrive",
+        "cover":"/articles/resource/page119/6.png",
+        "desc":"开源的跨平台文件浏览器。",
+        "link":"https://github.com/spacedriveapp/spacedrive",
+        "language":"TypeScript"
+    }
+]
