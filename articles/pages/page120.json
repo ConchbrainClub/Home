@@ -1,0 +1,44 @@
+[
+    {
+        "title":"atuin",
+        "cover":"/articles/resource/page120/1.gif",
+        "desc":"神奇的 Shell 历史记录。",
+        "link":"https://github.com/ellie/atuin",
+        "language":"Rust"
+    },
+    {
+        "title":"node-audiorecorder",
+        "cover":"/articles/resource/page120/2.png",
+        "desc":"基于 SoX 的 Node.js 录音包。",
+        "link":"https://github.com/RedKenrok/node-audiorecorder",
+        "language":"JavaScript"
+    },
+    {
+        "title":"ejsExcel",
+        "cover":"/articles/resource/page120/3.png",
+        "desc":"Node.js Excel 模板引擎。",
+        "link":"https://github.com/sail-sail/ejsExcel",
+        "language":"JavaScript"
+    },
+    {
+        "title":"nginx-proxy-manager",
+        "cover":"/articles/resource/page120/4.png",
+        "desc":"管理 Nginx 代理主机的仪表盘。",
+        "link":"https://github.com/NginxProxyManager/nginx-proxy-manager",
+        "language":"JavaScript"
+    },
+    {
+        "title":"MicaWPF",
+        "cover":"/articles/resource/page120/5.png",
+        "desc":"WPF Mica 特效库。",
+        "link":"https://github.com/Simnico99/MicaWPF",
+        "language":"C#"
+    },
+    {
+        "title":"snipli",
+        "cover":"/articles/resource/page120/6.png",
+        "desc":"用于快速共享本地文件代码段的命令行界面。",
+        "link":"https://github.com/buidler-hub/snipli",
+        "language":"TypeScript"
+    }
+]
