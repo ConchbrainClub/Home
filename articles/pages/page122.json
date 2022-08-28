@@ -1,0 +1,44 @@
+[
+    {
+        "title":"zellij",
+        "cover":"/articles/resource/page122/1.gif",
+        "desc":"终端的个人工作空间。",
+        "link":"https://github.com/zellij-org/zellij",
+        "language":"Rust"
+    },
+    {
+        "title":"lens",
+        "cover":"/articles/resource/page122/2.png",
+        "desc":"Kubernetes IDE。",
+        "link":"https://github.com/lensapp/lens",
+        "language":"TypeScript"
+    },
+    {
+        "title":"payload",
+        "cover":"/articles/resource/page122/3.png",
+        "desc":"免费开源的无头 CMS。",
+        "link":"https://github.com/payloadcms/payload",
+        "language":"TypeScript"
+    },
+    {
+        "title":"dashy",
+        "cover":"/articles/resource/page122/4.png",
+        "desc":"可自行托管的个人仪表盘。",
+        "link":"https://github.com/Lissy93/dashy",
+        "language":"Vue"
+    },
+    {
+        "title":"modren",
+        "cover":"/articles/resource/page122/5.gif",
+        "desc":"面向 Linux 用户的现代商店。",
+        "link":"https://github.com/RudraSwat/modren",
+        "language":"JavaScript"
+    },
+    {
+        "title":"t3",
+        "cover":"/articles/resource/page122/6.png",
+        "desc":"实时动画工具包。",
+        "link":"https://github.com/still-scene/t3",
+        "language":"C#"
+    }
+]
