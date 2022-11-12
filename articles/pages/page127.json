@@ -1,0 +1,44 @@
+[
+    {
+        "title":"motionity",
+        "cover":"/articles/resource/page127/1.gif",
+        "desc":"基于 Web 的动态图形编辑器。",
+        "link":"https://github.com/alyssaxuu/motionity",
+        "language":"JavaScript"
+    },
+    {
+        "title":"photoprism",
+        "cover":"/articles/resource/page127/2.png",
+        "desc":"去中心化网络的 AI 驱动的照片应用。",
+        "link":"https://github.com/photoprism/photoprism",
+        "language":"Go"
+    },
+    {
+        "title":"NvChad",
+        "cover":"/articles/resource/page127/3.png",
+        "desc":"极快启动时间的 NeoVim IDE 配置。",
+        "link":"https://github.com/NvChad/NvChad",
+        "language":"Lua"
+    },
+    {
+        "title":"runtipi",
+        "cover":"/articles/resource/page127/4.png",
+        "desc":"个人家庭服务器编排器。",
+        "link":"https://github.com/meienberger/runtipi",
+        "language":"TypeScript"
+    },
+    {
+        "title":"Jaya",
+        "cover":"/articles/resource/page127/5.png",
+        "desc":"跨平台文件管理器应用程序。",
+        "link":"https://github.com/waliarubal/Jaya",
+        "language":"C#"
+    },
+    {
+        "title":"homepage",
+        "cover":"/articles/resource/page127/6.png",
+        "desc":"高度可定制的仪表板应用。",
+        "link":"https://github.com/benphelps/homepage",
+        "language":"JavaScript"
+    }
+]
