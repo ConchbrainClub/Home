@@ -55,17 +55,16 @@ function showInfo(){
     document.querySelector("#userName").innerText = userInfo.login;
 }
 
-function request(href,callback){
-    $.ajax({
-        type: 'GET',
-        url: href,
-        success: (data) => {
-            callback(data);
-        },
-        error: () => {
-            callback(undefined);
-        }
-    });
+function request(href, callback){
+    try {
+        fetch(href).then(res => {
+            res.text().then(data => {
+                callback(data);
+            });
+        });
+    } catch (error) {
+        callback(undefined);
+    }
 }
 
 function guid() {
