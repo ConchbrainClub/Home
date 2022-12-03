@@ -1,0 +1,44 @@
+[
+    {
+        "title":"turbo",
+        "cover":"/articles/resource/page129/1.png",
+        "desc":"前端开发的下一代构建工具链。",
+        "link":"https://github.com/vercel/turbo",
+        "language":"Rust"
+    },
+    {
+        "title":"wrld.js",
+        "cover":"/articles/resource/page129/2.png",
+        "desc":"用于创建 3D 地图的 JavaScript API。",
+        "link":"https://github.com/wrld3d/wrld.js",
+        "language":"JavaScript"
+    },
+    {
+        "title":"ToolUI",
+        "cover":"/articles/resource/page129/3.png",
+        "desc":"用于管理 dotnet tools 的 TUI 应用程序。",
+        "link":"https://github.com/jinek/ToolUI",
+        "language":"C#"
+    },
+    {
+        "title":"answer",
+        "cover":"/articles/resource/page129/4.png",
+        "desc":"开源的知识问答社区。",
+        "link":"https://github.com/answerdev/answer",
+        "language":"Go"
+    },
+    {
+        "title":"net-dynamic-api",
+        "cover":"/articles/resource/page129/5.png",
+        "desc":"根据 Model 自动生成 Web API。",
+        "link":"https://github.com/DeeJayTC/net-dynamic-api",
+        "language":"C#"
+    },
+    {
+        "title":"league-paradox",
+        "cover":"/articles/resource/page129/6.png",
+        "desc":"英雄联盟客户端风格的组件库。",
+        "link":"https://github.com/youngtailors/league-paradox",
+        "language":"Vue"
+    }
+]
