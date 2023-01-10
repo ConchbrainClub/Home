@@ -1,23 +1,24 @@
-name: Build conchbrain
-on:
-    push:
-        branches:
-            - main
+# name: Build conchbrain
+# on:
+#     push:
+#         branches:
+#             - main
 
-jobs:
-    build:
-        runs-on: ubuntu-latest
-        if: github.repository == 'ConchbrainClub/CloudShell'
+# jobs:
+#     build:
+#         runs-on: ubuntu-latest
+#         if: github.repository == 'ConchbrainClub/CloudShell'
 
-        steps:
-            - name: Checkout Repository master branch
-              uses: actions/checkout@master
+#         steps:
+#             - name: Checkout Repository master branch
+#               uses: actions/checkout@master
 
-            - name: setup aliyun oss
-              uses: manyuanrong/setup-ossutil@master
-              with:
-                  endpoint: oss-cn-shanghai.aliyuncs.com
-                  access-key-id: ${{ secrets.OSS_KEY_ID}} # 刚刚配置过的AccessKeyId
-                  access-key-secret: ${{ secrets.OSS_KEY_SECRET }} # 刚刚配置过的AccessKeySecret
-            - name: cp files to aliyun
-              run: ossutil cp --recursive ./ -rf  oss://conchbrainclub/
+#             - name: setup aliyun oss
+#               uses: manyuanrong/setup-ossutil@master
+#               with:
+#                   endpoint: oss-cn-shanghai.aliyuncs.com
+#                   access-key-id: ${{ secrets.OSS_KEY_ID}}
+#                   access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+            
+#             - name: cp files to aliyun
+#               run: ossutil cp --recursive ./ -rf  oss://conchbrainclub/
