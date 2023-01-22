@@ -1,0 +1,44 @@
+[
+    {
+        "title":"temporal",
+        "cover":"/articles/resource/page134/1.png",
+        "desc":"持久化工作流平台。",
+        "link":"https://github.com/temporalio/temporal",
+        "language":"Go"
+    },
+    {
+        "title":"airbyte",
+        "cover":"/articles/resource/page134/2.png",
+        "desc":"ELT 管道的数据集成平台。",
+        "link":"https://github.com/airbytehq/airbyte",
+        "language":"Java"
+    },
+    {
+        "title":"rough-notation",
+        "cover":"/articles/resource/page134/3.png",
+        "desc":"在网页上创建手绘动画批注。",
+        "link":"https://github.com/rough-stuff/rough-notation",
+        "language":"TypeScript"
+    },
+    {
+        "title":"barba",
+        "cover":"/articles/resource/page134/4.png",
+        "desc":"页面间切换的动效库。",
+        "link":"https://github.com/barbajs/barba",
+        "language":"TypeScript"
+    },
+    {
+        "title":"val.town",
+        "cover":"/articles/resource/page134/5.png",
+        "desc":"简单有趣的 serverless 平台。",
+        "link":"https://www.val.town/",
+        "language":"Markdown"
+    },
+    {
+        "title":"cdc-file-transfer",
+        "cover":"/articles/resource/page134/6.gif",
+        "desc":"用于将文件从 Windows 同步和流式传输到 Linux 的工具。",
+        "link":"https://github.com/google/cdc-file-transfer",
+        "language":"C++"
+    }
+]
