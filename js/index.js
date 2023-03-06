@@ -1,13 +1,13 @@
 let scripts = [];
 let baiduPushLink = "http://data.zz.baidu.com/urls?site=https://conchbrain.club&token=5ZG2x3hnCmpkN4Qh";
 let client_id = "68fd42deb929a87fc8b9";
-let redirect_uri = "https://oauth.conchbrain.workers.dev/redirect";
+let redirect_uri = "https://oauth.conchbrain.club/redirect";
 let userInfo = undefined;
 let isDarkMode = false;
 
 async function pushToBaidu(){
     let siteMap = await (await fetch("/SiteMap.txt")).text();
-    fetch("https://cors.conchbrain.workers.dev/?" + baiduPushLink,{
+    fetch("https://cors.conchbrain.club/?" + baiduPushLink,{
         method: "POST",
         body: siteMap
     });
