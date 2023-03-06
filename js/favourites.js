@@ -7,7 +7,7 @@ async function showFavourites() {
         return;
     }
 
-    let res = await fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`);
+    let res = await fetch(`https://www.conchbrain.club/storage/${userInfo.id}/get?ConchFavourites`);
     favourites = await res.json();
 
     document.querySelector("#favouriteList").innerHTML = null;
@@ -59,7 +59,7 @@ function delFavourite(favourite, id){
     toast("收藏", "删除中，请稍候......");
     
     // 保存个人数据
-    fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/set`,{
+    fetch(`https://www.conchbrain.club/storage/${userInfo.id}/set`,{
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

@@ -177,7 +177,7 @@ function changeFavourite(favourite,starId) {
     toast("推荐", "保存中，请稍候......");
 
     // 保存个人数据
-    fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/set`,{
+    fetch(`https://www.conchbrain.club/storage/${userInfo.id}/set`,{
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -243,7 +243,7 @@ document.querySelector("input").onkeydown = () => {
 }
 
 if(userInfo)
-    fetch(`https://storage.conchbrain.workers.dev/${userInfo.id}/get?ConchFavourites`).then((res) => {
+    fetch(`https://www.conchbrain.club/storage/${userInfo.id}/get?ConchFavourites`).then((res) => {
         if(res.status == 404)
             loadConfig();
         else
