@@ -38,7 +38,7 @@ function showTimeline(){
 }
 
 function showLangs() {
-    request("https://lang.conchbrain.workers.dev/", langs => {
+    request("/lang", langs => {
         JSON.parse(langs).forEach(lang => {
             let html = `<li class="nav-item animate__animated animate__flip"><a class="nav-link" onclick="filterByLang('${lang}')">${lang}</a></li>`;
             document.querySelector("#langs").innerHTML += html;
