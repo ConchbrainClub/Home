@@ -1,7 +1,7 @@
 let scripts = [];
 let baiduPushLink = "http://data.zz.baidu.com/urls?site=https://conchbrain.club&token=5ZG2x3hnCmpkN4Qh";
 let client_id = "68fd42deb929a87fc8b9";
-let redirect_uri = "https://www.conchbrain.club/oauth/redirect";
+let redirect_uri = "https://oauth.conchbrain.workers.dev/redirect";
 let userInfo = undefined;
 let isDarkMode = false;
 
