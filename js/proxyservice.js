@@ -1,5 +1,5 @@
-var proxyHref = "https://proxy.conchbrain.workers.dev/-----";
-var searchHref = "https://proxy.conchbrain.workers.dev/-----https://duckduckgo.com/?q=";
+var proxyHref = "https://proxy.conchbrain.club/-----";
+var searchHref = "https://proxy.conchbrain.club/-----https://duckduckgo.com/?q=";
 
 function search(){
     let href = document.querySelector("#link").value;
@@ -27,7 +27,7 @@ function initBackground(){
         return;
     }
 
-    let corsProxy = "https://cors.conchbrain.workers.dev/?";
+    let corsProxy = "https://cors.conchbrain.club/?";
     let api = "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN";
     request(corsProxy + api,(data) => {
         let bgHref = "https://cn.bing.com" + data.images[0].url;

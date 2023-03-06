@@ -38,7 +38,7 @@ function showTimeline(){
 }
 
 function showLangs() {
-    request("/lang", langs => {
+    request("https://lang.conchbrain.club/", langs => {
         JSON.parse(langs).forEach(lang => {
             let html = `<li class="nav-item animate__animated animate__flip"><a class="nav-link" onclick="filterByLang('${lang}')">${lang}</a></li>`;
             document.querySelector("#langs").innerHTML += html;
@@ -177,7 +177,7 @@ function changeFavourite(favourite,starId) {
     toast("推荐", "保存中，请稍候......");
 
     // 保存个人数据
-    fetch(`https://www.conchbrain.club/storage/${userInfo.id}/set`,{
+    fetch(`https://storage.conchbrain.club/${userInfo.id}/set`,{
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -243,7 +243,7 @@ document.querySelector("input").onkeydown = () => {
 }
 
 if(userInfo)
-    fetch(`https://www.conchbrain.club/storage/${userInfo.id}/get?ConchFavourites`).then((res) => {
+    fetch(`https://storage.conchbrain.club/${userInfo.id}/get?ConchFavourites`).then((res) => {
         if(res.status == 404)
             loadConfig();
         else
