@@ -1,0 +1,44 @@
+[
+    {
+        "title":"GyroShell",
+        "cover":"/articles/resource/page137/1.png",
+        "desc":"Windows 11 可定制和简化的 Shell。",
+        "link":"https://github.com/Pdawg-bytes/GyroShell",
+        "language":"C#"
+    },
+    {
+        "title":"prototypes",
+        "cover":"/articles/resource/page137/2.png",
+        "desc":"拟物化（会反光）的按钮。",
+        "link":"https://github.com/alexwidua/prototypes",
+        "language":"Swift"
+    },
+    {
+        "title":"ChatGPT",
+        "cover":"/articles/resource/page137/3.png",
+        "desc":"适用于全平台的 ChatGPT 客户端。",
+        "link":"https://github.com/wieslawsoltes/ChatGPT",
+        "language":"C#"
+    },
+    {
+        "title":"sigma-file-manager",
+        "cover":"/articles/resource/page137/4.png",
+        "desc":"免费开源的，现代化文件管理器。",
+        "link":"https://github.com/aleksey-hoffman/sigma-file-manager",
+        "language":"C"
+    },
+    {
+        "title":"KCLVM",
+        "cover":"/articles/resource/page137/5.png",
+        "desc":"一种基于约束的记录和功能语言，主要用于配置和策略场景。",
+        "link":"https://github.com/KusionStack/KCLVM",
+        "language":"Rust"
+    },
+    {
+        "title":"apitable",
+        "cover":"/articles/resource/page137/6.png",
+        "desc":"一个面向API的低代码平台。",
+        "link":"https://github.com/apitable/apitable",
+        "language":"TypeScript"
+    }
+]
