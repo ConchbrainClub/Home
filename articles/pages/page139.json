@@ -1,0 +1,44 @@
+[
+    {
+        "title":"timer-cli",
+        "cover":"/articles/resource/page139/1.png",
+        "desc":"Python CLI 倒计时器。",
+        "link":"https://github.com/1Blademaster/timer-cli",
+        "language":"Python"
+    },
+    {
+        "title":"Auto-GPT",
+        "cover":"/articles/resource/page139/2.png",
+        "desc":"让你的 GPT-4 完全自主运行。",
+        "link":"https://github.com/Significant-Gravitas/Auto-GPT",
+        "language":"Python"
+    },
+    {
+        "title":"SPlayer",
+        "cover":"/articles/resource/page139/3.png",
+        "desc":"一个简约的在线音乐播放器，适配移动端。",
+        "link":"https://github.com/imsyy/SPlayer",
+        "language":"Vue"
+    },
+    {
+        "title":"carrot",
+        "cover":"/articles/resource/page139/4.png",
+        "desc":"ChatGPT 镜像站点合集。",
+        "link":"https://github.com/xx025/carrot",
+        "language":"Markdown"
+    },
+    {
+        "title":"jimp",
+        "cover":"/articles/resource/page139/5.png",
+        "desc":"没有原生依赖的 Node.js 图像处理库。",
+        "link":"https://github.com/jimp-dev/jimp",
+        "language":"JavaScript"
+    },
+    {
+        "title":"Dapper",
+        "cover":"/articles/resource/page139/6.png",
+        "desc":"一个简单的 .NET 对象映射器。",
+        "link":"https://github.com/DapperLib/Dapper",
+        "language":"C#"
+    }
+]
