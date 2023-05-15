@@ -135,7 +135,7 @@ function showData(date, articles){
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a href="${article.link}" target="_blank">${article.title}</a>
+                            <a href="${article.link}" target="_blank">${article.link.replace("https://github.com/", "")}</a>
                             <div id="${starId}" class="float-right star">${showStar(article, starId)}</div>
                         </h5>
                         <p class="card-text">${article.desc}</p>
