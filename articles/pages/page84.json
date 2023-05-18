@@ -1,41 +1,35 @@
 [
     {
-        "title":"replace-jquery",
         "cover":"/articles/resource/page84/1.png",
         "desc":"自动替换 jQuery 为原生 JS。",
         "link":"https://github.com/sachinchoolur/replace-jquery",
         "language":"JavaScript"
     },
     {
-        "title":"mockachino",
         "cover":"/articles/resource/page84/2.png",
         "desc":"快速的创建 JSON API。",
         "link":"https://www.mockachino.com/",
         "language":"HTML"
     },
     {
-        "title":"storybook",
         "cover":"/articles/resource/page84/3.gif",
         "desc":"交互式开发和测试组件。",
         "link":"https://github.com/storybookjs/storybook",
         "language":"TypeScript"
     },
     {
-        "title":"OpenSilver",
         "cover":"/articles/resource/page84/4.png",
         "desc":"开源的 Silverlight 重新实现。",
         "link":"https://github.com/OpenSilver/OpenSilver",
         "language":"C#"
     },
     {
-        "title":"hacker-scripts",
         "cover":"/articles/resource/page84/5.png",
         "desc":"黑客的脚本。",
         "link":"https://github.com/NARKOZ/hacker-scripts",
         "language":"JavaScript"
     },
     {
-        "title":"CameraVoyeur",
         "cover":"/articles/resource/page84/6.png",
         "desc":"黑入任何的 IP 摄像头。",
         "link":"https://github.com/Anduin2017/CameraVoyeur",

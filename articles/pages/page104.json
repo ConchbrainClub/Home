@@ -1,41 +1,35 @@
 [
     {
-        "title":"flat",
         "cover":"/articles/resource/page104/1.png",
         "desc":"开源的电子教室。",
         "link":"https://github.com/netless-io/flat",
         "language":"TypeScript"
     },
     {
-        "title":"nodexr",
         "cover":"/articles/resource/page104/2.png",
         "desc":"基于节点的正则表达式编辑器。",
         "link":"https://github.com/Jcparkyn/nodexr",
         "language":"C#"
     },
     {
-        "title":"Nuklear",
         "cover":"/articles/resource/page104/3.png",
         "desc":"即时模式跨平台 GUI 库。",
         "link":"https://github.com/Immediate-Mode-UI/Nuklear",
         "language":"C"
     },
     {
-        "title":"grpc-curl",
         "cover":"/articles/resource/page104/4.png",
         "desc":"grpc 命令行交互工具。",
         "link":"https://github.com/xoofx/grpc-curl",
         "language":"C#"
     },
     {
-        "title":"PyFlow",
         "cover":"/articles/resource/page104/5.png",
         "desc":"Python 可视化编程框架。",
         "link":"https://github.com/wonderworks-software/PyFlow",
         "language":"Python"
     },
     {
-        "title":"DevToys",
         "cover":"/articles/resource/page104/6.png",
         "desc":"常用的开发人员工具整合。",
         "link":"https://github.com/veler/DevToys",

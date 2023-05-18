@@ -1,41 +1,35 @@
 [
     {
-        "title":"wails",
         "cover":"/articles/resource/page99/1.png",
         "desc":"使用 Go 和 Web 技术来创建桌面应用。",
         "link":"https://github.com/wailsapp/wails",
         "language":"Go"
     },
     {
-        "title":"helix-toolkits",
         "cover":"/articles/resource/page99/2.png",
         "desc":".NET 3D 组件库。",
         "link":"https://github.com/helix-toolkit/helix-toolkits",
         "language":"C#"
     },
     {
-        "title":"appsmith",
         "cover":"/articles/resource/page99/3.gif",
         "desc":"用于构建内部工具和仪表板的低代码平台。",
         "link":"https://github.com/appsmithorg/appsmith",
         "language":"TypeScript"
     },
     {
-        "title":"MagiskOnWSA",
         "cover":"/articles/resource/page99/4.png",
         "desc":"将 Magisk root 和 Google Apps 集成到 WSA 中。",
         "link":"https://github.com/LSPosed/MagiskOnWSA",
         "language":"Markdown"
     },
     {
-        "title":"lapce",
         "cover":"/articles/resource/page99/5.png",
         "desc":"使用Rust编写的轻量快速的代码编辑器。",
         "link":"https://github.com/lapce/lapce",
         "language":"Rust"
     },
     {
-        "title":"stats",
         "cover":"/articles/resource/page99/6.png",
         "desc":"菜单栏中的 macOS 系统监视器。",
         "link":"https://github.com/exelban/stats",

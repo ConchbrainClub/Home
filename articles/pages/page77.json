@@ -1,41 +1,35 @@
 [
     {
-        "title":"sqlmodel",
         "cover":"/articles/resource/page77/1.png",
         "desc":"Python 中的 SQL 数据库，专为简单、兼容和稳健性而设计",
         "link":"https://github.com/tiangolo/sqlmodel",
         "language":"Python"
     },
     {
-        "title":"OpenSilver",
         "cover":"/articles/resource/page77/2.png",
         "desc":"编译 C#/XAML/.NET 到网络组装/HTML/CSS",
         "link":"https://github.com/OpenSilver/OpenSilver",
         "language":"C#"
     },
     {
-        "title":"ArchiveBox",
         "cover":"/articles/resource/page77/3.png",
         "desc":"一个强大的，自托管的互联网存档解决方案",
         "link":"https://github.com/ArchiveBox/ArchiveBox",
         "language":"Python"
     },
     {
-        "title":"jint",
         "cover":"/articles/resource/page77/4.png",
         "desc":"在任何.NET 平台上运行JavaScript",
         "link":"https://github.com/sebastienros/jint",
         "language":"C#"
     },
     {
-        "title":"ExpressionEvaluator",
         "cover":"/articles/resource/page77/5.png",
         "desc":"一个简单的计算器",
         "link":"https://github.com/codingseb/ExpressionEvaluator",
         "language":"C#"
     },
     {
-        "title":"jspaint",
         "cover":"/articles/resource/page77/6.png",
         "desc":"在线画图工具",
         "link":"https://github.com/1j01/jspaint",

@@ -1,41 +1,35 @@
 [
     {
-        "title":"NanaZip",
         "cover":"/articles/resource/page95/1.png",
         "desc":"拥有现代 Windows 体验的 7-Zip。",
         "link":"https://github.com/M2Team/NanaZip",
         "language":"C"
     },
     {
-        "title":"http-server-online",
         "cover":"/articles/resource/page95/2.png",
         "desc":"无需任何工具即可启动本地 HTTP 服务器。",
         "link":"https://github.com/EtherDream/http-server-online",
         "language":"JavaScript"
     },
     {
-        "title":"questdb",
         "cover":"/articles/resource/page95/3.png",
         "desc":"高性能的开源时序数据库。",
         "link":"https://github.com/questdb/questdb",
         "language":"Java"
     },
     {
-        "title":"Consolonia",
         "cover":"/articles/resource/page95/4.png",
         "desc":"适用于 Avalonia 的 TUI 实现。",
         "link":"https://github.com/jinek/Consolonia",
         "language":"C#"
     },
     {
-        "title":"cesium",
         "cover":"/articles/resource/page95/5.png",
         "desc":"在浏览器中创建 3D 地球仪和 2D 地图。",
         "link":"https://github.com/CesiumGS/cesium",
         "language":"JavaScript"
     },
     {
-        "title":"WebAssemblyStudio",
         "cover":"/articles/resource/page95/6.png",
         "desc":"WebAssembly Playground。",
         "link":"https://github.com/wasdk/WebAssemblyStudio",

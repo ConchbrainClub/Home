@@ -1,55 +1,47 @@
 [
     {
-        "title":"viewerjs",
         "cover":"/articles/resource/page53/1.png",
         "desc":"JavaScript 图像查看器。",
         "link":"https://github.com/fengyuanchen/viewerjs",
         "language":"JavaScript"
     },
     {
-        "title":"styli.sh",
         "cover":"/articles/resource/page53/2.png",
         "desc":"壁纸管理 CLI 工具。",
         "link":"https://github.com/thevinter/styli.sh",
         "language":"Shell"
     },
     {
-        "title":"github-profile-readme-generator",
         "cover":"/articles/resource/page53/3.gif",
         "desc":"Github Profile README 生成器。",
         "link":"https://github.com/rahuldkjain/github-profile-readme-generator",
         "language":"JavaScript"
     },
     {
-        "title":"rustpad",
         "cover":"/articles/resource/page53/4.png",
         "desc":"实时的可协作代码编辑器。",
         "link":"https://github.com/ekzhang/rustpad",
         "language":"Rust"
     },
     {
-        "title":"handsfree",
         "cover":"/articles/resource/page53/5.gif",
         "desc":"面部和手势识别的前端库。",
         "link":"https://github.com/midiblocks/handsfree",
         "language":"JavaScript"
     },
     {
-        "title":"MdXaml",
         "cover":"/articles/resource/page53/6.png",
         "desc":"WPF 的 Markdown 渲染控件。",
         "link":"https://github.com/whistyun/MdXaml",
         "language":"C#"
     },
     {
-        "title":"docz",
         "cover":"/articles/resource/page53/7.png",
         "desc":"交互式文档生成器。",
         "link":"https://github.com/pedronauck/docz",
         "language":"TypeScript"
     },
     {
-        "title":"cheat.sh",
         "cover":"/articles/resource/page53/8.gif",
         "desc":"命令行的编程备忘录。",
         "link":"https://github.com/chubin/cheat.sh",

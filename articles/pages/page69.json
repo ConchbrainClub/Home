@@ -1,41 +1,35 @@
 [
     {
-        "title":"PowerDesktop",
         "cover":"/articles/resource/page69/1.png",
         "desc":"在 Windows 桌面创建小部件。",
         "link":"https://github.com/DmitryBorodiy/PowerDesktop",
         "language":"HTML"
     },
     {
-        "title":"headless-recorder",
         "cover":"/articles/resource/page69/2.gif",
         "desc":"将网页操作录制为 Playwright 或 Puppeteer 脚本。",
         "link":"https://github.com/checkly/headless-recorder",
         "language":"JavaScript"
     },
     {
-        "title":"torpar",
         "cover":"/articles/resource/page69/3.png",
         "desc":"Torrent Paradise 的 TUI 客户端。",
         "link":"https://github.com/varbhat/torpar",
         "language":"Go"
     },
     {
-        "title":"pyautogui",
         "cover":"/articles/resource/page69/4.png",
         "desc":"基于 Python 的跨平台 GUI 自动化框架。",
         "link":"https://github.com/asweigart/pyautogui",
         "language":"Python"
     },
     {
-        "title":"mitmproxy",
         "cover":"/articles/resource/page69/5.png",
         "desc":"免费开源的交互式 HTTPS 代理。",
         "link":"https://github.com/mitmproxy/mitmproxy",
         "language":"Python"
     },
     {
-        "title":"daisyui",
         "cover":"/articles/resource/page69/6.png",
         "desc":"Tailwind CSS 组件。",
         "link":"https://github.com/saadeghi/daisyui",

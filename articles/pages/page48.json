@@ -1,55 +1,47 @@
 [
     {
-        "title":"sched",
         "cover":"/articles/resource/page48/1.png",
         "desc":"一个简单的进程管理器，允许您指定基于计时器执行作业的计划。",
         "link":"https://github.com/sherifabdlnaby/sched",
         "language":"Go"
     },
     {
-        "title":"markdeep",
         "cover":"/articles/resource/page48/2.png",
         "desc":"官方公开 Markdeep 源档案。",
         "link":"https://github.com/morgan3d/markdeep",
         "language":"JavaScript"
     },
     {
-        "title":"winbox",
         "cover":"/articles/resource/page48/3.png",
         "desc":"现代网络窗口管理器。",
         "link":"https://github.com/nextapps-de/winbox",
         "language":"JavaScript"
     },
     {
-        "title":"BlackSheep",
         "cover":"/articles/resource/page48/4.png",
         "desc":"BlackSheep 是一个异步 Web 框架，用于使用 Python 构建基于事件的 Web 应用程序。",
         "link":"https://github.com/Neoteroi/BlackSheep",
         "language":"Python"
     },
     {
-        "title":"socket.io",
         "cover":"/articles/resource/page48/5.png",
         "desc":"实时应用框架（Node.JS 服务器）。",
         "link":"https://github.com/socketio/socket.io",
         "language":"JavaScript"
     },
     {
-        "title":"webamp",
         "cover":"/articles/resource/page48/6.png",
         "desc":"在 HTML5 和 JavaScript 中重新实现 Winamp 2.9，具有完整的皮肤支持。",
         "link":"https://github.com/captbaritone/webamp",
         "language":"TypeScript"
     },
     {
-        "title":"git-quick-stats",
         "cover":"/articles/resource/page48/7.png",
         "desc":"是一种访问 git 存储库中各种统计信息的简单有效的方法。",
         "link":"https://github.com/arzzen/git-quick-stats",
         "language":"Shell"
     },
     {
-        "title":"pangolin_desktop",
         "cover":"/articles/resource/page48/8.png",
         "desc":"dahliaOS 的桌面 shell。",
         "link":"https://github.com/dahliaOS/pangolin_desktop",

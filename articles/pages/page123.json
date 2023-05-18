@@ -1,41 +1,35 @@
 [
     {
-        "title":"ToolJet",
         "cover":"/articles/resource/page123/1.png",
         "desc":"用于构建业务应用程序的可扩展低代码框架。",
         "link":"https://github.com/ToolJet/ToolJet",
         "language":"JavaScript"
     },
     {
-        "title":"mdserver-web",
         "cover":"/articles/resource/page123/2.png",
         "desc":"一款简单Linux面板。",
         "link":"https://github.com/midoks/mdserver-web",
         "language":"JavaScript"
     },
     {
-        "title":"prefect",
         "cover":"/articles/resource/page123/3.png",
         "desc":"数据流协调和编排平台。",
         "link":"https://github.com/PrefectHQ/prefect",
         "language":"Python"
     },
     {
-        "title":"dooit",
         "cover":"/articles/resource/page123/4.png",
         "desc":"TUI 待办事项管理器。",
         "link":"https://github.com/kraanzu/dooit",
         "language":"Python"
     },
     {
-        "title":"dragonfly",
         "cover":"/articles/resource/page123/5.png",
         "desc":"Redis 和 Memcached 的现代化替代品。",
         "link":"https://github.com/dragonflydb/dragonfly",
         "language":"C++"
     },
     {
-        "title":"t3",
         "cover":"/articles/resource/page123/6.png",
         "desc":"实时动画工具包。",
         "link":"https://github.com/still-scene/t3",

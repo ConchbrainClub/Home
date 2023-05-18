@@ -1,41 +1,35 @@
 [
     {
-        "title":"blazorators",
         "cover":"/articles/resource/page126/1.png",
         "desc":"用于创建 JavaScript 互操作代码的 C# 源生成器。",
         "link":"https://github.com/IEvangelist/blazorators",
         "language":"C#"
     },
     {
-        "title":"DynamicExpresso",
         "cover":"/articles/resource/page126/2.png",
         "desc":"C# 表达式解释器",
         "link":"https://github.com/dynamicexpresso/DynamicExpresso",
         "language":"C#"
     },
     {
-        "title":"WatneyAstrometry",
         "cover":"/articles/resource/page126/3.png",
         "desc":"适用于 .NET 的天体测量求解器。",
         "link":"https://github.com/Jusas/WatneyAstrometry",
         "language":"C#"
     },
     {
-        "title":"BaGet",
         "cover":"/articles/resource/page126/4.png",
         "desc":"一个轻量级的 Nuget 和符号服务器。",
         "link":"https://github.com/loic-sharma/BaGet",
         "language":"C#"
     },
     {
-        "title":"dotnet-maui-showcase",
         "cover":"/articles/resource/page126/5.png",
         "desc":".NET MAUI 精选。",
         "link":"https://github.com/jsuarezruiz/dotnet-maui-showcase",
         "language":"C#"
     },
     {
-        "title":"apisix",
         "cover":"/articles/resource/page126/6.png",
         "desc":"云原生 API 网关。",
         "link":"https://github.com/apache/apisix",

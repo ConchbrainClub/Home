@@ -1,41 +1,35 @@
 [
     {
-        "title":"whistle",
         "cover":"/articles/resource/page58/1.png",
         "desc":"HTTP、HTTP2、HTTPS 网络调试代理。",
         "link":"https://github.com/avwo/whistle",
         "language":"JavaScript"
     },
     {
-        "title":"brython",
         "cover":"/articles/resource/page58/2.png",
         "desc":"Python 3 在浏览器中运行的实现。",
         "link":"https://github.com/brython-dev/brython",
         "language":"Python"
     },
     {
-        "title":"sql.js",
         "cover":"/articles/resource/page58/3.png",
         "desc":"将 SQLite 编译为 WebAssembly 在浏览器中运行。",
         "link":"https://github.com/sql-js/sql.js",
         "language":"JavaScript"
     },
     {
-        "title":"NanUI",
         "cover":"/articles/resource/page58/4.png",
         "desc":"使用前端技术来构建 WinForms 应用程序",
         "link":"https://github.com/NetDimension/NanUI",
         "language":"C#"
     },
     {
-        "title":"WhyNotWin11",
         "cover":"/articles/resource/page58/5.png",
         "desc":"识别你的电脑是否支持 Windows 11。",
         "link":"https://github.com/rcmaehl/WhyNotWin11",
         "language":"AutoIt"
     },
     {
-        "title":"MeiliSearch",
         "cover":"/articles/resource/page58/6.gif",
         "desc":"强大、快速、开源、易于使用的搜索引擎。",
         "link":"https://github.com/meilisearch/MeiliSearch",

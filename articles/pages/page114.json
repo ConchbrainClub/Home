@@ -1,41 +1,35 @@
 [
     {
-        "title":"hubfs",
         "cover":"/articles/resource/page114/1.png",
         "desc":"GitHub 和 GitLab 的文件系统。",
         "link":"https://github.com/winfsp/hubfs",
         "language":"Go"
     },
     {
-        "title":"CodeEdit",
         "cover":"/articles/resource/page114/2.png",
         "desc":"适用于 MacOS 的代码编辑器。",
         "link":"https://github.com/CodeEditApp/CodeEdit",
         "language":"Swift"
     },
     {
-        "title":"loaders.css",
         "cover":"/articles/resource/page114/3.png",
         "desc":"性能优先的 CSS 加载动画。",
         "link":"https://github.com/ConnorAtherton/loaders.css",
         "language":"CSS"
     },
     {
-        "title":"semgrep",
         "cover":"/articles/resource/page114/4.png",
         "desc":"针对多种语言的轻量级静态分析。",
         "link":"https://github.com/returntocorp/semgrep",
         "language":"OCaml"
     },
     {
-        "title":"yew",
         "cover":"/articles/resource/page114/5.png",
         "desc":"Rust/Wasm 框架，用于构建客户端 Web 应用程序。",
         "link":"https://github.com/yewstack/yew",
         "language":"Rust"
     },
     {
-        "title":"HanLP",
         "cover":"/articles/resource/page114/6.png",
         "desc":"面向生产环境的多语种自然语言处理工具包。",
         "link":"https://github.com/hankcs/HanLP",

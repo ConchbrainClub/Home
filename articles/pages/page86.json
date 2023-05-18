@@ -1,41 +1,35 @@
 [
     {
-        "title":"jbang",
         "cover":"/articles/resource/page86/1.png",
         "desc":"无需设置直接运行 java 文件。",
         "link":"https://github.com/maxandersen/jbang",
         "language":"Java"
     },
     {
-        "title":"platform",
         "cover":"/articles/resource/page86/2.png",
         "desc":"使用 Java 开发 Web 界面。",
         "link":"https://github.com/vaadin/platform",
         "language":"Java"
     },
     {
-        "title":"deno-github-contributions-api",
         "cover":"/articles/resource/page86/3.gif",
         "desc":"获取你的 GitHub 贡献数据。",
         "link":"https://github.com/kawarimidoll/deno-github-contributions-api",
         "language":"TypeScript"
     },
     {
-        "title":"daisyui",
         "cover":"/articles/resource/page86/4.png",
         "desc":"Tailwind CSS 组件。",
         "link":"https://github.com/saadeghi/daisyui",
         "language":"Vue"
     },
     {
-        "title":"GWSL-Source",
         "cover":"/articles/resource/page86/5.png",
         "desc":"WSL GUI 的第三方实现。",
         "link":"https://github.com/Opticos/GWSL-Source",
         "language":"Python"
     },
     {
-        "title":"OpenInWSL-Source",
         "cover":"/articles/resource/page86/6.png",
         "desc":"更好的 Windows 和 WSL 集成。",
         "link":"https://github.com/Opticos/OpenInWSL-Source",

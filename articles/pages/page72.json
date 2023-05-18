@@ -1,41 +1,35 @@
 [
     {
-        "title":"my-qr.art",
         "cover":"/articles/resource/page72/1.png",
         "desc":"自定义二维码的Web应用程序。",
         "link":"https://github.com/raatmarien/my-qr.art",
         "language":"Python"
     },
     {
-        "title":"egui",
         "cover":"/articles/resource/page72/2.gif",
         "desc":"一个简单的的即时模式的Rust GUI库。",
         "link":"https://github.com/emilk/egui",
         "language":"Rust"
     },
     {
-        "title":"strapi",
         "cover":"/articles/resource/page72/3.png",
         "desc":"Node.js快速构建自定义API工具",
         "link":"https://github.com/strapi/strapi",
         "language":"JavaScript"
     },
     {
-        "title":"rg3d",
         "cover":"/articles/resource/page72/4.png",
         "desc":"Rust的3D和2D游戏引擎。",
         "link":"https://github.com/rg3dengine/rg3d",
         "language":"Rust"
     },
     {
-        "title":"localstack",
         "cover":"/articles/resource/page72/5.png",
         "desc":"功能齐全的本地AWS云堆栈。离线开发和测试您的云和无服务器应用",
         "link":"https://github.com/localstack/localstack",
         "language":"Python"
     },
     {
-        "title":"localstack",
         "cover":"/articles/resource/page72/6.gif",
         "desc":"开源的命令行m3u8/HLS/dash下载器。",
         "link":"https://github.com/nilaoda/N_m3u8DL-CLI",

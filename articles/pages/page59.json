@@ -1,41 +1,35 @@
 [
     {
-        "title":"winget-run",
         "cover":"/articles/resource/page59/1.png",
         "desc":"WinGet 包管理器 Web 界面。",
         "link":"https://github.com/winget-run/web",
         "language":"TypeScript"
     },
     {
-        "title":"markup",
         "cover":"/articles/resource/page59/2.gif",
         "desc":"基于 Web 的机器学习文本注释工具。",
         "link":"https://github.com/samueldobbie/markup",
         "language":"JavaScript"
     },
     {
-        "title":"jseval",
         "cover":"/articles/resource/page59/3.png",
         "desc":"在指定 URL 上运行 JavaScript。",
         "link":"https://github.com/yuis-ice/jseval",
         "language":"JavaScript"
     },
     {
-        "title":"grpcui",
         "cover":"/articles/resource/page59/4.png",
         "desc":"gRPC 交互式 Web UI。",
         "link":"https://github.com/fullstorydev/grpcui",
         "language":"JavaScript"
     },
     {
-        "title":"srs",
         "cover":"/articles/resource/page59/5.png",
         "desc":"简单、高效和实时的视频服务器。",
         "link":"https://github.com/ossrs/srs",
         "language":"C++"
     },
     {
-        "title":"svgedit",
         "cover":"/articles/resource/page59/6.png",
         "desc":"浏览器中的 SVG 编辑器。",
         "link":"https://github.com/SVG-Edit/svgedit",

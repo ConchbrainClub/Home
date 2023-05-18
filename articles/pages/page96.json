@@ -1,41 +1,35 @@
 [
     {
-        "title":"helix",
         "cover":"/articles/resource/page96/1.png",
         "desc":"现代化模态编辑器。",
         "link":"https://github.com/helix-editor/helix",
         "language":"Rust"
     },
     {
-        "title":"fmt",
         "cover":"/articles/resource/page96/2.png",
         "desc":"C++ iostream 快速安全的替代方案。",
         "link":"https://github.com/fmtlib/fmt",
         "language":"C++"
     },
     {
-        "title":"MalwareSourceCode",
         "cover":"/articles/resource/page96/3.png",
         "desc":"各平台的恶意软件源代码。",
         "link":"https://github.com/vxunderground/MalwareSourceCode",
         "language":"Assembly"
     },
     {
-        "title":"fonoster",
         "cover":"/articles/resource/page96/4.png",
         "desc":"将电话服务与互联网连接起来。",
         "link":"https://github.com/fonoster/fonoster",
         "language":"JavaScript"
     },
     {
-        "title":"nginxconfig.io",
         "cover":"/articles/resource/page96/5.png",
         "desc":"NGINX 配置生成器。",
         "link":"https://github.com/digitalocean/nginxconfig.io",
         "language":"JavaScript"
     },
     {
-        "title":"streamlit-geospatial",
         "cover":"/articles/resource/page96/6.gif",
         "desc":"通过时间线来展示地理空间的变化。",
         "link":"https://github.com/giswqs/streamlit-geospatial",

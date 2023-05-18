@@ -1,41 +1,35 @@
 [
     {
-        "title":"vscode-luna-paint",
         "cover":"/articles/resource/page78/1.png",
         "desc":"Vscode图像编辑器扩展",
         "link":"https://github.com/lunapaint/vscode-luna-paint",
         "language":"JavaScript"
     },
     {
-        "title":"pdf.js",
         "cover":"/articles/resource/page78/2.png",
         "desc":"PDF在线查看器",
         "link":"https://github.com/mozilla/pdf.js",
         "language":"JavaScript"
     },
     {
-        "title":"RustPython",
         "cover":"/articles/resource/page78/3.png",
         "desc":"用Rust写的Python",
         "link":"https://github.com/RustPython/RustPython",
         "language":"Rust"
     },
     {
-        "title":"brython",
         "cover":"/articles/resource/page78/4.png",
         "desc":"Python 3在浏览器中运行的实现",
         "link":"https://github.com/brython-dev/brython",
         "language":"Python"
     },
     {
-        "title":"CopyQ",
         "cover":"/articles/resource/page78/5.png",
         "desc":"具有编辑和脚本功能的高级剪贴板管理器",
         "link":"https://github.com/hluk/CopyQ",
         "language":"C++"
     },
     {
-        "title":"lite-xl",
         "cover":"/articles/resource/page78/6.png",
         "desc":"用 Lua 写的轻量级文本编辑器",
         "link":"https://github.com/lite-xl/lite-xl",

@@ -1,41 +1,35 @@
 [
     {
-        "title":"yao",
         "cover":"/articles/resource/page112/1.png",
         "desc":"用于创建 Web 服务和仪表板的低代码引擎。",
         "link":"https://github.com/YaoApp/yao",
         "language":"Go"
     },
     {
-        "title":"superset",
         "cover":"/articles/resource/page112/2.png",
         "desc":"一个数据可视化和数据探索平台。",
         "link":"https://github.com/apache/superset",
         "language":"TypeScript"
     },
     {
-        "title":"Hitomi-Downloader",
         "cover":"/articles/resource/page112/3.gif",
         "desc":"从各种网站下载音视频。",
         "link":"https://github.com/KurtBestor/Hitomi-Downloader",
         "language":"Python"
     },
     {
-        "title":"beam",
         "cover":"/articles/resource/page112/4.png",
         "desc":"为您的组织或项目提供简单的留言板。",
         "link":"https://github.com/planetscale/beam",
         "language":"TypeScript"
     },
     {
-        "title":"plyr",
         "cover":"/articles/resource/page112/5.png",
         "desc":"一个简单的 HTML5 播放器。",
         "link":"https://github.com/sampotts/plyr",
         "language":"JavaScript"
     },
     {
-        "title":"vector",
         "cover":"/articles/resource/page112/6.png",
         "desc":"高性能可观察的数据管道。",
         "link":"https://github.com/vectordotdev/vector",

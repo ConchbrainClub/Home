@@ -1,41 +1,35 @@
 [
     {
-        "title":"just",
         "cover":"/articles/resource/page135/1.png",
         "desc":"保存和运行项目特有命令的便捷方式。",
         "link":"https://github.com/casey/just",
         "language":"Rust"
     },
     {
-        "title":"rath",
         "cover":"/articles/resource/page135/2.gif",
         "desc":"自动化的数据探索分析和可视化工具。",
         "link":"https://github.com/Kanaries/rath",
         "language":"TypeScript"
     },
     {
-        "title":"graphic-walker",
         "cover":"/articles/resource/page135/3.png",
         "desc":"通过简单的拖放操作分析数据并可视化。",
         "link":"https://github.com/Kanaries/graphic-walker",
         "language":"TypeScript"
     },
     {
-        "title":"webcontainer-core",
         "cover":"/articles/resource/page135/4.png",
         "desc":"在浏览器中运行 Node.js。",
         "link":"https://github.com/stackblitz/webcontainer-core",
         "language":"Markdown"
     },
     {
-        "title":"KasmVNC",
         "cover":"/articles/resource/page135/5.png",
         "desc":"基于 Web 的现代化 VNC 服务器和客户端。",
         "link":"https://github.com/kasmtech/KasmVNC",
         "language":"C++"
     },
     {
-        "title":"EdgeGPT",
         "cover":"/articles/resource/page135/6.png",
         "desc":"微软 Bing Chat API。",
         "link":"https://github.com/acheong08/EdgeGPT",

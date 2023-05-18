@@ -1,41 +1,35 @@
 [
     {
-        "title":"Polaris",
         "cover":"/articles/resource/page68/1.png",
         "desc":"PowerShell 的跨平台 Web 框架。",
         "link":"https://github.com/PowerShell/Polaris",
         "language":"PowerShell"
     },
     {
-        "title":"Wikipedia",
         "cover":"/articles/resource/page68/2.png",
         "desc":"维基百科 Python API。",
         "link":"https://github.com/goldsmith/Wikipedia",
         "language":"Python"
     },
     {
-        "title":"AutoHistory",
         "cover":"/articles/resource/page68/3.png",
         "desc":"EFCore 自动记录数据改变历史。",
         "link":"https://github.com/Arch/AutoHistory",
         "language":"C#"
     },
     {
-        "title":"windows11",
         "cover":"/articles/resource/page68/4.png",
         "desc":"基于 Web 的 Windows 11 桌面。",
         "link":"https://github.com/blueedgetechno/windows11",
         "language":"CSS"
     },
     {
-        "title":"puppy-browser",
         "cover":"/articles/resource/page68/5.png",
         "desc":"命令行 Web 浏览器。",
         "link":"https://github.com/lmt-swallow/puppy-browser/",
         "language":"Rust"
     },
     {
-        "title":"moviepy",
         "cover":"/articles/resource/page68/6.png",
         "desc":"Python 的视频处理库。",
         "link":"https://github.com/Zulko/moviepy",

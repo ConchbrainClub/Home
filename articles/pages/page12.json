@@ -1,48 +1,41 @@
 [
     {
-        "title":"Ward",
         "cover":"/articles/resource/page12/1.png",
         "desc":"一个简约的服务器监控工具。",
         "link":"https://github.com/B-Software/Ward",
         "language":"Java"
     },
     {
-        "title":"gridjs",
         "cover":"/articles/resource/page12/2.png",
         "desc":"高级的table插件。",
         "link":"https://github.com/grid-js/gridjs",
         "language":"TypeScript"
     },
     {
-        "title":"responsively-app",
         "cover":"/articles/resource/page12/3.gif",
         "desc":"有助于响应响应 Web 开发的修改浏览器。",
         "link":"https://github.com/manojVivek/responsively-app",
         "language":"JavaScript"
     },
     {
-        "title":"files-uwp",
         "cover":"/articles/resource/page12/4.png",
         "desc":"UWP版本Windows 资源管理器。",
         "link":"https://github.com/files-community/files-uwp",
         "language":"C#"
     },
     {
-        "title":"josh.js",
         "cover":"/articles/resource/page12/5.png",
         "desc":"用于在页面滚动上为内容设置动画的库。",
         "link":"https://github.com/mamunhpath/josh.js",
         "language":"JavaScript"
     },
     {
-        "title":"notyf",
         "cover":"/articles/resource/page12/6.png",
         "desc":"一个简约、响应迅速的库，用于显示 toast 通知。",
         "link":"https://github.com/caroso1222/notyf",
         "language":"JavaScript"
     },
     {
-        "title":"excalidraw",
         "cover":"/articles/resource/page12/7.png",
         "desc":"用于绘制手绘像图表一样的虚拟白板。",
         "link":"https://github.com/excalidraw/excalidraw",

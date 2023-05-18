@@ -1,41 +1,35 @@
 [
     {
-        "title":"cal.com",
         "cover":"/articles/resource/page130/1.gif",
         "desc":"开源的 Calendly 替代方案。",
         "link":"https://github.com/calcom/cal.com",
         "language":"TypeScript"
     },
     {
-        "title":"excalidraw",
         "cover":"/articles/resource/page130/2.png",
         "desc":"用于绘制手绘图表和草图的虚拟白板。",
         "link":"https://github.com/excalidraw/excalidraw",
         "language":"TypeScript"
     },
     {
-        "title":"MemoryPack",
         "cover":"/articles/resource/page130/3.png",
         "desc":"高性能二进制序列化。",
         "link":"https://github.com/Cysharp/MemoryPack",
         "language":"C#"
     },
     {
-        "title":"SetResolution",
         "cover":"/articles/resource/page130/4.png",
         "desc":"通过命令行快速设置 Windows 显示分辨率。",
         "link":"https://github.com/RickStrahl/SetResolution",
         "language":"C#"
     },
     {
-        "title":"lyra",
         "cover":"/articles/resource/page130/5.png",
         "desc":"TypeScript 编写的全文搜索引擎。",
         "link":"https://github.com/LyraSearch/lyra",
         "language":"TypeScript"
     },
     {
-        "title":"chat-gpt-google-extension",
         "cover":"/articles/resource/page130/6.png",
         "desc":"在搜索引擎结果旁边显示 ChatGPT 结果。",
         "link":"https://github.com/wong2/chat-gpt-google-extension",

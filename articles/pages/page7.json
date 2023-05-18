@@ -1,20 +1,17 @@
 [
     {
-        "title":"GitQlient",
         "cover":"/articles/resource/page7/1.png",
         "desc":"​​使用QT编写的跨平台GIT客户端。",
         "link":"https://github.com/francescmm/GitQlient",
         "language":"C++"
     },
     {
-        "title":"gifcap",
         "cover":"/articles/resource/page7/2.png",
         "desc":"​​​​在浏览器中录制你的屏幕并生成GIF。",
         "link":"https://github.com/joaomoreno/gifcap",
         "language":"JavaScript"
     },
     {
-        "title":"vscode-drawio",
         "cover":"/articles/resource/page7/3.png",
         "desc":"​​​​将draw.io集成到vscode中，通过设计器生成html/svg/xml等。",
         "link":"https://github.com/hediet/vscode-drawio",

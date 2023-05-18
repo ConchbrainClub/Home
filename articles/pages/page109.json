@@ -1,41 +1,35 @@
 [
     {
-        "title":"d3-graph-controller",
         "cover":"/articles/resource/page109/1.png",
         "desc":"用于可视化和模拟有向的交互式图形。",
         "link":"https://github.com/DerYeger/d3-graph-controller",
         "language":"TypeScript"
     },
     {
-        "title":"pushdeer",
         "cover":"/articles/resource/page109/2.gif",
         "desc":"开放源码的无App推送服务。",
         "link":"https://github.com/easychen/pushdeer",
         "language":"C"
     },
     {
-        "title":"hibiki",
         "cover":"/articles/resource/page109/3.png",
         "desc":"简单易用的 Web 框架，无脚手架。",
         "link":"https://github.com/dashborg/hibiki",
         "language":"TypeScript"
     },
     {
-        "title":"unikraft",
         "cover":"/articles/resource/page109/4.gif",
         "desc":"构建专门的 POSIX 兼容操作系统。",
         "link":"https://github.com/unikraft/unikraft",
         "language":"C"
     },
     {
-        "title":"minver",
         "cover":"/articles/resource/page109/5.png",
         "desc":"使用 Git 标记的简约版本控制。",
         "link":"https://github.com/adamralph/minver",
         "language":"C#"
     },
     {
-        "title":"AstroNvim",
         "cover":"/articles/resource/page109/6.png",
         "desc":"美观且功能丰富的 neovim 配置。",
         "link":"https://github.com/AstroNvim/AstroNvim",

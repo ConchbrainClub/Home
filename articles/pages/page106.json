@@ -1,41 +1,35 @@
 [
     {
-        "title":"bubbletea",
         "cover":"/articles/resource/page106/1.gif",
         "desc":"一个强大的 TUI 框架。",
         "link":"https://github.com/charmbracelet/bubbletea",
         "language":"Go"
     },
     {
-        "title":"homelab",
         "cover":"/articles/resource/page106/2.png",
         "desc":"功能完善的自托管基础架构。",
         "link":"https://github.com/khuedoan/homelab",
         "language":"Python"
     },
     {
-        "title":"Tomlyn",
         "cover":"/articles/resource/page106/3.png",
         "desc":".NET TOML 解析器。",
         "link":"https://github.com/xoofx/Tomlyn",
         "language":"C#"
     },
     {
-        "title":"rrweb",
         "cover":"/articles/resource/page106/4.png",
         "desc":"记录和回放网站操作。",
         "link":"https://github.com/rrweb-io/rrweb",
         "language":"TypeScript"
     },
     {
-        "title":"exa",
         "cover":"/articles/resource/page106/5.png",
         "desc":"现代化的 'ls' 替代品。",
         "link":"https://github.com/ogham/exa",
         "language":"Rust"
     },
     {
-        "title":"simple-exec",
         "cover":"/articles/resource/page106/6.png",
         "desc":"运行外部命令的 .NET 库。",
         "link":"https://github.com/adamralph/simple-exec",

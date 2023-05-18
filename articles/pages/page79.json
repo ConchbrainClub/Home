@@ -1,41 +1,35 @@
 [
     {
-        "title":"prettymaps",
         "cover":"/articles/resource/page79/1.png",
         "desc":"从 OpenStreetMap 绘制漂亮的地图。",
         "link":"https://github.com/marceloprates/prettymaps",
         "language":"Jupyter Notebook"
     },
     {
-        "title":"Vieb",
         "cover":"/articles/resource/page79/2.png",
         "desc":"类似 Vim 的浏览器。",
         "link":"https://github.com/Jelmerro/Vieb",
         "language":"JavaScript"
     },
     {
-        "title":"Remotely",
         "cover":"/articles/resource/page79/3.png",
         "desc":".NET 的远程控制的解决方案。",
         "link":"https://github.com/lucent-sea/Remotely",
         "language":"C#"
     },
     {
-        "title":"psst",
         "cover":"/articles/resource/page79/4.png",
         "desc":"原生跨平台 Spotify 客户端。",
         "link":"https://github.com/jpochyla/psst",
         "language":"Rust"
     },
     {
-        "title":"EasyData",
         "cover":"/articles/resource/page79/5.gif",
         "desc":"快速轻松的实现 CRUD 操作。",
         "link":"https://github.com/KorzhCom/EasyData",
         "language":"C#"
     },
     {
-        "title":"kubesphere",
         "cover":"/articles/resource/page79/6.png",
         "desc":"面向云原生应用的容器混合云。",
         "link":"https://github.com/kubesphere/kubesphere",

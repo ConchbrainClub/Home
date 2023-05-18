@@ -1,13 +1,11 @@
 [
     {
-        "title":"new.css",
         "cover":"/articles/resource/page9/1.png",
         "desc":"一个无类的CSS框架，用于仅使用 HTML 编写现代网站。",
         "link":"https://github.com/xz/new.css",
         "language":"HTML"
     },
     {
-        "title":"PowerToys",
         "cover":"/articles/resource/page9/2.png",
         "desc":"Windows 系统实用程序，以最大限度地提高工作效率。",
         "link":"https://github.com/microsoft/PowerToys",

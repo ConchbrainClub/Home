@@ -1,41 +1,35 @@
 [
     {
-        "title":"cmdpxl",
         "cover":"/articles/resource/page75/1.gif",
         "desc":"命令行图像编辑器",
         "link":"https://github.com/knosmos/cmdpxl",
         "language":"Python"
     },
     {
-        "title":"eget",
         "cover":"/articles/resource/page75/2.gif",
         "desc":"预建二进制文件工具",
         "link":"https://github.com/zyedidia/eget",
         "language":"Go"
     },
     {
-        "title":"WindowsTemplateStudio",
         "cover":"/articles/resource/page75/3.png",
         "desc":"快速构建UWP应用程序模板",
         "link":"https://github.com/microsoft/WindowsTemplateStudio",
         "language":"C#"
     },
     {
-        "title":"AvalonDock",
         "cover":"/articles/resource/page75/4.png",
         "desc":"WPF文件对接库",
         "link":"https://github.com/Dirkster99/AvalonDock",
         "language":"C#"
     },
     {
-        "title":"NodeNetwork",
         "cover":"/articles/resource/page75/5.gif",
         "desc":"基于 WPF 的节点编辑器。",
         "link":"https://github.com/Wouterdek/NodeNetwork",
         "language":"C#"
     },
     {
-        "title":"Realtime-Voice-Clone-Chinese",
         "cover":"/articles/resource/page75/6.png",
         "desc":"实时语音克隆",
         "link":"https://github.com/babysor/Realtime-Voice-Clone-Chinese",

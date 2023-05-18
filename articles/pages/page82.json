@@ -1,41 +1,35 @@
 [
     {
-        "title":"bUnit",
         "cover":"/articles/resource/page82/1.png",
         "desc":"Blazor 组件测试库。",
         "link":"https://github.com/bUnit-dev/bUnit",
         "language":"C#"
     },
     {
-        "title":"github-doorcat",
         "cover":"/articles/resource/page82/2.png",
         "desc":"Github 网页版导航栏扩展。",
         "link":"https://github.com/antfu/github-doorcat",
         "language":"TypeScript"
     },
     {
-        "title":"Pode",
         "cover":"/articles/resource/page82/3.png",
         "desc":"跨平台 PowerShell Web 框架。",
         "link":"https://github.com/Badgerati/Pode",
         "language":"PowerShell"
     },
     {
-        "title":"Macast",
         "cover":"/articles/resource/page82/4.png",
         "desc":"使用电脑接收发送自手机的视频、图片和音乐。",
         "link":"https://github.com/xfangfang/Macast",
         "language":"Python"
     },
     {
-        "title":"htmlq",
         "cover":"/articles/resource/page82/5.png",
         "desc":"类似 jq 的 html cli 工具。",
         "link":"https://github.com/mgdm/htmlq",
         "language":"Rust"
     },
     {
-        "title":"chineseocr_lite",
         "cover":"/articles/resource/page82/6.png",
         "desc":"超轻量级的中文 OCR 。",
         "link":"https://github.com/DayBreak-u/chineseocr_lite",

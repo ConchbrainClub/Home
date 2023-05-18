@@ -1,41 +1,35 @@
 [
     {
-        "title":"writefreely",
         "cover":"/articles/resource/page67/1.png",
         "desc":"一个干净简洁的内容发布系统。",
         "link":"https://github.com/writefreely/writefreely",
         "language":"Go"
     },
     {
-        "title":"CBL-Mariner",
         "cover":"/articles/resource/page67/2.png",
         "desc":"微软开源的 Linux 发行版本。",
         "link":"https://github.com/microsoft/CBL-Mariner",
         "language":"Go"
     },
     {
-        "title":"svgbob",
         "cover":"/articles/resource/page67/3.png",
         "desc":"将你的 ASCII 图型转换为 SVG。",
         "link":"https://github.com/ivanceras/svgbob",
         "language":"Rust"
     },
     {
-        "title":"asciichart",
         "cover":"/articles/resource/page67/4.png",
         "desc":"命令行 ASCII 图表。",
         "link":"https://github.com/kroitor/asciichart",
         "language":"Python"
     },
     {
-        "title":"faas",
         "cover":"/articles/resource/page67/5.png",
         "desc":"开源支持自托管的 FaaS。",
         "link":"https://github.com/openfaas/faas",
         "language":"Go"
     },
     {
-        "title":"REXS",
         "cover":"/articles/resource/page67/6.png",
         "desc":"一种创建正则表达式的语言。",
         "link":"https://github.com/uellenberg/REXS",

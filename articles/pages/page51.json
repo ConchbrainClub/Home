@@ -1,41 +1,35 @@
 [
     {
-        "title":"ao",
         "cover":"/articles/resource/page51/1.png",
         "desc":"优雅的微软待办桌面应用。",
         "link":"https://github.com/klaussinani/ao",
         "language":"JavaScript"
     },
     {
-        "title":"xlsx",
         "cover":"/articles/resource/page51/2.png",
         "desc":"Go (golang) 库，用于读取和写入 XLSX 文件。",
         "link":"https://github.com/tealeg/xlsx",
         "language":"Go"
     },
     {
-        "title":"rest-book",
         "cover":"/articles/resource/page51/3.png",
         "desc":"REST Book 是一个 Visual Studio Code 扩展，允许您在 Notebook 界面中执行 REST 调用。",
         "link":"https://github.com/tanhakabir/rest-book",
         "language":"TypeScript"
     },
     {
-        "title":"vscode-qq",
         "cover":"/articles/resource/page51/4.gif",
         "desc":"基于安卓QQ协议的vscode-qq扩展。",
         "link":"https://github.com/takayama-lily/vscode-qq",
         "language":"TypeScript"
     },
     {
-        "title":"typehole",
         "cover":"/articles/resource/page51/5.gif",
         "desc":"用于 Visual Studio Code 的 TypeScript 开发工具，可帮助您自动为运行时值创建初始静态类型。",
         "link":"https://github.com/rikukissa/typehole",
         "language":"Go"
     },
     {
-        "title":"fast-blazor",
         "cover":"/articles/resource/page51/6.png",
         "desc":"微软官方 FluentUI Web Components 的轻量级包装器，用于 .NET 5.0 Razor 视图。",
         "link":"https://github.com/microsoft/fast-blazor",

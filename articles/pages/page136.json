@@ -1,41 +1,35 @@
 [
     {
-        "title":"tabby",
         "cover":"/articles/resource/page136/1.png",
         "desc":"更现代化的终端。",
         "link":"https://github.com/Eugeny/tabby",
         "language":"TypeScript"
     },
     {
-        "title":"visual-chatgpt",
         "cover":"/articles/resource/page136/2.gif",
         "desc":"用于绘图和编辑的 ChatGPT。",
         "link":"https://github.com/microsoft/visual-chatgpt",
         "language":"Python"
     },
     {
-        "title":"i3-gnome",
         "cover":"/articles/resource/page136/3.png",
         "desc":"将 i3wm/i3-gap 与 GNOME Session 结合使用。",
         "link":"https://github.com/i3-gnome/i3-gnome",
         "language":"Makefile"
     },
     {
-        "title":"core",
         "cover":"/articles/resource/page136/4.png",
         "desc":"F# 和 C# 中的全栈、功能性、反应式 Web 应用和微服务。",
         "link":"https://github.com/dotnet-websharper/core",
         "language":"F#"
     },
     {
-        "title":"misskey",
         "cover":"/articles/resource/page136/5.png",
         "desc":"开源，分散的社交媒体平台。",
         "link":"https://github.com/misskey-dev/misskey",
         "language":"TypeScript"
     },
     {
-        "title":"SukiUI",
         "cover":"/articles/resource/page136/6.gif",
         "desc":"适用与移动和桌面应用的 Avalonia 主题。",
         "link":"https://github.com/kikipoulet/SukiUI",

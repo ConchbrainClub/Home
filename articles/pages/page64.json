@@ -1,41 +1,35 @@
 [
     {
-        "title":"vscode-livepreview",
         "cover":"/articles/resource/page64/1.gif",
         "desc":"在 VSCode 中实时预览网页。",
         "link":"https://github.com/microsoft/vscode-livepreview",
         "language":"TypeScript"
     },
     {
-        "title":"ImageSharp",
         "cover":"/articles/resource/page64/2.png",
         "desc":".NET 跨平台 2D 图形库。",
         "link":"https://github.com/SixLabors/ImageSharp",
         "language":"C#"
     },
     {
-        "title":"Bludger",
         "cover":"/articles/resource/page64/3.png",
         "desc":"GitHub Actions 自动化框架。",
         "link":"https://github.com/0xInfection/Bludger",
         "language":"Python"
     },
     {
-        "title":"BBDown",
         "cover":"/articles/resource/page64/4.gif",
         "desc":"命令行式哔哩哔哩下载器。",
         "link":"https://github.com/nilaoda/BBDown",
         "language":"C#"
     },
     {
-        "title":"transfer.sh",
         "cover":"/articles/resource/page64/5.png",
         "desc":"从命令行轻松快速的共享文件。",
         "link":"https://github.com/dutchcoders/transfer.sh",
         "language":"Go"
     },
     {
-        "title":"Wasp",
         "cover":"/articles/resource/page64/6.png",
         "desc":"PowerShell 的 Windows 自动化框架。",
         "link":"https://github.com/mavaddat/wasp",

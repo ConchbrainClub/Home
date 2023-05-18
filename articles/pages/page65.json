@@ -1,41 +1,35 @@
 [
     {
-        "title":"forem",
         "cover":"/articles/resource/page65/1.png",
         "desc":"用于构建社区的开源软件。",
         "link":"https://github.com/forem/forem",
         "language":"Ruby"
     },
     {
-        "title":"Onova",
         "cover":"/articles/resource/page65/2.png",
         "desc":"桌面应用程序的轻量级自动更新框架。",
         "link":"https://github.com/Tyrrrz/Onova",
         "language":"C#"
     },
     {
-        "title":"Schema.NET",
         "cover":"/articles/resource/page65/3.png",
         "desc":".NET序列化工具",
         "link":"https://github.com/RehanSaeed/Schema.NET",
         "language":"C#"
     },
     {
-        "title":"playwright-dotnet",
         "cover":"/articles/resource/page65/4.png",
         "desc":"Web应用自动化测试框架",
         "link":"https://github.com/microsoft/playwright-dotnet",
         "language":"C#"
     },
     {
-        "title":"pnpm",
         "cover":"/articles/resource/page65/5.png",
         "desc":"在快速的，节省磁盘空间的包管理工具",
         "link":"https://github.com/pnpm/pnpm",
         "language":"TypeScript"
     },
     {
-        "title":"papercss",
         "cover":"/articles/resource/page65/6.png",
         "desc":"CSS样式库",
         "link":"https://github.com/rhyneav/papercss",

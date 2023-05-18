@@ -1,41 +1,35 @@
 [
     {
-        "title":"shot-scraper-template",
         "cover":"/articles/resource/page115/1.png",
         "desc":"即时截取网页截图的 Github Action。",
         "link":"https://github.com/simonw/shot-scraper-template",
         "language":"YAML"
     },
     {
-        "title":"regex-vis",
         "cover":"/articles/resource/page115/2.gif",
         "desc":"正则表达式可视化工具和编辑器。",
         "link":"https://github.com/Bowen7/regex-vis",
         "language":"TypeScript"
     },
     {
-        "title":"Reactive-Resume",
         "cover":"/articles/resource/page115/3.png",
         "desc":"独一无二的简历构建器。",
         "link":"https://github.com/AmruthPillai/Reactive-Resume",
         "language":"TypeScript"
     },
     {
-        "title":"PSSW100AVB",
         "cover":"/articles/resource/page115/4.png",
         "desc":"有用 Powershell 脚本列表。",
         "link":"https://github.com/tihanyin/PSSW100AVB",
         "language":"PowerShell"
     },
     {
-        "title":"hybridclr",
         "cover":"/articles/resource/page115/5.png",
         "desc":"Unity 全平台原生 C# 热更方案。",
         "link":"https://github.com/focus-creative-games/hybridclr",
         "language":"C++"
     },
     {
-        "title":"orchest",
         "cover":"/articles/resource/page115/6.gif",
         "desc":"简单易行的数据处理管道",
         "link":"https://github.com/orchest/orchest",

@@ -1,41 +1,35 @@
 [
     {
-        "title":"column",
         "cover":"/articles/resource/page60/1.png",
         "desc":"高性能、柱状、内存存储。",
         "link":"https://github.com/kelindar/column",
         "language":"Go"
     },
     {
-        "title":"asciiflow",
         "cover":"/articles/resource/page60/2.png",
         "desc":"绘制 ASCII 图表的 Web 应用程序。",
         "link":"https://github.com/lewish/asciiflow",
         "language":"TypeScript"
     },
     {
-        "title":"gjf",
         "cover":"/articles/resource/page60/3.png",
         "desc":"一个修复 GeoJSON 的工具。",
         "link":"https://github.com/yazeed44/gjf",
         "language":"Python"
     },
     {
-        "title":"Eto",
         "cover":"/articles/resource/page60/4.png",
         "desc":".NET 跨平台桌面和移动应用程序框架。",
         "link":"https://github.com/picoe/Eto",
         "language":"C#"
     },
     {
-        "title":"nodatime",
         "cover":"/articles/resource/page60/5.png",
         "desc":".NET 中更好用的日期和时间库。",
         "link":"https://github.com/nodatime/nodatime",
         "language":"C#"
     },
     {
-        "title":"petite-vue",
         "cover":"/articles/resource/page60/6.png",
         "desc":"5kb 的 Vue 子集。",
         "link":"https://github.com/vuejs/petite-vue",

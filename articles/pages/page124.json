@@ -1,41 +1,35 @@
 [
     {
-        "title":"xlite",
         "cover":"/articles/resource/page124/1.png",
         "desc":"Excel 文件作为虚拟表进行查询的 SQLite 扩展。",
         "link":"https://github.com/x2bool/xlite",
         "language":"Rust"
     },
     {
-        "title":"massCode",
         "cover":"/articles/resource/page124/2.png",
         "desc":"代码片段管理器。",
         "link":"https://github.com/massCodeIO/massCode",
         "language":"TypeScript"
     },
     {
-        "title":"VideoTogether",
         "cover":"/articles/resource/page124/3.png",
         "desc":"一起看视频，同步播放视频。",
         "link":"https://github.com/VideoTogether/VideoTogether",
         "language":"JavaScript"
     },
     {
-        "title":"yboard",
         "cover":"/articles/resource/page124/4.gif",
         "desc":"类似桌面的多人同步工作区。",
         "link":"https://github.com/felipeleivav/yboard",
         "language":"Vue"
     },
     {
-        "title":"ZY-Player",
         "cover":"/articles/resource/page124/5.png",
         "desc":"跨平台桌面端视频资源播放器。",
         "link":"https://github.com/Hunlongyu/ZY-Player",
         "language":"Vue"
     },
     {
-        "title":"ikvm",
         "cover":"/articles/resource/page124/6.png",
         "desc":"适用于 .NET 的 Java 虚拟机。",
         "link":"https://github.com/ikvm-revived/ikvm",

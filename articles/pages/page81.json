@@ -1,41 +1,35 @@
 [
     {
-        "title":"any-rule",
         "cover":"/articles/resource/page81/1.png",
         "desc":"常用正则表达式大全。",
         "link":"https://github.com/any86/any-rule",
         "language":"TypeScript"
     },
     {
-        "title":"server",
         "cover":"/articles/resource/page81/2.png",
         "desc":"为开发人员设计的屏幕共享。",
         "link":"https://github.com/screego/server",
         "language":"Go"
     },
     {
-        "title":"fluentui-system-icons",
         "cover":"/articles/resource/page81/3.png",
         "desc":"Fluent Design System 图标库。",
         "link":"https://github.com/microsoft/fluentui-system-icons",
         "language":"HTML"
     },
     {
-        "title":"7.css",
         "cover":"/articles/resource/page81/4.png",
         "desc":"Windows 7 样式的 CSS 库。",
         "link":"https://github.com/khang-nd/7.css",
         "language":"SCSS"
     },
     {
-        "title":"git-cliff",
         "cover":"/articles/resource/page81/5.png",
         "desc":"根据 git commit 记录生成更新日志。",
         "link":"https://github.com/orhun/git-cliff",
         "language":"Rust"
     },
     {
-        "title":"airbyte",
         "cover":"/articles/resource/page81/6.png",
         "desc":"开源的数据集成平台。",
         "link":"https://github.com/airbytehq/airbyte",

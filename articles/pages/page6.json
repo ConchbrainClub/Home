@@ -1,13 +1,11 @@
 [
     {
-        "title":"YARP",
         "cover":"/articles/resource/page6/1.png",
         "desc":"用于开发高性能 HTTP 反向代理应用程序的工具包，为 .NET 5 编写的高性能、生产就绪的反向代理。",
         "link":"https://github.com/microsoft/reverse-proxy",
         "language":"C#"
     },
     {
-        "title":"deno",
         "cover":"/articles/resource/page6/2.png",
         "desc":"Deno 是使用 V8 并在 Rust 中构建的 JavaScript 和 TypeScript 的简单、现代和安全的运行时。",
         "link":"https://github.com/denoland/deno",
