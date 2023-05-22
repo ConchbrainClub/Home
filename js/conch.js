@@ -57,15 +57,15 @@ async function filterByLang(lang) {
         let res = await fetch("/articles/pages/" + pages[i].name);
         let projects = await res.json();
 
-        filter(projects, (project) => {
-            return project.language == lang;
-        }).forEach(project => {
-            results.push(project);
+        projects.forEach(project => {
+            if (project.language == lang) {
+                nextState(false);
+                showData(lang, results);
+                results.push(project);
+            }
         });
     }
 
-    nextState(false);
-    showData(lang, results);
 }
 
 function loadDatePage(index){
@@ -128,7 +128,7 @@ function showData(date, articles){
         let starId = guid();
 
         let html = `
-            <div class="col-md-6 animate__animated animate__bounceIn">
+            <div class="col-md-6">
                 <div class="card mb-3">
                     <div class="cover">
                         <a href="${article.link}" style="background-image:url('${article.cover}');" target="_blank"></a>
@@ -213,28 +213,16 @@ async function search() {
         let res = await fetch("/articles/pages/" + pages[i].name);
         let projects = await res.json();
 
-        filter(projects, (project) => {
-            return project.title.includes(keyword) || project.desc.includes(keyword);
-        }).forEach(project => {
-            results.push(project);
+        projects.forEach(project => {
+            if (project.title.includes(keyword) || project.desc.includes(keyword)) {
+                results.push(project);
+                nextState(false);
+                showData(keyword, results);
+            }
         });
     }
 
-    nextState(false);
-    showData(keyword, results);
     document.querySelector("#keyword").value = null;
-}
-
-function filter(projects, func) {
-    let results = new Array();
-
-    projects.forEach(project => {
-        if(func(project)){
-            results.push(project);
-        }
-    });
-
-    return results;
 }
 
 document.querySelector("input").onkeydown = () => {
