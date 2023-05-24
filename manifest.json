@@ -1,0 +1,19 @@
+{
+    "lang": "en-us",
+    "name": "ConchbrainClub",
+    "short_name": "Conchbrain",
+    "description": "Conchbrain official website.",
+    "start_url": "/",
+    "orientation": "any",
+    "display": "standalone",
+    "display_override": [ "window-controls-overlay" ],
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "48x48",
+            "type": "image/ico"
+        }
+    ]
+}
