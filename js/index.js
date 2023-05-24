@@ -201,3 +201,7 @@ async function init(){
     //推送到百度
     pushToBaidu();
 }
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./serviceworker.js');
+};
