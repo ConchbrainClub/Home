@@ -177,7 +177,7 @@ async function init(){
     }
 
     //获取当前用户
-    getUser();
+    await getUser();
 
     //获取当前地址
     let href = window.location.href;
