@@ -11,7 +11,7 @@ body{
     border-radius: 5px;
 }
 
-#userName {
+.nav-link {
     cursor: pointer;
 }
 
