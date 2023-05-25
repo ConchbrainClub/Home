@@ -1,4 +1,4 @@
-const CACHE_NAME = "ConchbrainClub v1";
+const CACHE_NAME = "ConchbrainClub v2";
 
 const PRE_CACHED_RESOURCES = [
     "/",
@@ -78,9 +78,9 @@ self.addEventListener("fetch", event => {
             return cachedResponse;
         }
         else {
-            const fetchResponse = await fetch(event.request.url);
+            const fetchResponse = await fetch(event.request);
 
-            if(PRE_CACHED_RESOURCES.find(i => event.request.url.endsWith(i))) {
+            if(PRE_CACHED_RESOURCES.includes(event.request.url)) {
                 cache.put(event.request.url, fetchResponse.clone());
             }
 
