@@ -1,0 +1,38 @@
+[
+    {
+        "cover":"/articles/resource/page143/1.png",
+        "desc":"免费开源的 Tailwind CSS 组件库。",
+        "link":"https://github.com/saadeghi/daisyui",
+        "language":"Svelte"
+    },
+    {
+        "cover":"/articles/resource/page143/2.png",
+        "desc":"JS 轻量级 MVU 框架。",
+        "link":"https://github.com/vanjs-org/van",
+        "language":"JavaScript"
+    },
+    {
+        "cover":"/articles/resource/page143/3.png",
+        "desc":"支持 NativeAOT 的 csv 库。",
+        "link":"https://github.com/nietras/Sep",
+        "language":"C#"
+    },
+    {
+        "cover":"/articles/resource/page143/4.png",
+        "desc":"适用于微控制器 TypeScript。",
+        "link":"https://github.com/microsoft/devicescript",
+        "language":"TypeScript"
+    },
+    {
+        "cover":"/articles/resource/page143/5.png",
+        "desc":"Windows 开发人员主页。",
+        "link":"https://github.com/microsoft/devhome",
+        "language":"C#"
+    },
+    {
+        "cover":"/articles/resource/page143/6.png",
+        "desc":"搭建自己的魔兽世界私服。",
+        "link":"https://github.com/azerothcore/acore-docker",
+        "language":"TypeScript"
+    }
+]
