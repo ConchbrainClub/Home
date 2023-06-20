@@ -214,7 +214,7 @@ async function search() {
         let projects = await res.json();
 
         projects.forEach(project => {
-            if (project.title.includes(keyword) || project.desc.includes(keyword)) {
+            if (project.link.replace("https://github.com/", "").includes(keyword) || project.desc.includes(keyword)) {
                 results.push(project);
                 nextState(false);
                 showData(keyword, results);
