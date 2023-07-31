@@ -203,16 +203,5 @@ async function init(){
 }
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./serviceworker.js').then(reg => {
-        reg.onupdatefound = () => {
-            reg.installing.onstatechange = () => {
-                if (reg.installing.state != 'installed') 
-                    return;
-                
-                if (confirm('update website')) {
-                    location.reload()
-                }
-            }
-        }
-    });
+    navigator.serviceWorker.register('./serviceworker.js');
 };
