@@ -2,7 +2,7 @@ var currentPage = 0;
 var pages = undefined;
 var favourites = [];
 
-function loadConfig(){
+function loadConfig() {
     showLangs();
     request("/articles/config.json?" + Math.random(), (result) => {
         pages = result.pages;
@@ -11,21 +11,21 @@ function loadConfig(){
     });
 }
 
-function showTimeline(){
+function showTimeline() {
     let list = document.querySelector("#timeline > ul");
     list.innerHTML = "";
 
     let startIndex = currentPage - 4 < 0 ? 0 : currentPage - 4;
-    
-    if(startIndex + 9 >= pages.length)
+
+    if (startIndex + 9 >= pages.length)
         startIndex = pages.length - 9;
-    
+
     let endIndex = startIndex + 9 < pages.length ? startIndex + 9 : pages.length;
 
-    for(let i = startIndex; i < endIndex; i++){
+    for (let i = startIndex; i < endIndex; i++) {
 
         let style = "";
-        if(i == currentPage){
+        if (i == currentPage) {
             style = "style='color:red;'";
         }
 
@@ -50,7 +50,7 @@ async function filterByLang(lang) {
 
     window.stop();
     nextState(true);
-    
+
     let results = new Array();
 
     for (let i = 0; i < pages.length; i++) {
@@ -68,20 +68,20 @@ async function filterByLang(lang) {
 
 }
 
-function loadDatePage(index){
+function loadDatePage(index) {
     window.stop();
     MoveTop();
     currentPage = index;
     loadData();
 }
 
-function loadData(){
+function loadData() {
 
     nextState(true);
     let page = pages[currentPage];
 
-    request("/articles/pages/" + page.name,(result) => {
-        if(!result)
+    request("/articles/pages/" + page.name, (result) => {
+        if (!result)
             return;
         nextState(false);
         showData(page.date, result);
@@ -89,7 +89,7 @@ function loadData(){
     });
 }
 
-function showInfo(date){
+function showInfo(date) {
     let html = `
         <div class="col-md-12">
             <h1 class="display-4 m-3">${date}</h1>
@@ -99,12 +99,12 @@ function showInfo(date){
     document.querySelector("#articles").innerHTML += html;
 }
 
-function getNum(articles){
-    return Math.ceil(articles.length/2);
+function getNum(articles) {
+    return Math.ceil(articles.length / 2);
 }
 
 function showStar(article, starId) {
-    if(favourites.indexOf(JSON.stringify(article)) < 0){
+    if (favourites.indexOf(JSON.stringify(article)) < 0) {
         return `
             <svg onclick="changeFavourite('${encodeURI(JSON.stringify(article))}','${starId}')" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
                 <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
@@ -118,7 +118,7 @@ function showStar(article, starId) {
     `;
 }
 
-function showData(date, articles){
+function showData(date, articles) {
 
     document.querySelector("#articles").innerHTML = null;
 
@@ -149,35 +149,35 @@ function showData(date, articles){
     });
 }
 
-function nextState(flag){
+function nextState(flag) {
     document.querySelector("#articles").innerHTML = null;
     let loadingBox = document.querySelector("#loadingBox");
 
-    if(flag)
+    if (flag)
         loadingBox.removeAttribute("hidden");
     else
-        loadingBox.setAttribute("hidden","hidden");
+        loadingBox.setAttribute("hidden", "hidden");
 }
 
-function changeFavourite(favourite,starId) {
+function changeFavourite(favourite, starId) {
 
     // 用户是否登录
-    if(!userInfo){
+    if (!userInfo) {
         alert("登录后才能收藏");
         return;
     }
 
     favourite = decodeURI(favourite);
 
-    if(favourites.indexOf(favourite) < 0)
+    if (favourites.indexOf(favourite) < 0)
         favourites.push(favourite);
     else
-        favourites.splice(favourites.indexOf(decodeURI(favourite)),1);
+        favourites.splice(favourites.indexOf(decodeURI(favourite)), 1);
 
     toast("推荐", "保存中，请稍候......");
 
     // 保存个人数据
-    fetch(`https://storage.conchbrain.club/${userInfo.id}/set`,{
+    fetch(`https://storage.conchbrain.club/${userInfo.id}/set`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -187,8 +187,8 @@ function changeFavourite(favourite,starId) {
             "value": favourites
         })
     }).then((res) => {
-        if(res.status == 200){
-            document.getElementById(starId).innerHTML = showStar(JSON.parse(decodeURI(favourite)),starId);
+        if (res.status == 200) {
+            document.getElementById(starId).innerHTML = showStar(JSON.parse(decodeURI(favourite)), starId);
             toast("推荐", "保存成功。");
         }
         else
@@ -202,7 +202,7 @@ async function search() {
 
     let keyword = document.querySelector("#keyword").value.trim();
 
-    if(!keyword){
+    if (!keyword) {
         alert("搜索内容不能为空");
         return;
     }
@@ -230,9 +230,9 @@ document.querySelector("input").onkeydown = () => {
         search();
 }
 
-if(userInfo)
+if (userInfo)
     fetch(`https://storage.conchbrain.club/${userInfo.id}/get?ConchFavourites`).then((res) => {
-        if(res.status == 404)
+        if (res.status == 404)
             loadConfig();
         else
             res.json().then((data) => {
@@ -243,7 +243,7 @@ if(userInfo)
 else
     loadConfig();
 
-if(!userInfo)
+if (!userInfo)
     toast("推荐", "登录账号后，即可收藏项目推荐。");
 else
     toast("推荐", "点击星号，即可收藏项目推荐。");

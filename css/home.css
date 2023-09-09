@@ -1,27 +1,28 @@
-#conch-banner{
+#conch-banner {
     background-color: black;
     color: white;
 }
 
-#conch-banner img{
+#conch-banner img {
     width: 100%;
 }
 
-#detail{
-    padding-top: 5rem;;
+#detail {
+    padding-top: 5rem;
+    ;
     padding-bottom: 5rem;
     padding-left: 4rem;
     padding-right: 4rem;
 }
 
-#detail h1{
+#detail h1 {
     padding-bottom: 1rem;
 }
 
-#pic{
+#pic {
     padding-right: 0;
 }
 
-#opt{
+#opt {
     padding-top: 1rem;
 }

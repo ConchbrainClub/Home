@@ -6,7 +6,9 @@
     "start_url": "/",
     "orientation": "any",
     "display": "standalone",
-    "display_override": [ "window-controls-overlay" ],
+    "display_override": [
+        "window-controls-overlay"
+    ],
     "theme_color": "#B12A34",
     "background_color": "#B12A34",
     "icons": [

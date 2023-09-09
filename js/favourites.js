@@ -2,7 +2,7 @@ var favourites = [];
 
 async function showFavourites() {
 
-    if(!userInfo){
+    if (!userInfo) {
         navigation("home");
         return;
     }
@@ -12,12 +12,12 @@ async function showFavourites() {
 
     document.querySelector("#favouriteList").innerHTML = null;
 
-    if(favourites.length == 0){
+    if (favourites.length == 0) {
         document.querySelector("#favouriteList").innerHTML = "<h2 class='display-6 ml-4'>这里什么也没有</h2>";
         return;
     }
 
-    for(var i=favourites.length-1; i>=0; i--){
+    for (var i = favourites.length - 1; i >= 0; i--) {
 
         let id = guid();
         let favourite = JSON.parse(favourites[i]);
@@ -49,17 +49,17 @@ async function showFavourites() {
     }
 }
 
-function delFavourite(favourite, id){
+function delFavourite(favourite, id) {
 
     favourite = decodeURI(favourite);
 
-    if(favourites.indexOf(favourite) >= 0)
-        favourites.splice(favourites.indexOf(decodeURI(favourite)),1);
-    
+    if (favourites.indexOf(favourite) >= 0)
+        favourites.splice(favourites.indexOf(decodeURI(favourite)), 1);
+
     toast("收藏", "删除中，请稍候......");
-    
+
     // 保存个人数据
-    fetch(`https://storage.conchbrain.club/${userInfo.id}/set`,{
+    fetch(`https://storage.conchbrain.club/${userInfo.id}/set`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -69,7 +69,7 @@ function delFavourite(favourite, id){
             "value": favourites
         })
     }).then((res) => {
-        if(res.status == 200){
+        if (res.status == 200) {
             document.getElementById(id).remove();
             toast("收藏", "删除成功。");
         }

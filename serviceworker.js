@@ -32,7 +32,7 @@ const PRE_CACHED_RESOURCES = [
     "view/kvstorage.html",
     "view/notfound.html",
     "view/proxyservice.html",
-    
+
     "css/index.css",
     "css/notfound.css",
     "css/home.css",
@@ -80,7 +80,7 @@ self.addEventListener("fetch", event => {
         else {
             const fetchResponse = await fetch(event.request);
 
-            if(PRE_CACHED_RESOURCES.includes(event.request.url)) {
+            if (PRE_CACHED_RESOURCES.includes(event.request.url)) {
                 cache.put(event.request.url, fetchResponse.clone());
             }
 
@@ -93,7 +93,7 @@ self.addEventListener("fetch", event => {
 
 self.addEventListener("activate", event => {
     async function deleteOldCaches() {
-        
+
         const names = await caches.keys();
         await Promise.all(names.map(name => {
             if (name !== CACHE_NAME) {

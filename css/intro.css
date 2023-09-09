@@ -1,39 +1,39 @@
-.banner{
+.banner {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
-.banner img{
+.banner img {
     max-height: 400px;
 }
 
-.banner h1{
+.banner h1 {
     padding-bottom: 1rem;
 }
 
-#banner1 h1{
+#banner1 h1 {
     color: blueviolet;
 }
 
-#banner1 img{
+#banner1 img {
     border-radius: 20px;
 }
 
-#banner2{
+#banner2 {
     background-color: yellowgreen;
 }
 
-#banner3{
+#banner3 {
     background-color: black;
     color: white;
 }
 
-#banner4{
+#banner4 {
     background-color: palevioletred;
     color: white;
 }
 
-#banner5{
+#banner5 {
     background-color: blueviolet;
     color: white;
 }

@@ -1,17 +1,17 @@
-#bg{
-    height: 80vh; 
-    background-attachment:fixed;
+#bg {
+    height: 80vh;
+    background-attachment: fixed;
     background-color: whitesmoke;
 }
 
-#input-group{
-    width: 100%; 
-    height: 45px; 
-    background-color: white; 
+#input-group {
+    width: 100%;
+    height: 45px;
+    background-color: white;
     border-radius: 50px;
 }
 
-#bg input{
+#bg input {
     height: 45px;
     width: calc(100% - 45px);
     background-color: white;
@@ -20,9 +20,9 @@
     float: left;
 }
 
-#bg button{
-    width: 45px; 
-    height: 45px; 
+#bg button {
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     float: right;
 }

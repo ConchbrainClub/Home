@@ -1,11 +1,11 @@
-body{
+body {
     padding-top: 50px;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
-.logo{
+.logo {
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -15,11 +15,11 @@ body{
     cursor: pointer;
 }
 
-#content{
+#content {
     flex: 1;
 }
 
-#loading{
+#loading {
     padding-top: 3rem;
     padding-bottom: 1rem;
 }
@@ -33,12 +33,10 @@ body{
     height: 15px;
     margin-bottom: 20px;
     background-color: whitesmoke;
-    background: linear-gradient( 
-        100deg,
-        rgba(255,255,255,0) 40%, 
-        rgba(255,255,255,0.8) 50%, 
-        rgba(255,255,255,0) 60% 
-    ) whitesmoke;
+    background: linear-gradient(100deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 60%) whitesmoke;
     background-size: 200% 100%;
     background-position-x: 120%;
     animation: 1s loading ease-in-out infinite;
@@ -70,11 +68,11 @@ body{
     }
 }
 
-footer{
+footer {
     background-color: whitesmoke;
 }
 
-footer .title{
+footer .title {
     font-weight: 600;
     color: #616161;
     margin-top: 20px;
@@ -84,7 +82,7 @@ footer a {
     color: #616161;
 }
 
-#footerInfo{
+#footerInfo {
     padding-top: 30px;
     padding-bottom: 0;
 }
@@ -98,7 +96,7 @@ footer a {
     background-color: darkgray;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: black;
 }
 

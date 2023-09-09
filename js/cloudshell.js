@@ -3,23 +3,23 @@ var container = {
     system: undefined,
     time: undefined
 }
-var worker,forward = [];
+var worker, forward = [];
 
 var baseUrl = "https://cloudshell.conchbrain.club"
 
-function create(system){
+function create(system) {
 
     // 抵消 animate.css 导致模态框被覆盖的 BUG
     try {
         document.querySelector("#systemList").className = "";
-    } catch (error) {}
-    
-    if(!container.id){
-        window.fetch(baseUrl + "/create?" + system,{
-            method:"GET"
-        }).then((res)=>{
-            if(res.status==200){
-                res.text().then((text)=>{
+    } catch (error) { }
+
+    if (!container.id) {
+        window.fetch(baseUrl + "/create?" + system, {
+            method: "GET"
+        }).then((res) => {
+            if (res.status == 200) {
+                res.text().then((text) => {
                     container.id = text;
                     container.system = system;
                     container.time = -1;
@@ -30,64 +30,64 @@ function create(system){
                     worker.onmessage = () => {
                         container.time++;
                     };
-                    document.querySelector("#loadingStatus").setAttribute("hidden","hidden");
-                    setTimeout(tryConnect,500);
+                    document.querySelector("#loadingStatus").setAttribute("hidden", "hidden");
+                    setTimeout(tryConnect, 500);
                 });
             }
-            else{
+            else {
                 alert("出错了,请刷新后重试");
             }
         });
     }
-    else{
+    else {
         alert("请先关闭当前运行中的环境");
     }
 }
 
-function tryConnect(){
-    if(container.id){
-        let num = Math.round((Math.random()*100000)).toString();
-        let str = prompt("请输入"+num);
-        if(!str || str==""){
+function tryConnect() {
+    if (container.id) {
+        let num = Math.round((Math.random() * 100000)).toString();
+        let str = prompt("请输入" + num);
+        if (!str || str == "") {
             kill();
             $("#shell").modal("toggle");
         }
-        else if(str == num){
+        else if (str == num) {
             let url = `${baseUrl}/${container.id}/`;;
             document.querySelector("#shell").querySelector("iframe").src = url;
         }
-        else{
-            setTimeout(tryConnect,1000);
+        else {
+            setTimeout(tryConnect, 1000);
         }
     }
-    else{
+    else {
         alert("请先创建环境");
     }
 }
 
-function kill(){
-    if(container.id){
-        fetch(baseUrl + "/kill?" + container.id,{
-            method:"GET"
-        }).then((res)=>{
-            if(res.status == 200){
+function kill() {
+    if (container.id) {
+        fetch(baseUrl + "/kill?" + container.id, {
+            method: "GET"
+        }).then((res) => {
+            if (res.status == 200) {
                 document.querySelector("#shell").querySelector("iframe").src = "";
                 container.id = undefined;
                 forward = [];
                 worker.terminate();
                 document.querySelector("#loadingStatus").removeAttribute("hidden");
             }
-            else{
+            else {
                 console.log("kill container defeat");
             }
         });
     }
 }
 
-function createContainer(system){
-    
+function createContainer(system) {
+
     // 用户是否登录
-    if(!userInfo){
+    if (!userInfo) {
         alert("登录后才能使用");
         return;
     }
@@ -99,47 +99,47 @@ function createContainer(system){
     //创建容器
     create(system);
     //离开网页关闭容器
-    window.addEventListener('beforeunload',kill);
+    window.addEventListener('beforeunload', kill);
 }
 
-function fullScreen(){
+function fullScreen() {
     document.querySelector("#btn_mini").click();
-    setTimeout(()=>{
+    setTimeout(() => {
         let iframe = document.querySelector("#shell").querySelector("iframe");
         let fullScreenFrame = document.querySelector("#fullScreenFrame");
         fullScreenFrame.src = iframe.src;
         iframe.src = "";
         fullScreenFrame.removeAttribute("hidden");
-    },500);
+    }, 500);
     document.querySelector(".exitFullScreen").removeAttribute("hidden");
-    document.querySelector("nav").setAttribute("hidden","hidden");
+    document.querySelector("nav").setAttribute("hidden", "hidden");
 }
 
-function exitFullScreen(){
+function exitFullScreen() {
     let iframe = document.querySelector("#shell").querySelector("iframe");
     let fullScreenFrame = document.querySelector("#fullScreenFrame");
     iframe.src = fullScreenFrame.src;
     fullScreenFrame.src = "";
-    fullScreenFrame.setAttribute("hidden","hidden");
+    fullScreenFrame.setAttribute("hidden", "hidden");
     document.querySelector("#showModal").click();
-    document.querySelector(".exitFullScreen").setAttribute("hidden","hidden");
+    document.querySelector(".exitFullScreen").setAttribute("hidden", "hidden");
     document.querySelector("nav").removeAttribute("hidden");
 }
 
-function reconnect(){
+function reconnect() {
     let url = baseUrl + "/" + container.id;
     document.querySelector("#shell").querySelector("iframe").src = url;
 }
 
-function forwardPort(){
+function forwardPort() {
     let port = document.querySelector("#port").value;
-    if(!isNaN(port)){
+    if (!isNaN(port)) {
         fetch(`${baseUrl}/forward?id=${container.id}&port=${port}`).then((res) => {
-            if(res.status == 200){
+            if (res.status == 200) {
                 alert("转发端口成功");
                 forward.push(port);
             }
-            else{
+            else {
                 alert("转发端口失败");
             }
         });
@@ -147,8 +147,8 @@ function forwardPort(){
     document.querySelector("#port").value = undefined;
 }
 
-function showRunning(){
-    if(container.id){
+function showRunning() {
+    if (container.id) {
         //显示当前运行状态
         document.querySelector("#running").removeAttribute("hidden");
         document.querySelector("#containerSystem").innerText = container.system;
@@ -167,17 +167,17 @@ function showRunning(){
         });
         document.querySelector("#forwardPorts").innerHTML = forwardHtml;
     }
-    else{
+    else {
         try {
-            document.querySelector("#running").setAttribute("hidden","hidden");
-        } catch (error) {}
+            document.querySelector("#running").setAttribute("hidden", "hidden");
+        } catch (error) { }
     }
-    setTimeout(showRunning,2000);
+    setTimeout(showRunning, 2000);
 }
 
 showRunning();
 
-if(!userInfo)
+if (!userInfo)
     toast("CloudShell", "登录后，即可使用 CloudShell 的全部功能。");
 else
     toast("CloudShell", "端口转发功能已经可用，快去试试吧。");
