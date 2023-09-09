@@ -131,7 +131,7 @@ function showData(date, articles){
             <div class="col-md-6">
                 <div class="card mb-3">
                     <div class="cover">
-                        <a href="${article.link}" style="background-image:url('${article.cover}');" target="_blank"></a>
+                        <a href="${article.link}" style="background-image:url('https://fastly.jsdelivr.net/gh/conchbrainclub/home@latest${article.cover}');" target="_blank"></a>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">
