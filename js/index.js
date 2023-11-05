@@ -111,7 +111,12 @@ function loadingState(flag) {
 function inject() {
     document.querySelectorAll("#main > script").forEach(element => {
         let src = element.getAttribute("src");
-        request(src, (data) => { });
+        if (src) {
+            request(src, (data) => { });
+        }
+        else {
+            eval(element.innerText)
+        }
     });
 }
 

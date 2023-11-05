@@ -1,9 +1,8 @@
-<div
-    style="position: fixed; height: 100vh; margin-top: -50px; z-index: 10; width: 100%; background: rgba(0,0,0,.1); backdrop-filter: saturate(110%) blur(4px);">
-    <div style="position: absolute; left: 40%; top: 40%; color: white;">
-        <h1>MixStore</h1>
-        <h5>即将上线...</h5>
-    </div>
-</div>
+<iframe src="http://127.0.0.1:5501/" style="width: 100%;" scrolling="no" frameborder="0"></iframe>
 
-<iframe src="https://mixintro.conchbrain.club/" style="height: 800px; width: 100%;" scrolling="no" frameborder="0"></iframe>
+<script>
+    window.addEventListener('message', e => {
+        console.log(e.data)
+        document.querySelector('iframe').height = e.data
+    },false)
+</script>
