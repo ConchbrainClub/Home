@@ -1,4 +1,4 @@
-const CACHE_NAME = "ConchbrainClub-v1.5";
+const CACHE_NAME = "ConchbrainClub-v1.6";
 
 const PRE_CACHED_RESOURCES = [
     "/",
