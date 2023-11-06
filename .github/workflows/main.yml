@@ -6,8 +6,10 @@ jobs:
     steps:
     - name: Checkout Repository master branch
       uses: actions/checkout@main
+      
     - name: delete articles
-      run: rm -rf articles/*
+      run: rm -rf articles
+      
     - name: upload files to OSS
       uses: fangbinwei/aliyun-oss-website-action@v1
       with:
