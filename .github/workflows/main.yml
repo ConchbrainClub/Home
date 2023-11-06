@@ -15,4 +15,4 @@ jobs:
           accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
           bucket: conchbrainclub
           endpoint: oss-cn-shanghai.aliyuncs.com
-          folder: .Home/
+          folder: ./
