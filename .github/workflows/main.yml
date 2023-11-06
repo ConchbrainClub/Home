@@ -1,0 +1,23 @@
+name: deploy to aliyun oss
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+    - uses: srt32/git-actions@v0.0.3
+      with:
+        args: git submodule update --init --recursive
+      
+    - name: setup aliyun oss
+      uses: manyuanrong/setup-ossutil@master
+      with:
+        endpoint: oss-cn-shanghai.aliyuncs.com
+        access-key-id: LTAI5tQ475LMtCzePBpqTykg
+        access-key-secret: 0PxHs6yW0U0JsxSLXlL5HAOl28dRto
+    - name: cp files to aliyun
+      run: ossutil cp -rf ./ oss://conchbrainclub/
