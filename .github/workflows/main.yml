@@ -8,12 +8,11 @@ jobs:
     steps:
     - name: Checkout Repository master branch
       uses: actions/checkout@master
-      
-    - name: setup aliyun oss
-      uses: manyuanrong/setup-ossutil@master
+    - name: upload files to OSS
+      uses: fangbinwei/aliyun-oss-website-action@v1
       with:
-        endpoint: oss-cn-shanghai.aliyuncs.com
-        access-key-id: ${{ secrets.KEY }}
-        access-key-secret: ${{ secrets.SECRET }}
-    - name: cp files to aliyun
-      run: ossutil cp -rf ./ oss://conchbrainclub/
+          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+          bucket: conchbrainclub
+          endpoint: oss-cn-shanghai.aliyuncs.com
+          folder: /
