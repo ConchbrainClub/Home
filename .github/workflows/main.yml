@@ -15,6 +15,6 @@ jobs:
       with:
           accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
           accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
-          bucket: conchbrainclub
-          endpoint: oss-cn-shanghai.aliyuncs.com
+          bucket: conchbrain
+          endpoint: oss-cn-shenzhen.aliyuncs.com
           folder: ./
