@@ -6,18 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-      with:
-        submodules: true
-    - uses: srt32/git-actions@v0.0.3
-      with:
-        args: git submodule update --init --recursive
+    - name: Checkout Repository master branch
+      uses: actions/checkout@master
       
     - name: setup aliyun oss
       uses: manyuanrong/setup-ossutil@master
       with:
         endpoint: oss-cn-shanghai.aliyuncs.com
-        access-key-id: 111
-        access-key-secret: 111
+        access-key-id: ${{ secrets.KEY }}
+        access-key-secret: ${{ secrets.SECRET }}
     - name: cp files to aliyun
       run: ossutil cp -rf ./ oss://conchbrainclub/
