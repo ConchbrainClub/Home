@@ -1,13 +1,13 @@
 name: deploy to aliyun oss
-
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository master branch
-      uses: actions/checkout@master
+      uses: actions/checkout@main
+    - name: delete articles
+      run: rm -rf articles/*
     - name: upload files to OSS
       uses: fangbinwei/aliyun-oss-website-action@v1
       with:
