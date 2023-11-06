@@ -17,7 +17,7 @@ jobs:
       uses: manyuanrong/setup-ossutil@master
       with:
         endpoint: oss-cn-shanghai.aliyuncs.com
-        access-key-id: LTAI5tQ475LMtCzePBpqTykg
-        access-key-secret: 0PxHs6yW0U0JsxSLXlL5HAOl28dRto
+        access-key-id: 111
+        access-key-secret: 111
     - name: cp files to aliyun
       run: ossutil cp -rf ./ oss://conchbrainclub/
