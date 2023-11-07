@@ -1,4 +1,4 @@
-const CACHE_NAME = "ConchbrainClub-v1.6";
+const CACHE_NAME = "ConchbrainClub-v1.35";
 
 const PRE_CACHED_RESOURCES = [
     "/",
@@ -104,3 +104,9 @@ self.addEventListener("activate", event => {
 
     event.waitUntil(deleteOldCaches());
 });
+
+self.addEventListener('message', event => {
+    if (event.data == 'SKIP_WAITING') {
+        self.skipWaiting()
+    }
+})

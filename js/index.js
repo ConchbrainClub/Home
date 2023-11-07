@@ -1,17 +1,8 @@
 let scripts = [];
-let baiduPushLink = "http://data.zz.baidu.com/urls?site=https://conchbrain.club&token=5ZG2x3hnCmpkN4Qh";
 let client_id = "68fd42deb929a87fc8b9";
 let redirect_uri = "https://oauth.conchbrain.club/redirect";
 let userInfo = undefined;
 let isDarkMode = false;
-
-async function pushToBaidu() {
-    let siteMap = await (await fetch("/SiteMap.txt")).text();
-    fetch("https://cors.conchbrain.club/?" + baiduPushLink, {
-        method: "POST",
-        body: siteMap
-    });
-}
 
 function login() {
     let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
@@ -127,6 +118,33 @@ function initMenu() {
     });
 }
 
+async function initPWA() {
+    if (!('serviceWorker' in navigator)) return
+
+    let registration = await navigator.serviceWorker.register('./serviceworker.js');
+    
+    registration.onupdatefound = () => {
+        let installingWorker = registration.installing
+
+        registration.installing.onstatechange = () => {
+            if (installingWorker.state != 'installed') return
+
+            if (!localStorage.getItem('isInstalled')) {
+                console.log('first install')
+                localStorage.setItem('isInstalled', 'true')
+                return
+            }
+
+            if (confirm('新版本可用，立即更新？')) {
+                registration.waiting.postMessage('SKIP_WAITING')
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1000)
+            }
+        }
+    }
+}
+
 function MoveTop() {
     $("html,body").animate({ scrollTop: 0 }, 500);
 }
@@ -202,10 +220,5 @@ async function init() {
         navigation("home");
     }
 
-    //推送到百度
-    pushToBaidu();
+    initPWA()
 }
-
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./serviceworker.js');
-};
