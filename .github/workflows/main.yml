@@ -12,7 +12,10 @@ jobs:
         rm -rf .git
         rm -rf .github
         rm -rf articles
-      
+
+    - name: upgrade version
+      run: sed -i "s/Conchbrain-Version/Conchbrain-$(date +%s%3N)/g" ./serviceworker.js
+
     - name: upload files to OSS
       uses: fangbinwei/aliyun-oss-website-action@v1
       with:
