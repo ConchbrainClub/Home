@@ -4,4 +4,4 @@
 
 https://www.conchbrain.club
 
-![Deploy](https://github.com/ConchBrainClub/Home/workflows/Deploy/badge.svg)
+[![deploy to aliyun oss](https://github.com/ConchbrainClub/Home/actions/workflows/main.yml/badge.svg)](https://github.com/ConchbrainClub/Home/actions/workflows/main.yml)
