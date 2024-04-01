@@ -3,6 +3,7 @@ let client_id = "68fd42deb929a87fc8b9";
 let redirect_uri = "https://oauth.conchbrain.club/redirect";
 let userInfo = undefined;
 let isDarkMode = false;
+let currentView = 'index'
 
 function login() {
     let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
@@ -67,6 +68,7 @@ function guid() {
 }
 
 function navigation(name, isBack = false) {
+    if (window.onNavigation) window.onNavigation(name, isBack)
 
     window.scrollTo(0, 0);
     loadingState(true);
@@ -86,6 +88,7 @@ function navigation(name, isBack = false) {
             navigation("notfound");
             loadingState(false);
         }
+        currentView = name;
     });
 }
 
