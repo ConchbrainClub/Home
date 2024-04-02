@@ -3,8 +3,9 @@
 <script>
     document.querySelector('footer').setAttribute('hidden', 'hidden')
 
-    window.onNavigation = (name, isBack) => {
+    onNavigation = (name, isBack) => {
+        console.log('leave')
         document.querySelector('footer').removeAttribute('hidden')
-        window.onNavigation = undefined
+        onNavigation = undefined
     }
 </script>
