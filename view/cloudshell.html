@@ -1,11 +1,1 @@
 <iframe id="cloudshell" src="https://cloudshell.conchbrain.club" style="width: 100%; height: calc(100vh - 58px);" frameborder="0"></iframe>
-
-<script>
-    document.querySelector('footer').setAttribute('hidden', 'hidden')
-
-    onNavigation = (name, isBack) => {
-        console.log('leave')
-        document.querySelector('footer').removeAttribute('hidden')
-        onNavigation = undefined
-    }
-</script>
