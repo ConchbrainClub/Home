@@ -5,7 +5,8 @@
 
     onNavigated = (name, isBack) => {
         if (name == 'cloudshell') return
-        console.log('leave')
         document.querySelector('footer').removeAttribute('hidden')
+        onNavigated = undefined
+        console.log('leave')
     }
 </script>
