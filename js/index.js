@@ -2,6 +2,7 @@ let client_id = "68fd42deb929a87fc8b9";
 let redirect_uri = "https://oauth.conchbrain.club/redirect";
 let userInfo = undefined;
 let isDarkMode = false;
+let onNavigated = undefined
 
 function login() {
     let href = `https://github.com/login/oauth/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}`;
@@ -65,7 +66,7 @@ function guid() {
     });
 }
 
-function navigation(name, isBack = false) {
+function navigate(name, isBack = false) {
 
     window.scrollTo(0, 0);
     loadingState(true);
@@ -82,9 +83,10 @@ function navigation(name, isBack = false) {
             loadingState(false);
         }
         else {
-            navigation("notfound");
+            navigate("notfound");
             loadingState(false);
         }
+        if (onNavigated) onNavigated(name, isBack)
     });
 }
 
@@ -194,7 +196,7 @@ async function init() {
 
     //初始化导航
     window.onpopstate = (e) => {
-        navigation(e.state.page, true);
+        navigate(e.state.page, true);
     }
 
     //获取当前用户
@@ -213,10 +215,10 @@ async function init() {
     //导航到指定页面
     if (href.includes("#")) {
         let page = href.substring(href.indexOf("#") + 1);
-        navigation(page);
+        navigate(page);
     }
     else {
-        navigation("home");
+        navigate("home");
     }
 
     initPWA()

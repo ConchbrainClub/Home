@@ -3,7 +3,7 @@ var favourites = [];
 async function showFavourites() {
 
     if (!userInfo) {
-        navigation("home");
+        navigate("home");
         return;
     }
 
