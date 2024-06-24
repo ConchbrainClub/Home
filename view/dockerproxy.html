@@ -1,0 +1,33 @@
+<div class="container mt-5 mb-5 animate__animated animate__fadeIn">
+    <div class="text-center">
+        <h1>Welcome to ConchBrain DockerProxy</h1>
+        <p>Dockerhub Proxy Service</p>
+    </div>
+    <hr />
+
+    <h2>Usage</h2>
+    <p>Api: https://docker.conchbrain.club</p>
+
+    <hr />
+
+    <h5>Pull Image:</h5>
+
+    <pre>
+    docker pull docker.conchbrain.club/ubuntu
+    </pre>
+
+    <hr />
+
+    <h5>Global:</h5>
+
+    <pre>
+    sudo mkdir -p /etc/docker
+    sudo tee /etc/docker/daemon.json <<-'EOF'
+    {
+        "registry-mirrors": ["https://docker.conchbrain.club"]
+    }
+    EOF
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
+    </pre>
+<div>
