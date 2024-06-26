@@ -15,7 +15,6 @@ function search() {
 
 function setBackground(bgHref) {
     document.querySelector("#bg").style.backgroundImage = `url("${bgHref}")`;
-    document.querySelector("#bg h1").style.color = "white";
 }
 
 function initBackground() {

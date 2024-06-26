@@ -15,10 +15,6 @@ body {
     cursor: pointer;
 }
 
-#content {
-    flex: 1;
-}
-
 #loading {
     padding-top: 3rem;
     padding-bottom: 1rem;

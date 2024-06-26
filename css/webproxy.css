@@ -13,7 +13,6 @@
 
 #bg input {
     height: 45px;
-    width: calc(100% - 45px);
     background-color: white;
     border: 0;
     border-radius: 50px;
@@ -25,4 +24,6 @@
     height: 45px;
     border-radius: 50%;
     float: right;
+    position: absolute;
+    right: -1px;
 }
