@@ -1,5 +1,6 @@
 #bg {
     height: 80vh;
+    min-height: 600px;
     background-attachment: fixed;
     background-color: whitesmoke;
 }
