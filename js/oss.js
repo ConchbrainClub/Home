@@ -1,7 +1,19 @@
+const api = 'http://localhost:8787'
+
 let files = []
 let totalSize = 0
 let uploadedSize = 0;
 let fileHandlers = []
+
+function keyBase() {
+    let key = 'oss_key'
+    let base = localStorage.getItem(key)
+    if (!base) {
+        base = guid()
+        localStorage.setItem(key, base)
+    }
+    return base
+}
 
 async function addFile() {
     let items = await showOpenFilePicker({ multiple: true })
@@ -97,34 +109,37 @@ async function upload() {
     for (let file of files) {
         let reader = file.stream().getReader();
 
-        await fetch(`http://localhost:8787/${file.key}`, {
+        await fetch(`${api}/${file.key}`, {
             method: 'PUT',
             body: file
-        })
-        .then(res => {
-            res.text(result => {
-                console.log(result)
-            })
         })
         .catch(err => {
             alert(err)
         })
 
-        reader.read().then(function processChunk({ done, value }) {
-            if (done) {
-                return;
-            }
-            uploadedSize += value.length;
+        while (true) {
+            let { done, value } = await reader.read()
+            if (done) break
+            uploadedSize += value.length
             let progress = (uploadedSize / totalSize) * 100;
-            console.log(`Upload progress: ${progress.toFixed(2)}%`);
-            return reader.read().then(processChunk);
-        })
+
+            console.log(`Upload progress: ${progress.toFixed(2)}%`)
+            document.querySelector('#progress').style.width = `${progress}%`
+
+            if (uploadedSize == totalSize) {
+                let url = `${api}/?prefix=${keyBase()}`
+                console.log(url)
+
+                fileHandlers = []
+                render(fileHandlers)
+            }
+        }
     }
 }
 
 async function recursive(handlers, base = '') {
     if (!base) {
-        base = guid()
+        base = keyBase()
         totalSize = 0
         uploadedSize = 0
     }
