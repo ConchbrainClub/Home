@@ -1,4 +1,4 @@
-const api = 'http://localhost:8787'
+const api = 'https://oss.conchbrain.club'
 
 let files = []
 let totalSize = 0
@@ -33,7 +33,12 @@ function removeFile(fileName) {
 
 async function render(handlers, target = '#fileList') {
     let parent = document.querySelector(target)
-    if (target == '#fileList') parent.innerHTML = ''
+
+    if (target == '#fileList') {
+        parent.innerHTML = handlers.length == 0 
+            ? '<p class="text-center py-2 m-0">Pending list</p>' 
+            : ''
+    }
 
     for (let handler of handlers) {
         if (handler.kind == 'file') {
@@ -47,64 +52,54 @@ async function render(handlers, target = '#fileList') {
 }
 
 async function showFile(handler, parent) {
-    let file = await handler.getFile()
+    let file = await getFile(handler)
+    console.log()
 
     parent.innerHTML +=`
         <div class="card-header" style="background-color: whitesmoke;">
             <div class="d-flex w-100 justify-content-between">
                 <div>
                     <p class="mb-1">${file.name}</p>
-                    <small>And some small print.</small>
-                </div>
-                <div>
-                    <small>${Math.round(file.size / 1000)}kb</small> &nbsp;&nbsp;
+                    <small>
                     ${
                         (() => {
-                            return parent.id ? '' : `
-                                <button type="button" class="close" onclick="removeFile('${handler.name}')">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>`
+                            return file.key 
+                                ? `<a href="${api}/${file.key}" target="_blank">Download</a>` 
+                                : ''
                         })()
                     }
+                    </small>
+                </div>
+                <div>
+                    <small>${Math.round(file.size / 1000)}kb</small>
                 </div>
             </div>
         </div>`
 }
 
 async function showFolder(handler, parent) {
+    let id = 'folder_' + guid()
+
     parent.innerHTML += `
         <div class="card">
-            <div class="card-header" style="background-color: white;">
-                <div class="d-flex w-100 justify-content-between" data-toggle="collapse" data-target="#${handler.name}">
+            <div class="card-header" style="background-color: white; cursor: pointer;">
+                <div class="d-flex w-100 justify-content-between" data-toggle="collapse" data-target="#${id}">
                     <div>
                         <p class="mb-1">${handler.name}</p>
-                        <small>And some small print.</small>
-                    </div>
-                    <div>
-                        ${
-                            (() => {
-                                return parent.id ? '' : `
-                                    <button type="button" class="close" onclick="removeFile('${handler.name}')">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>`
-                            })()
-                        }
+                        <small>${handler.kind}</small>
                     </div>
                 </div>
             </div>
-            <div id="${handler.name}" class="collapse"></div>
+            <div id="${id}" class="collapse"></div>
         </div>`
 
-    let children = []
-    for await (let child of handler.values()) {
-        children.push(child)
-    }
-    await render(children, `#${handler.name}`)
+    let children = await getChildren(handler)
+    await render(children, `#${id}`)
 }
 
 async function upload() {
     files.splice(0)
-    await recursive(fileHandlers)
+    await getAllFiles(fileHandlers)
 
     for (let file of files) {
         let reader = file.stream().getReader();
@@ -126,18 +121,41 @@ async function upload() {
             console.log(`Upload progress: ${progress.toFixed(2)}%`)
             document.querySelector('#progress').style.width = `${progress}%`
 
-            if (uploadedSize == totalSize) {
-                let url = `${api}/?prefix=${keyBase()}`
-                console.log(url)
+            if (uploadedSize != totalSize) continue
 
-                fileHandlers = []
-                render(fileHandlers)
-            }
+            fileHandlers = []
+            render(fileHandlers)
+            showUploaded()
+
+            document.querySelector('#progress').style.width = '0'
+            toast("OSS", "Upload Success")
         }
     }
 }
 
-async function recursive(handlers, base = '') {
+async function getFile(handler) {
+    if (handler.getFile) {
+        return await handler.getFile()
+    }
+    return handler
+}
+
+async function getChildren(handler) {
+    let children = []
+
+    if (handler.values) {
+        for await (let child of handler.values()) {
+            children.push(child)
+        }
+    }
+    else {
+        children = handler.children
+    }
+
+    return children.sort((a, b) => b.kind.length - a.kind.length)
+}
+
+async function getAllFiles(handlers, base = '') {
     if (!base) {
         base = keyBase()
         totalSize = 0
@@ -158,7 +176,44 @@ async function recursive(handlers, base = '') {
                 children.push(child)
             }
             let key = `${base}/${item.name}`
-            await recursive(children, key)
+            await getAllFiles(children, key)
         }
     }
 }
+
+async function showUploaded() {
+    let url = `${api}/?prefix=${keyBase()}`
+    let res = await fetch(url)
+
+    let files = (await res.json()).objects
+    let handlers = []
+
+    document.querySelector('#uploaded').innerHTML = files.length == 0 
+        ? '<p class="text-center py-2 m-0">Uploaded list</p>' 
+        : ''
+
+    files.forEach(file => {
+        let current = handlers
+        let parts = file.key.split('/').slice(1)
+
+        parts.forEach((part, index) => {
+            let handler = current.find(i => i.name == part)
+
+            if (!handler) {
+                if (index == parts.length - 1) {
+                    handler = Object.assign({ name: part, kind: 'file' }, file)
+                }
+                else {
+                    handler = { name: part, kind: 'directory', children: [] }
+                }
+                current.push(handler)
+            }
+            current = handler.children
+        })
+    })
+
+    render(handlers, '#uploaded')
+}
+
+render(fileHandlers)
+showUploaded()
