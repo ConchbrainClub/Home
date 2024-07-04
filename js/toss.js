@@ -1,16 +1,16 @@
-const api = 'https://oss.conchbrain.club'
+var api = 'https://oss.conchbrain.club'
+var prefix = 'oss_key'
 
-let files = []
-let totalSize = 0
-let uploadedSize = 0;
-let fileHandlers = []
+var files = []
+var totalSize = 0
+var uploadedSize = 0;
+var fileHandlers = []
 
 function keyBase() {
-    let key = 'oss_key'
-    let base = localStorage.getItem(key)
+    let base = localStorage.getItem(prefix)
     if (!base) {
         base = guid()
-        localStorage.setItem(key, base)
+        localStorage.setItem(prefix, base)
     }
     return base
 }
@@ -215,5 +215,19 @@ async function showUploaded() {
     render(handlers, '#uploaded')
 }
 
-render(fileHandlers)
-showUploaded()
+function init() {
+    let regex = /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/
+    let href = location.href.substring(location.href.indexOf("#") + 1)
+    let id = href.split('/').at(1)
+
+    if (!id || !regex.test(id)) {
+        navigate(`toss/${keyBase()}`)
+        return
+    }
+
+    localStorage.setItem(prefix, id)
+    render(fileHandlers)
+    showUploaded()
+}
+
+init()

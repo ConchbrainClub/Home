@@ -196,7 +196,7 @@ async function init() {
 
     //初始化导航
     window.onpopstate = (e) => {
-        navigate(e.state.page, true);
+        navigate(e.target.location.hash.substring(1), true);
     }
 
     //获取当前用户
