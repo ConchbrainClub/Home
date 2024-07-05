@@ -18,20 +18,20 @@ function keyBase() {
 async function addFile() {
     let items = await showOpenFilePicker({ multiple: true })
     fileHandlers.push(...items);
-    render(fileHandlers)
+    renderPending(fileHandlers)
 }
 
 async function addFolder() {
     fileHandlers.push(await showDirectoryPicker())
-    render(fileHandlers)
+    renderPending(fileHandlers)
 }
 
 function removeFile(fileName) {
     fileHandlers.splice(fileHandlers.findIndex(i => i.name == fileName), 1)
-    render(fileHandlers)
+    renderPending(fileHandlers)
 }
 
-async function render(handlers, target = '#fileList') {
+async function renderPending(handlers, target = '#fileList') {
     let parent = document.querySelector(target)
 
     if (target == '#fileList') {
@@ -53,21 +53,16 @@ async function render(handlers, target = '#fileList') {
 
 async function showFile(handler, parent) {
     let file = await getFile(handler)
-    console.log()
 
     parent.innerHTML +=`
         <div class="card-header" style="background-color: whitesmoke;">
             <div class="d-flex w-100 justify-content-between">
                 <div>
                     <p class="mb-1">${file.name}</p>
-                    <small>
-                    ${
-                        (() => {
-                            return file.key 
-                                ? `<a href="${api}/${file.key}" target="_blank">Download</a>` 
-                                : ''
-                        })()
-                    }
+                    <small ${file.key ? '' : 'hidden'}>
+                        <a href="javascript:void(0)" onclick="downloadFile('${file.key}')">View</a> &nbsp;
+                        <a href="javascript:void(0)" onclick="downloadFile('${file.key}', true)">Download</a> &nbsp;
+                        <a href="javascript:void(0)" onclick="deleteFile('${file.key}')">Delete</a> &nbsp;
                     </small>
                 </div>
                 <div>
@@ -94,10 +89,31 @@ async function showFolder(handler, parent) {
         </div>`
 
     let children = await getChildren(handler)
-    await render(children, `#${id}`)
+    await renderPending(children, `#${id}`)
+}
+
+function downloadFile(key, attachment = false) {
+    let url = `${api}/${key}` + (attachment ? '?attachment=true' : '')
+    window.open(url)
+}
+
+async function deleteFile(key) {
+    toast("Conchbrain OSS", "Deleting...")
+
+    await fetch(`${api}/${key}`, {
+        method: 'DELETE',
+    })
+    .catch(err => {
+        alert(err)
+    })
+    .finally(() => {
+        renderUploaded()
+    })
 }
 
 async function upload() {
+    toast("Conchbrain OSS", "Uploading...")
+
     files.splice(0)
     await getAllFiles(fileHandlers)
 
@@ -115,6 +131,7 @@ async function upload() {
         while (true) {
             let { done, value } = await reader.read()
             if (done) break
+
             uploadedSize += value.length
             let progress = (uploadedSize / totalSize) * 100;
 
@@ -124,11 +141,13 @@ async function upload() {
             if (uploadedSize != totalSize) continue
 
             fileHandlers = []
-            render(fileHandlers)
-            showUploaded()
+            renderPending(fileHandlers)
+            renderUploaded()
 
-            document.querySelector('#progress').style.width = '0'
-            toast("OSS", "Upload Success")
+            setTimeout(() => {
+                document.querySelector('#progress').style.width = '0'
+                toast("Conchbrain OSS", "Upload Success")
+            }, 2000)
         }
     }
 }
@@ -181,7 +200,7 @@ async function getAllFiles(handlers, base = '') {
     }
 }
 
-async function showUploaded() {
+async function renderUploaded() {
     let url = `${api}/?prefix=${keyBase()}`
     let res = await fetch(url)
 
@@ -212,7 +231,7 @@ async function showUploaded() {
         })
     })
 
-    render(handlers, '#uploaded')
+    renderPending(handlers, '#uploaded')
 }
 
 function init() {
@@ -226,8 +245,8 @@ function init() {
     }
 
     localStorage.setItem(prefix, id)
-    render(fileHandlers)
-    showUploaded()
+    renderPending(fileHandlers)
+    renderUploaded()
 }
 
 init()
