@@ -31,10 +31,10 @@ function removeFile(fileName) {
     renderPending(fileHandlers)
 }
 
-async function renderPending(handlers, target = '#fileList') {
+async function renderPending(handlers, target = '#pending') {
     let parent = document.querySelector(target)
 
-    if (target == '#fileList') {
+    if (target == '#pending') {
         parent.innerHTML = handlers.length == 0 
             ? '<p class="text-center py-2 m-0">Pending list</p>' 
             : ''
@@ -54,6 +54,11 @@ async function renderPending(handlers, target = '#fileList') {
 async function showFile(handler, parent) {
     let file = await getFile(handler)
 
+    let expires = file.uploaded ? `
+        <p class="m-0">
+            <span class="badge badge-warning">Expires: ${new Date(Date.parse(file.uploaded) + 24 * 60 * 60 * 1000).toLocaleString()}</span>
+        </p>` : ''
+
     parent.innerHTML +=`
         <div class="card-header" style="background-color: whitesmoke;">
             <div class="d-flex w-100 justify-content-between">
@@ -65,8 +70,11 @@ async function showFile(handler, parent) {
                         <a href="javascript:void(0)" onclick="deleteFile('${file.key}')">Delete</a> &nbsp;
                     </small>
                 </div>
-                <div>
-                    <small>${Math.round(file.size / 1000)}kb</small>
+                <div class="text-right">
+                    ${expires}
+                    <p class="m-0">
+                        <span class="badge badge-primary">Size: ${Math.round(file.size / 1000)}kb</span>
+                    </p>
                 </div>
             </div>
         </div>`
@@ -112,10 +120,16 @@ async function deleteFile(key) {
 }
 
 async function upload() {
-    toast("Conchbrain OSS", "Uploading...")
-
     files.splice(0)
     await getAllFiles(fileHandlers)
+
+    if (files.length == 0) {
+        toast("Conchbrain OSS", "Empty pending list")
+        return
+    }
+
+    updateUploadStatus(true)
+    toast("Conchbrain OSS", "Uploading...")
 
     for (let file of files) {
         let reader = file.stream().getReader();
@@ -126,6 +140,7 @@ async function upload() {
         })
         .catch(err => {
             alert(err)
+            updateUploadStatus(false)
         })
 
         while (true) {
@@ -145,11 +160,28 @@ async function upload() {
             renderUploaded()
 
             setTimeout(() => {
+                updateUploadStatus(false)
                 document.querySelector('#progress').style.width = '0'
                 toast("Conchbrain OSS", "Upload Success")
             }, 2000)
         }
     }
+}
+
+function updateUploadStatus(uploading = false) {
+    let html = `
+        <div class="spinner-border" style="height: 17px; width: 17px;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>`
+    
+    let btn = document.querySelector('#btn-upload')
+
+    if (uploading) 
+        btn.setAttribute('disabled', 'disabled')
+    else
+        btn.removeAttribute('disabled')
+
+    btn.innerHTML = uploading ? html : 'Upload'
 }
 
 async function getFile(handler) {
