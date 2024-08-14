@@ -3,6 +3,7 @@ const CACHE_NAME = "Conchbrain-Version";
 const PRE_CACHED_RESOURCES = [
     "/",
     "favicon.ico",
+    "favicon_color.ico",
     "SiteMap.txt",
 
     "images/notfound.png",
