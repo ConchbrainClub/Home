@@ -15,7 +15,6 @@ const PRE_CACHED_RESOURCES = [
     "images/pic6.png",
 
     "view/cloudshell.html",
-    "view/conch.html",
     "view/corsproxy.html",
     "view/dockerproxy.html",
     "view/home.html",
@@ -27,14 +26,12 @@ const PRE_CACHED_RESOURCES = [
     "view/webproxy.html",
 
     "css/cloudshell.css",
-    "css/conch.css",
     "css/home.css",
     "css/index.css",
     "css/intro.css",
     "css/notfound.css",
     "css/webproxy.css",
 
-    "js/conch.js",
     "js/index.js",
     "js/intro.js",
     "js/toss.js",
