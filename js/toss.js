@@ -266,6 +266,12 @@ async function renderUploaded() {
     renderPending(handlers, '#uploaded')
 }
 
+function share() {
+    navigator.clipboard.writeText(location.href).then(() => {
+        alert('Copied to clipboard successfully')
+    })
+}
+
 function init() {
     let regex = /^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/
     let href = location.href.substring(location.href.indexOf("#") + 1)
