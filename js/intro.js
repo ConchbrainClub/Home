@@ -1,7 +1,7 @@
 function createVideo() {
 
     // 抵消 animate.css 导致模态框被覆盖的 BUG
-    document.querySelector("#banners").className = "";
+    document.querySelector("#banners").className = ""
 
     let html = `
     <div class="modal-content">
@@ -21,11 +21,11 @@ function createVideo() {
         <iframe class="modal-content" width="800" height="600" allowfullscreen="true" src="https://v.qq.com/txp/iframe/player.html?vid=i054487uic5"></iframe>
 
     </div>
-    `;
+    `
 
-    document.querySelector(".modal-dialog").innerHTML = html;
+    document.querySelector(".modal-dialog").innerHTML = html
 }
 
 function removeVideo() {
-    document.querySelector("iframe").remove();
+    document.querySelector("iframe").remove()
 }

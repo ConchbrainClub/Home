@@ -1,50 +1,50 @@
-var proxyHref = "https://proxy.conchbrain.club/-----";
-var searchHref = "https://proxy.conchbrain.club/-----https://duckduckgo.com/?q=";
+var proxyHref = "https://proxy.conchbrain.club/-----"
+var searchHref = "https://proxy.conchbrain.club/-----https://duckduckgo.com/?q="
 
 function search() {
-    let href = document.querySelector("#link").value;
+    let href = document.querySelector("#link").value
     if (href) {
         if (isHref(href)) {
-            window.open(proxyHref + href);
+            window.open(proxyHref + href)
         }
         else {
-            window.open(searchHref + href);
+            window.open(searchHref + href)
         }
     }
 }
 
 function setBackground(bgHref) {
-    document.querySelector("#bg").style.backgroundImage = `url("${bgHref}")`;
+    document.querySelector("#bg").style.backgroundImage = `url("${bgHref}")`
 }
 
 function initBackground() {
-    let date = new Date().getDate().toString();
-    let lastDate = localStorage.getItem("lastDate");
+    let date = new Date().getDate().toString()
+    let lastDate = localStorage.getItem("lastDate")
 
     if (lastDate == date) {
-        setBackground(localStorage.getItem("bg"));
-        return;
+        setBackground(localStorage.getItem("bg"))
+        return
     }
 
-    let corsProxy = "https://cors.conchbrain.club/?";
-    let api = "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN";
+    let corsProxy = "https://cors.conchbrain.club/?"
+    let api = "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN"
     request(corsProxy + api, (data) => {
-        let bgHref = "https://cn.bing.com" + data.images[0].url;
-        setBackground(bgHref);
+        let bgHref = "https://cn.bing.com" + data.images[0].url
+        setBackground(bgHref)
 
-        localStorage.setItem("lastDate", date);
-        localStorage.setItem("bg", bgHref);
-    });
+        localStorage.setItem("lastDate", date)
+        localStorage.setItem("bg", bgHref)
+    })
 }
 
 function isHref(href) {
-    var reg = /^((http|https):\/\/)?(([A-Za-z0-9]+-[A-Za-z0-9]+|[A-Za-z0-9]+)\.)+([A-Za-z]+)[/\?\:]?.*$/;
-    return reg.test(href);
+    var reg = /^((http|https):\/\/)?(([A-Za-z0-9]+-[A-Za-z0-9]+|[A-Za-z0-9]+)\.)+([A-Za-z]+)[/\?\:]?.*$/
+    return reg.test(href)
 }
 
 document.querySelector("input").onkeydown = () => {
     if (window.event.keyCode == 13)
-        search();
+        search()
 }
 
-initBackground();
+initBackground()

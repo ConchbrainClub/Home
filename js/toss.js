@@ -3,7 +3,7 @@ var prefix = 'oss_key'
 
 var files = []
 var totalSize = 0
-var uploadedSize = 0;
+var uploadedSize = 0
 var fileHandlers = []
 
 function keyBase() {
@@ -17,7 +17,7 @@ function keyBase() {
 
 async function addFile() {
     let items = await showOpenFilePicker({ multiple: true })
-    fileHandlers.push(...items);
+    fileHandlers.push(...items)
     renderPending(fileHandlers)
 }
 
@@ -65,9 +65,9 @@ async function showFile(handler, parent) {
                 <div>
                     <p class="mb-1">${file.name}</p>
                     <small ${file.key ? '' : 'hidden'}>
-                        <a href="javascript:void(0)" onclick="downloadFile('${file.key}')">View</a> &nbsp;
-                        <a href="javascript:void(0)" onclick="downloadFile('${file.key}', true)">Download</a> &nbsp;
-                        <a href="javascript:void(0)" onclick="deleteFile('${file.key}')">Delete</a> &nbsp;
+                        <a href="javascript:void(0)" onclick="downloadFile('${file.key}')">View</a> &nbsp
+                        <a href="javascript:void(0)" onclick="downloadFile('${file.key}', true)">Download</a> &nbsp
+                        <a href="javascript:void(0)" onclick="deleteFile('${file.key}')">Delete</a> &nbsp
                     </small>
                 </div>
                 <div class="text-right">
@@ -132,7 +132,7 @@ async function upload() {
     toast("Conchbrain OSS", "Uploading...")
 
     for (let file of files) {
-        let reader = file.stream().getReader();
+        let reader = file.stream().getReader()
 
         await fetch(`${api}/${file.key}`, {
             method: 'PUT',
@@ -148,7 +148,7 @@ async function upload() {
             if (done) break
 
             uploadedSize += value.length
-            let progress = (uploadedSize / totalSize) * 100;
+            let progress = (uploadedSize / totalSize) * 100
 
             console.log(`Upload progress: ${progress.toFixed(2)}%`)
             document.querySelector('#progress').style.width = `${progress}%`
