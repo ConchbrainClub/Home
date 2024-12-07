@@ -14,31 +14,31 @@ function logout() {
     location.reload();
 }
 
-// async function getUser() {
+async function getUser() {
 
-//     let access_token = localStorage.getItem("access_token");
+    let access_token = localStorage.getItem("access_token");
 
-//     if (!access_token) {
-//         document.querySelector("#userName").onclick = login;
-//         return;
-//     }
+    if (!access_token) {
+        document.querySelector("#userName").onclick = login;
+        return;
+    }
 
-//     let res = await fetch("https://api.github.com/user", {
-//         headers: {
-//             accept: 'application/json',
-//             Authorization: `token ${localStorage.getItem("access_token")}`
-//         }
-//     });
+    let res = await fetch("https://api.github.com/user", {
+        headers: {
+            accept: 'application/json',
+            Authorization: `token ${localStorage.getItem("access_token")}`
+        }
+    });
 
-//     if (res.status == 200) {
-//         userInfo = await res.json();
-//         showInfo();
-//     }
-//     else {
-//         alert("登陆失败，请重新登录");
-//         logout();
-//     }
-// }
+    if (res.status == 200) {
+        userInfo = await res.json();
+        showInfo();
+    }
+    else {
+        alert("登陆失败，请重新登录");
+        logout();
+    }
+}
 
 function showInfo() {
     document.querySelector("#userName").setAttribute("data-toggle", "dropdown");
@@ -120,6 +120,7 @@ function initMenu() {
 }
 
 async function initPWA() {
+    if (location.href.startsWith('http://')) return
     if (!('serviceWorker' in navigator)) return
 
     let registration = await navigator.serviceWorker.register('./serviceworker.js');
@@ -200,17 +201,17 @@ async function init() {
     }
 
     //获取当前用户
-    // getUser();
+    getUser();
 
     //获取当前地址
     let href = window.location.href;
 
     //判断是否授权登陆
-    // if (href.includes("#login")) {
-    //     let access_token = location.href.substring(location.href.indexOf("?") + 1);
-    //     localStorage.setItem("access_token", access_token);
-    //     window.location.href = "/";
-    // }
+    if (href.includes("#login")) {
+        let access_token = location.href.substring(location.href.indexOf("?") + 1);
+        localStorage.setItem("access_token", access_token);
+        window.location.href = "/";
+    }
 
     //导航到指定页面
     if (href.includes("#")) {

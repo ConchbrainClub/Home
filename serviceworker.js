@@ -22,6 +22,7 @@ const PRE_CACHED_RESOURCES = [
     "view/kv.html",
     "view/mixstore.html",
     "view/notfound.html",
+    "view/tmail.html",
     "view/toss.html",
     "view/webproxy.html",
 
@@ -34,6 +35,7 @@ const PRE_CACHED_RESOURCES = [
 
     "js/index.js",
     "js/intro.js",
+    "js/tmail.js",
     "js/toss.js",
     "js/webproxy.js",
 

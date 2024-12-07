@@ -2,206 +2,209 @@
 <html lang="zh-cn">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="LLLXY,ConchbrainClub,ConchBrain" />
-  <meta name="description" content="海螺大脑俱乐部是一个汇聚了各种奇思妙想的开发者组织" />
-  <meta property="og:locale" content="zh_cn" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="ConchbrainClub" />
-  <meta property="og:description" content="海螺大脑俱乐部是一个汇聚了各种奇思妙想的开发者组织" />
-  <meta property="og:url" content="https://conchbrain.club/" />
-  <meta property="og:site_name" content="ConchbrainClub" />
-  <meta property="og:image" content="/images/pic1.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="LLLXY,ConchbrainClub,ConchBrain" />
+    <meta name="description" content="海螺大脑俱乐部是一个汇聚了各种奇思妙想的开发者组织" />
+    <meta property="og:locale" content="zh_cn" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ConchbrainClub" />
+    <meta property="og:description" content="海螺大脑俱乐部是一个汇聚了各种奇思妙想的开发者组织" />
+    <meta property="og:url" content="https://conchbrain.club/" />
+    <meta property="og:site_name" content="ConchbrainClub" />
+    <meta property="og:image" content="/images/pic1.png" />
 
-  <title>海螺大脑俱乐部</title>
+    <title>海螺大脑俱乐部</title>
 
-  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/CodeByZach/pace/themes/blue/pace-theme-barber-shop.css" />
-  <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://fastly.jsdelivr.net/gh/CodeByZach/pace/themes/blue/pace-theme-barber-shop.css" />
+    <link rel="stylesheet" href="/css/index.css" />
 
-  <script src="https://fastly.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://fastly.jsdelivr.net/gh/CodeByZach/pace/pace.min.js"></script>
-  <script src="/js/index.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/gh/CodeByZach/pace/pace.min.js"></script>
+    <script src="/js/index.js"></script>
 </head>
 
 <body>
 
-  <!--header-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <img class="logo" src="./favicon.ico" class="d-inline-block align-top">
-        &nbsp;Conchbrain
-      </a>
-      <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('home')" class="nav-link">主页</a>
-          </li>
+    <!--header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img class="logo" src="./favicon.ico" class="d-inline-block align-top">
+                &nbsp;Conchbrain
+            </a>
+            <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('home')" class="nav-link">主页</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('intro')" class="nav-link">关于</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('intro')" class="nav-link">关于</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('mixstore')" class="nav-link">MixStore</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('mixstore')" class="nav-link">MixStore</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('cloudshell')" class="nav-link">CloudShell</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('cloudshell')" class="nav-link">CloudShell</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('kv')" class="nav-link">KV</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('kv')" class="nav-link">KV</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('corsproxy')" class="nav-link">CorsProxy</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('corsproxy')" class="nav-link">CorsProxy</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('dockerproxy')" class="nav-link">DockerProxy</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('dockerproxy')" class="nav-link">DockerProxy</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('webproxy')" class="nav-link">WebProxy</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('webproxy')" class="nav-link">WebProxy</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('toss')" class="nav-link">TOSS</a>
-          </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('toss')" class="nav-link">TOSS</a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="javascript:void(0)" onclick="navigate('tmail')" class="nav-link disabled">Tmail</a>
-          </li>
-        </ul>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="navigate('tmail')" class="nav-link disabled">Tmail</a>
+                    </li>
+                </ul>
 
-        <!-- <div class="dropdown">
-          <span id="userName" class="nav-link">
-            登录
-          </span>
+                <div class="dropdown">
+                    <span id="userName" class="nav-link">
+                        登录
+                    </span>
 
-          <div class="dropdown-menu" data-toggle="collapse" data-target="#navbar" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="javascript:void(0)" onclick="logout()">注销</a>
-          </div>
-        </div> -->
-      </div>
-    </div>
-  </nav>
-
-  <!--body-->
-  <div id="content">
-    <div id="loading" class="container">
-      <div class="row">
-        <div class="box box-6"></div>
-      </div>
-      <div class="row">
-        <div class="box box-10"></div>
-      </div>
-      <div class="row">
-        <div class="box box-4"></div>
-      </div>
-      <div class="row">
-        <div class="box box-8"></div>
-      </div>
-      <div class="row">
-        <div class="box box-3"></div>
-      </div>
-      <div class="row">
-        <div class="box box-10"></div>
-      </div>
-      <div class="row">
-        <div class="box box-4"></div>
-      </div>
-      <div class="row">
-        <div class="box box-8"></div>
-      </div>
-      <div class="row">
-        <div class="box box-3"></div>
-      </div>
-      <div class="row">
-        <div class="box box-10"></div>
-      </div>
-      <div class="row">
-        <div class="box box-6"></div>
-      </div>
-    </div>
-    <div id="main"></div>
-  </div>
-
-  <!--footer-->
-  <footer class="bd-footer text-muted">
-
-    <div class="container" id="footerInfo">
-      <div class="row">
-
-        <div class="col-md-3">
-          <p class="title">新增内容</p>
-          <p><a href="javascript:void(0)" onclick="navigate('corsproxy')">CorsProxy</a></p>
-          <p><a href="javascript:void(0)" onclick="navigate('webproxy')">WebProxy</a></p>
-          <p><a href="javascript:void(0)" onclick="navigate('dockerproxy')">DockerProxy</a></p>
+                    <div class="dropdown-menu" data-toggle="collapse" data-target="#navbar" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="javascript:void(0)" onclick="logout()">注销</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <div class="col-md-3">
-          <p class="title">友情链接</p>
-          <p><a target="blank" href="https://www.lllxy.net/">LLLXY</a></p>
-          <p><a target="blank" href="https://chanrich.netlify.app/">Chanrich</a></p>
-          <p><a target="blank" href="https://yql520.com/">龍啓</a></p>
+    <!--body-->
+    <div id="content">
+        <div id="loading" class="container">
+            <div class="row">
+                <div class="box box-6"></div>
+            </div>
+            <div class="row">
+                <div class="box box-10"></div>
+            </div>
+            <div class="row">
+                <div class="box box-4"></div>
+            </div>
+            <div class="row">
+                <div class="box box-8"></div>
+            </div>
+            <div class="row">
+                <div class="box box-3"></div>
+            </div>
+            <div class="row">
+                <div class="box box-10"></div>
+            </div>
+            <div class="row">
+                <div class="box box-4"></div>
+            </div>
+            <div class="row">
+                <div class="box box-8"></div>
+            </div>
+            <div class="row">
+                <div class="box box-3"></div>
+            </div>
+            <div class="row">
+                <div class="box box-10"></div>
+            </div>
+            <div class="row">
+                <div class="box box-6"></div>
+            </div>
         </div>
-
-        <div class="col-md-3">
-          <p class="title">关于</p>
-          <p><a target="blank" href="https://github.com/ConchBrainClub">GitHub</a></p>
-          <p><a href="mailto:conchbrainclub@outlook.com">Mail</a></p>
-          <p><a href="javascript:void(0);" onclick="alert('QQ群：1091165646 - 欢迎加入！');">QQ</a></p>
-        </div>
-
-        <div class="col-md-3">
-          <p class="title">其他</p>
-          <p><a target="blank" href="https://github.com/ConchbrainClub/Home/issues/new?assignees=lixinyang123%2C+ccczg&labels=&template=feedback.md&title=Feedback">Feedback</a></p>
-          <p><a target="blank" href="https://storage.conchbrain.club/">Storage</a></p>
-        </div>
-
-      </div>
+        <div id="main"></div>
     </div>
 
-    <div class="container-fluid p-3 p-md-5 text-center">
+    <!--footer-->
+    <footer class="bd-footer text-muted">
 
-      <p>Developed by the
-        <a href="https://www.conchbrain.club" target="_blank"><strong>ConchbrainClub</strong></a>
-        ❤ with the help of our
-        <a href="https://github.com/ConchBrainClub/Home/graphs/contributors" target="_blank">
-          <strong>contributors</strong>
+        <div class="container" id="footerInfo">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <p class="title">新增内容</p>
+                    <p><a href="javascript:void(0)" onclick="navigate('corsproxy')">CorsProxy</a></p>
+                    <p><a href="javascript:void(0)" onclick="navigate('webproxy')">WebProxy</a></p>
+                    <p><a href="javascript:void(0)" onclick="navigate('dockerproxy')">DockerProxy</a></p>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">友情链接</p>
+                    <p><a target="blank" href="https://www.lllxy.net/">LLLXY</a></p>
+                    <p><a target="blank" href="https://chanrich.netlify.app/">Chanrich</a></p>
+                    <p><a target="blank" href="https://yql520.com/">龍啓</a></p>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">关于</p>
+                    <p><a target="blank" href="https://github.com/ConchBrainClub">GitHub</a></p>
+                    <p><a href="mailto:conchbrainclub@outlook.com">Mail</a></p>
+                    <p><a href="javascript:void(0);" onclick="alert('QQ群：1091165646 - 欢迎加入！');">QQ</a></p>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">其他</p>
+                    <p><a target="blank"
+                            href="https://github.com/ConchbrainClub/Home/issues/new?assignees=lixinyang123%2C+ccczg&labels=&template=feedback.md&title=Feedback">Feedback</a>
+                    </p>
+                    <p><a target="blank" href="https://storage.conchbrain.club/">Storage</a></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid p-3 p-md-5 text-center">
+
+            <p>Developed by the
+                <a href="https://www.conchbrain.club" target="_blank"><strong>ConchbrainClub</strong></a>
+                ❤ with the help of our
+                <a href="https://github.com/ConchBrainClub/Home/graphs/contributors" target="_blank">
+                    <strong>contributors</strong>
+                </a>
+            </p>
+
+            <p>
+                <span>© 2024 - Conchbrain Club</span>
+                &nbsp;<strong><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备18041216号-5</a></strong>
+            </p>
+        </div>
+
+    </footer>
+
+    <div id="top" class="gototop js-top">
+        <a onclick="MoveTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+            </svg>
         </a>
-      </p>
-
-      <p>
-        <span>© 2024 - Conchbrain Club</span>
-        &nbsp;<strong><a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备18041216号-5</a></strong>
-      </p>
     </div>
 
-  </footer>
+    <div id="toastArea"></div>
 
-  <div id="top" class="gototop js-top">
-    <a onclick="MoveTop()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up"
-        viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-          d="M3.204 11L8 5.519 12.796 11H3.204zm-.753-.659l4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
-      </svg>
-    </a>
-  </div>
-
-  <div id="toastArea"></div>
-
-  <script>init();</script>
+    <script>init();</script>
 </body>
 
 </html>
