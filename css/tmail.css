@@ -1,0 +1,12 @@
+#emails {
+    min-height: 500px;
+}
+
+lottie-player {
+    margin: 0 auto;
+    position: absolute;
+    width: 150px; 
+    height: 150px; 
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+}

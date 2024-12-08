@@ -36,7 +36,10 @@ async function renderPending(handlers, target = '#pending') {
 
     if (target == '#pending') {
         parent.innerHTML = handlers.length == 0 
-            ? '<p class="text-center py-2 m-0">Pending list</p>' 
+            ? `<lottie-player 
+                    src="https://lottie.host/12be33ff-874c-4a11-af80-54f715547982/B4iNXgrRme.json" 
+                    style="width: 150px; height: 150px; margin: 0 auto;" 
+                    loop autoplay></lottie-player>` 
             : ''
     }
 
@@ -63,7 +66,7 @@ async function showFile(handler, parent) {
         <div class="card-header" style="background-color: whitesmoke;">
             <div class="d-flex w-100 justify-content-between">
                 <div>
-                    <p class="mb-1">${file.name}</p>
+                    <p class="mb-1">${decodeURI(file.name)}</p>
                     <small ${file.key ? '' : 'hidden'}>
                         <a href="javascript:void(0)" onclick="downloadFile('${file.key}')">View</a> &nbsp
                         <a href="javascript:void(0)" onclick="downloadFile('${file.key}', true)">Download</a> &nbsp
@@ -88,7 +91,7 @@ async function showFolder(handler, parent) {
             <div class="card-header" style="background-color: white; cursor: pointer;">
                 <div class="d-flex w-100 justify-content-between" data-toggle="collapse" data-target="#${id}">
                     <div>
-                        <p class="mb-1">${handler.name}</p>
+                        <p class="mb-1">${decodeURI(handler.name)}</p>
                         <small>${handler.kind}</small>
                     </div>
                 </div>
@@ -240,7 +243,10 @@ async function renderUploaded() {
     let handlers = []
 
     document.querySelector('#uploaded').innerHTML = files.length == 0 
-        ? '<p class="text-center py-2 m-0">Uploaded list</p>' 
+        ? `<lottie-player 
+                src="https://lottie.host/5f51e5f6-99a8-441c-a56a-07d5de6cde78/GgMuLxhysX.json" 
+                style="width: 150px; height: 150px; margin: 0 auto;" 
+                loop autoplay></lottie-player>` 
         : ''
 
     files.forEach(file => {

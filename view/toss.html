@@ -11,7 +11,7 @@
 
     <div class="alert alert-primary">
         <span>
-            <button type="button" class="btn btn-sm btn-success" onclick="share()">Copy</button> 
+            <button type="button" class="btn btn-sm btn-success" onclick="share()">Copy</button>
             current link and share link to your friend.
         </span>
     </div>
@@ -28,7 +28,7 @@
                             <label class="custom-file-label">Choose File</label>
                         </div>
                     </div>
-    
+
                     <div class="col-md">
                         <div class="custom-file" onclick="addFolder()">
                             <label class="custom-file-label">Choose Folder</label>
@@ -36,9 +36,17 @@
                     </div>
 
                     <div class="col-md-2">
-                        <button id="btn-upload" type="button" class="btn btn-outline-secondary btn-block" onclick="upload()">Upload</button>
+                        <button id="btn-upload" type="button" class="btn btn-outline-secondary btn-block"
+                            onclick="upload()">Upload</button>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="jumbotron p-0 mb-3">
+            <div id="pending" class="accordion">
+                <lottie-player src="https://lottie.host/12be33ff-874c-4a11-af80-54f715547982/B4iNXgrRme.json"
+                    style="width: 150px; height: 150px; margin: 0 auto;" loop autoplay></lottie-player>
             </div>
         </div>
 
@@ -47,18 +55,13 @@
         </div>
     </div>
 
-    <hr />
-    <p>Upload or Download your file</p>
 
-    <div class="jumbotron p-3">
-        <div id="pending" class="accordion">
-            <p class="text-center py-2 m-0">Pending list</p>
-        </div>
-    </div>
+    <p class="m-0">Uploaded list</p>
 
     <div class="jumbotron p-3">
         <div id="uploaded" class="accordion">
-            <p class="text-center py-2 m-0">Uploaded list</p>
+            <lottie-player src="https://lottie.host/5f51e5f6-99a8-441c-a56a-07d5de6cde78/GgMuLxhysX.json"
+                style="width: 150px; height: 150px; margin: 0 auto;" loop autoplay></lottie-player>
         </div>
     </div>
-<div>
+    <div>
