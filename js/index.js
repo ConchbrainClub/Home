@@ -113,24 +113,20 @@ function inject() {
 }
 
 function initMenu() {
-    if (window.innerWidth <= 992) {
+    window.onresize = () => {
         document.querySelectorAll(".nav-item").forEach(element => {
-            element.setAttribute("data-toggle", "collapse")
-            element.setAttribute("data-target", "#navbar")
+            if (window.innerWidth < 992) {
+                element.setAttribute("data-toggle", "collapse")
+                element.setAttribute("data-target", "#navbar")
+            } else {
+                element.removeAttribute("data-toggle")
+                element.removeAttribute("data-target")
+            }
         })
     }
+    
+    window.onresize()
 }
-window.addEventListener('resize', () => {
-    document.querySelectorAll(".nav-item").forEach(element => {
-        if (window.innerWidth <= 992) {
-            element.setAttribute("data-toggle", "collapse")
-            element.setAttribute("data-target", "#navbar")
-        } else {
-            element.removeAttribute("data-toggle")
-            element.removeAttribute("data-target")
-        }
-    })
-})
 
 async function initPWA() {
     if (location.href.startsWith('http://')) return
