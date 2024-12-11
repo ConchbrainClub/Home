@@ -113,18 +113,31 @@ function inject() {
 }
 
 function initMenu() {
-    document.querySelectorAll(".nav-item").forEach(element => {
-        element.setAttribute("data-toggle", "collapse")
-        element.setAttribute("data-target", "#navbar")
-    })
+    if (window.innerWidth <= 992) {
+        document.querySelectorAll(".nav-item").forEach(element => {
+            element.setAttribute("data-toggle", "collapse")
+            element.setAttribute("data-target", "#navbar")
+        })
+    }
 }
+window.addEventListener('resize', () => {
+    document.querySelectorAll(".nav-item").forEach(element => {
+        if (window.innerWidth <= 992) {
+            element.setAttribute("data-toggle", "collapse")
+            element.setAttribute("data-target", "#navbar")
+        } else {
+            element.removeAttribute("data-toggle")
+            element.removeAttribute("data-target")
+        }
+    })
+})
 
 async function initPWA() {
     if (location.href.startsWith('http://')) return
     if (!('serviceWorker' in navigator)) return
 
     let registration = await navigator.serviceWorker.register('./serviceworker.js')
-    
+
     registration.onupdatefound = () => {
         let installingWorker = registration.installing
 
