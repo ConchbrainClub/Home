@@ -91,7 +91,34 @@ function renderEmail(id) {
         html.innerHTML = selectedEmail.html
         html.querySelectorAll('style').forEach(i => i.remove())
 
-        document.querySelector('#email').innerHTML = html.innerHTML
+        document.querySelector('#email > .info').innerHTML = `
+            <p class="border-bottom">
+                <span>From:</span>
+                <span class="badge badge-secondary">${selectedEmail.from.address}</span>
+            </p>
+
+            <p class="border-bottom">
+                <span>To:</span>
+                ${
+                    selectedEmail.to
+                        .map(i => '<span class="badge badge-secondary mr-1">' + i.address + '</span>')
+                        .toString()
+                        .replaceAll(',', '')
+                }
+            </p>
+
+            <p class="border-bottom">
+                <span>CC:</span>
+                ${
+                    selectedEmail.cc
+                        .map(i => '<span class="badge badge-secondary mr-1">' + i.address + '</span>')
+                        .toString()
+                        .replaceAll(',', '')
+                }
+            </p>
+        `
+
+        document.querySelector('#email > .content').innerHTML = html.innerHTML
         renderInbox()
     })
 }
