@@ -1,4 +1,5 @@
 var api = 'https://smail.conchbrain.club/api'
+var tossApi = 'https://oss.conchbrain.club'
 
 var address = localStorage.getItem('email_address')
 var emails = []
@@ -87,11 +88,8 @@ function renderEmail(id) {
     selectedId = id
 
     getEmail().then(() => {
-        let html = document.createElement('div')
-        html.innerHTML = selectedEmail.html
-        html.querySelectorAll('style').forEach(i => i.remove())
-
-        document.querySelector('#email > .info').innerHTML = `
+        // render email base info
+        let emailInfo = `
             <p class="border-bottom">
                 <span>From:</span>
                 <span class="badge badge-secondary">${selectedEmail.from.address}</span>
@@ -105,21 +103,44 @@ function renderEmail(id) {
                         .toString()
                         .replaceAll(',', '')
                 }
-            </p>
+            </p>`
 
-            <p class="border-bottom">
-                <span>CC:</span>
-                ${
-                    selectedEmail.cc
-                        .map(i => '<span class="badge badge-secondary mr-1">' + i.address + '</span>')
-                        .toString()
-                        .replaceAll(',', '')
-                }
-            </p>
-        `
+        if (selectedEmail.cc) {
+            emailInfo += `
+                <p class="border-bottom">
+                    <span>CC:</span>
+                    ${
+                        selectedEmail.cc
+                            .map(i => '<span class="badge badge-secondary mr-1">' + i.address + '</span>')
+                            .toString()
+                            .replaceAll(',', '')
+                    }
+                </p>`
+        }
+
+        document.querySelector('#email > .info').innerHTML = emailInfo
+
+        // render email attachments
+        let emailAttachments = selectedEmail.attachments
+            .map(file => {
+                let url = `${tossApi}/tmail_attachments/${selectedEmail.messageId}/${file.filename}`
+                return `
+                    <a href="${url}" target="_blank" class="btn btn-outline-secondary mr-1 mb-1">
+                        ${file.filename}
+                        <span class="badge badge-light">${file.mimeType}</span>
+                    </a>`
+            })
+            .toString()
+            .replaceAll(',', '')
+
+        document.querySelector('#email > .attachments').innerHTML = emailAttachments
+
+        // render email content
+        let html = document.createElement('div')
+        html.innerHTML = selectedEmail.html
+        html.querySelectorAll('style').forEach(i => i.remove())
 
         document.querySelector('#email > .content').innerHTML = html.innerHTML
-        renderInbox()
     })
 }
 
