@@ -36,10 +36,14 @@ function renderEmailAddress() {
  */
 
 async function getInbox() {
+    document.querySelector('#refresh').innerHTML = '<div class="spinner-border spinner-border-sm"></div>'
+
     let res = await fetch(`${api}?email=${address}`)
     emails = res.status == 200 
         ? (await res.json()).emails 
         : []
+
+    document.querySelector('#refresh').innerHTML = 'Refresh'
 }
 
 async function renderInbox() {
@@ -50,20 +54,28 @@ async function renderInbox() {
         document.querySelector('lottie-player').setAttribute('hidden', '')
     }
 
-    let emailArea = document.querySelector('#emails')
+    let emailArea = document.querySelector('.message-list')
     emailArea.innerHTML = ''
 
     emails.forEach(email => {
-        let active = selectedId == email.id ? 'active' : ''
+        let unread = true ? 'unread' : ''
 
         emailArea.innerHTML += `
-            <a id="${email.id}" href="javascript:renderEmail('${email.id}')" class="list-group-item list-group-item-action ${active}">
-                <div class="d-flex w-100 justify-content-between">
-                    <p class="mb-1">${email.subject ?? 'Unknow'}</p>
-                    <small>${email.createdAt}</small>
+            <div class="row rounded message ${unread}" href="javascript:renderEmail('${email.id}')">
+                <div class="col-md-3">
+                    <div class="checkbox-wrapper-mail mr-2">
+                        <input type="checkbox" id="${email.id}">
+                        <label for="${email.id}" class="toggle"></label>
+                    </div>
+                    <a class="title">${email.from.name ?? email.from.address}</a>
                 </div>
-                <small>${email.from.name ?? email.from.address}</small>
-            </a>
+                <div class="col-md-6">
+                    <a class="subject">${email.subject ?? 'Unknow'}</a>
+                </div>
+                <div class="col-md-3 text-right">
+                    <div class="date">${email.createdAt}</div>
+                </div>
+            </div>
         `
     })
 }
@@ -148,6 +160,8 @@ function renderEmail(id) {
  * Renderer
  */
 
+let timeout = undefined
+
 async function init() {
     getEmailAddress().then(() => {
         renderEmailAddress()
@@ -157,7 +171,13 @@ async function init() {
         renderInbox()
     })
 
-    setTimeout(init, 1000 * 10)
+    timeout = setTimeout(init, 1000 * 10)
+}
+
+onNavigated = (name, isBack) => {
+    if (name == 'tmail') return
+    clearTimeout(timeout)
+    onNavigated = undefined
 }
 
 init()
