@@ -1,57 +1,242 @@
 <link rel="stylesheet" href="/css/tmail.css" />
 <script src="/js/tmail.js"></script>
 
-<div class="container mt-5 mb-5 animate__animated animate__fadeIn">
-    <div class="text-center">
-        <h1>Conchbrain Tmail</h1>
-        <p>Temporary email service</p>
-    </div>
-
-    <div class="input-group my-3">
-        <div class="input-group-prepend">
-            <button class="btn btn-outline-primary" type="button" id="btn_getAddress">Get Email Address</button>
-        </div>
-        <input id="address" type="text" class="form-control" placeholder="Email Address" />
-        <div class="input-group-append">
-            <span class="input-group-text">@conchbrain.club</span>
-            <button class="btn btn-outline-success" type="button" onclick="copyEmailAddress()">Copy</button>
-        </div>
-    </div>
-
-    <div class="container border rounded">
-        <div class="row border-bottom">
-            <div class="col-md-4 p-3 d-flex justify-content-between">
-                <h4 class="m-0">
-                    <strong>InBox</strong>
-                </h4>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col">
+            <div class="text-center">
+                <h1>Conchbrain Tmail</h1>
+                <p>Temporary email service</p>
             </div>
 
-            <div class="col-md-8 border-left p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
-                </svg>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 p-3">
-
-                <input class="form-control" type="text" placeholder="Search">
-
-                <div>
-                    <lottie-player src="/lottie/tmail.json" autoplay></lottie-player>
-                    <div id="emails" class="list-group py-2"></div>
+            <div class="input-group my-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-primary" type="button" id="btn_getAddress">Get Email Address</button>
+                </div>
+                <input id="address" type="text" class="form-control" placeholder="Email Address" />
+                <div class="input-group-append">
+                    <span class="input-group-text">@conchbrain.club</span>
+                    <button class="btn btn-outline-success" type="button" onclick="copyEmailAddress()">Copy</button>
                 </div>
             </div>
-
-            <div id="email" class="col-md-8 border-left p-3">
-                <div class="info mb-4"></div>
-                <div class="attachments card-group mb-4"></div>
-                <div class="content overflow-auto"></div>
-            </div>
         </div>
     </div>
 
-    <div>
+    <div class="row mt-3">
+        <div class="col">
+            <div class="card-box">
+                <div class="inbox-leftbar p-0">
+                    <a href="email-compose.html" class="btn btn-primary btn-block waves-effect waves-light">Compose</a>
+
+                    <div class="mail-list mt-4">
+                        <a href="#" class="list-group-item border-0 text-primary font-weight-bold"><i
+                                class="mdi mdi-inbox font-18 align-middle mr-2"></i>Inbox<span
+                                class="badge badge-primary float-right ml-2 mt-1">8</span></a>
+                        <a href="#" class="list-group-item border-0"><i
+                                class="mdi mdi-star font-18 align-middle mr-2"></i>Starred</a>
+                        <a href="#" class="list-group-item border-0"><i
+                                class="mdi mdi-delete font-18 align-middle mr-2"></i>Trash</a>
+                    </div>
+                </div>
+
+                <div class="inbox-rightbar">
+                    <div class="mt-3">
+                        <ul class="message-list">
+                            <li class="unread">
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk1">
+                                        <label for="chk1" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star text-warning"></span>
+                                    <a href="" class="title">Lucas Kriebel (via Twitter)</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Lucas Kriebel (@LucasKriebel) has sent
+                                        you a direct message on Twitter! &nbsp;–&nbsp;
+                                        <span class="teaser">@LucasKriebel - Very cool :) Nicklas, You have a new direct
+                                            message.</span>
+                                    </a>
+                                    <div class="date">11:49 am</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk3">
+                                        <label for="chk3" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star"></span>
+                                    <a href="" class="title">Randy, me (5)</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Last pic over my village &nbsp;–&nbsp;
+                                        <span class="teaser">Yeah i'd like that! Do you remember the video you showed me
+                                            of your train ride between Colombo and Kandy? The one with the mountain
+                                            view? I would love to see that one again!</span>
+                                    </a>
+                                    <div class="date">5:01 am</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk4">
+                                        <label for="chk4" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star text-warning"></span>
+                                    <a href="" class="title">Andrew Zimmer</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Mochila Beta: Subscription Confirmed
+                                        &nbsp;–&nbsp; <span class="teaser">You've been confirmed! Welcome to the ruling
+                                            class of the inbox. For your records, here is a copy of the information you
+                                            submitted to us...</span>
+                                    </a>
+                                    <div class="date">Mar 8</div>
+                                </div>
+                            </li>
+                            <li class="unread">
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk5">
+                                        <label for="chk5" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star"></span>
+                                    <a href="" class="title">Infinity HR</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Sveriges Hetaste sommarjobb &nbsp;–&nbsp;
+                                        <span class="teaser">Hej Nicklas Sandell! Vi vill bjuda in dig till "First tour
+                                            2014", ett rekryteringsevent som erbjuder jobb på 16 semesterorter
+                                            iSverige.</span>
+                                    </a>
+                                    <div class="date">Mar 8</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk6">
+                                        <label for="chk6" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star"></span>
+                                    <a href="" class="title">Web Support Dennis</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Re: New mail settings &nbsp;–&nbsp;
+                                        <span class="teaser">Will you answer him asap?</span>
+                                    </a>
+                                    <div class="date">Mar 7</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk7">
+                                        <label for="chk7" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star text-warning"></span>
+                                    <a href="" class="title">me, Peter (2)</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Off on Thursday &nbsp;–&nbsp;
+                                        <span class="teaser">Eff that place, you might as well stay here with us
+                                            instead! Sent from my iPhone 4 &gt; 4 mar 2014 at 5:55 pm</span>
+                                    </a>
+                                    <div class="date">Mar 4</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk8">
+                                        <label for="chk8" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star"></span>
+                                    <a href="" class="title">Medium</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">This Week's Top Stories &nbsp;–&nbsp;
+                                        <span class="teaser">Our top pick for you on Medium this week The Man Who
+                                            Destroyed America’s Ego</span>
+                                    </a>
+                                    <div class="date">Feb 28</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk9">
+                                        <label for="chk9" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star text-warning"></span>
+                                    <a href="" class="title">Death to Stock</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Montly High-Res Photos &nbsp;–&nbsp;
+                                        <span class="teaser">To create this month's pack, we hosted a party with local
+                                            musician Jared Mahone here in Columbus, Ohio.</span>
+                                    </a>
+                                    <div class="date">Feb 28</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk10">
+                                        <label for="chk10" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star"></span>
+                                    <a href="" class="title">Revibe</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Weekend on Revibe &nbsp;–&nbsp;
+                                        <span class="teaser">Today's Friday and we thought maybe you want some music
+                                            inspiration for the weekend. Here are some trending tracks and playlists we
+                                            think you should give a listen!</span>
+                                    </a>
+                                    <div class="date">Feb 27</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk11">
+                                        <label for="chk11" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star"></span>
+                                    <a href="" class="title">Erik, me (5)</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Regarding our meeting &nbsp;–&nbsp;
+                                        <span class="teaser">That's great, see you on Thursday!</span>
+                                    </a>
+                                    <div class="date">Feb 24</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-mail col-mail-1">
+                                    <div class="checkbox-wrapper-mail">
+                                        <input type="checkbox" id="chk12">
+                                        <label for="chk12" class="toggle"></label>
+                                    </div>
+                                    <span class="star-toggle far fa-star text-warning"></span>
+                                    <a href="" class="title">KanbanFlow</a>
+                                </div>
+                                <div class="col-mail col-mail-2">
+                                    <a href="" class="subject">Task assigned: Clone ARP's website
+                                        &nbsp;–&nbsp; <span class="teaser">You have been assigned a task by Alex@Work on
+                                            the board Web.</span>
+                                    </a>
+                                    <div class="date">Feb 24</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

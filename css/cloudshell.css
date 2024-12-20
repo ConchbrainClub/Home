@@ -1,6 +1,0 @@
-iframe {
-    margin-top: 8px; 
-    position: fixed; 
-    width: 100%; 
-    height: calc(100vh - 58px);
-}

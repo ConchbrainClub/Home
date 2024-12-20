@@ -128,34 +128,6 @@ function initMenu() {
     window.onresize()
 }
 
-async function initPWA() {
-    if (location.href.startsWith('http://')) return
-    if (!('serviceWorker' in navigator)) return
-
-    let registration = await navigator.serviceWorker.register('./serviceworker.js')
-
-    registration.onupdatefound = () => {
-        let installingWorker = registration.installing
-
-        registration.installing.onstatechange = () => {
-            if (installingWorker.state != 'installed') return
-
-            if (!localStorage.getItem('isInstalled')) {
-                console.log('first install')
-                localStorage.setItem('isInstalled', 'true')
-                return
-            }
-
-            if (confirm('新版本可用，立即更新？')) {
-                registration.waiting.postMessage('SKIP_WAITING')
-                setTimeout(() => {
-                    window.location.reload()
-                }, 1000)
-            }
-        }
-    }
-}
-
 function MoveTop() {
     $("html,body").animate({ scrollTop: 0 }, 500)
 }
@@ -220,6 +192,7 @@ async function init() {
         let access_token = location.href.substring(location.href.indexOf("?") + 1)
         localStorage.setItem("access_token", access_token)
         window.location.href = "/"
+        return
     }
 
     //导航到指定页面
@@ -230,6 +203,4 @@ async function init() {
     else {
         navigate("home")
     }
-
-    initPWA()
 }

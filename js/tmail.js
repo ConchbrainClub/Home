@@ -62,7 +62,7 @@ async function renderInbox() {
                     <p class="mb-1">${email.subject ?? 'Unknow'}</p>
                     <small>${email.createdAt}</small>
                 </div>
-                <small>And some small print.</small>
+                <small>${email.from.name ?? email.from.address}</small>
             </a>
         `
     })

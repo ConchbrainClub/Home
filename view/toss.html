@@ -1,67 +1,70 @@
 <script src="/js/toss.js"></script>
 
-<div class="container mt-5 mb-5 animate__animated animate__fadeIn">
-    <div class="text-center">
-        <h1>ConchBrain TOSS</h1>
-        <p>Temporary object storage service (24h validity)</p>
+<div class="animate__animated animate__fadeIn">
+
+    <div class="bg-light py-5">
+        <div class="container">
+            <h1 class="display-4">TOSS</h1>
+            <p class="lead">Temporary object storage service (24h validity)</p>
+
+            <hr />
+
+            <div class="alert alert-primary">
+                <span>
+                    <button type="button" class="btn btn-sm btn-success" onclick="share()">Copy</button>
+                    current link and share link to your friend.
+                </span>
+            </div>
+        </div>
     </div>
 
-    <hr />
-    <p>Share your file</p>
+    <div class="container my-4">
+        <p>Select file or folder to upload</p>
 
-    <div class="alert alert-primary">
-        <span>
-            <button type="button" class="btn btn-sm btn-success" onclick="share()">Copy</button>
-            current link and share link to your friend.
-        </span>
-    </div>
+        <div class="jumbotron p-3">
+            <div class="input-group mb-2">
+                <div class="container m-0 p-0">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="custom-file" onclick="addFile()">
+                                <label class="custom-file-label">Choose File</label>
+                            </div>
+                        </div>
 
-    <hr />
-    <p>Select file or folder to upload</p>
+                        <div class="col-md">
+                            <div class="custom-file" onclick="addFolder()">
+                                <label class="custom-file-label">Choose Folder</label>
+                            </div>
+                        </div>
 
-    <div class="jumbotron p-3">
-        <div class="input-group mb-2">
-            <div class="container m-0 p-0">
-                <div class="row">
-                    <div class="col-md">
-                        <div class="custom-file" onclick="addFile()">
-                            <label class="custom-file-label">Choose File</label>
+                        <div class="col-md-2">
+                            <button id="btn-upload" type="button" class="btn btn-outline-secondary btn-block"
+                                onclick="upload()">Upload</button>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col-md">
-                        <div class="custom-file" onclick="addFolder()">
-                            <label class="custom-file-label">Choose Folder</label>
-                        </div>
-                    </div>
+            <div class="jumbotron p-0 mb-3">
+                <div id="pending" class="accordion">
+                    <lottie-player src="/lottie/toss.json" style="width: 150px; height: 150px; margin: 0 auto;" loop
+                        autoplay></lottie-player>
+                </div>
+            </div>
 
-                    <div class="col-md-2">
-                        <button id="btn-upload" type="button" class="btn btn-outline-secondary btn-block"
-                            onclick="upload()">Upload</button>
-                    </div>
+            <div class="progress bg-white">
+                <div id="progress" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%">
                 </div>
             </div>
         </div>
 
-        <div class="jumbotron p-0 mb-3">
-            <div id="pending" class="accordion">
-                <lottie-player src="/lottie/toss.json"
-                    style="width: 150px; height: 150px; margin: 0 auto;" loop autoplay></lottie-player>
+        <p>Uploaded list</p>
+
+        <div class="jumbotron p-3">
+            <div id="uploaded" class="accordion">
+                <lottie-player src="/lottie/toss1.json" style="width: 150px; height: 150px; margin: 0 auto;" loop
+                    autoplay></lottie-player>
             </div>
         </div>
-
-        <div class="progress bg-white">
-            <div id="progress" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%"></div>
-        </div>
     </div>
-
-
-    <p class="m-0">Uploaded list</p>
-
-    <div class="jumbotron p-3">
-        <div id="uploaded" class="accordion">
-            <lottie-player src="/lottie/toss1.json"
-                style="width: 150px; height: 150px; margin: 0 auto;" loop autoplay></lottie-player>
-        </div>
-    </div>
-    <div>
+</div>
