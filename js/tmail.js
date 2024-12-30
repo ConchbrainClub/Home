@@ -1,5 +1,6 @@
 var api = 'https://smail.conchbrain.club/api'
 var tossApi = 'https://oss.conchbrain.club'
+var timeout = undefined
 
 var address = localStorage.getItem('email_address')
 var emails = []
@@ -159,15 +160,13 @@ function renderEmail(id) {
         html.innerHTML = selectedEmail.html
         html.querySelectorAll('style').forEach(i => i.remove())
 
-        emailContent.innerHTML += html.innerHTML
+        emailContent.innerHTML += `<div class="px-3">${html.innerHTML}</div>`
     })
 }
 
 /**
  * Renderer
  */
-
-var timeout = undefined
 
 async function init() {
     getAddress().then(() => {
