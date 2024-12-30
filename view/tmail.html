@@ -1,21 +1,20 @@
-<link href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/tmail.css" />
 <script src="/js/tmail.js"></script>
 
 <div class="bg-light py-5">
     <div class="container">
         <h1 class="display-4">Tmail</h1>
-        <p class="lead">Shadow email service</p>
+        <p class="lead">Temporary email service</p>
         <hr />
 
         <div class="input-group">
             <div class="input-group-prepend">
-                <button class="btn btn-outline-primary" type="button" id="btn_getAddress">Get New Address</button>
+                <button class="btn btn-outline-primary" type="button" onclick="getNewAddress()">Get New Address</button>
             </div>
             <input id="address" type="text" class="form-control" placeholder="Email Address" />
             <div class="input-group-append">
                 <span class="input-group-text">@conchbrain.club</span>
-                <button class="btn btn-success" type="button" onclick="copyEmailAddress()">Copy</button>
+                <button class="btn btn-success" type="button" onclick="copyAddress()">Copy</button>
             </div>
         </div>
     </div>
@@ -25,41 +24,40 @@
     <div class="row mt-3">
         <div class="col">
             <div class="row">
-                <div class="inbox-leftbar p-0">
-                    <button id="refresh" class="btn btn-primary btn-block">Refresh</button>
+                <div class="inbox-leftbar pb-3 px-3">
+                    <button id="refresh" class="btn btn-primary btn-block" onclick="getInbox()">Refresh</button>
 
                     <div class="mail-list mt-4">
                         <a class="list-group-item border-0 text-primary font-weight-bold">
-                            <i class="mdi mdi-inbox font-18 align-middle mr-2"></i>
                             Inbox
-                            <span class="badge badge-primary float-right ml-2 mt-1">8</span>
+                            <span class="badge badge-primary float-right ml-2 mt-1 counter">8</span>
                         </a>
-                        <a class="list-group-item border-0">
-                            <i class="mdi mdi-star font-18 align-middle mr-2"></i>
-                            Starred
-                        </a>
-                        <a class="list-group-item border-0">
-                            <i class="mdi mdi-delete font-18 align-middle mr-2"></i>
-                            Trash
-                        </a>
-                    </div>
-
-                    <h6 class="mt-4">Labels</h6>
-
-                    <div class="list-group b-0 mail-list">
-                        <a class="list-group-item border-0"><span class="mdi mdi-circle text-info mr-2"></span>Web App</a>
-                        <a class="list-group-item border-0"><span class="mdi mdi-circle text-warning mr-2"></span>Recharge</a>
-                        <a class="list-group-item border-0"><span class="mdi mdi-circle text-dark mr-2"></span>Wallet Balance</a>
-                        <a class="list-group-item border-0"><span class="mdi mdi-circle text-primary mr-2"></span>Friends</a>
-                        <a class="list-group-item border-0"><span class="mdi mdi-circle text-success mr-2"></span>Family</a>
                     </div>
                 </div>
 
                 <div class="inbox-rightbar px-3">
                     <div class="position-relative">
                         <lottie-player src="/lottie/tmail.json" autoplay></lottie-player>
-                        <div class="message-list"></div>
+                        <div class="message-list px-3 border-top"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="emailModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body overflow-auto">
+                <div id="email">
+                    <div class="spinner-grow text-dark mx-auto d-block" role="status" />
                 </div>
             </div>
         </div>

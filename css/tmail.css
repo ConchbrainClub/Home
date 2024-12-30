@@ -1,10 +1,19 @@
 .inbox-leftbar {
     width: 240px;
-    margin-right: 10px;
 }
 
 .inbox-rightbar {
     width: calc(100% - 250px);
+}
+
+@media (max-width: 992px) {
+    .inbox-leftbar, .inbox-rightbar {
+        width: 100%;
+    }
+
+    .message .from, .message .createdAt {
+        display: none;
+    }
 }
 
 .message-list {
@@ -17,11 +26,13 @@
     line-height: 50px;
     cursor: default;
     -webkit-transition-duration: .3s;
-    transition-duration: .3s
+    transition-duration: .3s;
+    overflow-y: hidden;
 }
 
-.message-list .message a {
-    color: #6c757d
+.message-list .message {
+    color: #272e37;
+    cursor: pointer;
 }
 
 .message-list .message:hover {
@@ -41,11 +52,6 @@
 .message-list .message.active:hover {
     -webkit-box-shadow: inset 3px 0 0 #00bcd4;
     box-shadow: inset 3px 0 0 #00bcd4
-}
-
-.message-list .message.unread a, .message-list .message.unread .date {
-    font-weight: 600;
-    color: #272e37
 }
 
 .message-list .checkbox-wrapper-mail {

@@ -10,13 +10,20 @@ var selectedEmail = undefined
  * Email address
  */
 
-function copyEmailAddress() {
+function copyAddress() {
     navigator.clipboard.writeText(address).then(() => {
         alert('Copied to clipboard successfully')
     })
 }
 
-async function getEmailAddress() {
+function getNewAddress() {
+    address = undefined
+    getAddress().then(() => {
+        renderAddress()
+    })
+}
+
+async function getAddress() {
     if (address) return
 
     let res = await fetch(api, {
@@ -27,7 +34,7 @@ async function getEmailAddress() {
     localStorage.setItem('email_address', address)
 }
 
-function renderEmailAddress() {
+function renderAddress() {
     document.querySelector('#address').value = address.substring(0, address.indexOf('@'))
 }
 
@@ -58,26 +65,24 @@ async function renderInbox() {
     emailArea.innerHTML = ''
 
     emails.forEach(email => {
-        let unread = true ? 'unread' : ''
-
         emailArea.innerHTML += `
-            <div class="row rounded message ${unread}" href="javascript:renderEmail('${email.id}')">
-                <div class="col-md-3">
-                    <div class="checkbox-wrapper-mail mr-2">
-                        <input type="checkbox" id="${email.id}">
-                        <label for="${email.id}" class="toggle"></label>
+            <div class="row rounded message" onclick="renderEmail('${email.id}')">
+                <div class="col-2 from">
+                    <span class="title">${email.from.name ?? email.from.address}</span>
+                </div>
+                <div class="col subject">
+                    <div class="overflow-hidden">
+                        <span class="subject">${email.subject ?? 'Unknow'}</span>
                     </div>
-                    <a class="title">${email.from.name ?? email.from.address}</a>
                 </div>
-                <div class="col-md-6">
-                    <a class="subject">${email.subject ?? 'Unknow'}</a>
-                </div>
-                <div class="col-md-3 text-right">
-                    <div class="date">${email.createdAt}</div>
+                <div class="col-2 text-right createdAt">
+                    <span class="date">${email.createdAt}</span>
                 </div>
             </div>
         `
     })
+
+    document.querySelector('.counter').innerText = emails.length
 }
 
 /**
@@ -90,16 +95,18 @@ async function getEmail() {
     selectedEmail = res.status == 200 
         ? (await res.json()).email 
         : undefined
-    
-    console.log(selectedEmail)
 }
 
 function renderEmail(id) {
-    document.querySelectorAll('.active').forEach(i => i.classList.remove('active'))
-    document.querySelector(`#${id}`).classList.add('active')
     selectedId = id
+    let emailContent = document.querySelector('#email')
+    emailContent.innerHTML = '<div class="spinner-grow text-dark mx-auto d-block" role="status" />'
+    $('#emailModal').modal()
 
     getEmail().then(() => {
+        document.querySelector('#emailModal .modal-title').innerText = selectedEmail.subject
+        emailContent.innerHTML = ''
+
         // render email base info
         let emailInfo = `
             <p class="border-bottom">
@@ -130,7 +137,7 @@ function renderEmail(id) {
                 </p>`
         }
 
-        document.querySelector('#email > .info').innerHTML = emailInfo
+        emailContent.innerHTML += `<div class="pb-2">${emailInfo}</div>`
 
         // render email attachments
         let emailAttachments = selectedEmail.attachments
@@ -145,14 +152,14 @@ function renderEmail(id) {
             .toString()
             .replaceAll(',', '')
 
-        document.querySelector('#email > .attachments').innerHTML = emailAttachments
+        emailContent.innerHTML += `<div class="pb-2">${emailAttachments}</div>`
 
         // render email content
         let html = document.createElement('div')
         html.innerHTML = selectedEmail.html
         html.querySelectorAll('style').forEach(i => i.remove())
 
-        document.querySelector('#email > .content').innerHTML = html.innerHTML
+        emailContent.innerHTML += html.innerHTML
     })
 }
 
@@ -160,11 +167,11 @@ function renderEmail(id) {
  * Renderer
  */
 
-let timeout = undefined
+var timeout = undefined
 
 async function init() {
-    getEmailAddress().then(() => {
-        renderEmailAddress()
+    getAddress().then(() => {
+        renderAddress()
     })
 
     getInbox().then(() => {
